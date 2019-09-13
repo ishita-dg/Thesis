@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2016)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: dissertation.aux
+A level-1 auxiliary file: chapters/introduction.aux
+A level-1 auxiliary file: chapters/chapter1.aux
+A level-1 auxiliary file: chapters/chapter2.aux
+A level-1 auxiliary file: chapters/chapter3.aux
+The style file: apalike2.bst
+Reallocated field_info (elt_size=4) to 10896 items from 5000.
+Database file #1: references.bib
+Warning--entry type for "gershman2017complex" isn't style-file defined
+--line 2048 of file references.bib
+Warning--can't use both volume and number fields in abbott2015random
+Warning--empty journal in elstein1978medical
+Warning--empty journal in Heckerman1990
+Warning--empty journal in luu2016choice
+Warning--empty journal in marino2018learning
+Warning--empty journal in marr1976understanding
+Warning--empty journal in sasaki2007belief
+Warning--empty year in Yildirim
+Warning--empty journal in Yildirim
+Warning--empty journal in zhu_sanborn_chater_2018
+You've used 268 entries,
+            2229 wiz_defined-function locations,
+            1839 strings with 44884 characters,
+and the built_in function-call counts, 111470 in all, are:
+= -- 11181
+> -- 4380
+< -- 167
++ -- 1544
+- -- 1440
+* -- 9622
+:= -- 19008
+add.period$ -- 794
+call.type$ -- 268
+change.case$ -- 2048
+chr.to.int$ -- 240
+cite$ -- 278
+duplicate$ -- 4155
+empty$ -- 7847
+format.name$ -- 1914
+if$ -- 21851
+int.to.chr$ -- 29
+int.to.str$ -- 0
+missing$ -- 272
+newline$ -- 1333
+num.names$ -- 808
+pop$ -- 1674
+preamble$ -- 1
+purify$ -- 2056
+quote$ -- 0
+skip$ -- 3163
+stack$ -- 0
+substring$ -- 8758
+swap$ -- 573
+text.length$ -- 32
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1592
+warning$ -- 10
+while$ -- 989
+width$ -- 0
+write$ -- 3443
+(There were 11 warnings)
