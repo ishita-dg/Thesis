@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  15 SEP 2019 14:51
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  15 SEP 2019 14:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1734,22 +1734,450 @@ File: mt-ppl.cfg 2005/11/16 v1.6 microtype config. file: Palatino (RS)
 
 
 ]
-\openout2 = `chapters/introduction.aux'.
-
- (./chapters/introduction.tex
-Chapter 1.
-) [1
-
-
-]
-\openout2 = `chapters/chapter1.aux'.
-
- (./chapters/chapter1.tex
-Chapter 2.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/bx/n' will be
+(Font)              scaled to size 24.88pt on input line 18.
+ (./dissertation.lof
 LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 31.
+(Font)              scaled to size 10.95pt on input line 3.
+
+Overfull \hbox (16.69565pt too wide) in paragraph at lines 3--3
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Subadditivity. MCMC estimates were ma
+de for the following queries: Given the symp- 
+ []
+
+
+Overfull \hbox (16.42555pt too wide) in paragraph at lines 3--3
+ \EU1/EBGaramond(2)/bx/n/10.95 toms \EU1/EBGaramond(2)/m/it/10.95 fever, nausea
+ \EU1/EBGaramond(2)/bx/n/10.95 and \EU1/EBGaramond(2)/m/it/10.95 fatigue\EU1/EB
+Garamond(2)/bx/n/10.95 , (a) Packed: what is the probability that these symptom
+s 
+ []
+
+
+Overfull \hbox (5.23465pt too wide) in paragraph at lines 3--3
+ \EU1/EBGaramond(2)/bx/n/10.95 were caused by the presence of a gastrointestina
+l disease? (b) Unpacked to typical ex- 
+ []
+
+
+Overfull \hbox (11.13669pt too wide) in paragraph at lines 3--3
+ \EU1/EBGaramond(2)/bx/n/10.95 amples: what is the probability that these were 
+caused by the presence of food poison- 
+ []
+
+
+Overfull \hbox (13.49098pt too wide) in paragraph at lines 3--3
+ \EU1/EBGaramond(2)/bx/n/10.95 ing, stomach flu, or any other gastrointestinal 
+diseases? The estimate for the unpacked 
+ []
+
+
+Overfull \hbox (3.4498pt too wide) in paragraph at lines 3--3
+ \EU1/EBGaramond(2)/bx/n/10.95 condition is higher than that of the packed cond
+ition. The difference between these 
+ []
+
+
+Overfull \hbox (4.77477pt too wide) in paragraph at lines 3--3
+ \EU1/EBGaramond(2)/bx/n/10.95 estimates is represented by the red line. This e
+ffect diminishes as the number of sam- 
+ []
+
+
+Overfull \hbox (25.45566pt too wide) in paragraph at lines 4--4
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Superadditivity. MCMC-estimates were 
+made for the following queries: Given the symp- 
+ []
+
+
+Overfull \hbox (18.955pt too wide) in paragraph at lines 4--4
+ \EU1/EBGaramond(2)/bx/n/10.95 toms \EU1/EBGaramond(2)/m/it/10.95 fever, nausea
+ \EU1/EBGaramond(2)/bx/n/10.95 and \EU1/EBGaramond(2)/m/it/10.95 fatigue\EU1/EB
+Garamond(2)/bx/n/10.95 , (a) Packed: What is the probability that these symptom
+s 
+ []
+
+
+Overfull \hbox (3.04465pt too wide) in paragraph at lines 4--4
+ \EU1/EBGaramond(2)/bx/n/10.95 were caused by the presence of gastrointestinal 
+disease? (b) Unpacked to atypical ex- 
+ []
+
+
+Overfull \hbox (2.62856pt too wide) in paragraph at lines 4--4
+ \EU1/EBGaramond(2)/bx/n/10.95 amples: What is the probability is that these sy
+mptoms were caused by the presence 
+ []
+
+
+Overfull \hbox (8.89197pt too wide) in paragraph at lines 4--4
+ \EU1/EBGaramond(2)/bx/n/10.95 of gastroenteritis, stomach cancer, or any other
+ gastrointestinal disease? The estimate 
+ []
+
+
+Overfull \hbox (12.51642pt too wide) in paragraph at lines 4--4
+ \EU1/EBGaramond(2)/bx/n/10.95 for the unpacked condition is lower than that of
+ the packed condition. The difference 
+ []
+
+
+Overfull \hbox (17.76146pt too wide) in paragraph at lines 4--4
+ \EU1/EBGaramond(2)/bx/n/10.95 between these estimates is represnted by the red
+ line. This effect diminishes as the num- 
+ []
+
+[1]
+Overfull \hbox (4.09222pt too wide) in paragraph at lines 5--5
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Weak evidence effect. MCMC estimates 
+were made for the following queries: Given 
+ []
+
+
+Overfull \hbox (15.2539pt too wide) in paragraph at lines 5--5
+ \EU1/EBGaramond(2)/bx/n/10.95 the symptoms \EU1/EBGaramond(2)/m/it/10.95 fever
+, nausea \EU1/EBGaramond(2)/bx/n/10.95 and \EU1/EBGaramond(2)/m/it/10.95 fatigu
+e\EU1/EBGaramond(2)/bx/n/10.95 , (a) Control: What is the probability that thes
+e 
+ []
+
+
+Overfull \hbox (6.0997pt too wide) in paragraph at lines 5--5
+ \EU1/EBGaramond(2)/bx/n/10.95 symptoms were caused by the presence of gastroin
+testinal disease? (b) Evidence for a 
+ []
+
+
+Overfull \hbox (10.24974pt too wide) in paragraph at lines 5--5
+ \EU1/EBGaramond(2)/bx/n/10.95 weak cause: What is the probability that these s
+ymptoms were caused by the presence 
+ []
+
+
+Overfull \hbox (24.2037pt too wide) in paragraph at lines 5--5
+ \EU1/EBGaramond(2)/bx/n/10.95 of gastrointestinal disease, assuming the patien
+t’s grandmother was diagnosed with stom- 
+ []
+
+
+Overfull \hbox (11.83751pt too wide) in paragraph at lines 5--5
+ \EU1/EBGaramond(2)/bx/n/10.95 ach cancer? The increase in support of the weak 
+cause (stomach cancer) is modeled by 
+ []
+
+
+Overfull \hbox (21.90054pt too wide) in paragraph at lines 5--5
+ \EU1/EBGaramond(2)/bx/n/10.95 increasing the prior probability of stomach canc
+er from 0.05 to 0.06. The estimate from 
+ []
+
+
+Overfull \hbox (6.96478pt too wide) in paragraph at lines 5--5
+ \EU1/EBGaramond(2)/bx/n/10.95 the weak evidence chain is lower than that from 
+the control chain. The difference be- 
+ []
+
+
+Overfull \hbox (10.1512pt too wide) in paragraph at lines 5--5
+ \EU1/EBGaramond(2)/bx/n/10.95 tween these estimates is represented by the red 
+line. The effect diminishes as the num- 
+ []
+
+
+Overfull \hbox (8.84451pt too wide) in paragraph at lines 6--6
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Dud alternative effect. MCMC estimate
+s were made for the following queries: Given 
+ []
+
+
+Overfull \hbox (7.46846pt too wide) in paragraph at lines 6--6
+ \EU1/EBGaramond(2)/bx/n/10.95 the symptoms \EU1/EBGaramond(2)/m/it/10.95 fever
+, nausea \EU1/EBGaramond(2)/bx/n/10.95 and \EU1/EBGaramond(2)/m/it/10.95 fatigu
+e\EU1/EBGaramond(2)/bx/n/10.95 , (a) Control: What is the probability that the 
+
+ []
+
+
+Overfull \hbox (14.83052pt too wide) in paragraph at lines 6--6
+ \EU1/EBGaramond(2)/bx/n/10.95 patient has a respiratory disease (as opposed to
+ the symptoms being caused by the pres- 
+ []
+
+
+Overfull \hbox (13.85597pt too wide) in paragraph at lines 6--6
+ \EU1/EBGaramond(2)/bx/n/10.95 ity that the patient has a respiratory disease (
+as opposed to the symptoms being caused 
+ []
+
+
+Overfull \hbox (20.97346pt too wide) in paragraph at lines 6--6
+ \EU1/EBGaramond(2)/bx/n/10.95 by the presence of gastroenteritis, stomach canc
+er, or any other gastrointestinal disease)? 
+ []
+
+
+Overfull \hbox (1.9424pt too wide) in paragraph at lines 6--6
+ \EU1/EBGaramond(2)/bx/n/10.95 The estimate from the control chain is higher th
+an from the chain for which dud al- 
+ []
+
+
+Overfull \hbox (8.2459pt too wide) in paragraph at lines 6--6
+ \EU1/EBGaramond(2)/bx/n/10.95 ternatives are presented. The difference between
+ these estimates is represented by the 
+ []
+
+[2]
+Overfull \hbox (15.26118pt too wide) in paragraph at lines 7--7
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Self-generation effect. MCMC estimate
+s for the following query: Given the symptoms 
+ []
+
+
+Overfull \hbox (8.6401pt too wide) in paragraph at lines 7--7
+ \EU1/EBGaramond(2)/m/it/10.95 fever \EU1/EBGaramond(2)/bx/n/10.95 and \EU1/EBG
+aramond(2)/m/it/10.95 fatigue\EU1/EBGaramond(2)/bx/n/10.95 , (a) Self-generated
+: What are the two most likely respiratory diseases 
+ []
+
+
+Overfull \hbox (26.26959pt too wide) in paragraph at lines 7--7
+ \EU1/EBGaramond(2)/bx/n/10.95 to have caused these symptoms? Estimate the prob
+ability that these symptoms are caused 
+ []
+
+
+Overfull \hbox (14.28665pt too wide) in paragraph at lines 7--7
+ \EU1/EBGaramond(2)/bx/n/10.95 by either of these two diseases. (b) Other-gener
+ated: What is the probability that these 
+ []
+
+
+Overfull \hbox (12.89235pt too wide) in paragraph at lines 7--7
+ \EU1/EBGaramond(2)/bx/n/10.95 symptoms were caused by the presence of a cold o
+r respiratory flu (two most likely res- 
+ []
+
+
+Overfull \hbox (5.46461pt too wide) in paragraph at lines 7--7
+ \EU1/EBGaramond(2)/bx/n/10.95 piratory diseases to have caused these symptoms 
+returned by the first chain)? The es- 
+ []
+
+
+Overfull \hbox (20.4004pt too wide) in paragraph at lines 7--7
+ \EU1/EBGaramond(2)/bx/n/10.95 timate from the other-generated chain is higher 
+than from the self-generated chain. The 
+ []
+
+
+Overfull \hbox (16.8234pt too wide) in paragraph at lines 7--7
+ \EU1/EBGaramond(2)/bx/n/10.95 difference between these estimates is represente
+d by the red line and the effect decreases 
+ []
+
+
+Overfull \hbox (0.65755pt too wide) in paragraph at lines 8--8
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Anchoring and adjustment. The y axis 
+represents the difference in the probabilities 
+ []
+
+
+Overfull \hbox (0.34367pt too wide) in paragraph at lines 8--8
+ \EU1/EBGaramond(2)/bx/n/10.95 of respiratory flu and stomach flu given the sym
+ptoms \EU1/EBGaramond(2)/m/it/10.95 fever \EU1/EBGaramond(2)/bx/n/10.95 and \EU
+1/EBGaramond(2)/m/it/10.95 fatigue \EU1/EBGaramond(2)/bx/n/10.95 as returned 
+ []
+
+
+Overfull \hbox (8.74963pt too wide) in paragraph at lines 8--8
+ \EU1/EBGaramond(2)/bx/n/10.95 by two different chains that are initialized dif
+ferently. The chains are initialized in the 
+ []
+
+
+Overfull \hbox (5.87338pt too wide) in paragraph at lines 8--8
+ \EU1/EBGaramond(2)/bx/n/10.95 two different clusters, at hypotheses other than
+ the focal hypotheses of \EU1/EBGaramond(2)/m/it/10.95 respiratory \EU1/EBGaram
+ond(2)/bx/n/10.95 or 
+ []
+
+
+Overfull \hbox (1.3474pt too wide) in paragraph at lines 8--8
+ \EU1/EBGaramond(2)/m/it/10.95 stomach flu\EU1/EBGaramond(2)/bx/n/10.95 . Befor
+e reaching convergence, the chain initialized in cluster 1 of respira- 
+ []
+
+
+Overfull \hbox (5.75294pt too wide) in paragraph at lines 8--8
+ \EU1/EBGaramond(2)/bx/n/10.95 tory diseases places higher probability on respi
+ratory flu, than the chain initialized in 
+ []
+
+
+Overfull \hbox (12.5821pt too wide) in paragraph at lines 8--8
+ \EU1/EBGaramond(2)/bx/n/10.95 cluster 2 of gastrointestinal diseases. The net 
+difference between the two chains dimin- 
+ []
+
+[3]
+Overfull \hbox (11.99812pt too wide) in paragraph at lines 9--9
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 The crowd within. Errors in the MCMC 
+estimates for the following query: Given the 
+ []
+
+
+Overfull \hbox (19.04625pt too wide) in paragraph at lines 9--9
+ \EU1/EBGaramond(2)/bx/n/10.95 symptoms \EU1/EBGaramond(2)/m/it/10.95 nausea \E
+U1/EBGaramond(2)/bx/n/10.95 and \EU1/EBGaramond(2)/m/it/10.95 shortness of brea
+th\EU1/EBGaramond(2)/bx/n/10.95 , what is the probability that these were cause
+d 
+ []
+
+
+Overfull \hbox (0.53711pt too wide) in paragraph at lines 9--9
+ \EU1/EBGaramond(2)/bx/n/10.95 by the presence of a respiratory disease? The es
+timates are averaged either over sam- 
+ []
+
+
+Overfull \hbox (2.22337pt too wide) in paragraph at lines 10--10
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experimental setup. Participants were
+ asked to estimate the conditional probability 
+ []
+
+
+Overfull \hbox (1.71605pt too wide) in paragraph at lines 11--11
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experiment 1 results. Mean probabilit
+y estimates for each condition. Error bars rep- 
+ []
+
+
+Overfull \hbox (31.84312pt too wide) in paragraph at lines 11--11
+ \EU1/EBGaramond(2)/bx/n/10.95 resent the 95% confidence interval of the mean. 
+Red dots show estimates from the MCMC 
+ []
+
+
+Overfull \hbox (3.1724pt too wide) in paragraph at lines 12--12
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experiment 2 results. Mean probabilit
+y estimates for each condition. Error bars rep- 
+ []
+
+
+Overfull \hbox (31.84312pt too wide) in paragraph at lines 12--12
+ \EU1/EBGaramond(2)/bx/n/10.95 resent the 95% confidence interval of the mean. 
+Red dots show estimates from the MCMC 
+ []
+
+
+Overfull \hbox (4.18347pt too wide) in paragraph at lines 12--12
+ \EU1/EBGaramond(2)/bx/n/10.95 model with 230 samples, assuming 6 hidden object
+s in the scene. Unpacking 1 is typ- 
+ []
+
+
+Overfull \hbox (4.38423pt too wide) in paragraph at lines 12--12
+ \EU1/EBGaramond(2)/bx/n/10.95 ical for cue object 1 and atypical for cue objec
+t 2; unpacking 2 is typical for cue object 
+ []
+
+[4]
+Overfull \hbox (13.11137pt too wide) in paragraph at lines 14--14
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Demonstration of how MCMC sampling ca
+n give rise to sub- and super-additivity for 
+ []
+
+
+Overfull \hbox (2.47527pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 different unpacked versions of the question : “I
+n the presence of a table, what is the 
+ []
+
+
+Overfull \hbox (3.77829pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 probability that there is also another object st
+arting with C?”. The color gradient in- 
+ []
+
+
+Overfull \hbox (8.30064pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 dicates probability density. (a) The chain initi
+alized with a typical unpacking starts at 
+ []
+
+
+Overfull \hbox (12.00543pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 ‘chair’, a high probability hypothesis, denoted 
+by a darker shading, while the chain ini- 
+ []
+
+
+Overfull \hbox (5.84055pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 tialized with an atypical unpacking starts at ‘c
+anoe’, a low probability hypothesis, de- 
+ []
+
+
+Overfull \hbox (10.27167pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 noted by a lighter shading. (b) For the purposes
+ of illustration we show the same new 
+ []
+
+
+Overfull \hbox (6.71289pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 intermediate probability proposal of ‘toothbrush
+’ being made to both chains. In the 
+ []
+
+
+Overfull \hbox (1.23792pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 model, this proposal is randomly generated for e
+ach chain. (c) Since the probability 
+ []
+
+
+Overfull \hbox (15.01665pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 of ‘toothbrush’ is significantly higher than ‘ca
+noe’ the proposal is accepted by the atyp- 
+ []
+
+
+Overfull \hbox (10.90677pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 ically unpacked chain. But conversely since it i
+s significantly less probable than ‘chair’, 
+ []
+
+
+Overfull \hbox (0.1867pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 is likely rejected by the typically unpacked cha
+in. (d) The tendency for the typically 
+ []
+
+
+Overfull \hbox (7.29692pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 unpacked chain to tarry in the high probability 
+region of the queried object set, gives 
+ []
+
+
+Overfull \hbox (0.48602pt too wide) in paragraph at lines 14--14
+ \EU1/EBGaramond(2)/bx/n/10.95 rise to sub-additivity, whereas the tendency for
+ the atypically unpacked to get easily 
+ []
+
+LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
+(Font)              scaled to size 9.35316pt on input line 19.
+Package microtype Info: Loading generic settings for font family
+(microtype)             `SourceCodePro' (encoding: EU1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+LaTeX Font Warning: Font shape `EU1/SourceCodePro(0)/m/it' undefined
+(Font)              using `EU1/SourceCodePro(0)/m/n' instead on input line 19.
+
 LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 31.
+(Font)              scaled to size 8.0pt on input line 19.
 Package microtype Info: Character `•' is missing
 (microtype)             in font `\EU1/EBGaramond(2)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1762,6 +2190,956 @@ Package microtype Info: Character `™' is missing
 Package microtype Info: Character `−' is missing
 (microtype)             in font `\EU1/EBGaramond(2)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 19.
+Package microtype Info: Character `•' is missing
+(microtype)             in font `\EU1/EBGaramond(2)/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `℃' is missing
+(microtype)             in font `\EU1/EBGaramond(2)/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `™' is missing
+(microtype)             in font `\EU1/EBGaramond(2)/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `−' is missing
+(microtype)             in font `\EU1/EBGaramond(2)/m/n/6'.
+(microtype)             Ignoring protrusion settings for this character.
+
+Overfull \hbox (26.68571pt too wide) in paragraph at lines 19--19
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Theory schematic. (Left) Standard, me
+moryless framework in which a recognition model 
+ []
+
+
+Overfull \hbox (9.14182pt too wide) in paragraph at lines 19--19
+ [][]\OT1/cmr/m/n/10.95 ([]\OMS/cmsy/m/n/10.95 j[]\OT1/cmr/m/n/10.95 )$ \EU1/EB
+Garamond(2)/bx/n/10.95 approximates the posterior over hypothesis $[]$ given da
+ta $[]$. The recognition 
+ []
+
+
+Overfull \hbox (11.90689pt too wide) in paragraph at lines 19--19
+ \EU1/EBGaramond(2)/bx/n/10.95 model is parametrized by $[]$ (e.g., a set of sa
+mples in the case of Monte Carlo methods). 
+ []
+
+
+Overfull \hbox (23.26929pt too wide) in paragraph at lines 19--19
+ \EU1/EBGaramond(2)/bx/n/10.95 Memoryless inference builds a separate recogniti
+on model for each query. (Right) Amor- 
+ []
+
+
+Overfull \hbox (13.16246pt too wide) in paragraph at lines 19--19
+ \EU1/EBGaramond(2)/bx/n/10.95 tized framework, in which the recognition model 
+shares parameters across queries. Af- 
+ []
+
+
+Overfull \hbox (11.02719pt too wide) in paragraph at lines 19--19
+ \EU1/EBGaramond(2)/bx/n/10.95 ter each new query, the recognition model update
+s the shared parameters. In this way, 
+ []
+
+[5]
+Overfull \hbox (9.53069pt too wide) in paragraph at lines 20--20
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Simulation of subadditivity and super
+additivity effects under sample-based (top) and 
+ []
+
+
+Overfull \hbox (3.37315pt too wide) in paragraph at lines 20--20
+ \EU1/EBGaramond(2)/bx/n/10.95 summary-based (bottom) amortization strategies. 
+In all panels, the y-axis represents 
+ []
+
+
+Overfull \hbox (14.30856pt too wide) in paragraph at lines 20--20
+ \EU1/EBGaramond(2)/bx/n/10.95 the unstandardized effect size for $\OMS/cmsy/m/
+n/10.95 Q[]$\EU1/EBGaramond(2)/bx/n/10.95 . Left panels show the effects of cha
+nging the sam- 
+ []
+
+
+Overfull \hbox (12.77199pt too wide) in paragraph at lines 20--20
+ \EU1/EBGaramond(2)/bx/n/10.95 ple size for $\OMS/cmsy/m/n/10.95 Q[]$\EU1/EBGar
+amond(2)/bx/n/10.95 ; right panels show the effects of changing the sample size
+ for $\OMS/cmsy/m/n/10.95 Q[]$\EU1/EBGaramond(2)/bx/n/10.95 . When 
+ []
+
+
+Overfull \hbox (16.17738pt too wide) in paragraph at lines 20--20
+ \EU1/EBGaramond(2)/bx/n/10.95 sample size for one query is changed, sample siz
+e for the other query is held fixed at 230 
+ []
+
+
+Overfull \hbox (2.22337pt too wide) in paragraph at lines 21--21
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experimental setup. Participants were
+ asked to estimate the conditional probability 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--22
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experiment 1: Differences between $\O
+MS/cmsy/m/n/10.95 Q[]$ \EU1/EBGaramond(2)/bx/n/10.95 responses for each conditi
+on and an average 
+ []
+
+
+Overfull \hbox (13.5457pt too wide) in paragraph at lines 22--22
+ \EU1/EBGaramond(2)/bx/n/10.95 positive relative mean estimate a subadditivity 
+effect. Error bars represent the standard 
+ []
+
+
+Overfull \hbox (16.67378pt too wide) in paragraph at lines 23--23
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Trial-by-trial analyses of Experiment
+ 1. Difference between $\OMS/cmsy/m/n/10.95 Q[]$ \EU1/EBGaramond(2)/bx/n/10.95 
+responses and true prob- 
+ []
+
+
+Overfull \hbox (1.36934pt too wide) in paragraph at lines 23--23
+ \EU1/EBGaramond(2)/bx/n/10.95 ability (as assessed by our MCMC model) plotted 
+against the same quantity for $\OMS/cmsy/m/n/10.95 Q[]$\EU1/EBGaramond(2)/bx/n/
+10.95 . 
+ []
+
+[6]
+Overfull \hbox (1.3876pt too wide) in paragraph at lines 24--24
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experiment 2: Differences between $\O
+MS/cmsy/m/n/10.95 Q[]$ \EU1/EBGaramond(2)/bx/n/10.95 responses for each conditi
+on and an average 
+ []
+
+
+Overfull \hbox (13.5457pt too wide) in paragraph at lines 24--24
+ \EU1/EBGaramond(2)/bx/n/10.95 positive relative mean estimate a subadditivity 
+effect. Error bars represent the standard 
+ []
+
+
+Overfull \hbox (5.01204pt too wide) in paragraph at lines 25--25
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Trial-by-trial analyses of Experiment
+ 2. Relationship between difference between $\OMS/cmsy/m/n/10.95 Q[]$ 
+ []
+
+
+Overfull \hbox (5.00473pt too wide) in paragraph at lines 25--25
+ \EU1/EBGaramond(2)/bx/n/10.95 responses and true probability (as assessed by o
+ur MCMC model) and $\OMS/cmsy/m/n/10.95 Q[]$ \EU1/EBGaramond(2)/bx/n/10.95 resp
+onses 
+ []
+
+
+Overfull \hbox (0.8401pt too wide) in paragraph at lines 26--26
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experiment 3: Differences between $\O
+MS/cmsy/m/n/10.95 Q[]$ \EU1/EBGaramond(2)/bx/n/10.95 responses for each conditi
+on and an average 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ \EU1/EBGaramond(2)/bx/n/10.95 packed baseline. A negative relative mean estima
+te indicates a superadditivity effect 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--26
+ \EU1/EBGaramond(2)/bx/n/10.95 and a positive relative mean estimate a subaddit
+ivity effect. Error bars represent the 
+ []
+
+
+Overfull \hbox (4.46454pt too wide) in paragraph at lines 27--27
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Trial-by-trial analyses of Experiment
+ 3. Relationship between difference between $\OMS/cmsy/m/n/10.95 Q[]$ 
+ []
+
+
+Overfull \hbox (5.00473pt too wide) in paragraph at lines 27--27
+ \EU1/EBGaramond(2)/bx/n/10.95 responses and true probability (as assessed by o
+ur MCMC model) and $\OMS/cmsy/m/n/10.95 Q[]$ \EU1/EBGaramond(2)/bx/n/10.95 resp
+onses 
+ []
+
+
+Overfull \hbox (10.17307pt too wide) in paragraph at lines 29--29
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Schematics of different inference met
+hods. (A) Memoryless inference recomputes the 
+ []
+
+
+Overfull \hbox (10.66953pt too wide) in paragraph at lines 29--29
+ \EU1/EBGaramond(2)/bx/n/10.95 variational parameters $[]$ from scratch for eac
+h new set of observations, resulting in an 
+ []
+
+
+Overfull \hbox (5.48932pt too wide) in paragraph at lines 29--29
+ \EU1/EBGaramond(2)/bx/n/10.95 approximate posterior $[][]$ that is unique for 
+each $[]$. (B) Amortized inference allows 
+ []
+
+
+Overfull \hbox (17.8993pt too wide) in paragraph at lines 29--29
+ \EU1/EBGaramond(2)/bx/n/10.95 some variational parameters to be shared across 
+queries, optimizing them such that $[][]$ 
+ []
+
+
+Overfull \hbox (6.88809pt too wide) in paragraph at lines 29--29
+ \EU1/EBGaramond(2)/bx/n/10.95 is a good approximation \EU1/EBGaramond(2)/m/it/
+10.95 in expectation \EU1/EBGaramond(2)/bx/n/10.95 over the query distribution.
+ (C) Schematic of 
+ []
+
+
+Overfull \hbox (5.85153pt too wide) in paragraph at lines 29--29
+ \EU1/EBGaramond(2)/bx/n/10.95 how we implemented this framework with a neural 
+network function approximator 
+ []
+
+
+Overfull \hbox (6.6253pt too wide) in paragraph at lines 29--29
+ \EU1/EBGaramond(2)/bx/n/10.95 in the Learned Inference Model, with low capacit
+y (1 hidden unit). (D) Schematic of 
+ []
+
+
+Overfull \hbox (5.0741pt too wide) in paragraph at lines 29--29
+ \EU1/EBGaramond(2)/bx/n/10.95 a neural network function approximator in the Le
+arned Inference Model, with high 
+ []
+
+[7]
+Overfull \hbox (14.00923pt too wide) in paragraph at lines 34--34
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Schematic demonstration of how the ap
+proximate posterior depends on the query dis- 
+ []
+
+
+Overfull \hbox (7.9612pt too wide) in paragraph at lines 34--34
+ \EU1/EBGaramond(2)/bx/n/10.95 tribution. (A) The true posterior probability $[
+]$ (indicated by colors on the heatmap), 
+ []
+
+
+Overfull \hbox (33.58098pt too wide) in paragraph at lines 34--34
+ \EU1/EBGaramond(2)/bx/n/10.95 as a function of the prior and likelihood for a 
+generative model in which $[] \OMS/cmsy/m/n/10.95 ^^X []\OT1/cmr/m/n/10.95 ([][
+])$ 
+ []
+
+
+Overfull \hbox (1.14302pt too wide) in paragraph at lines 34--34
+ \EU1/EBGaramond(2)/bx/n/10.95 approximate posterior $[]$ computed by the Learn
+ed Inference Model, averaged over 
+ []
+
+
+Overfull \hbox (8.79344pt too wide) in paragraph at lines 34--34
+ \EU1/EBGaramond(2)/bx/n/10.95 the query distribution. The approximation is bet
+ter for areas that are sufficiently cov- 
+ []
+
+
+Overfull \hbox (6.05591pt too wide) in paragraph at lines 34--34
+ \EU1/EBGaramond(2)/bx/n/10.95 ered by the query distribution. (C) The average 
+KL divergence between the true and 
+ []
+
+
+Overfull \hbox (9.49423pt too wide) in paragraph at lines 34--34
+ \EU1/EBGaramond(2)/bx/n/10.95 approximate posteriors. Higher divergence occurs
+ in areas that are covered less by the 
+ []
+
+
+Overfull \hbox (8.11816pt too wide) in paragraph at lines 38--38
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Simulation of inferential errors in b
+inary symmetric problems with non-uniform pri- 
+ []
+
+
+Overfull \hbox (3.03502pt too wide) in paragraph at lines 38--38
+ \EU1/EBGaramond(2)/bx/n/10.95 ors. $[]\OT1/cmr/m/n/10.95 ([]\OMS/cmsy/m/n/10.9
+5 j[]\OT1/cmr/m/n/10.95 )$ \EU1/EBGaramond(2)/bx/n/10.95 represents true poster
+ior probabilities, $[]\OT1/cmr/m/n/10.95 ([]\OMS/cmsy/m/n/10.95 j[]\OT1/cmr/m/n
+/10.95 )$ \EU1/EBGaramond(2)/bx/n/10.95 represents subjective pos- 
+ []
+
+
+Overfull \hbox (2.88039pt too wide) in paragraph at lines 38--38
+ \EU1/EBGaramond(2)/bx/n/10.95 terior probabilities. Plots show prior log-odds 
+on the x axis, and the subjective prior 
+ []
+
+
+Overfull \hbox (16.36354pt too wide) in paragraph at lines 38--38
+ \EU1/EBGaramond(2)/bx/n/10.95 log-odds calculated as the subjective posterior 
+log-odds adjusted for subjective response 
+ []
+
+
+Overfull \hbox (16.50269pt too wide) in paragraph at lines 38--38
+ \EU1/EBGaramond(2)/bx/n/10.95 to the likelihood (as modulated by $[][]$). (A) 
+Data aggregated by$[]$. (B) Simulation with 
+ []
+
+
+Overfull \hbox (1.29265pt too wide) in paragraph at lines 38--38
+ \EU1/EBGaramond(2)/bx/n/10.95 low-capacity (2 hidden nodes) Learned Inference 
+Model. (C) Simulation with high- 
+ []
+
+
+Overfull \hbox (7.80789pt too wide) in paragraph at lines 38--38
+ \EU1/EBGaramond(2)/bx/n/10.95 capacity (8 hidden nodes) Learned Inference Mode
+l. The shaded curves show the lin- 
+ []
+
+[8]
+Overfull \hbox (0.6612pt too wide) in paragraph at lines 39--39
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Simulations of inferential errors wit
+h high capacity and a biased query distribution. 
+ []
+
+
+Overfull \hbox (6.08278pt too wide) in paragraph at lines 39--39
+ []\OT1/cmr/m/n/10.95 ([]\OMS/cmsy/m/n/10.95 j[]\OT1/cmr/m/n/10.95 )$ \EU1/EBGa
+ramond(2)/bx/n/10.95 represents true posterior probabilities, $[]\OT1/cmr/m/n/1
+0.95 ([]\OMS/cmsy/m/n/10.95 j[]\OT1/cmr/m/n/10.95 )$ \EU1/EBGaramond(2)/bx/n/10
+.95 represents subjective posterior 
+ []
+
+
+Overfull \hbox (24.15623pt too wide) in paragraph at lines 39--39
+ \EU1/EBGaramond(2)/bx/n/10.95 probabilities. (A) Simulation of high-capacity (
+8 hidden units) Learned Inference Model. 
+ []
+
+
+Overfull \hbox (10.58191pt too wide) in paragraph at lines 39--39
+ \EU1/EBGaramond(2)/bx/n/10.95 (B) Simulation of low-capacity (2 hidden units) 
+Learned Inference Model with biased 
+ []
+
+
+Overfull \hbox (11.47978pt too wide) in paragraph at lines 39--39
+ \EU1/EBGaramond(2)/bx/n/10.95 query distribution. Left: subjective posterior l
+og-odds vs. Bayesian posterior log-odds. 
+ []
+
+
+Overfull \hbox (10.38765pt too wide) in paragraph at lines 39--39
+ \EU1/EBGaramond(2)/bx/n/10.95 Middle: estimated sensitivity to the likelihood 
+$[][]$ vs. sample size $[]$. Right: estimated 
+ []
+
+
+Overfull \hbox (12.04189pt too wide) in paragraph at lines 39--39
+ \EU1/EBGaramond(2)/bx/n/10.95 sensitivity to the likelihood vs. diagnosticity 
+$[]$. The shaded curves show the linear and 
+ []
+
+
+Overfull \hbox (3.70164pt too wide) in paragraph at lines 40--40
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Strength and weight in probabilistic 
+judgment. (A) Regression coefficients reported 
+ []
+
+
+Overfull \hbox (11.76656pt too wide) in paragraph at lines 40--40
+ \EU1/EBGaramond(2)/bx/n/10.95 in$[]$. (B) Regression coefficients estimated fr
+om simulations of the Learned Inference 
+ []
+
+
+Overfull \hbox (0.36192pt too wide) in paragraph at lines 41--41
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Variance explained by strength and we
+ight independently. These plots show regres- 
+ []
+
+
+Overfull \hbox (4.28564pt too wide) in paragraph at lines 41--41
+ \EU1/EBGaramond(2)/bx/n/10.95 sions between the log of the strength or weight 
+of the evidence against the log of the 
+ []
+
+
+Overfull \hbox (23.11603pt too wide) in paragraph at lines 41--41
+ \EU1/EBGaramond(2)/bx/n/10.95 posterior log-odds. (A) For samples drawn from t
+he true generative process, the strength 
+ []
+
+
+Overfull \hbox (3.45552pt too wide) in paragraph at lines 41--41
+ \EU1/EBGaramond(2)/bx/n/10.95 explains more variance in the posterior. (B) For
+ the stimuli used in$[]$, the weight ex- 
+ []
+
+
+Overfull \hbox (7.85536pt too wide) in paragraph at lines 41--41
+ \EU1/EBGaramond(2)/bx/n/10.95 plains almost none of the variance in the log po
+sterior log-odds, whereas the strength 
+ []
+
+[9]
+Overfull \hbox (9.18762pt too wide) in paragraph at lines 44--44
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Screen shots of urn experiment. (A) I
+n the condition with informative priors and un- 
+ []
+
+
+Overfull \hbox (9.0574pt too wide) in paragraph at lines 44--44
+ \EU1/EBGaramond(2)/bx/n/10.95 informative likelihoods, the wheel of fortune ha
+d urn probabilities of $[]\OML/cmm/m/it/10.95 :[]; []:[]$\EU1/EBGaramond(2)/bx/
+n/10.95 , or $[]\OML/cmm/m/it/10.95 :[]$\EU1/EBGaramond(2)/bx/n/10.95 . 
+ []
+
+
+Overfull \hbox (12.31447pt too wide) in paragraph at lines 44--44
+ \EU1/EBGaramond(2)/bx/n/10.95 The proportions of blue balls in the urns was $[
+]\OML/cmm/m/it/10.95 :[]$ \EU1/EBGaramond(2)/bx/n/10.95 or $[]\OML/cmm/m/it/10.
+95 :[]$\EU1/EBGaramond(2)/bx/n/10.95 . (B) In the condition with un- 
+ []
+
+
+Overfull \hbox (2.88406pt too wide) in paragraph at lines 44--44
+ \EU1/EBGaramond(2)/bx/n/10.95 informative priors and informative likelihoods, 
+the wheel of fortune had urn proba- 
+ []
+
+
+Overfull \hbox (4.45721pt too wide) in paragraph at lines 45--45
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Results of urn experiment. The y-axis
+ shows estimates for the regression coefficients 
+ []
+
+
+Overfull \hbox (2.32234pt too wide) in paragraph at lines 45--45
+ [][]$ \EU1/EBGaramond(2)/bx/n/10.95 and $[][]$ (see Equation 4.10), and the x-
+axis represents the experimental condition. 
+ []
+
+
+Overfull \hbox (10.18771pt too wide) in paragraph at lines 45--45
+ \EU1/EBGaramond(2)/bx/n/10.95 (A) Subjects weighted the prior more in the info
+rmative prior than in the informative 
+ []
+
+
+Overfull \hbox (17.45483pt too wide) in paragraph at lines 45--45
+ \EU1/EBGaramond(2)/bx/n/10.95 likelihood condition. (B) Subjects weighted the 
+likelihood more in the informative like- 
+ []
+
+
+Overfull \hbox (30.11307pt too wide) in paragraph at lines 45--45
+ \EU1/EBGaramond(2)/bx/n/10.95 lihood than in the informative prior condition. 
+(C) The Learned Inference Model weights 
+ []
+
+
+Overfull \hbox (3.99004pt too wide) in paragraph at lines 45--45
+ \EU1/EBGaramond(2)/bx/n/10.95 the prior more in the informative prior conditio
+n as compared to in the informative 
+ []
+
+
+Overfull \hbox (8.05975pt too wide) in paragraph at lines 45--45
+ \EU1/EBGaramond(2)/bx/n/10.95 likelihood condition. (D) The Learned Inference 
+Model weights the likelihood more 
+ []
+
+
+Overfull \hbox (1.55913pt too wide) in paragraph at lines 45--45
+ \EU1/EBGaramond(2)/bx/n/10.95 in the informative likelihood condition as compa
+red in the informative prior condi- 
+ []
+
+
+Overfull \hbox (22.33855pt too wide) in paragraph at lines 46--46
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Base rate neglect within and between 
+subjects. The y-axis shows the reaction to the prior 
+ []
+
+
+Overfull \hbox (0.14658pt too wide) in paragraph at lines 46--46
+ \EU1/EBGaramond(2)/bx/n/10.95 as measured in predictions from the Learned Infe
+rence Model, the x-axis shows the 
+ []
+
+
+Overfull \hbox (11.67325pt too wide) in paragraph at lines 46--46
+ \EU1/EBGaramond(2)/bx/n/10.95 different conditions. Reaction to the prior here
+ is measured by the difference between 
+ []
+
+
+Overfull \hbox (7.74956pt too wide) in paragraph at lines 46--46
+ \EU1/EBGaramond(2)/bx/n/10.95 the responses given to test queries in which the
+ base rate was $[][]\OT1/cmr/m/n/10.95 %$ \EU1/EBGaramond(2)/bx/n/10.95 and tho
+se in which 
+ []
+
+
+Overfull \hbox (7.11078pt too wide) in paragraph at lines 46--46
+ \EU1/EBGaramond(2)/bx/n/10.95 the base rate was $[][]\OT1/cmr/m/n/10.95 %$\EU1
+/EBGaramond(2)/bx/n/10.95 . Thus, a greater difference indicates a stronger rea
+ction to prior 
+ []
+
+
+Overfull \hbox (10.7206pt too wide) in paragraph at lines 46--46
+ \EU1/EBGaramond(2)/bx/n/10.95 information. The model simulations of the within
+-subjects design show a stronger re- 
+ []
+
+
+Overfull \hbox (26.3718pt too wide) in paragraph at lines 46--46
+ \EU1/EBGaramond(2)/bx/n/10.95 action to the base rates than the simulations of
+ the between-subjects design (which shows 
+ []
+
+
+Overfull \hbox (2.62854pt too wide) in paragraph at lines 46--46
+ \EU1/EBGaramond(2)/bx/n/10.95 no reaction to the base rate at all). Both of th
+ese conditions produce under-reaction 
+ []
+
+[10]
+Overfull \hbox (10.87392pt too wide) in paragraph at lines 47--47
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Inferential errors in a continuous do
+main. (A) Reanalysis of data from the payoff pre- 
+ []
+
+
+Overfull \hbox (20.74364pt too wide) in paragraph at lines 47--47
+ \EU1/EBGaramond(2)/bx/n/10.95 diction task collected by$[]$. (B) Simulations o
+f the Learned Inference Model. Each panel 
+ []
+
+
+Overfull \hbox (14.35963pt too wide) in paragraph at lines 47--47
+ \EU1/EBGaramond(2)/bx/n/10.95 shows subjective updates from prior to posterior
+ ($[]$Data) on the y-axis and the update 
+ []
+
+
+Overfull \hbox (3.46075pt too wide) in paragraph at lines 47--47
+ \EU1/EBGaramond(2)/bx/n/10.95 of a rational (hierarchical) model ($[]$Rational
+) on the x-axis. Error bars represent the 
+ []
+
+
+Overfull \hbox (29.18228pt too wide) in paragraph at lines 50--50
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Belief bias. Top: experimental data. 
+Bottom: simulations of the Learned Inference Model. 
+ []
+
+
+Overfull \hbox (2.99236pt too wide) in paragraph at lines 50--50
+ \EU1/EBGaramond(2)/bx/n/10.95 (A) Empirical results for the believable conditi
+on$[]$. (B) Empirical results for the un- 
+ []
+
+
+Overfull \hbox (16.2467pt too wide) in paragraph at lines 50--50
+ \EU1/EBGaramond(2)/bx/n/10.95 believable condition. (C) Simulated results for 
+the believable condition. (D) Simulated 
+ []
+
+
+Overfull \hbox (22.57947pt too wide) in paragraph at lines 50--50
+ \EU1/EBGaramond(2)/bx/n/10.95 results for the unbelievable condition. The corr
+elation between the actual and estimated 
+ []
+
+
+Overfull \hbox (4.93173pt too wide) in paragraph at lines 50--50
+ \EU1/EBGaramond(2)/bx/n/10.95 posterior is closer to 1 (i.e., exact Bayesian i
+nference) in the believable condition than 
+ []
+
+
+Overfull \hbox (0.37286pt too wide) in paragraph at lines 50--50
+ \EU1/EBGaramond(2)/bx/n/10.95 in the unbelievable condition. The Learned Infer
+ence Model reproduces this effect. 
+ []
+
+
+Overfull \hbox (6.7161pt too wide) in paragraph at lines 51--51
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Memory effect. (A) Observed subadditi
+vity effect in query 2 reported in$[]$. Cues that 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 51--51
+ \EU1/EBGaramond(2)/bx/n/10.95 were similar to a previous query showed a higher
+ effect than cues that were less sim- 
+ []
+
+
+Overfull \hbox (10.40305pt too wide) in paragraph at lines 51--51
+ \EU1/EBGaramond(2)/bx/n/10.95 ilar, indicating strategic reuse of past computa
+tion. (B) Simulated subadditivity effect. 
+ []
+
+
+Overfull \hbox (1.23062pt too wide) in paragraph at lines 51--51
+ \EU1/EBGaramond(2)/bx/n/10.95 Provided that the model was trained to exhibit a
+ subadditivity effect in a first query, 
+ []
+
+
+Overfull \hbox (9.22047pt too wide) in paragraph at lines 51--51
+ \EU1/EBGaramond(2)/bx/n/10.95 this effect remained stronger for similar querie
+s than for dissimilar queries. Error bars 
+ []
+
+[11]
+Overfull \hbox (13.2604pt too wide) in paragraph at lines 52--52
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Correction prior. (A) Simulation resu
+lts from the correction prior model in$[]$ exhibit- 
+ []
+
+
+Overfull \hbox (17.54245pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 ing conservatism. Black line represents the opti
+mal response and the colored lines show 
+ []
+
+
+Overfull \hbox (0.5152pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 estimates from different parameterizations of th
+e model. (B) Quadratic relation be- 
+ []
+
+
+Overfull \hbox (3.01544pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 tween the variance of subjective probability est
+imates and mean subjective probabil- 
+ []
+
+
+Overfull \hbox (13.15092pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 ity estimates, as observed by$[]$. Points show d
+ata points from previous empirical stud- 
+ []
+
+
+Overfull \hbox (14.39618pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 ies. The line shows best fit quadratic fit to th
+is data. (C) The Learned Inference Model 
+ []
+
+
+Overfull \hbox (1.04079pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 replicates the conservatism effect. Points repre
+sent mean estimates from our model, 
+ []
+
+
+Overfull \hbox (9.67305pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 the pink line represents the best fit linear reg
+ression to these points, the black line rep- 
+ []
+
+
+Overfull \hbox (14.9473pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 resents the optimal response. (D) The Learned In
+ference Model replicates the variance 
+ []
+
+
+Overfull \hbox (9.7351pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 effect. Points represent variance of the subject
+ive responses from our model for differ- 
+ []
+
+
+Overfull \hbox (20.55371pt too wide) in paragraph at lines 52--52
+ \EU1/EBGaramond(2)/bx/n/10.95 ent mean subjective responses. The pink line rep
+resents the best fit quadratic fit to these 
+ []
+
+
+Overfull \hbox (7.98674pt too wide) in paragraph at lines 53--53
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Performance of the L-HBM. Simulation 
+results of a hierarchical Bayesian model that 
+ []
+
+
+Overfull \hbox (19.78369pt too wide) in paragraph at lines 53--53
+ \EU1/EBGaramond(2)/bx/n/10.95 infers the underlying parameters in the the expe
+riment reported by$[]$. The Y-axis shows 
+ []
+
+
+Overfull \hbox (2.40224pt too wide) in paragraph at lines 53--53
+ \EU1/EBGaramond(2)/bx/n/10.95 the L-HBM’s updates from prior to posterior ($[]
+$Data) and the X-axis shows the up- 
+ []
+
+
+Overfull \hbox (12.45438pt too wide) in paragraph at lines 53--53
+ \EU1/EBGaramond(2)/bx/n/10.95 date of a rational (hierarchical) model ($[]$Rat
+ional; a HBM that knows the true param- 
+ []
+
+
+Overfull \hbox (10.633pt too wide) in paragraph at lines 53--53
+ \EU1/EBGaramond(2)/bx/n/10.95 eters for the underlying generative process). Er
+ror bars represent the standard error of 
+ []
+
+[12]
+Overfull \hbox (15.60796pt too wide) in paragraph at lines 59--59
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 a) Active vs Random Conditional, b)As
+sociative Baseline vs Active Conditional, where 
+ []
+
+
+Overfull \hbox (8.0561pt too wide) in paragraph at lines 60--60
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experiment 1. Agents do causal reason
+ing from observational data. a) Average perfor- 
+ []
+
+
+Overfull \hbox (0.17577pt too wide) in paragraph at lines 60--60
+ \EU1/EBGaramond(2)/bx/n/10.95 mance of the agents tested in this experiment. b
+) Performance split by the presence 
+ []
+
+
+Overfull \hbox (1.42767pt too wide) in paragraph at lines 60--60
+ \EU1/EBGaramond(2)/bx/n/10.95 or absence of at least one parent (Parent and Or
+phan respectively) on the externally 
+ []
+
+
+Overfull \hbox (10.58922pt too wide) in paragraph at lines 60--60
+ \EU1/EBGaramond(2)/bx/n/10.95 intervened node. c) Quiz phase for a test CBN. G
+reen (red) edges indicate a weight of 
+ []
+
+
+Overfull \hbox (20.53795pt too wide) in paragraph at lines 60--60
+ \OT1/cmr/m/n/10.95 +[]$ \EU1/EBGaramond(2)/bx/n/10.95 ($\OMS/cmsy/m/n/10.95 ^^
+@[]$\EU1/EBGaramond(2)/bx/n/10.95 ). Black represents the intervened node, gree
+n (red) nodes indicate a positive (neg- 
+ []
+
+
+Overfull \hbox (1.7197pt too wide) in paragraph at lines 60--60
+ \EU1/EBGaramond(2)/bx/n/10.95 ative) value, white indicates a zero value. The 
+blue circles indicate the agent’s choice. 
+ []
+
+
+Overfull \hbox (24.15808pt too wide) in paragraph at lines 60--60
+ \EU1/EBGaramond(2)/bx/n/10.95 Left panel: The undirected version of $\OMS/cmsy
+/m/n/10.95 G$ \EU1/EBGaramond(2)/bx/n/10.95 and the nodes taking the mean value
+s prescribed 
+ []
+
+
+Overfull \hbox (6.06686pt too wide) in paragraph at lines 60--60
+ \EU1/EBGaramond(2)/bx/n/10.95 ent. The Associative Baseline’s choice is consis
+tent with maximizing these (incorrect) 
+ []
+
+
+Overfull \hbox (6.5965pt too wide) in paragraph at lines 60--60
+ \EU1/EBGaramond(2)/bx/n/10.95 node values. Right panel: $\OMS/cmsy/m/n/10.95 G
+[]$ \EU1/EBGaramond(2)/bx/n/10.95 and the nodes taking the mean values prescrib
+ed 
+ []
+
+
+Overfull \hbox (0.13977pt too wide) in paragraph at lines 60--60
+ \EU1/EBGaramond(2)/bx/n/10.95 by $[][]\OT1/cmr/m/n/10.95 ([][]\OMS/cmsy/m/n/10
+.95 j[][] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@[]\OT1/cmr/m/n/10.95 )$\E
+U1/EBGaramond(2)/bx/n/10.95 . The Active-Conditional Agent’s choice is consiste
+nt 
+ []
+
+[13]
+Overfull \hbox (0.19403pt too wide) in paragraph at lines 61--61
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experiment 2. Agents do causal reason
+ing from interventional data. a) Average per- 
+ []
+
+
+Overfull \hbox (4.59592pt too wide) in paragraph at lines 61--61
+ \EU1/EBGaramond(2)/bx/n/10.95 formance of the agents tested in this experiment
+. See main text for details. b) Perfor- 
+ []
+
+
+Overfull \hbox (21.94801pt too wide) in paragraph at lines 61--61
+ \EU1/EBGaramond(2)/bx/n/10.95 mance split by the presence or absence of unobse
+rved confounders (abbreviated as Conf. 
+ []
+
+
+Overfull \hbox (10.90314pt too wide) in paragraph at lines 61--61
+ \EU1/EBGaramond(2)/bx/n/10.95 and Unconf.). c) Quiz phase for a test CBN. See 
+Figure 6.2 for a legend. Here, the left 
+ []
+
+
+Overfull \hbox (24.96582pt too wide) in paragraph at lines 61--61
+ \EU1/EBGaramond(2)/bx/n/10.95 panel shows the full $\OMS/cmsy/m/n/10.95 G$ \EU
+1/EBGaramond(2)/bx/n/10.95 and the nodes taking the mean values prescribed by $
+[]\OT1/cmr/m/n/10.95 ([][]\OMS/cmsy/m/n/10.95 j[][] \OT1/cmr/m/n/10.95 = 
+ []
+
+
+Overfull \hbox (11.77914pt too wide) in paragraph at lines 61--61
+ \OMS/cmsy/m/n/10.95 ^^@[]\OT1/cmr/m/n/10.95 )$\EU1/EBGaramond(2)/bx/n/10.95 . 
+We see that the Active-Cond Agent’s choice is consistent with choosing based on
+ 
+ []
+
+
+Overfull \hbox (2.6691pt too wide) in paragraph at lines 61--61
+ \EU1/EBGaramond(2)/bx/n/10.95 these (incorrect) node values. The right panel s
+hows $\OMS/cmsy/m/n/10.95 G[]$ \EU1/EBGaramond(2)/bx/n/10.95 and the nodes taki
+ng 
+ []
+
+
+Overfull \hbox (7.2463pt too wide) in paragraph at lines 61--61
+ \EU1/EBGaramond(2)/bx/n/10.95 the mean values prescribed by $[][]\OT1/cmr/m/n/
+10.95 ([][]\OMS/cmsy/m/n/10.95 j[][] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^
+^@[]\OT1/cmr/m/n/10.95 )$\EU1/EBGaramond(2)/bx/n/10.95 . We see that the Active
+-Int. 
+ []
+
+[14]
+Overfull \hbox (3.14505pt too wide) in paragraph at lines 64--64
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 (a): A CBN $\OMS/cmsy/m/n/10.95 G$ \E
+U1/EBGaramond(2)/bx/n/10.95 with a confounder for the effect of exercise ($[]$)
+ on heath ($[]$) given by 
+ []
+
+
+Overfull \hbox (15.8744pt too wide) in paragraph at lines 65--65
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Experiment 3. Agents do counterfactua
+l reasoning. a) Performance of the agents tested 
+ []
+
+
+Overfull \hbox (3.64693pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 in this experiment. Note that performance can be
+ above 1.0 since the counterfactual 
+ []
+
+
+Overfull \hbox (12.49815pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 agent can theoretically perform better than the 
+optimal interventional baseline, which 
+ []
+
+
+Overfull \hbox (17.52785pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 doesn’t have access to noise information. See ma
+in text for details. b) Performance split 
+ []
+
+
+Overfull \hbox (16.57886pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 by if the maximum node value in the quiz phase i
+s degenerate (Deg.) or distinct (Dist.). 
+ []
+
+
+Overfull \hbox (2.32199pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 c) Quiz phase for an example test-CBN. See Figur
+es in Main text for a legend. Here, 
+ []
+
+
+Overfull \hbox (86.9469pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 the left panel shows $\OMS/cmsy/m/n/10.95 G[]$ \
+EU1/EBGaramond(2)/bx/n/10.95 and the nodes taking the mean values prescribed by
+ $[][]\OT1/cmr/m/n/10.95 ([][]\OMS/cmsy/m/n/10.95 j[][] \OT1/cmr/m/n/10.95 = 
+ []
+
+
+Overfull \hbox (13.46179pt too wide) in paragraph at lines 65--65
+ \OMS/cmsy/m/n/10.95 ^^@[]\OT1/cmr/m/n/10.95 )$\EU1/EBGaramond(2)/bx/n/10.95 . 
+We see that the Active-Int. Agent’s choice is consistent with maximizing on the
+se 
+ []
+
+
+Overfull \hbox (9.97969pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 node values, where it makes a random choice betw
+een two nodes with the same value. 
+ []
+
+
+Overfull \hbox (15.03531pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 The right panel panel shows $\OMS/cmsy/m/n/10.95
+ G[]$ \EU1/EBGaramond(2)/bx/n/10.95 and the nodes taking the exact values presc
+ribed 
+ []
+
+
+Overfull \hbox (4.69862pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 by the means of $[][]\OT1/cmr/m/n/10.95 ([][]\OM
+S/cmsy/m/n/10.95 j[][] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/10.95 ^^@[]\OT1/cmr/m
+/n/10.95 )$\EU1/EBGaramond(2)/bx/n/10.95 , combined with the specific randomnes
+s 
+ []
+
+
+Overfull \hbox (16.5679pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 inferred from the previous time step. As a resul
+t of accounting for the randomness, the 
+ []
+
+
+Overfull \hbox (5.65076pt too wide) in paragraph at lines 65--65
+ \EU1/EBGaramond(2)/bx/n/10.95 two previously degenerate maximum values are now
+ distinct. We see that the Active- 
+ []
+
+
+Overfull \hbox (17.17018pt too wide) in paragraph at lines 71--71
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Results for non-linear graphs. (a) Co
+mparing average episode reward for agents trained 
+ []
+
+[15]
+Overfull \hbox (2.74165pt too wide) in paragraph at lines 72--72
+ [][] [][][]\EU1/EBGaramond(2)/bx/n/10.95 Results for $[] \OT1/cmr/m/n/10.95 = 
+[]$ \EU1/EBGaramond(2)/bx/n/10.95 graphs. (a) Comparing average episode reward 
+for agents trained 
+ []
+
+)
+\tf@lof=\write6
+\openout6 = `dissertation.lof'.
+
+ [16]
+\openout2 = `chapters/introduction.aux'.
+
+ (./chapters/introduction.tex
+Chapter 1.
+) [17
+
+
+]
+\openout2 = `chapters/chapter1.aux'.
+
+ (./chapters/chapter1.tex
+Chapter 2.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 31.
 Package microtype Info: Character `•' is missing
@@ -1850,7 +3228,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--31
  and chased away, returned by stealth through the back
  []
 
-[2
+[18
 
 
 
@@ -1890,7 +3268,7 @@ Overfull \hbox (27.50186pt too wide) in paragraph at lines 38--40
 e only a subset, leading to judgment biases$[]$. 
  []
 
-[3]
+[19]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/bx/n' will be
 (Font)              scaled to size 12.0pt on input line 43.
 LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/bx/n' will be
@@ -1899,108 +3277,6 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             `LatoRegular' (encoding: EU1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package microtype Info: Character `\u A' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\u a' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v C' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v c' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v D' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v d' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\dj ' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v E' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v e' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\u G' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\u g' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\.I' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\'L' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v L' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\'l' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v l' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v N' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v n' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\H O' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\H o' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\'R' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v R' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\'r' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v r' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\c S' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\c s' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\c T' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v T' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\c t' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\v t' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\H U' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\r U' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\H u' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\r u' is missing
-(microtype)             in font `\EU1/LatoRegular(0)/bx/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/bx/n' will be
 (Font)              scaled to size 7.99225pt on input line 43.
 LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/m/n' will be
@@ -2070,33 +3346,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--55
 
 LaTeX Warning: Float too large for page by 2.8232pt on input line 57.
 
-[4] [5] [6]
+[20] [21] [22]
 Overfull \hbox (1.74539pt too wide) in paragraph at lines 72--73
 \EU1/EBGaramond(2)/bx/n/10.95 In their simplest form, sample-based approximatio
 ns also known as \EU1/EBGaramond(2)/m/it/10.95 Monte Carlo \EU1/EBGaramond(2)/b
 x/n/10.95 approximations;$[]$, 
  []
 
-[7] [8] [9] [10] [11] [12]
+[23] [24] [25] [26] [27] [28]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(4)/m/n' will be
 (Font)              scaled to size 10.95pt on input line 129.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(4)/m/it' will be
 (Font)              scaled to size 10.95pt on input line 129.
-LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 129.
-Package microtype Info: Character `•' is missing
-(microtype)             in font `\EU1/EBGaramond(2)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `℃' is missing
-(microtype)             in font `\EU1/EBGaramond(2)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `™' is missing
-(microtype)             in font `\EU1/EBGaramond(2)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `−' is missing
-(microtype)             in font `\EU1/EBGaramond(2)/m/n/6'.
-(microtype)             Ignoring protrusion settings for this character.
- [13]
+ [29]
 Overfull \hbox (3.59508pt too wide) in paragraph at lines 140--140
  []|\EU1/EBGaramond(4)/bx/n/12 TB| 
  []
@@ -2171,25 +3433,25 @@ Overfull \hbox (27.10727pt too wide) in paragraph at lines 138--161
  [][] 
  []
 
-[14] [15]
+[30] [31]
 File: figures/sub.pdf Graphic file (type QTm)
  <use  "figures/sub.pdf" >
 LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/m/it' will be
 (Font)              scaled to size 8.09479pt on input line 181.
- [16] [17] [18]
+ [32] [33] [34]
 File: figures/super.pdf Graphic file (type QTm)
  <use  "figures/super.pdf" >
-[19] [20]
+[35] [36]
 File: figures/weak.pdf Graphic file (type QTm)
- <use  "figures/weak.pdf" > [21] [22]
+ <use  "figures/weak.pdf" > [37] [38]
 File: figures/dud.pdf Graphic file (type QTm)
  <use  "figures/dud.pdf" >
-[23] [24]
+[39] [40]
 File: figures/confidence.pdf Graphic file (type QTm)
- <use  "figures/confidence.pdf" > [25] [26]
+ <use  "figures/confidence.pdf" > [41] [42]
 File: figures/anchoring.pdf Graphic file (type QTm)
 
-<use  "figures/anchoring.pdf" > [27] [28]
+<use  "figures/anchoring.pdf" > [43] [44]
 Underfull \hbox (badness 10000) in paragraph at lines 285--285
 [][][]\EU1/EBGaramond(2)/m/n/10 We could also induce correlation between consec
 utive estimates by continuing the chain—i.e., carrying
@@ -2207,38 +3469,38 @@ Underfull \hbox (badness 10000) in paragraph at lines 285--285
 les and will always be lower error on average than the
  []
 
-[29]
+[45]
 File: figures/error.pdf Graphic file (type QTm)
- <use  "figures/error.pdf" > [30]
+ <use  "figures/error.pdf" > [46]
 Underfull \hbox (badness 10000) in paragraph at lines 296--296
 |[]\EU1/EBGaramond(2)/m/sc/12 Summary of simulation results and comparison with
  importance sam-
  []
 
-[31] [32] [33] [34]
+[47] [48] [49] [50]
 Overfull \hbox (7.57822pt too wide) in paragraph at lines 328--329
 \EU1/EBGaramond(2)/bx/n/10.95 ble, we focus on object-level co-occurrence stati
 stics, which have recently been quantified by Greene$[]$$[]$$[]$. 
  []
 
-[35] [36]
+[51] [52]
 Overfull \hbox (47.88753pt too wide) in paragraph at lines 357--372
  [][] 
  []
 
 File: figures/screenshot.png Graphic file (type QTm)
-<use  "figures/screenshot.png" > [37] [38]
+<use  "figures/screenshot.png" > [53] [54]
 File: figures/estimates.pdf Graphic file (type QTm)
  <use  "figures/estimates.pdf" >
-[39] [40] [41]
+[55] [56] [57]
 File: figures/estimate2new.pdf Graphic file (type QTm)
- <use  "figures/estimate2new.pdf" > [42] [43]
+ <use  "figures/estimate2new.pdf" > [58] [59]
 Overfull \hbox (9.95229pt too wide) in paragraph at lines 453--454
 []\EU1/EBGaramond(2)/bx/n/10.95 Prior studies suggest that—when averaged over l
 ong time periods or across individuals—probability 
  []
 
-[44] [45]
+[60] [61]
 Underfull \hbox (badness 10000) in paragraph at lines 487--487
 [][][]\EU1/EBGaramond(2)/m/n/10 While an importance sampler does reproduce this
  effect, we have elaborated in the section comparing
@@ -2250,18 +3512,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 487--487
 tion does not extend to follow-up studies on this
  []
 
-[46] [47]
+[62] [63]
 Overfull \hbox (4.46754pt too wide) in paragraph at lines 515--517
 \EU1/EBGaramond(2)/bx/n/10.95 This material is based upon work supported by the
  Center for Brains, Minds and Machines (CBMM), 
  []
 
-) [48]
+) [64]
 \openout2 = `chapters/chapter2.aux'.
 
  (./chapters/chapter2.tex
 Chapter 3.
-[49
+[65
 
 
 
@@ -2287,7 +3549,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--26
 rior), a bound (variational free energy) can be tractably
  []
 
-[50] [51] [52] [53] [54] [55]
+[66] [67] [68] [69] [70] [71]
 File: figures/Remembrance_figs_2.pdf Graphic file (type QTm)
  <use  "figures/Remembrance_figs_2.pdf" >
 LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/bx/n' will be
@@ -2300,7 +3562,7 @@ File: figures/Remembrance_figs_4.pdf Graphic file (type QTm)
 <use  "figures/Remembrance_figs_4.pdf" >
 File: figures/Remembrance_figs_5.pdf Graphic file (type QTm)
 
-<use  "figures/Remembrance_figs_5.pdf" > [56] [57] [58] [59]
+<use  "figures/Remembrance_figs_5.pdf" > [72] [73] [74] [75]
 File: figures/amortization_schematic.pdf Graphic file (type QTm)
 
 <use  "figures/amortization_schematic.pdf" >
@@ -2312,7 +3574,7 @@ LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/m/n' will be
 (Font)              scaled to size 5.66635pt on input line 125.
 LaTeX Font Info:    Font shape `EU1/LatoRegular(0)/m/n' will be
 (Font)              scaled to size 4.0474pt on input line 125.
- [60]
+ [76]
 Underfull \hbox (badness 10000) in paragraph at lines 133--133
 [][][]\EU1/EBGaramond(2)/bx/n/10 We focus on sampling-based amortization strate
 gies because our earlier experiments support the idea that
@@ -2330,9 +3592,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 133--133
 xity by re-using a feedforward mapping from inputs to
  []
 
-[61] [62]
+[77] [78]
 File: figures/changingN.pdf Graphic file (type QTm)
- <use  "figures/changingN.pdf" > [63] [64]
+ <use  "figures/changingN.pdf" > [79] [80]
 Underfull \hbox (badness 10000) in paragraph at lines 166--166
 [][][]\EU1/EBGaramond(2)/bx/n/10 Our findings do not strongly depend on the use
  of the KL divergence measure and all of our qualitative
@@ -2344,13 +3606,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--166
 ic distance measure such as the Jensen-Shannon
  []
 
-[65]
+[81]
 Overfull \hbox (1.67444pt too wide) in paragraph at lines 171--172
 \EU1/EBGaramond(2)/bx/n/10.95 hypothesis) in such a way that subadditive or sup
 eradditive probability judgments could be elicited$[]$. 
  []
 
-[66]
+[82]
 File: figures/screenshot.png Graphic file (type QTm)
  <use  "figures/screenshot.png" >
 Underfull \hbox (badness 10000) in paragraph at lines 189--189
@@ -2358,12 +3620,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 189--189
 med that two consecutive trials are related and were there-
  []
 
-[67]
+[83]
 Overfull \hbox (52.36356pt too wide) in paragraph at lines 199--214
  [][] 
  []
 
-[68]
+[84]
 Underfull \hbox (badness 10000) in paragraph at lines 227--227
 [][][]\EU1/EBGaramond(2)/bx/n/10 The extent and direction of this asymmetry dep
 ends on the difference between how many samples it
@@ -2381,7 +3643,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 227--227
 ility areas when the chain is far away from them (the root
  []
 
-[69]
+[85]
 File: figures/amo1results.pdf Graphic file (type QTm)
  <use  "figures/amo1results.pdf" >
 Underfull \hbox (badness 10000) in paragraph at lines 242--242
@@ -2401,9 +3663,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 242--242
 ller correlations and weaker effects overall as compared to
  []
 
-[70] [71]
+[86] [87]
 File: figures/exp1correspondence.pdf Graphic file (type QTm)
- <use  "figures/exp1correspondence.pdf" > [72] [73] [74]
+ <use  "figures/exp1correspondence.pdf" > [88] [89] [90]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/bx/n' will be
 (Font)              scaled to size 8.0pt on input line 277.
 Package microtype Info: Character `•' is missing
@@ -2423,32 +3685,32 @@ Overfull \hbox (16.28093pt too wide) in paragraph at lines 276--291
  [][] 
  []
 
-[75]
+[91]
 File: figures/amo2results.pdf Graphic file (type QTm)
- <use  "figures/amo2results.pdf" > [76] [77] [78]
+ <use  "figures/amo2results.pdf" > [92] [93] [94]
 File: figures/exp2correspondence.pdf Graphic file (type QTm)
 
-<use  "figures/exp2correspondence.pdf" > [79] [80] [81]
+<use  "figures/exp2correspondence.pdf" > [95] [96] [97]
 Overfull \hbox (63.22755pt too wide) in paragraph at lines 349--359
  [][] 
  []
 
-[82] [83]
+[98] [99]
 File: figures/amo3results.pdf Graphic file (type QTm)
- <use  "figures/amo3results.pdf" > [84]
+ <use  "figures/amo3results.pdf" > [100]
 File: figures/exp3correspondence.pdf Graphic file (type QTm)
 
-<use  "figures/exp3correspondence.pdf" > [85] [86] [87] [88] [89] [90] [91]
-[92] [93]) [94]
+<use  "figures/exp3correspondence.pdf" > [101] [102] [103] [104] [105] [106]
+[107] [108] [109]) [110]
 \openout2 = `chapters/chapter3.aux'.
 
  (./chapters/chapter3.tex
 Chapter 4.
-[95
+[111
 
 
 
-] [96]
+] [112]
 Underfull \hbox (badness 10000) in paragraph at lines 15--15
 [][][]\EU1/EBGaramond(2)/bx/n/10 We will mostly avoid the term “conservatism” t
 o denote under-reaction to data, because it is sometimes
@@ -2466,7 +3728,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--15
 ions only when the prior is uniform over hypotheses.
  []
 
-[97]
+[113]
 Underfull \hbox (badness 10000) in paragraph at lines 21--21
 [][][]\EU1/EBGaramond(2)/bx/n/10 When the recognition model is parametrized as 
 a neural network, it is sometimes also referred to as an
@@ -2503,13 +3765,13 @@ ly, we postulate an approximate \EU1/EBGaramond(2)/m/it/10.95 recognition model
 $[]$ 
  []
 
-[98] [99]
+[114] [115]
 Overfull \hbox (2.80318pt too wide) in paragraph at lines 37--38
 \EU1/EBGaramond(2)/bx/n/10.95 under-reacted to the evidence, revising their bel
 iefs less than mandated by Bayes’ rule (a phenomenon 
  []
 
-[100] [101] [102]
+[116] [117] [118]
 Underfull \hbox (badness 10000) in paragraph at lines 64--64
 [][][]\EU1/EBGaramond(2)/bx/n/10 Although base rate neglect was popularized by 
 Kahneman and Tversky’s work, it was in fact documented
@@ -2521,13 +3783,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--64
 observation was mostly ignored by subsequent research
  []
 
-[103] [104]
+[119] [120]
 Overfull \hbox (14.84814pt too wide) in paragraph at lines 82--83
 \EU1/EBGaramond(2)/bx/n/10.95 findings in more ‘realistic’ scenarios, such effe
 cts are also found in more laboratory-controlled paradigms 
  []
 
-[105] [106] [107] [108] [109] [110]
+[121] [122] [123] [124] [125] [126]
 File: Figures/memoryless0.png Graphic file (type QTm)
  <use  "Figures/memoryless0.png" >
 File: Figures/amortized0.png Graphic file (type QTm)
@@ -2544,8 +3806,8 @@ File: Figures/all_finalQs.png Graphic file (type QTm)
 
 <use  "Figures/all_finalQs.png" >
 File: Figures/all_KLs.png Graphic file (type QTm)
- <use  "Figures/all_KLs.png" > [111] [112]
-[113]
+ <use  "Figures/all_KLs.png" > [127] [128]
+[129]
 Underfull \hbox (badness 10000) in paragraph at lines 166--166
 [][][]\EU1/EBGaramond(2)/bx/n/10 In this parallel, the network in our LIM is no
 t intended to represent an actual network of neurons in
@@ -2581,7 +3843,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 166--166
 and specifics like the number of units in the bottleneck
  []
 
-[114] [115] [116]
+[130] [131] [132]
 Underfull \hbox (badness 10000) in paragraph at lines 185--185
 [][][]\EU1/EBGaramond(2)/bx/n/10 Crucially however, the stimuli actually used i
 n the experiment are much better represented in the query
@@ -2617,25 +3879,25 @@ Overfull \hbox (833.47166pt too wide) in paragraph at lines 194--200
 LaTeX Warning: Float too large for page by 64.00108pt on input line 200.
 
 File: figures/Benjamin_prior.pdf Graphic file (type QTm)
-<use  "figures/Benjamin_prior.pdf" > [117] [118] [119]
+<use  "figures/Benjamin_prior.pdf" > [133] [134] [135]
 File: figures/Benjamin_control_hor.pdf Graphic file (type QTm)
 
-<use  "figures/Benjamin_control_hor.pdf" > [120] [121] [122] [123]
+<use  "figures/Benjamin_control_hor.pdf" > [136] [137] [138] [139]
 File: figures/GT_fulltrain.pdf Graphic file (type QTm)
 
-<use  "figures/GT_fulltrain.pdf" > [124]
+<use  "figures/GT_fulltrain.pdf" > [140]
 File: figures/GT_rsquare_sample.pdf Graphic file (type QTm)
 
 <use  "figures/GT_rsquare_sample.pdf" >
 File: figures/GT_rsquare_stimuli.pdf Graphic file (type QTm)
 
-<use  "figures/GT_rsquare_stimuli.pdf" > [125] [126]
+<use  "figures/GT_rsquare_stimuli.pdf" > [141] [142]
 File: figures/urns.png Graphic file (type QTm)
 
-<use  "figures/urns.png" > [127] [128]
+<use  "figures/urns.png" > [143] [144]
 File: figures/resulturns.pdf Graphic file (type QTm)
  <use  "figures/resulturns.pdf" >
-[129] [130] [131] [132]
+[145] [146] [147] [148]
 File: figures/FC_temp.pdf Graphic file (type QTm)
  <use  "figures/FC_temp.pdf" >
 Underfull \hbox (badness 10000) in paragraph at lines 356--356
@@ -2661,7 +3923,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 356--356
 ribution in this space and reduces covariance between the
  []
 
-[133] [134] [135]
+[149] [150] [151]
 Underfull \hbox (badness 10000) in paragraph at lines 364--364
 [][][]\EU1/EBGaramond(2)/bx/n/10 This rational hierarchical model is assumed to
  know the true parameter values for $[]$, $[]$ and $[][]$. However,
@@ -2679,12 +3941,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 364--364
  a hierarchical Bayesian model that additionally also infers
  []
 
-[136]
+[152]
 File: figures/samexp.pdf Graphic file (type QTm)
  <use  "figures/samexp.pdf" >
 File: figures/samsim.pdf Graphic file (type QTm)
- <use  "figures/samsim.pdf" > [137] [138]
-[139]
+ <use  "figures/samsim.pdf" > [153] [154]
+[155]
 File: figures/cohenetal.pdf Graphic file (type QTm)
  <use  "figures/cohenetal.pdf" >
 Underfull \hbox (badness 10000) in paragraph at lines 407--407
@@ -2704,15 +3966,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--407
 $ as the training distribution (with $[][]$ as the test distribu-
  []
 
-[140] [141] [142] [143]
+[156] [157] [158] [159]
 File: figures/amonew.pdf Graphic file (type QTm)
- <use  "figures/amonew.pdf" > [144] [145]
+ <use  "figures/amonew.pdf" > [160] [161]
 Underfull \hbox (badness 10000) in paragraph at lines 443--443
 [][][]\EU1/EBGaramond(2)/bx/n/10 Epistemic uncertainty due to computational imp
 recision has been studied systematically in the field of
  []
 
-[146] [147]
+[162] [163]
 Underfull \hbox (badness 10000) in paragraph at lines 454--454
 [][][]\EU1/EBGaramond(2)/bx/n/10 We assume for simplicity that the inference en
 gine can directly sample from the posterior, though in
@@ -2730,10 +3992,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 454--454
 ne samples from a Markov chain whose stationary
  []
 
-[148]
+[164]
 File: figures/correctionprior2.pdf Graphic file (type QTm)
- <use  "figures/correctionprior2.pdf" > [149] [150] [151] [152] [153]
-[154] [155] [156] [157] [158]
+ <use  "figures/correctionprior2.pdf" > [165] [166] [167] [168] [169]
+[170] [171] [172] [173] [174]
 Underfull \hbox (badness 10000) in paragraph at lines 519--519
 [][][]\EU1/EBGaramond(2)/bx/n/10 While these models predict deviations from opt
 imality, they do not always specify a model for the re-
@@ -2757,7 +4019,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 519--519
  provides a model for what these context-sensitive ‘a
  []
 
-[159] [160] [161] [162] [163] [164]
+[175] [176] [177] [178] [179] [180]
 Overfull \hbox (1.85164pt too wide) in paragraph at lines 558--560
 \EU1/EBGaramond(2)/bx/n/10.95 from the fact that $\OMS/cmsy/m/n/10.95 L\OT1/cmr
 /m/n/10.95 [[][]([]\OMS/cmsy/m/n/10.95 j[]\OT1/cmr/m/n/10.95 )]$ \EU1/EBGaramon
@@ -2765,24 +4027,24 @@ d(2)/bx/n/10.95 is a lower bound on the “evidence” (log marginal likelihood)
 ] []\OT1/cmr/m/n/10.95 ([])$\EU1/EBGaramond(2)/bx/n/10.95 . 
  []
 
-[165]
+[181]
 Overfull \hbox (1.01129pt too wide) in paragraph at lines 568--570
 \EU1/EBGaramond(2)/bx/n/10.95 where $[]$ indexes iterations and $[][]$ is an it
 eration-dependent step-size. Provided $[][]$ satisfies the Robbins- 
  []
 
-[166] [167]
+[182] [183]
 File: figures/samstan.pdf Graphic file (type QTm)
- <use  "figures/samstan.pdf" > [168]) [169]
+ <use  "figures/samstan.pdf" > [184]) [185]
 \openout2 = `chapters/chapter4.aux'.
 
  (./chapters/chapter4.tex
 Chapter 5.
-[170
+[186
 
 
 
-] [171] [172] [173]
+] [187] [188] [189]
 Underfull \hbox (badness 10000) in paragraph at lines 26--26
 [][][]\EU1/EBGaramond(2)/bx/n/10 The details and implementation of the optimiza
 tion algorithm also contribute see$[]$ for an overview,
@@ -2794,27 +4056,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--26
 this has relatively little effect, and we leave this out of our
  []
 
-[174] [175] [176]
+[190] [191] [192]
 Overfull \hbox (2.10527pt too wide) in paragraph at lines 42--43
 \EU1/EBGaramond(2)/bx/n/10.95 The sentence embeddings we study in this paper ar
 e from a highly successful NLI system, InferSent$[]$. 
  []
 
-[177]
+[193]
 File: figures/InferSent_arch.png Graphic file (type QTm)
- <use  "figures/InferSent_arch.png" > [178] [179] [180]
+ <use  "figures/InferSent_arch.png" > [194] [195] [196]
 Overfull \hbox (1.01712pt too wide) in paragraph at lines 71--72
 []\EU1/EBGaramond(2)/bx/n/10.95 We considered pairs of sentences such that the 
 NLI relation between the sentences can be changed 
  []
 
-LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
-(Font)              scaled to size 9.35316pt on input line 77.
-Package microtype Info: Loading generic settings for font family
-(microtype)             `SourceCodePro' (encoding: EU1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-[181] [182]
+[197] [198]
 Underfull \hbox (badness 10000) in paragraph at lines 132--132
 [][][]\EU1/EBGaramond(2)/bx/n/10 Only a few words differed by more than $[]\OT1
 /cmr/m/n/10 %$ \EU1/EBGaramond(2)/bx/n/10 from their occurrence rate in SNLI, s
@@ -2828,7 +4084,7 @@ inevitable given the general structure of the comparison sentence pairs we use.
  All of
  []
 
-[183] [184]
+[199] [200]
 File: figures/bow-same-large.png Graphic file (type QTm)
  <use  "figures/bow-same-large.png" >
 File: figures/bow-ml-large-5.png Graphic file (type QTm)
@@ -2844,20 +4100,20 @@ File: figures/infersent-ml-large-2.png Graphic file (type QTm)
 <use  "figures/infersent-ml-large-2.png" >
 File: figures/infersent-not-large.png Graphic file (type QTm)
 
-<use  "figures/infersent-not-large.png" > [185] [186]
+<use  "figures/infersent-not-large.png" > [201] [202]
 Overfull \hbox (0.27003pt too wide) in paragraph at lines 192--193
 \EU1/EBGaramond(2)/bx/n/10.95 on the same-type comparisons), the question remai
 ns as to why it encodes this rule. With our knowl- 
  []
 
-[187] [188] [189] [190] [191] [192] [193] [194] [195] [196] [197] [198]
-[199] [200] [201]
+[203] [204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214]
+[215] [216] [217]
 Overfull \hbox (0.49272pt too wide) in paragraph at lines 455--460
 \EU1/EBGaramond(2)/bx/n/10.95 equally likely to occur in the context of a same-
 type sentence pair as it is in the context of a more/less- 
  []
 
-[202] [203]
+[218] [219]
 Underfull \hbox (badness 10000) in paragraph at lines 494--494
 [][][]\EU1/EBGaramond(2)/bx/n/10 In this experiment we only make comparisons be
 tween the performances of differently augmented
@@ -2887,16 +4143,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 494--494
 ting the learning environment’ for details on these). This
  []
 
-[204] [205] [206] [207] [208] [209]) [210]
+[220] [221] [222] [223] [224] [225]) [226]
 \openout2 = `chapters/chapter5.aux'.
 
  (./chapters/chapter5.tex
 Chapter 6.
-[211
+[227
 
 
 
-] [212] [213] [214] [215]
+] [228] [229] [230] [231]
 Underfull \hbox (badness 10000) in paragraph at lines 75--75
 [][][]\EU1/EBGaramond(2)/bx/n/10 When the CBN $\OMS/cmsy/m/n/10 G$ \EU1/EBGaram
 ond(2)/bx/n/10 is known, this process can be formalized as do-calculus$[]$. In 
@@ -2909,13 +4165,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 75--75
 usly perform causal identification using samples from
  []
 
-[216] [217] [218]
+[232] [233] [234]
 Underfull \hbox (badness 10000) in paragraph at lines 92--92
 [][][]\EU1/EBGaramond(2)/bx/n/10 ’Observation’ $[][]$ refers to the reinforceme
 nt learning term, i.e. the input from the environment to the
  []
 
-[219] [220] [221] [222] [223]
+[235] [236] [237] [238] [239]
 File: figures/fig2_conf_unconf_pars_act_pass_combined.pdf Graphic file (type QT
 m)
 
@@ -2924,15 +4180,15 @@ Overfull \hbox (12.46608pt too wide) in paragraph at lines 162--164
  [][] 
  []
 
-[224]
+[240]
 File: figures/fig_expt1.pdf Graphic file (type QTm)
- <use  "figures/fig_expt1.pdf" > [225] [226]
+ <use  "figures/fig_expt1.pdf" > [241] [242]
 
-LaTeX Warning: Reference `fig:expt1_conf' on page 227 undefined on input line 2
+LaTeX Warning: Reference `fig:expt1_conf' on page 243 undefined on input line 2
 05.
 
 File: figures/fig_expt2.pdf Graphic file (type QTm)
-<use  "figures/fig_expt2.pdf" > [227]
+<use  "figures/fig_expt2.pdf" > [243]
 File: figures/fig_causal_act_v_pass.pdf Graphic file (type QTm)
 
 <use  "figures/fig_causal_act_v_pass.pdf" >
@@ -2946,10 +4202,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 237--237
 hat our agents are able to infer from interventions even
  []
 
-[228] [229] [230] [231]
+[244] [245] [246] [247]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/bx/n' will be
 (Font)              scaled to size 17.28pt on input line 271.
- [232]
+ [248]
 Overfull \hbox (17.06152pt too wide) in paragraph at lines 282--283
 \EU1/EBGaramond(2)/bx/n/10.95 of the network, each action is a function of the 
 entire trajectory $\OMS/cmsy/m/n/10.95 H[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/1
@@ -2957,7 +4213,7 @@ entire trajectory $\OMS/cmsy/m/n/10.95 H[] \OT1/cmr/m/n/10.95 = \OMS/cmsy/m/n/1
 y/m/n/10.95 g$ 
  []
 
-[233] [234] [235] [236]
+[249] [250] [251] [252]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(2)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 396.
 Package microtype Info: Character `•' is missing
@@ -2972,33 +4228,33 @@ Package microtype Info: Character `™' is missing
 Package microtype Info: Character `−' is missing
 (microtype)             in font `\EU1/EBGaramond(2)/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
- [237] [238] [239] [240]
+ [253] [254] [255] [256]
 File: figures/fig_expt3.pdf Graphic file (type QTm)
 
-<use  "figures/fig_expt3.pdf" > [241]
+<use  "figures/fig_expt3.pdf" > [257]
 File: figures/fig_counterfactual_act_v_pass.pdf Graphic file (type QTm)
 
-<use  "figures/fig_counterfactual_act_v_pass.pdf" > [242]
+<use  "figures/fig_counterfactual_act_v_pass.pdf" > [258]
 File: figures/Nonlinear_results.pdf Graphic file (type QTm)
 
-<use  "figures/Nonlinear_results.pdf" > [243]
+<use  "figures/Nonlinear_results.pdf" > [259]
 File: figures/N6_results_active.pdf Graphic file (type QTm)
 
-<use  "figures/N6_results_active.pdf" >) [244] (./dissertation.bbl [245
+<use  "figures/N6_results_active.pdf" >) [260] (./dissertation.bbl [261
 
 
 
 ]
-[246] [247] [248] [249] [250] [251] [252] [253] [254] [255] [256] [257]
-[258] [259] [260] [261] [262] [263] [264] [265] [266] [267] [268] [269]
-[270] [271] [272] [273] [274]
+[262] [263] [264] [265] [266] [267] [268] [269] [270] [271] [272] [273]
+[274] [275] [276] [277] [278] [279] [280] [281] [282] [283] [284] [285]
+[286] [287] [288] [289] [290]
 Underfull \hbox (badness 1412) in paragraph at lines 1392--1396
 []\EU1/EBGaramond(2)/bx/n/10.95 Mnih, V., Badia, A., Mirza, M., Graves, A., Lil
 licrap, T., Harley, T., Silver, D., & 
  []
 
-[275] [276] [277] [278] [279] [280] [281] [282] [283] [284] [285] [286]
-[287] [288] [289] [290] [291] [292]) [293]
+[291] [292] [293] [294] [295] [296] [297] [298] [299] [300] [301] [302]
+[303] [304] [305] [306] [307] [308]) [309]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 46.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 46.
  (./dissertation.aux
@@ -3019,12 +4275,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 41182 strings out of 493591
- 808926 string characters out of 6143546
- 887349 words of memory out of 5000000
- 43776 multiletter control sequences out of 15000+600000
- 14172 words of font info for 124 fonts, out of 8000000 for 9000
+ 41206 strings out of 493591
+ 809726 string characters out of 6143546
+ 887595 words of memory out of 5000000
+ 43795 multiletter control sequences out of 15000+600000
+ 14188 words of font info for 126 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  62i,19n,107p,10474b,1228s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (301 pages).
+Output written on dissertation.pdf (317 pages).

@@ -64,7 +64,7 @@
 % Text layout.
 \RequirePackage[width=5.75in, letterpaper]{geometry}
 \usepackage{ragged2e}
-% added by ishita
+% start added by ishita
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{tablefootnote}
@@ -128,6 +128,7 @@
 
 \DeclareMathOperator*{\argmin}{argmin}
 \DeclareMathOperator*{\argmax}{argmax}
+% end added by ishita
 
 \RaggedRight
 \RequirePackage{graphicx}
