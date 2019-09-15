@@ -64,10 +64,67 @@
 % Text layout.
 \RequirePackage[width=5.75in, letterpaper]{geometry}
 \usepackage{ragged2e}
+% added by ishita
 \usepackage{amsmath}
 \usepackage{array}
 \usepackage{tablefootnote}
 \usepackage{subfig}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,shapes}
+\usepackage{wrapfig}
+
+\newcommand{\CBN}{CBN}
+\newcommand{\CBNs}{CBNs}
+
+\tikzstyle{dgraph}=[->, line width=1.5pt]
+\tikzstyle{hcont}=[circle,draw=black!50,thick,fill=black!10,minimum size=6mm,>=stealth]  % hidden continuous node
+\tikzstyle{ocont}=[circle,draw=blue!50,thick,fill=blue!10,minimum size=6mm,>=stealth]  % observed continuous node
+\tikzstyle{contdec}=[circle,draw=red!50,thick,fill=red!10]  % observed node after a decision
+
+
+\tikzstyle{cont}=[circle,draw=blue!50,thick,minimum size=6mm,line width=2pt,>=stealth]  % continuous  node
+%\tikzstyle{ocont}=[ellipse,draw=blue!50,thick,minimum size=6mm,>=stealth]  % continuous  node
+\tikzstyle{blackcont}=[circle,draw=black!50,thick,minimum size=6mm,line width=2pt,>=stealth]  % continuous  node
+\tikzstyle{oval}=[ellipse,draw=blue!50,thick,minimum size=6mm,line width=2pt,>=stealth]  % continuous node
+\tikzstyle{disc}=[rectangle,draw=blue!50,thick,line width=1pt,minimum size=6mm]  % discrete node
+
+
+\tikzstyle{fillred}=[fill=red!20,thick]  % observed node
+\tikzstyle{fillgreen}=[fill=green!20,thick]  % observed node
+\tikzstyle{purered}=[fill=red]  % observed node
+\tikzstyle{state}=[rectangle,fill=red!20]  % state
+\tikzstyle{sobs}=[fill=green!15,thick]  % sequentally observed node
+\tikzstyle{fact}=[fill,minimum size=1.5mm,line width=2pt,>=stealth]
+\tikzstyle{varfact}=[draw,minimum size=1.5mm,line width=2pt,>=stealth]
+\tikzstyle{sep}=[rectangle,draw=magenta!50,thick,minimum size=6mm]  % discrete node
+\tikzstyle{det}=[fill=red!15,rectangle,draw=red!50,thick,minimum size=6mm]  % deterministic node
+
+\tikzstyle{dethid}=[diamond,draw=red!50,thick,minimum size=6mm]  % deterministic  hidden node
+
+\tikzstyle{lineball}=[fill,-*,draw=red!50,line width=1.5pt]
+\tikzstyle{redball}=[mark=*,mark options={fill=red!50,draw=red},mark size=0.5pt]
+\tikzstyle{greenball}=[mark=*,mark options={fill=green!50,draw=green},mark size=0.5pt]
+
+\tikzstyle{dec}=[rectangle,draw=red!50,thick,minimum size=6mm]  % decision node
+\tikzstyle{utility}=[diamond,draw=red!50,thick,minimum size=6mm]  % utility node
+\tikzstyle{decutility}=[diamond,draw=red!50,thick,minimum size=6mm]  % utility node
+
+% dependent styles
+\tikzstyle{contobs}+=[cont]
+\tikzstyle{contobs}+=[obs]
+\tikzstyle{discobs}+=[disc]
+\tikzstyle{discobs}+=[obs]
+
+\tikzstyle{obsred}+=[obs]
+\tikzstyle{obsred}+=[red]
+
+\tikzstyle{background grid}=[draw, black!50,step=.1cm]
+\tikzstyle{dgraph}=[->, line width=1.5pt]
+\tikzstyle{ugraph}=[line width=1.5pt]
+
 
 \DeclareMathOperator*{\argmin}{argmin}
 \DeclareMathOperator*{\argmax}{argmax}
@@ -110,7 +167,7 @@
 % Headings and headers.
 \RequirePackage{fancyhdr}
 \RequirePackage[tiny, md, sc]{titlesec}
-\setlength{\headheight}{15pt}
+\setlength{\headheight}{5pt}
 \pagestyle{plain}
 \RequirePackage{titling}
 

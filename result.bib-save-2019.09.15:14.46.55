@@ -1,0 +1,4732 @@
+
+
+@book{stanford10,
+  author =        {Stanford, P Kyle},
+  publisher =     {Oxford University Press},
+  title =         {Exceeding our grasp: Science, history, and the
+                   problem of unconceived alternatives},
+  year =          {2010},
+}
+
+@incollection{gershman2017complex,
+  author =        {Gershman, Samuel J and Beck, Jeffrey M},
+  booktitle =     {Computational Models of Brain and Behavior},
+  editor =        {A. Moustafa},
+  publisher =     {John Wiley \& Sons},
+  title =         {Complex Probabilistic Inference},
+  year =          {2017},
+}
+
+@article{griffiths2006,
+  author =        {Griffiths, Thomas L and Tenenbaum, Joshua B},
+  journal =       {Psychological Science},
+  pages =         {767--773},
+  publisher =     {SAGE Publications},
+  title =         {Optimal predictions in everyday cognition},
+  volume =        {17},
+  year =          {2006},
+}
+
+@article{griffiths2011,
+  author =        {Griffiths, Thomas L and Tenenbaum, Joshua B},
+  journal =       {Journal of Experimental Psychology: General},
+  pages =         {725--743},
+  publisher =     {American Psychological Association},
+  title =         {Predicting the future as Bayesian inference: {P}eople
+                   combine prior knowledge with observations when
+                   estimating duration and extent},
+  volume =        {140},
+  year =          {2011},
+}
+
+@article{frank2012,
+  author =        {Frank, Michael C and Goodman, Noah D},
+  journal =       {Science},
+  pages =         {998--998},
+  publisher =     {American Association for the Advancement of Science},
+  title =         {Predicting pragmatic reasoning in language games},
+  volume =        {336},
+  year =          {2012},
+}
+
+@article{petzschner2015,
+  author =        {Petzschner, Frederike H and Glasauer, Stefan and
+                   Stephan, Klaas E},
+  journal =       {Trends in Cognitive Sciences},
+  pages =         {285--293},
+  publisher =     {Elsevier},
+  title =         {A {B}ayesian perspective on magnitude estimation},
+  volume =        {19},
+  year =          {2015},
+}
+
+@book{oaksford2007,
+  author =        {Oaksford, Mike and Chater, Nick},
+  publisher =     {Oxford University Press},
+  title =         {Bayesian rationality: The probabilistic approach to
+                   human reasoning},
+  year =          {2007},
+}
+
+@article{chater2006,
+  author =        {Chater, Nick and Tenenbaum, Joshua B and
+                   Yuille, Alan},
+  journal =       {Trends in Cognitive Sciences},
+  pages =         {287--291},
+  publisher =     {Elsevier},
+  title =         {Probabilistic models of cognition: Conceptual
+                   foundations},
+  volume =        {10},
+  year =          {2006},
+}
+
+@article{Thomas2008,
+  author =        {Thomas, Rick P and Dougherty, Michael and
+                   Sprenger, Amber M and Harbison, J Isaiah},
+  journal =       {Psychological {R}eview},
+  number =        {1},
+  pages =         {155--185},
+  title =         {{Diagnostic hypothesis generation and human
+                   judgment.}},
+  volume =        {115},
+  year =          {2008},
+}
+
+@article{Dougherty2003,
+  author =        {Dougherty, Michael and Hunter, Jennifer},
+  journal =       {Memory {\&} Cognition},
+  pages =         {968--982},
+  title =         {{Probability judgment and subadditivity: The role of
+                   working memory capacity and constraining retrieval}},
+  volume =        {31},
+  year =          {2003},
+}
+
+@article{carroll2015,
+  author =        {Carroll, Christopher D and Kemp, Charles},
+  journal =       {Cognition},
+  pages =         {130--153},
+  publisher =     {Elsevier},
+  title =         {Evaluating the inverse reasoning account of object
+                   discovery},
+  volume =        {139},
+  year =          {2015},
+}
+
+@article{koriat1980,
+  author =        {Koriat, Asher and Lichtenstein, Sarah and
+                   Fischhoff, Baruch},
+  journal =       {Journal of Experimental Psychology: Human learning
+                   and memory},
+  pages =         {107--118},
+  publisher =     {American Psychological Association},
+  title =         {Reasons for confidence},
+  volume =        {6},
+  year =          {1980},
+}
+
+@article{weber1993,
+  author =        {Weber, Elke U and B{\"o}ckenholt, Ulf and
+                   Hilton, Denis J and Wallace, Brian},
+  journal =       {Journal of Experimental Psychology: Learning, Memory,
+                   and Cognition},
+  pages =         {1151--1164},
+  publisher =     {American Psychological Association},
+  title =         {Determinants of diagnostic hypothesis generation:
+                   {E}ffects of information, base rates, and experience},
+  volume =        {19},
+  year =          {1993},
+}
+
+@article{Gettys1979,
+  author =        {Gettys, Charles F. and Fisher, S. D.},
+  journal =       {Organizational Behavior and Human Performance},
+  pages =         {93--110},
+  title =         {{Hypothesis plausibility and hypothesis generation}},
+  volume =        {24},
+  year =          {1979},
+}
+
+@article{fox1998belief,
+  author =        {Fox, Craig R and Tversky, Amos},
+  journal =       {Management Science},
+  number =        {7},
+  pages =         {879--895},
+  publisher =     {INFORMS},
+  title =         {A belief-based account of decision under uncertainty},
+  volume =        {44},
+  year =          {1998},
+}
+
+@article{super,
+  author =        {Sloman, Steven and Rottenstreich, Yuval and
+                   Wisniewski, Edward and Hadjichristidis, Constantinos and
+                   Fox, Craig R},
+  journal =       {Journal of Experimental Psychology: Learning, Memory,
+                   and Cognition},
+  number =        {3},
+  pages =         {573--582},
+  title =         {{Typical versus atypical unpacking and superadditive
+                   probability judgment.}},
+  volume =        {30},
+  year =          {2004},
+}
+
+@inproceedings{hadjichristidis1999opening,
+  author =        {Hadjichristidis, C and Stibel, JM and Sloman, SA and
+                   Over, DE and Stevenson, RJ},
+  booktitle =     {{Proceedings of the European Society for the Study of
+                   Cognitive Systems 16th Annual Workshop}},
+  title =         {Opening Pandora's box: Selective unpacking and
+                   superadditivity},
+  year =          {1999},
+}
+
+@article{weak,
+  author =        {Fernbach, Philip M and Darlow, Adam and
+                   Sloman, Steven A},
+  journal =       {Cognition},
+  number =        {3},
+  pages =         {459--467},
+  publisher =     {Elsevier},
+  title =         {When good evidence goes bad: The weak evidence effect
+                   in judgment and decision-making},
+  volume =        {119},
+  year =          {2011},
+}
+
+@article{dud,
+  author =        {Windschitl, Paul D and Chambers, John R},
+  journal =       {Journal of Experimental Psychology: Learning, Memory,
+                   and Cognition},
+  number =        {1},
+  pages =         {198},
+  publisher =     {American Psychological Association},
+  title =         {The dud-alternative effect in likelihood judgment.},
+  volume =        {30},
+  year =          {2004},
+}
+
+@article{conf,
+  author =        {Koehler, DJ},
+  journal =       {Learning, Memory},
+  title =         {{Hypothesis Generation And Confidence in Judgment}},
+  year =          {1994},
+}
+
+@article{vul08,
+  author =        {Vul, Edward and Pashler, Harold},
+  journal =       {Psychological Science},
+  pages =         {645--647},
+  publisher =     {SAGE Publications},
+  title =         {Measuring the crowd within probabilistic
+                   representations within individuals},
+  volume =        {19},
+  year =          {2008},
+}
+
+@article{tversky,
+  author =        {Tversky, Amos and Kahneman, Daniel},
+  journal =       {Science (New York, N.Y.)},
+  number =        {4157},
+  pages =         {1124--1131},
+  title =         {{Judgment under Uncertainty: Heuristics and Biases.}},
+  volume =        {185},
+  year =          {1974},
+}
+
+@article{Goodman2008,
+  author =        {Goodman, Noah and Tenenbaum, Joshua B and
+                   Feldman, Jacob and Griffiths, Thomas},
+  journal =       {Cognitive Science: A Multidisciplinary Journal},
+  number =        {1},
+  pages =         {108--154},
+  title =         {{A Rational Analysis of Rule-Based Concept Learning}},
+  volume =        {32},
+  year =          {2008},
+}
+
+@article{marr1976understanding,
+  author =        {Marr, David and Poggio, Tomaso},
+  title =         {From understanding computation to understanding
+                   neural circuitry},
+  year =          {1976},
+}
+
+@article{Griffiths2012BridgingCognition,
+  author =        {Griffiths, T. L. and Vul, E. and Sanborn, a. N.},
+  journal =       {Current Directions in Psychological Science},
+  number =        {4},
+  pages =         {263--268},
+  title =         {{Bridging Levels of Analysis for Probabilistic Models
+                   of Cognition}},
+  volume =        {21},
+  year =          {2012},
+}
+
+@book{robert13,
+  author =        {Robert, Christian and Casella, George},
+  publisher =     {Springer Science \& Business Media},
+  title =         {{Monte Carlo Statistical Methods}},
+  year =          {2013},
+}
+
+@article{wozny2010,
+  author =        {Wozny, David R and Beierholm, Ulrik R and
+                   Shams, Ladan},
+  journal =       {PLoS Computational Biology},
+  pages =         {e1000871},
+  publisher =     {Public Library of Science},
+  title =         {Probability matching as a computational strategy used
+                   in perception},
+  volume =        {6},
+  year =          {2010},
+}
+
+@article{Denison2013,
+  author =        {Denison, Stephanie and Bonawitz, Elizabeth and
+                   Gopnik, Alison and Griffiths, Thomas L.},
+  journal =       {Cognition},
+  number =        {2},
+  pages =         {280--300},
+  publisher =     {Elsevier B.V.},
+  title =         {{Rational variability in children's causal
+                   inferences: The Sampling Hypothesis}},
+  volume =        {126},
+  year =          {2013},
+}
+
+@article{Moreno11,
+  author =        {Moreno-Bote, Rub{\'e}n and Knill, David C and
+                   Pouget, Alexandre},
+  journal =       {Proceedings of the National Academy of Sciences},
+  pages =         {12491--12496},
+  publisher =     {National Acad Sciences},
+  title =         {Bayesian sampling in visual perception},
+  volume =        {108},
+  year =          {2011},
+}
+
+@article{Vul2014,
+  author =        {Vul, Edward and Goodman, Noah and
+                   Griffiths, Thomas L. and Tenenbaum, Joshua B.},
+  journal =       {Cognitive Science},
+  number =        {4},
+  pages =         {599--637},
+  title =         {{One and done? Optimal decisions from very few
+                   samples}},
+  volume =        {38},
+  year =          {2014},
+}
+
+@article{stewart06,
+  author =        {Stewart, Neil and Chater, Nick and Brown, Gordon DA},
+  journal =       {Cognitive Psychology},
+  pages =         {1--26},
+  publisher =     {Elsevier},
+  title =         {Decision by sampling},
+  volume =        {53},
+  year =          {2006},
+}
+
+@inproceedings{hamrick2015think,
+  author =        {Hamrick, Jessica B and Smith, Kevin A and
+                   Griffiths, Thomas L and Vul, Edward},
+  booktitle =     {{Proceedings of the Thirty-seventh Annual Conference
+                   of the Cognitive Science Society}},
+  title =         {Think again? The amount of mental simulation tracks
+                   uncertainty in the outcome},
+  year =          {2015},
+}
+
+@article{multistability,
+  author =        {Gershman, Samuel J. and Vul, Edward and
+                   Tenenbaum, Joshua B},
+  journal =       {Neural Computation},
+  number =        {1},
+  pages =         {1--24},
+  title =         {{Multistability and Perceptual Inference}},
+  volume =        {24},
+  year =          {2012},
+}
+
+@article{Bonawitz2014,
+  author =        {Bonawitz, Elizabeth and Denison, Stephanie and
+                   Gopnik, Alison and Griffiths, Thomas L.},
+  journal =       {Cognitive Psychology},
+  pages =         {35--65},
+  title =         {{Win-Stay, Lose-Sample: A simple sequential algorithm
+                   for approximating Bayesian inference}},
+  volume =        {74},
+  year =          {2014},
+}
+
+@article{Lieder2013,
+  author =        {Lieder, Falk and Griffiths, Thomas L and
+                   Goodman, Noah D},
+  journal =       {Advances in Neural Information Processing Systems 25},
+  pages =         {1--9},
+  title =         {{Burn-in , bias , and the rationality of anchoring}},
+  volume =        {25},
+  year =          {2013},
+  isbn =          {9781627480031},
+  issn =          {10495258},
+}
+
+@article{buesing11,
+  author =        {Buesing, Lars and Bill, Johannes and
+                   Nessler, Bernhard and Maass, Wolfgang},
+  journal =       {PLoS Computational Biology},
+  pages =         {e1002211},
+  publisher =     {Public Library of Science},
+  title =         {Neural dynamics as sampling: a model for stochastic
+                   computation in recurrent networks of spiking neurons},
+  volume =        {7},
+  year =          {2011},
+}
+
+@article{pecevski11,
+  author =        {Pecevski, Dejan and Buesing, Lars and
+                   Maass, Wolfgang},
+  journal =       {PLoS Computational Biology},
+  pages =         {e1002294},
+  publisher =     {Public Library of Science},
+  title =         {Probabilistic inference in general graphical models
+                   through sampling in stochastic networks of spiking
+                   neurons},
+  volume =        {7},
+  year =          {2011},
+}
+
+@book{klein1999,
+  author =        {Klein, Gary},
+  publisher =     {MIT press},
+  title =         {Sources of Power: How People Make Decisions},
+  year =          {1999},
+}
+
+@article{ross96,
+  author =        {Ross, Brian H and Murphy, Gregory L},
+  journal =       {Journal of Experimental Psychology: Learning, Memory,
+                   and Cognition},
+  pages =         {736--753},
+  publisher =     {American Psychological Association},
+  title =         {Category-based predictions: influence of uncertainty
+                   and feature associations},
+  volume =        {22},
+  year =          {1996},
+}
+
+@article{dougherty1997,
+  author =        {Dougherty, Michael and Gettys, Charles F and
+                   Thomas, Rickey P},
+  journal =       {Organizational Behavior and Human Decision Processes},
+  pages =         {135--148},
+  publisher =     {Elsevier},
+  title =         {The role of mental simulation in judgments of
+                   likelihood},
+  volume =        {70},
+  year =          {1997},
+}
+
+@article{griffiths2015,
+  author =        {Griffiths, Thomas L and Lieder, Falk and
+                   Goodman, Noah D},
+  journal =       {Topics in Cognitive Science},
+  pages =         {217--229},
+  publisher =     {Wiley Online Library},
+  title =         {Rational use of cognitive resources: Levels of
+                   analysis between the computational and the
+                   algorithmic},
+  volume =        {7},
+  year =          {2015},
+}
+
+@article{Gershman2015,
+  author =        {Gershman, Samuel J and Horvitz, Eric J and
+                   Tenenbaum, Joshua B},
+  journal =       {Science},
+  number =        {6245},
+  pages =         {273--278},
+  title =         {{Computational rationality: A converging paradigm for
+                   intelligence in brains, minds, and machines}},
+  volume =        {349},
+  year =          {2015},
+}
+
+@inproceedings{schulz2016simple,
+  address =       {{Austin, TX}},
+  author =        {Schulz, Eric and Speekenbrink, Maarten and
+                   Meder, Bj{\"o}rn},
+  booktitle =     {{Proceedings of the 38th Annual Conference of the
+                   Cognitive Science Society}},
+  editor =        {Papafragou, A. and Grodner, D. and Mirman, D. and
+                   Trueswell, J.C.},
+  pages =         {2531–2536},
+  publisher =     {{Cognitive Science Society}},
+  title =         {{Simple Trees in Complex Forests: Growing Take The
+                   Best by Approximate Bayesian Computation}},
+  year =          {2016},
+}
+
+@article{sprenger2011,
+  author =        {Sprenger, Amber M and Dougherty, Michael and
+                   Atkins, Sharona M and Franco-Watkins, Ana M and
+                   Thomas, Rick and Lange, Nicholas and Abbs, Brandon},
+  journal =       {Frontiers in Psychology},
+  pages =         {129},
+  publisher =     {Frontiers},
+  title =         {Implications of cognitive load for hypothesis
+                   generation and probability judgment},
+  volume =        {2},
+  year =          {2011},
+}
+
+@inproceedings{abbott2015random,
+  author =        {Abbott, Joshua T and Austerweil, Joseph L and
+                   Griffiths, Thomas L},
+  booktitle =     {Neural {I}nformation {P}rocessing {S}ystems
+                   {C}onference},
+  number =        {3},
+  organization =  {American Psychological Association},
+  pages =         {558},
+  title =         {Random walks on semantic networks can resemble
+                   optimal foraging.},
+  volume =        {122},
+  year =          {2015},
+}
+
+@article{smith2013multiply,
+  author =        {Smith, Kevin A and Huber, David E and Vul, Edward},
+  journal =       {Cognition},
+  number =        {1},
+  pages =         {64--75},
+  publisher =     {Elsevier},
+  title =         {Multiply-constrained semantic search in the Remote
+                   Associates Test},
+  volume =        {128},
+  year =          {2013},
+}
+
+@article{hills2012optimal,
+  author =        {Hills, Thomas T and Jones, Michael N and
+                   Todd, Peter M},
+  journal =       {Psychological {R}eview},
+  number =        {2},
+  pages =         {431},
+  publisher =     {American Psychological Association},
+  title =         {Optimal foraging in semantic memory.},
+  volume =        {119},
+  year =          {2012},
+}
+
+@article{cooper1990complexity,
+  author =        {Cooper, Gregory F},
+  journal =       {Artificial {I}ntelligence},
+  number =        {2-3},
+  pages =         {393--405},
+  publisher =     {Elsevier},
+  title =         {The computational complexity of probabilistic
+                   inference using Bayesian belief networks},
+  volume =        {42},
+  year =          {1990},
+}
+
+@article{Shwe1991,
+  author =        {Shwe, Michael A and Cooper, G},
+  journal =       {Computers and biomedical research, an international
+                   journal},
+  number =        {5},
+  pages =         {453--475},
+  title =         {{An empirical analysis of likelihood-weighting
+                   simulation on a large, multiply connected medical
+                   belief network}},
+  volume =        {24},
+  year =          {1991},
+}
+
+@article{Jaakkola1999,
+  author =        {Jaakkola, Tommi S and Jordan, Michael I},
+  journal =       {Journal of Artificial Intelligence Research},
+  pages =         {291--322},
+  title =         {{Variational Probabilistic Inference and the QMR-DT
+                   Network}},
+  volume =        {10},
+  year =          {1999},
+}
+
+@article{Heckerman1990,
+  author =        {Heckerman, David},
+  title =         {{A Tractable Inference Algorithm for Diagnosing
+                   Multiple Diseases 1 The QMR model}},
+  year =          {1990},
+}
+
+@article{redelmeier1995probability,
+  author =        {Redelmeier, Donald A and Koehler, Derek J and
+                   Liberman, Varda and Tversky, Amos},
+  journal =       {Medical Decision Making},
+  number =        {3},
+  pages =         {227--230},
+  publisher =     {SAGE Publications},
+  title =         {Probability judgment in medicine discounting
+                   unspecified possibilities},
+  volume =        {15},
+  year =          {1995},
+}
+
+@article{elstein1978medical,
+  author =        {Elstein, Arthur S and Shulman, Lee S and
+                   Sprafka, Sarah A},
+  title =         {Medical problem solving an analysis of clinical
+                   reasoning},
+  year =          {1978},
+}
+
+@article{shwe1991probabilistic,
+  author =        {Shwe, Michael A and Middleton, Blackford and
+                   Heckerman, David E and Henrion, Max and
+                   Horvitz, Eric J and Lehmann, HP and
+                   Cooper, Gregory F},
+  journal =       {Methods of information in Medicine},
+  number =        {04},
+  pages =         {241--255},
+  publisher =     {Schattauer GmbH},
+  title =         {Probabilistic diagnosis using a reformulation of the
+                   INTERNIST-1/QMR knowledge base},
+  volume =        {30},
+  year =          {1991},
+}
+
+@article{tversky94,
+  author =        {Tversky, Amos and Koehler, Derek J},
+  journal =       {Psychological Review},
+  pages =         {547--567},
+  publisher =     {American Psychological Association},
+  title =         {Support theory: a nonextensional representation of
+                   subjective probability},
+  volume =        {101},
+  year =          {1994},
+}
+
+@article{MINERVAsub,
+  author =        {Neil Bearden, J. and Wallsten, Thomas S.},
+  journal =       {Journal of Behavioral Decision Making},
+  number =        {5},
+  pages =         {349--363},
+  title =         {{Minerva-DM and subadditive frequency judgments}},
+  volume =        {17},
+  year =          {2004},
+}
+
+@article{Costello2014,
+  author =        {Costello, Fintan and Watts, Paul},
+  journal =       {Psychological Review},
+  number =        {3},
+  pages =         {463--80},
+  title =         {{Surprisingly rational: Probability theory plus noise
+                   explains biases in judgment.}},
+  volume =        {121},
+  year =          {2014},
+}
+
+@book{surowiecki2005wisdom,
+  author =        {Surowiecki, James},
+  publisher =     {Anchor},
+  title =         {The wisdom of crowds},
+  year =          {2005},
+}
+
+@article{shi10,
+  author =        {Shi, Lei and Griffiths, Thomas L and Feldman, Naomi H and
+                   Sanborn, Adam N},
+  journal =       {Psychonomic Bulletin \& Review},
+  pages =         {443--464},
+  publisher =     {Springer},
+  title =         {Exemplar models as a mechanism for performing
+                   {B}ayesian inference},
+  volume =        {17},
+  year =          {2010},
+}
+
+@inproceedings{shi2009neural,
+  author =        {Shi, Lei and Griffiths, Thomas L},
+  booktitle =     {Advances in {N}eural {I}nformation {P}rocessing
+                   {S}ystems},
+  pages =         {1669--1677},
+  title =         {{Neural implementation of hierarchical Bayesian
+                   inference by importance sampling}},
+  year =          {2009},
+}
+
+@inproceedings{abbott13,
+  author =        {Abbott, Joshua T and Hamrick, Jessica B and
+                   Griffiths, Thomas L},
+  booktitle =     {Proceedings of the 35th {A}nnual {C}onference of the
+                   {C}ognitive {S}cience {S}ociety},
+  pages =         {1686--1691},
+  title =         {Approximating {B}ayesian inference with a sparse
+                   distributed memory system},
+  year =          {2013},
+}
+
+@inproceedings{vul2009explaining,
+  author =        {Vul, Ed and Alvarez, George and Tenenbaum, Joshua B and
+                   Black, Michael J},
+  booktitle =     {Advances in {N}eural {I}nformation {P}rocessing
+                   {S}ystems},
+  pages =         {1955--1963},
+  title =         {Explaining human multiple object tracking as
+                   resource-constrained approximate inference in a
+                   dynamic probabilistic model},
+  year =          {2009},
+}
+
+@article{brown09,
+  author =        {Brown, Scott D and Steyvers, Mark},
+  journal =       {Cognitive Psychology},
+  pages =         {49--67},
+  publisher =     {Elsevier},
+  title =         {Detecting and predicting changes},
+  volume =        {58},
+  year =          {2009},
+}
+
+@article{barlow2001exploitation,
+  author =        {Barlow, Horace},
+  journal =       {Behavioral and Brain Sciences},
+  number =        {04},
+  pages =         {602--607},
+  publisher =     {Cambridge Univ Press},
+  title =         {The exploitation of regularities in the environment
+                   by the brain},
+  volume =        {24},
+  year =          {2001},
+}
+
+@article{simoncelli2001natural,
+  author =        {Simoncelli, Eero P and Olshausen, Bruno A},
+  journal =       {{Annual Review of Neuroscience}},
+  number =        {1},
+  pages =         {1193--1216},
+  publisher =     {Annual Reviews 4139 El Camino Way, PO Box 10139, Palo
+                   Alto, CA 94303-0139, USA},
+  title =         {Natural image statistics and neural representation},
+  volume =        {24},
+  year =          {2001},
+}
+
+@article{greene13,
+  author =        {Greene, Michelle R},
+  journal =       {Frontiers in psychology},
+  publisher =     {Frontiers Media SA},
+  title =         {Statistics of high-level scene context},
+  volume =        {4},
+  year =          {2013},
+}
+
+@article{lda,
+  author =        {Blei, David M and Ng, Andrew Y and Jordan, Michael I},
+  journal =       {The Journal of Machine Learning Research},
+  pages =         {993--1022},
+  publisher =     {JMLR. org},
+  title =         {Latent dirichlet allocation},
+  volume =        {3},
+  year =          {2003},
+}
+
+@article{Yildirim,
+  author =        {Yildirim, Ilker and Kulkarni, Tejas D},
+  title =         {{Efficient analysis-by-synthesis in vision: {A}
+                   computational framework, behavioral tests, and
+                   comparison with neural representations}},
+}
+
+@article{Gershman2014b,
+  author =        {Gershman, Samuel J and Goodman, Noah D},
+  journal =       {Proceedings of the 36th Annual Conference of the
+                   Cognitive Science Society},
+  pages =         {517--522},
+  title =         {{Amortized Inference in Probabilistic Reasoning}},
+  volume =        {1},
+  year =          {2014},
+}
+
+@article{motion,
+  author =        {T{\'{e}}gl{\'{a}}s, Erno and Vul, Edward and
+                   Girotto, Vittorio and Gonzalez, Michel and
+                   Tenenbaum, Joshua B and Bonatti, Luca L},
+  journal =       {Science},
+  number =        {6033},
+  pages =         {1054--9},
+  title =         {{Pure reasoning in 12-month-old infants as
+                   probabilistic inference.}},
+  volume =        {332},
+  year =          {2011},
+}
+
+@inproceedings{collision,
+  author =        {Sanborn, Adam N and Griffiths, Thomas L},
+  booktitle =     {{Proceedings of the 31st Annual Conference of the
+                   Cognitive Science Society}},
+  pages =         {1145--1150},
+  title =         {{A Bayesian Framework for Modeling Intuitive
+                   Dynamics}},
+  year =          {2009},
+}
+
+@article{blocks,
+  author =        {Hamrick, Jessica B.; and Battaglia, Peter; and
+                   Tenenbaum, Joshua B.;},
+  journal =       {Proceedings of the 33rd Annual Conference of the
+                   Cognitive Science Society},
+  pages =         {1545--1550},
+  title =         {{Internal physics models guide probabilistic
+                   judgments about object dynamics}},
+  year =          {2011},
+}
+
+@article{smith2013sources,
+  author =        {Smith, Kevin A and Vul, Edward},
+  journal =       {Topics in cognitive science},
+  number =        {1},
+  pages =         {185--199},
+  publisher =     {Wiley Online Library},
+  title =         {Sources of uncertainty in intuitive physics},
+  volume =        {5},
+  year =          {2013},
+}
+
+@article{griffiths2012bridging,
+  author =        {Griffiths, Thomas L and Vul, Edward and
+                   Sanborn, Adam N},
+  journal =       {Current Directions in Psychological Science},
+  pages =         {263--268},
+  title =         {Bridging levels of analysis for probabilistic models
+                   of cognition},
+  volume =        {21},
+  year =          {2012},
+}
+
+@book{oaksford2007bayesian,
+  author =        {Oaksford, Mike and Chater, Nick},
+  publisher =     {Oxford University Press},
+  title =         {Bayesian rationality: The probabilistic approach to
+                   human reasoning},
+  year =          {2007},
+}
+
+@article{thaker17,
+  author =        {Thaker, Pratiksha and Tenenbaum, Joshua B. and
+                   Gershman, Samuel J.},
+  journal =       {Journal of Mathematical Psychology},
+  title =         {Online learning of symbolic concepts},
+  year =          {2017},
+}
+
+@article{dasgupta17,
+  author =        {Dasgupta, Ishita and Schulz, Eric and
+                   Gershman, Samuel J},
+  journal =       {Cognitive Psychology},
+  pages =         {1--25},
+  publisher =     {Elsevier},
+  title =         {Where do hypotheses come from?},
+  volume =        {96},
+  year =          {2017},
+}
+
+@article{vul2014one,
+  author =        {Vul, Edward and Goodman, Noah and Griffiths, Thomas L and
+                   Tenenbaum, Joshua B},
+  journal =       {Cognitive Science},
+  pages =         {599--637},
+  publisher =     {Wiley Online Library},
+  title =         {One and done? Optimal decisions from very few
+                   samples},
+  volume =        {38},
+  year =          {2014},
+}
+
+@article{gershman12,
+  author =        {Gershman, Samuel J and Vul, Edward and
+                   Tenenbaum, Joshua B},
+  journal =       {Neural Computation},
+  pages =         {1--24},
+  publisher =     {MIT Press},
+  title =         {Multistability and perceptual inference},
+  volume =        {24},
+  year =          {2012},
+}
+
+@article{denison13,
+  author =        {Denison, Stephanie and Bonawitz, Elizabeth and
+                   Gopnik, Alison and Griffiths, Thomas L},
+  journal =       {Cognition},
+  pages =         {285--300},
+  publisher =     {Elsevier},
+  title =         {Rational variability in children's causal inferences:
+                   The sampling hypothesis},
+  volume =        {126},
+  year =          {2013},
+}
+
+@article{sanborn2016bayesian,
+  author =        {Sanborn, Adam N and Chater, Nick},
+  journal =       {Trends in Cognitive Sciences},
+  pages =         {883--893},
+  publisher =     {Elsevier},
+  title =         {Bayesian brains without probabilities},
+  volume =        {20},
+  year =          {2016},
+}
+
+@article{ullman2012theory,
+  author =        {Ullman, Tomer D and Goodman, Noah D and
+                   Tenenbaum, Joshua B},
+  journal =       {Cognitive Development},
+  number =        {4},
+  pages =         {455--480},
+  publisher =     {Elsevier},
+  title =         {Theory learning as stochastic search in the language
+                   of thought},
+  volume =        {27},
+  year =          {2012},
+}
+
+@inproceedings{stuhlmuller2013learning,
+  author =        {Stuhlm{\"u}ller, Andreas and Taylor, Jacob and
+                   Goodman, Noah},
+  booktitle =     {{Advances in Neural Information Processing Systems}},
+  pages =         {3048--3056},
+  title =         {Learning stochastic inverses},
+  year =          {2013},
+}
+
+@inproceedings{gershman2014amortized,
+  author =        {Gershman, Samuel J and Goodman, Noah},
+  booktitle =     {{Proceedings of the 36th Annual Conference of the
+                   Cognitive Science Society}},
+  editor =        {P. Bello and M. Guarini and M. McShane and
+                   B. Scassellati},
+  pages =         {517--522},
+  publisher =     {Cognitive Science Society},
+  title =         {Amortized inference in probabilistic reasoning},
+  year =          {2014},
+}
+
+@article{jordan1999introduction,
+  author =        {Jordan, Michael I and Ghahramani, Zoubin and
+                   Jaakkola, Tommi S and Saul, Lawrence K},
+  journal =       {Machine Learning},
+  number =        {2},
+  pages =         {183--233},
+  publisher =     {Springer},
+  title =         {An introduction to variational methods for graphical
+                   models},
+  volume =        {37},
+  year =          {1999},
+}
+
+@article{dayan1995helmholtz,
+  author =        {Dayan, Peter and Hinton, Geoffrey E and
+                   Neal, Radford M and Zemel, Richard S},
+  journal =       {Neural Computation},
+  pages =         {889--904},
+  publisher =     {MIT Press},
+  title =         {{The Helmholtz machine}},
+  volume =        {7},
+  year =          {1995},
+}
+
+@article{hinton1995wake,
+  author =        {Hinton, Geoffrey E and Dayan, Peter and
+                   Frey, Brendan J and Neal, Radford M},
+  journal =       {Science},
+  pages =         {1158--1160},
+  publisher =     {The American Association for the Advancement of
+                   Science},
+  title =         {The ``wake-sleep'' algorithm for unsupervised neural
+                   networks},
+  volume =        {268},
+  year =          {1995},
+}
+
+@inproceedings{rezende2014stochastic,
+  author =        {Rezende, Danilo Jimenez and Mohamed, Shakir and
+                   Wierstra, Daan},
+  booktitle =     {{Proceedings of The 31st International Conference on
+                   Machine Learning}},
+  pages =         {1278--1286},
+  title =         {Stochastic Backpropagation and Approximate Inference
+                   in Deep Generative Models},
+  year =          {2014},
+}
+
+@inproceedings{paige2016inference,
+  author =        {Paige, Brooks and Wood, Frank},
+  booktitle =     {{International Conference on Machine Learning}},
+  pages =         {3040--3049},
+  title =         {Inference networks for sequential {Monte Carlo} in
+                   graphical models},
+  year =          {2016},
+}
+
+@article{kingma2013auto,
+  author =        {Kingma, Diederik P and Welling, Max},
+  journal =       {The 2nd International Conference on Learning
+                   Representations (ICLR)},
+  title =         {Auto-encoding variational bayes},
+  year =          {2013},
+}
+
+@inproceedings{ritchie2016neurally,
+  author =        {Ritchie, Daniel and Thomas, Anna and Hanrahan, Pat and
+                   Goodman, Noah},
+  booktitle =     {{Advances in Neural Information Processing Systems}},
+  pages =         {622--630},
+  title =         {Neurally-guided procedural models: Amortized
+                   inference for procedural graphics programs using
+                   neural networks},
+  year =          {2016},
+}
+
+@inproceedings{yildirim2015efficient,
+  author =        {Yildirim, Ilker and Kulkarni, Tejas D and
+                   Freiwald, Winrich A and Tenenbaum, Joshua B},
+  booktitle =     {{Proceedings of the 37th Annual Conference of the
+                   Cognitive Science Society}},
+  title =         {Efficient and robust analysis-by-synthesis in vision:
+                   A computational framework, behavioral tests, and
+                   modeling neuronal representations},
+  year =          {2015},
+}
+
+@article{lieder2017empirical,
+  author =        {Lieder, Falk and Griffiths, Thomas L. and
+                   Huys, Quentin J. M. and Goodman, Noah D.},
+  journal =       {Psychonomic Bulletin \& Review},
+  publisher =     {Springer},
+  title =         {Empirical Evidence for Resource-Rational Anchoring
+                   and Adjustment},
+  year =          {2017},
+}
+
+@article{lieder2017anchoring,
+  author =        {Lieder, Falk and Griffiths, Thomas L and
+                   Huys, Quentin JM and Goodman, Noah D},
+  journal =       {Psychonomic Bulletin \& Review},
+  number =        {1},
+  pages =         {322--349},
+  publisher =     {Springer},
+  title =         {The anchoring bias reflects rational use of cognitive
+                   resources},
+  volume =        {25},
+  year =          {2018},
+}
+
+@article{saeedi17,
+  author =        {Saeedi, Ardavan and Kulkarni, Tejas D and
+                   Mansinghka, Vikash and Gershman, Samuel J},
+  journal =       {Journal of Machine Learning Research},
+  pages =         {1--29},
+  title =         {Variational Particle Approximations},
+  volume =        {18},
+  year =          {2017},
+}
+
+@article{gershman2015computational,
+  author =        {Gershman, Samuel J and Horvitz, Eric J and
+                   Tenenbaum, Joshua B},
+  journal =       {Science},
+  number =        {6245},
+  pages =         {273--278},
+  publisher =     {American Association for the Advancement of Science},
+  title =         {Computational rationality: A converging paradigm for
+                   intelligence in brains, minds, and machines},
+  volume =        {349},
+  year =          {2015},
+}
+
+@misc{mackay2003information,
+  author =        {MacKay, David JC},
+  publisher =     {Cambridge University Press},
+  title =         {Information theory, inference and learning
+                   algorithms},
+  year =          {2003},
+}
+
+@inproceedings{hamrick15,
+  author =        {Hamrick, Jessica B and Smith, Kevin A and
+                   Griffiths, Thomas L and Vul, Edward},
+  booktitle =     {CogSci},
+  organization =  {Citeseer},
+  title =         {Think again? The amount of mental simulation tracks
+                   uncertainty in the outcome.},
+  year =          {2015},
+}
+
+@article{bonawitz14,
+  author =        {Bonawitz, Elizabeth and Denison, Stephanie and
+                   Gopnik, Alison and Griffiths, Thomas L},
+  journal =       {Cognitive Psychology},
+  pages =         {35--65},
+  publisher =     {Elsevier},
+  title =         {Win-Stay, Lose-Sample: A simple sequential algorithm
+                   for approximating Bayesian inference},
+  volume =        {74},
+  year =          {2014},
+}
+
+@article{suchow2017evolution,
+  author =        {Suchow, Jordan W and Bourgin, David D and
+                   Griffiths, Thomas L},
+  journal =       {Trends in Cognitive Sciences},
+  pages =         {522--530},
+  publisher =     {Elsevier},
+  title =         {Evolution in Mind: Evolutionary Dynamics, Cognitive
+                   Processes, and {B}ayesian Inference},
+  volume =        {21},
+  year =          {2017},
+}
+
+@article{sloman04,
+  author =        {Sloman, Steven and Rottenstreich, Yuval and
+                   Wisniewski, Edward and Hadjichristidis, Constantinos and
+                   Fox, Craig R},
+  journal =       {Journal of Experimental Psychology: Learning, Memory,
+                   and Cognition},
+  number =        {3},
+  pages =         {573--582},
+  title =         {{Typical versus atypical unpacking and superadditive
+                   probability judgment.}},
+  volume =        {30},
+  year =          {2004},
+}
+
+@inproceedings{lieder2012burn,
+  author =        {Lieder, Falk and Griffiths, Thomas L and
+                   Goodman, Noah D},
+  booktitle =     {{Advances in Neural Information Processing Systems}},
+  pages =         {2690--2798},
+  title =         {Burn-in, bias, and the rationality of anchoring},
+  year =          {2012},
+}
+
+@article{oliva2007role,
+  author =        {Oliva, Aude and Torralba, Antonio},
+  journal =       {Trends in Cognitive Sciences},
+  number =        {12},
+  pages =         {520--527},
+  publisher =     {Elsevier},
+  title =         {The role of context in object recognition},
+  volume =        {11},
+  year =          {2007},
+}
+
+@article{nosofsky1986attention,
+  author =        {Nosofsky, Robert M},
+  journal =       {Journal of Experimental Psychology: General},
+  number =        {1},
+  pages =         {39},
+  publisher =     {American Psychological Association},
+  title =         {Attention, similarity, and the
+                   identification--categorization relationship.},
+  volume =        {115},
+  year =          {1986},
+}
+
+@article{medin1978context,
+  author =        {Medin, Douglas L and Schaffer, Marguerite M},
+  journal =       {Psychological Review},
+  number =        {3},
+  pages =         {207},
+  publisher =     {American Psychological Association},
+  title =         {Context theory of classification learning.},
+  volume =        {85},
+  year =          {1978},
+}
+
+@article{heit2011predicting,
+  author =        {Heit, Evan and Hayes, Brett K},
+  journal =       {Journal of Experimental Psychology: General},
+  number =        {1},
+  pages =         {76--101},
+  publisher =     {American Psychological Association},
+  title =         {Predicting reasoning from memory},
+  volume =        {140},
+  year =          {2011},
+}
+
+@article{hayes2013relationship,
+  author =        {Hayes, Brett K and Fritz, Kristina and Heit, Evan},
+  journal =       {Developmental Psychology},
+  number =        {5},
+  pages =         {848--860},
+  publisher =     {American Psychological Association},
+  title =         {The relationship between memory and inductive
+                   reasoning: Does it develop?},
+  volume =        {49},
+  year =          {2013},
+}
+
+@article{hayes2013similar,
+  author =        {Hayes, Brett K and Heit, Evan},
+  journal =       {Memory \& Cognition},
+  number =        {5},
+  pages =         {781--795},
+  publisher =     {Springer},
+  title =         {How similar are recognition memory and inductive
+                   reasoning?},
+  volume =        {41},
+  year =          {2013},
+}
+
+@article{hawkins2016dynamic,
+  author =        {Hawkins, Guy E and Hayes, Brett K and Heit, Evan},
+  journal =       {Journal of Experimental Psychology: General},
+  number =        {2},
+  pages =         {155--180},
+  publisher =     {American Psychological Association},
+  title =         {A dynamic model of reasoning and memory},
+  volume =        {145},
+  year =          {2016},
+}
+
+@article{jazayeri2007new,
+  author =        {Jazayeri, Mehrdad and Movshon, J Anthony},
+  journal =       {Nature},
+  number =        {7138},
+  pages =         {912--915},
+  publisher =     {Nature Publishing Group},
+  title =         {A new perceptual illusion reveals mechanisms of
+                   sensory decoding},
+  volume =        {446},
+  year =          {2007},
+}
+
+@inproceedings{stocker2008bayesian,
+  author =        {Stocker, Alan A and Simoncelli, Eero P},
+  booktitle =     {{Advances in Neural Information Processing Systems}},
+  pages =         {1409--1416},
+  title =         {A Bayesian model of conditioned perception},
+  year =          {2008},
+}
+
+@article{luu2016choice,
+  author =        {Luu, Long and Stocker, Alan A},
+  title =         {Choice-dependent Perceptual Biases},
+  year =          {2016},
+}
+
+@article{fleming2017self,
+  author =        {Fleming, Stephen M and Daw, Nathaniel D},
+  journal =       {Psychological Review},
+  number =        {1},
+  pages =         {91},
+  publisher =     {American Psychological Association},
+  title =         {Self-evaluation of decision-making: A general
+                   Bayesian framework for metacognitive computation.},
+  volume =        {124},
+  year =          {2017},
+}
+
+@article{lieder2018overrepresentation,
+  author =        {Lieder, Falk and Griffiths, Thomas L and Hsu, Ming},
+  journal =       {Psychological review},
+  number =        {1},
+  pages =         {1},
+  publisher =     {American Psychological Association},
+  title =         {Overrepresentation of extreme events in decision
+                   making reflects rational use of cognitive resources.},
+  volume =        {125},
+  year =          {2018},
+}
+
+@inproceedings{gershman2010neural,
+  author =        {Gershman, Samuel J and Wilson, Robert},
+  booktitle =     {Advances in neural information processing systems},
+  pages =         {712--720},
+  title =         {The neural costs of optimal control},
+  year =          {2010},
+}
+
+@article{wang2013quantum,
+  author =        {Wang, Zheng and Busemeyer, Jerome R},
+  journal =       {Topics in Cognitive Science},
+  number =        {4},
+  pages =         {689--710},
+  publisher =     {Wiley Online Library},
+  title =         {A quantum question order model supported by empirical
+                   tests of an a priori and precise prediction},
+  volume =        {5},
+  year =          {2013},
+}
+
+@article{wang2014context,
+  author =        {Wang, Zheng and Solloway, Tyler and
+                   Shiffrin, Richard M and Busemeyer, Jerome R},
+  journal =       {Proceedings of the National Academy of Sciences},
+  number =        {26},
+  pages =         {9431--9436},
+  publisher =     {National Acad Sciences},
+  title =         {Context effects produced by question orders reveal
+                   quantum nature of human judgments},
+  volume =        {111},
+  year =          {2014},
+}
+
+@article{trueblood2011quantum,
+  author =        {Trueblood, Jennifer S and Busemeyer, Jerome R},
+  journal =       {Cognitive Science},
+  number =        {8},
+  pages =         {1518--1552},
+  publisher =     {Wiley Online Library},
+  title =         {A quantum probability account of order effects in
+                   inference},
+  volume =        {35},
+  year =          {2011},
+}
+
+@article{costello18,
+  author =        {Costello, Fintan J and Watts, Paul},
+  journal =       {Cognitive Psychology},
+  pages =         {1--16},
+  title =         {Invariants in probabilistic reasoning},
+  volume =        {100},
+  year =          {2018},
+}
+
+@article{marchiori15,
+  author =        {Marchiori, Davide and Di Guida, Sibilla and
+                   Erev, Ido},
+  journal =       {Decision},
+  pages =         {82--106},
+  publisher =     {Educational Publishing Foundation},
+  title =         {Noisy retrieval models of over-and undersensitivity
+                   to rare events},
+  volume =        {2},
+  year =          {2015},
+}
+
+@article{Dougherty1999,
+  author =        {Dougherty, Michael and Gettys, Charles F. and
+                   Ogden, Eve E.},
+  journal =       {Psychological Review},
+  number =        {1},
+  pages =         {180--209},
+  title =         {{MINERVA-DM: A memory processes model for judgments
+                   of likelihood.}},
+  volume =        {106},
+  year =          {1999},
+}
+
+@article{thomas2014memory,
+  author =        {Thomas, Rick P and Dougherty, Michael R and
+                   Buttaccio, Daniel R},
+  journal =       {Current Directions in Psychological Science},
+  number =        {4},
+  pages =         {264--270},
+  publisher =     {Sage Publications Sage CA: Los Angeles, CA},
+  title =         {Memory constraints on hypothesis generation and
+                   decision making},
+  volume =        {23},
+  year =          {2014},
+}
+
+@article{dougherty2003hypothesis,
+  author =        {Dougherty, Michael RP and Hunter, Jennifer E},
+  journal =       {Acta Psychologica},
+  number =        {3},
+  pages =         {263--282},
+  publisher =     {Elsevier},
+  title =         {Hypothesis generation, probability judgment, and
+                   individual differences in working memory capacity},
+  volume =        {113},
+  year =          {2003},
+}
+
+@article{dougherty2003probability,
+  author =        {Dougherty, Michael RP and Hunter, Jennifer},
+  journal =       {Memory \& Cognition},
+  number =        {6},
+  pages =         {968--982},
+  publisher =     {Springer},
+  title =         {Probability judgment and subadditivity: The role of
+                   working memory capacity and constraining retrieval},
+  volume =        {31},
+  year =          {2003},
+}
+
+@article{daw2005uncertainty,
+  author =        {Daw, Nathaniel D and Niv, Yael and Dayan, Peter},
+  journal =       {Nature Neuroscience},
+  number =        {12},
+  pages =         {1704--1711},
+  publisher =     {Nature Publishing Group},
+  title =         {Uncertainty-based competition between prefrontal and
+                   dorsolateral striatal systems for behavioral control},
+  volume =        {8},
+  year =          {2005},
+}
+
+@article{daw2011model,
+  author =        {Daw, Nathaniel D and Gershman, Samuel J and
+                   Seymour, Ben and Dayan, Peter and Dolan, Raymond J},
+  journal =       {Neuron},
+  number =        {6},
+  pages =         {1204--1215},
+  publisher =     {Elsevier},
+  title =         {Model-based influences on humans' choices and
+                   striatal prediction errors},
+  volume =        {69},
+  year =          {2011},
+}
+
+@article{kool2017cost,
+  author =        {Kool, Wouter and Gershman, Samuel J and
+                   Cushman, Fiery A},
+  journal =       {Psychological Science},
+  number =        {9},
+  pages =         {1321--1333},
+  publisher =     {SAGE Publications Sage CA: Los Angeles, CA},
+  title =         {Cost-benefit arbitration between multiple
+                   reinforcement-learning systems},
+  volume =        {28},
+  year =          {2017},
+}
+
+@article{keramati2016adaptive,
+  author =        {Keramati, Mehdi and Smittenaar, Peter and
+                   Dolan, Raymond J and Dayan, Peter},
+  journal =       {Proceedings of the National Academy of Sciences},
+  number =        {45},
+  pages =         {12868--12873},
+  publisher =     {National Acad Sciences},
+  title =         {Adaptive integration of habits into depth-limited
+                   planning defines a habitual-goal--directed spectrum},
+  volume =        {113},
+  year =          {2016},
+}
+
+@article{tversky1974judgment,
+  author =        {Tversky, Amos and Kahneman, Daniel},
+  journal =       {Science},
+  number =        {4157},
+  pages =         {1124--1131},
+  publisher =     {American association for the advancement of science},
+  title =         {Judgment under uncertainty: Heuristics and biases},
+  volume =        {185},
+  year =          {1974},
+}
+
+@article{slovic1971comparison,
+  author =        {Slovic, Paul and Lichtenstein, Sarah},
+  journal =       {Organizational Behavior and Human Performance},
+  number =        {6},
+  pages =         {649--744},
+  publisher =     {Elsevier},
+  title =         {Comparison of Bayesian and regression approaches to
+                   the study of information processing in judgment},
+  volume =        {6},
+  year =          {1971},
+}
+
+@article{grether1980bayes,
+  author =        {Grether, David M},
+  journal =       {The Quarterly Journal of Economics},
+  number =        {3},
+  pages =         {537--557},
+  publisher =     {MIT Press},
+  title =         {Bayes rule as a descriptive model: The
+                   representativeness heuristic},
+  volume =        {95},
+  year =          {1980},
+}
+
+@article{fischhoff1983hypothesis,
+  author =        {Fischhoff, Baruch and Beyth-Marom, Ruth},
+  journal =       {Psychological Review},
+  pages =         {239--260},
+  publisher =     {American Psychological Association},
+  title =         {Hypothesis evaluation from a {B}ayesian perspective},
+  volume =        {90},
+  year =          {1983},
+}
+
+@article{mellers2001frequency,
+  author =        {Mellers, Barbara and Hertwig, Ralph and
+                   Kahneman, Daniel},
+  journal =       {Psychological Science},
+  number =        {4},
+  pages =         {269--275},
+  publisher =     {SAGE Publications Sage CA: Los Angeles, CA},
+  title =         {{Do frequency representations eliminate conjunction
+                   effects? An exercise in adversarial collaboration}},
+  volume =        {12},
+  year =          {2001},
+}
+
+@article{gigerenzer1996narrow,
+  author =        {Gigerenzer, Gerd},
+  journal =       {{Psychological Review}},
+  pages =         {592--596},
+  publisher =     {American Psychological Association},
+  title =         {{On narrow norms and vague heuristics: A reply to
+                   Kahneman and Tversky}},
+  volume =        {103},
+  year =          {1996},
+}
+
+@article{samuels2012ending,
+  author =        {Samuels, Richard and Stich, Stephen and
+                   Bishop, Michael},
+  journal =       {Collected Papers, Volume 2: Knowledge, Rationality,
+                   and Morality, 1978-2010},
+  pages =         {191},
+  publisher =     {Oxford University Press},
+  title =         {Ending the rationality wars},
+  volume =        {2},
+  year =          {2012},
+}
+
+@article{gigerenzer1996reasoning,
+  author =        {Gigerenzer, Gerd and Goldstein, Daniel G},
+  journal =       {{Psychological Review}},
+  pages =         {650--669},
+  publisher =     {American Psychological Association},
+  title =         {Reasoning the fast and frugal way: Models of bounded
+                   rationality},
+  volume =        {103},
+  year =          {1996},
+}
+
+@article{shah2008heuristics,
+  author =        {Shah, Anuj K and Oppenheimer, Daniel M},
+  journal =       {Psychological Bulletin},
+  pages =         {207--222},
+  publisher =     {American Psychological Association},
+  title =         {Heuristics made easy: An effort-reduction framework},
+  volume =        {134},
+  year =          {2008},
+}
+
+@article{dasgupta2017hypotheses,
+  author =        {Dasgupta, Ishita and Schulz, Eric and
+                   Gershman, Samuel J},
+  journal =       {Cognitive Psychology},
+  pages =         {1--25},
+  publisher =     {Elsevier},
+  title =         {Where do hypotheses come from?},
+  volume =        {96},
+  year =          {2017},
+}
+
+@article{gigerenzer2009homo,
+  author =        {Gigerenzer, Gerd and Brighton, Henry},
+  journal =       {Topics in Cognitive Science},
+  number =        {1},
+  pages =         {107--143},
+  publisher =     {Wiley Online Library},
+  title =         {Homo heuristicus: Why biased minds make better
+                   inferences},
+  volume =        {1},
+  year =          {2009},
+}
+
+@article{parpart2018heuristics,
+  author =        {Parpart, Paula and Jones, Matt and Love, Bradley C},
+  journal =       {Cognitive Psychology},
+  pages =         {127--144},
+  publisher =     {Elsevier},
+  title =         {Heuristics as {B}ayesian inference under extreme
+                   priors},
+  volume =        {102},
+  year =          {2018},
+}
+
+@inproceedings{belousov2016catching,
+  author =        {Belousov, Boris and Neumann, Gerhard and
+                   Rothkopf, Constantin A and Peters, Jan R},
+  booktitle =     {{Advances in Neural Information Processing Systems}},
+  pages =         {1426--1434},
+  title =         {Catching heuristics are optimal control policies},
+  year =          {2016},
+}
+
+@article{bar1980base,
+  author =        {Bar-Hillel, Maya},
+  journal =       {Acta Psychologica},
+  number =        {3},
+  pages =         {211--233},
+  publisher =     {Elsevier},
+  title =         {The base-rate fallacy in probability judgments},
+  volume =        {44},
+  year =          {1980},
+}
+
+@article{birnbaum1983base,
+  author =        {Birnbaum, Michael H},
+  journal =       {The American Journal of Psychology},
+  pages =         {85--94},
+  publisher =     {JSTOR},
+  title =         {{Base rates in Bayesian inference: Signal detection
+                   analysis of the cab problem}},
+  year =          {1983},
+}
+
+@article{kahneman1973psychology,
+  author =        {Kahneman, Daniel and Tversky, Amos},
+  journal =       {Psychological Review},
+  pages =         {237--251},
+  publisher =     {American Psychological Association},
+  title =         {On the psychology of prediction},
+  volume =        {80},
+  year =          {1973},
+}
+
+@article{phillips1966conservatism,
+  author =        {Phillips, Lawrence D and Edwards, Ward},
+  journal =       {{Journal of Experimental Psychology}},
+  pages =         {346},
+  publisher =     {American Psychological Association},
+  title =         {Conservatism in a simple probability inference task},
+  volume =        {72},
+  year =          {1966},
+}
+
+@article{peterson1965sensitivity,
+  author =        {Peterson, Cameron R and Miller, Alan J},
+  journal =       {Journal of Experimental Psychology},
+  number =        {1},
+  pages =         {117},
+  publisher =     {American Psychological Association},
+  title =         {Sensitivity of subjective probability revision},
+  volume =        {70},
+  year =          {1965},
+}
+
+@article{gigerenzer2008heuristics,
+  author =        {Gigerenzer, Gerd},
+  journal =       {Perspectives on Psychological Science},
+  number =        {1},
+  pages =         {20--29},
+  publisher =     {SAGE Publications Sage CA: Los Angeles, CA},
+  title =         {Why heuristics work},
+  volume =        {3},
+  year =          {2008},
+}
+
+@article{marewski2014strategy,
+  author =        {Marewski, Julian N and Link, Daniela},
+  journal =       {Wiley Interdisciplinary Reviews: Cognitive Science},
+  pages =         {39--59},
+  publisher =     {Wiley Online Library},
+  title =         {Strategy selection: An introduction to the modeling
+                   challenge},
+  volume =        {5},
+  year =          {2014},
+}
+
+@article{johnson85,
+  author =        {Johnson, Eric J and Payne, John W},
+  journal =       {Management Science},
+  number =        {4},
+  pages =         {395--414},
+  publisher =     {INFORMS},
+  title =         {Effort and accuracy in choice},
+  volume =        {31},
+  year =          {1985},
+}
+
+@article{beach1978contingency,
+  author =        {Beach, Lee Roy and Mitchell, Terence R},
+  journal =       {Academy of Management Review},
+  pages =         {439--449},
+  publisher =     {Academy of Management Briarcliff Manor, NY 10510},
+  title =         {A contingency model for the selection of decision
+                   strategies},
+  volume =        {3},
+  year =          {1978},
+}
+
+@article{lieder2017strategy,
+  author =        {Lieder, Falk and Griffiths, Thomas L},
+  journal =       {Psychological Review},
+  pages =         {762--794},
+  publisher =     {American Psychological Association},
+  title =         {Strategy selection as rational metareasoning},
+  volume =        {124},
+  year =          {2017},
+}
+
+@article{erev05,
+  author =        {Erev, I and Barron, G},
+  journal =       {Psychological Review},
+  pages =         {912--931},
+  title =         {On adaptation, maximization, and reinforcement
+                   learning among cognitive strategies},
+  volume =        {112},
+  year =          {2005},
+}
+
+@article{rieskamp06,
+  author =        {Rieskamp, J{\"o}rg and Otto, Philipp E},
+  journal =       {Journal of Experimental Psychology: General},
+  pages =         {207--236},
+  publisher =     {American Psychological Association},
+  title =         {{SSL: A theory of how people learn to select
+                   strategies}},
+  volume =        {135},
+  year =          {2006},
+}
+
+@article{marewski2011cognitive,
+  author =        {Marewski, Julian N and Schooler, Lael J},
+  journal =       {Psychological Review},
+  pages =         {393--437},
+  publisher =     {American Psychological Association},
+  title =         {Cognitive niches: An ecological model of strategy
+                   selection},
+  volume =        {118},
+  year =          {2011},
+}
+
+@article{Griffiths15,
+  author =        {Griffiths, Thomas L},
+  journal =       {Cognition},
+  pages =         {43--48},
+  publisher =     {Elsevier},
+  title =         {Revealing ontological commitments by magic},
+  volume =        {136},
+  year =          {2015},
+}
+
+@book{mercier2017enigma,
+  author =        {Mercier, Hugo and Sperber, Dan},
+  publisher =     {Harvard University Press},
+  title =         {The enigma of reason},
+  year =          {2017},
+}
+
+@article{dasgupta2018remembrance,
+  author =        {Dasgupta, Ishita and Schulz, Eric and Goodman, Noah D and
+                   Gershman, Samuel J},
+  journal =       {Cognition},
+  pages =         {67--81},
+  publisher =     {Elsevier},
+  title =         {Remembrance of inferences past: Amortization in human
+                   hypothesis generation},
+  volume =        {178},
+  year =          {2018},
+}
+
+@article{kingma2014auto,
+  author =        {Diederik P. Kingma and Max Welling},
+  journal =       {CoRR},
+  title =         {Auto-Encoding Variational Bayes},
+  volume =        {abs/1312.6114},
+  year =          {2013},
+  biburl =        {https://dblp.org/rec/bib/journals/corr/KingmaW13},
+  url =           {http://arxiv.org/abs/1312.6114},
+}
+
+@inproceedings{mnih2014neural,
+  author =        {Mnih, Andriy and Gregor, Karol},
+  booktitle =     {{International Conference on Machine Learning}},
+  pages =         {1791--1799},
+  title =         {Neural Variational Inference and Learning in Belief
+                   Networks},
+  year =          {2014},
+}
+
+@inproceedings{rezende2015variational,
+  author =        {Rezende, Danilo and Mohamed, Shakir},
+  booktitle =     {{International Conference on Machine Learning}},
+  pages =         {1530--1538},
+  title =         {Variational Inference with Normalizing Flows},
+  year =          {2015},
+}
+
+@article{edwards1968conservatism,
+  author =        {Edwards, Ward},
+  journal =       {Formal Representation of Human Judgment},
+  pages =         {51},
+  title =         {Conservatism in human information processing},
+  volume =        {17},
+  year =          {1968},
+}
+
+@article{peterson1965sample,
+  author =        {Peterson, Cameron R and Schneider, Robert J and
+                   Miller, Alan J},
+  journal =       {Journal of Experimental Psychology},
+  pages =         {522--527},
+  publisher =     {American Psychological Association},
+  title =         {Sample size and the revision of subjective
+                   probabilities},
+  volume =        {69},
+  year =          {1965},
+}
+
+@article{peterson1964uncertainty,
+  author =        {Peterson, Cameron R and Ulehla, ZJ},
+  journal =       {Journal of Experimental Psychology},
+  pages =         {523--530},
+  publisher =     {American Psychological Association},
+  title =         {Uncertainty, inference difficulty, and probability
+                   learning},
+  volume =        {67},
+  year =          {1964},
+}
+
+@techreport{benjamin18,
+  author =        {Benjamin, Daniel J},
+  institution =   {National Bureau of Economic Research},
+  title =         {Errors in probabilistic reasoning and judgment
+                   biases},
+  year =          {2018},
+}
+
+@article{peterson1968sampling,
+  author =        {Peterson, Cameron R and DuCharme, Wesley M and
+                   Edwards, Ward},
+  journal =       {Journal of Experimental Psychology},
+  pages =         {236--243},
+  publisher =     {American Psychological Association},
+  title =         {Sampling distributions and probability revisions},
+  volume =        {76},
+  year =          {1968},
+}
+
+@article{wheeler1968subjective,
+  author =        {Wheeler, Gloria and Beach, Lee Roy},
+  journal =       {Organizational Behavior and Human Performance},
+  number =        {1},
+  pages =         {36--46},
+  publisher =     {Elsevier},
+  title =         {Subjective sampling distributions and conservatism},
+  volume =        {3},
+  year =          {1968},
+}
+
+@article{grinnell1971bayesian,
+  author =        {Grinnell, Merilyn and Keeley, Stuart M and
+                   Doherty, Michael E},
+  journal =       {Organizational Behavior and Human Performance},
+  number =        {3},
+  pages =         {379--387},
+  publisher =     {Elsevier},
+  title =         {Bayesian predictions of faculty judgments of graduate
+                   school success},
+  volume =        {6},
+  year =          {1971},
+}
+
+@article{ducharme1970response,
+  author =        {DuCharme, Wesley M},
+  journal =       {Journal of Experimental Psychology},
+  pages =         {66--74},
+  publisher =     {American Psychological Association},
+  title =         {Response bias explanation of conservative human
+                   inference},
+  volume =        {85},
+  year =          {1970},
+}
+
+@article{griffin1992weighing,
+  author =        {Griffin, Dale and Tversky, Amos},
+  journal =       {Cognitive Psychology},
+  pages =         {411--435},
+  publisher =     {Elsevier},
+  title =         {The weighing of evidence and the determinants of
+                   confidence},
+  volume =        {24},
+  year =          {1992},
+}
+
+@article{kraemer2004people,
+  author =        {Kraemer, Carlo and Weber, Martin},
+  journal =       {Journal of Risk and Uncertainty},
+  pages =         {113--142},
+  publisher =     {Springer},
+  title =         {How do people take into account weight, strength and
+                   quality of segregated vs. aggregated data?
+                   Experimental evidence},
+  volume =        {29},
+  year =          {2004},
+}
+
+@article{benjamin2016model,
+  author =        {Benjamin, Daniel J and Rabin, Matthew and
+                   Raymond, Collin},
+  journal =       {Journal of the European Economic Association},
+  pages =         {515--544},
+  publisher =     {Oxford University Press},
+  title =         {A model of nonbelief in the law of large numbers},
+  volume =        {14},
+  year =          {2016},
+}
+
+@article{kahneman1972subjective,
+  author =        {Kahneman, Daniel and Tversky, Amos},
+  journal =       {Cognitive Psychology},
+  pages =         {430--454},
+  publisher =     {Elsevier},
+  title =         {Subjective probability: A judgment of
+                   representativeness},
+  volume =        {3},
+  year =          {1972},
+}
+
+@article{koehler1996base,
+  author =        {Koehler, Jonathan J},
+  journal =       {Behavioral and Brain Sciences},
+  number =        {1},
+  pages =         {1--17},
+  publisher =     {Cambridge University Press},
+  title =         {The base rate fallacy reconsidered: Descriptive,
+                   normative, and methodological challenges},
+  volume =        {19},
+  year =          {1996},
+}
+
+@article{barbey2007base,
+  author =        {Barbey, Aron K and Sloman, Steven A},
+  journal =       {Behavioral and Brain Sciences},
+  number =        {3},
+  pages =         {241--254},
+  publisher =     {Cambridge University Press},
+  title =         {Base-rate respect: From ecological rationality to
+                   dual processes},
+  volume =        {30},
+  year =          {2007},
+}
+
+@article{ganguly2000asset,
+  author =        {Ganguly, Ananda R and Kagel, John H and
+                   Moser, Donald V},
+  journal =       {Journal of Risk and Uncertainty},
+  number =        {3},
+  pages =         {219--245},
+  publisher =     {Springer},
+  title =         {Do asset market prices reflect traders' judgment
+                   biases?},
+  volume =        {20},
+  year =          {2000},
+}
+
+@article{barberis1998model,
+  author =        {Barberis, Nicholas and Shleifer, Andrei and
+                   Vishny, Robert},
+  journal =       {Journal of Financial Economics},
+  pages =         {307--343},
+  publisher =     {Elsevier},
+  title =         {A model of investor sentiment},
+  volume =        {49},
+  year =          {1998},
+}
+
+@article{eddy1982probabilistic,
+  author =        {Eddy, DM},
+  journal =       {Judgment under uncertainty: Heuristics and biases},
+  pages =         {249--267},
+  publisher =     {Cambridge University Press},
+  title =         {Probabilistic reasoning in clinical medicine:
+                   Problems and opportunities},
+  year =          {1982},
+}
+
+@article{kennedy1997base,
+  author =        {Kennedy, Mary Lynne and Willis, W Grant and
+                   Faust, David},
+  journal =       {Journal of Psychoeducational Assessment},
+  pages =         {292--307},
+  publisher =     {Sage Publications Sage CA: Thousand Oaks, CA},
+  title =         {The base-rate fallacy in school psychology},
+  volume =        {15},
+  year =          {1997},
+}
+
+@inproceedings{tenenbaum2001rational,
+  author =        {Tenenbaum, Joshua B and Griffiths, Thomas},
+  booktitle =     {{Proceedings of the Annual Meeting of the Cognitive
+                   Science Society}},
+  title =         {The Rational Basis of Representatives},
+  volume =        {23},
+  year =          {2001},
+}
+
+@article{tversky1983extensional,
+  author =        {Tversky, Amos and Kahneman, Daniel},
+  journal =       {Psychological Review},
+  pages =         {293--315},
+  publisher =     {Psychological Review},
+  title =         {Extensional versus intuitive reasoning: The
+                   conjunction fallacy in probability judgment},
+  volume =        {90},
+  year =          {1983},
+}
+
+@article{gennaioli2010comes,
+  author =        {Gennaioli, Nicola and Shleifer, Andrei},
+  journal =       {The Quarterly Journal of Economics},
+  pages =         {1399--1433},
+  publisher =     {MIT Press},
+  title =         {What comes to mind},
+  volume =        {125},
+  year =          {2010},
+}
+
+@article{dougherty1999minerva,
+  author =        {Dougherty, Michael RP and Gettys, Charles F and
+                   Ogden, Eve E},
+  journal =       {Psychological Review},
+  pages =         {180--209},
+  publisher =     {Psychological Review},
+  title =         {{MINERVA-DM: A Memory Processes Model for Judgments
+                   of Likelihood}},
+  volume =        {106},
+  year =          {1999},
+}
+
+@article{mcclelland1998familiarity,
+  author =        {Mcclelland, James L and Chappell, Mark},
+  journal =       {Psychological Review},
+  pages =         {724--760},
+  publisher =     {Psychological Review},
+  title =         {Familiarity Breeds Differentiation: A
+                   Subjective-likelihood Approach to the Effects of
+                   Experience in Recognition Memory},
+  volume =        {105},
+  year =          {1998},
+}
+
+@article{shiffrin1997model,
+  author =        {Shiffrin, Richard M and Steyvers, Mark},
+  journal =       {Psychonomic Bulletin \& Review},
+  pages =         {145--166},
+  publisher =     {Springer},
+  title =         {A model for recognition memory: {REM}—retrieving
+                   effectively from memory},
+  volume =        {4},
+  year =          {1997},
+}
+
+@article{fischhoff1984diagnosticity,
+  author =        {Fischhoff, Baruch and Bar-Hillel, Maya},
+  journal =       {Memory \& Cognition},
+  pages =         {402--410},
+  publisher =     {Springer},
+  title =         {Diagnosticity and the base-rate effect},
+  volume =        {12},
+  year =          {1984},
+}
+
+@article{ofir1988pseudodiagnosticity,
+  author =        {Ofir, Chezy},
+  journal =       {Organizational Behavior and Human Decision Processes},
+  pages =         {343--363},
+  publisher =     {Elsevier},
+  title =         {Pseudodiagnosticity in judgment under uncertainty},
+  volume =        {42},
+  year =          {1988},
+}
+
+@article{peterson1964mode,
+  author =        {Peterson, Cameron and Miller, Alan},
+  journal =       {Journal of Experimental Psychology},
+  pages =         {363},
+  publisher =     {American Psychological Association},
+  title =         {Mode, median, and mean as optimal strategies},
+  volume =        {68},
+  year =          {1964},
+}
+
+@article{massey2005detecting,
+  author =        {Massey, Cade and Wu, George},
+  journal =       {Management Science},
+  number =        {6},
+  pages =         {932--947},
+  publisher =     {INFORMS},
+  title =         {Detecting regime shifts: The causes of under-and
+                   overreaction},
+  volume =        {51},
+  year =          {2005},
+}
+
+@article{andrieu2003introduction,
+  author =        {Andrieu, Christophe and De Freitas, Nando and
+                   Doucet, Arnaud and Jordan, Michael I},
+  journal =       {Machine Learning},
+  number =        {1-2},
+  pages =         {5--43},
+  publisher =     {Springer},
+  title =         {{An introduction to MCMC for machine learning}},
+  volume =        {50},
+  year =          {2003},
+}
+
+@article{denison2013rational,
+  author =        {Denison, Stephanie and Bonawitz, Elizabeth and
+                   Gopnik, Alison and Griffiths, Thomas L},
+  journal =       {Cognition},
+  pages =         {285--300},
+  publisher =     {Elsevier},
+  title =         {Rational variability in children’s causal
+                   inferences: The sampling hypothesis},
+  volume =        {126},
+  year =          {2013},
+}
+
+@article{gershman2012multistability,
+  author =        {Gershman, Samuel J and Vul, Edward and
+                   Tenenbaum, Joshua B},
+  journal =       {Neural Computation},
+  pages =         {1--24},
+  publisher =     {MIT Press},
+  title =         {Multistability and perceptual inference},
+  volume =        {24},
+  year =          {2012},
+}
+
+@article{buesing2011neural,
+  author =        {Buesing, Lars and Bill, Johannes and
+                   Nessler, Bernhard and Maass, Wolfgang},
+  journal =       {PLoS Computational Biology},
+  pages =         {e1002211},
+  publisher =     {Public Library of Science},
+  title =         {Neural dynamics as sampling: A model for stochastic
+                   computation in recurrent networks of spiking neurons},
+  volume =        {7},
+  year =          {2011},
+}
+
+@article{orban2016neural,
+  author =        {Orb{\'a}n, Gerg{\H{o}} and Berkes, Pietro and
+                   Fiser, J{\'o}zsef and Lengyel, M{\'a}t{\'e}},
+  journal =       {Neuron},
+  pages =         {530--543},
+  publisher =     {Elsevier},
+  title =         {Neural variability and sampling-based probabilistic
+                   representations in the visual cortex},
+  volume =        {92},
+  year =          {2016},
+}
+
+@article{haefner2016perceptual,
+  author =        {Haefner, Ralf M and Berkes, Pietro and
+                   Fiser, J{\'o}zsef},
+  journal =       {Neuron},
+  pages =         {649--660},
+  publisher =     {Elsevier},
+  title =         {Perceptual decision-making as probabilistic inference
+                   by neural sampling},
+  volume =        {90},
+  year =          {2016},
+}
+
+@article{saeedi2017variational,
+  author =        {Saeedi, Ardavan and Kulkarni, Tejas D and
+                   Mansinghka, Vikash K and Gershman, Samuel J},
+  journal =       {The Journal of Machine Learning Research},
+  pages =         {2328--2356},
+  publisher =     {JMLR. org},
+  title =         {Variational particle approximations},
+  volume =        {18},
+  year =          {2017},
+}
+
+@article{whittington2019theories,
+  author =        {Whittington, James CR and Bogacz, Rafal},
+  journal =       {Trends in Cognitive Sciences},
+  publisher =     {Elsevier},
+  title =         {Theories of error back-propagation in the brain},
+  year =          {2019},
+}
+
+@article{friston2008hierarchical,
+  author =        {Friston, Karl},
+  journal =       {PLoS Computational Biology},
+  pages =         {e1000211},
+  publisher =     {Public Library of Science},
+  title =         {Hierarchical models in the brain},
+  volume =        {4},
+  year =          {2008},
+}
+
+@article{gershman2019does,
+  author =        {Gershman, Samuel J},
+  journal =       {arXiv preprint arXiv:1901.07945},
+  title =         {What does the free energy principle tell us about the
+                   brain?},
+  year =          {2019},
+}
+
+@inproceedings{eslami2014just,
+  author =        {Eslami, SM Ali and Tarlow, Daniel and Kohli, Pushmeet and
+                   Winn, John},
+  booktitle =     {{Advances in Neural Information Processing Systems}},
+  pages =         {154--162},
+  title =         {Just-in-time learning for fast and flexible
+                   inference},
+  year =          {2014},
+}
+
+@inproceedings{wang2018meta,
+  author =        {Wang, Tongzhou and Wu, Yi and Moore, Dave and
+                   Russell, Stuart J},
+  booktitle =     {{Advances in Neural Information Processing Systems}},
+  pages =         {4150--4160},
+  title =         {{Meta-Learning {MCMC} Proposals}},
+  year =          {2018},
+}
+
+@article{rosenthal2011optimal,
+  author =        {Rosenthal, Jeffrey S},
+  journal =       {Handbook of Markov Chain Monte Carlo},
+  number =        {10.1201},
+  publisher =     {CRC Press, Boca Raton, FL},
+  title =         {Optimal proposal distributions and adaptive MCMC},
+  volume =        {4},
+  year =          {2011},
+}
+
+@article{marino2018learning,
+  author =        {Marino, Joseph and Yue, Yisong and Mandt, Stephan},
+  title =         {Learning to infer},
+  year =          {2018},
+}
+
+@article{feng2014multitasking,
+  author =        {Feng, Samuel F and Schwemmer, Michael and
+                   Gershman, Samuel J and Cohen, Jonathan D},
+  journal =       {Cognitive, Affective, \& Behavioral Neuroscience},
+  number =        {1},
+  pages =         {129--146},
+  publisher =     {Springer},
+  title =         {Multitasking versus multiplexing: Toward a normative
+                   account of limitations in the simultaneous execution
+                   of control-demanding behaviors},
+  volume =        {14},
+  year =          {2014},
+}
+
+@inproceedings{alon2017graph,
+  author =        {Alon, Noga and Reichman, Daniel and Shinkar, Igor and
+                   Wagner, Tal and Musslick, Sebastian and
+                   Cohen, Jonathan D and Griffiths, Thomas L and
+                   Dey, Biswadip and Ozcimder, Kayhan},
+  booktitle =     {Proceedings of the 31st International Conference on
+                   Neural Information Processing Systems},
+  organization =  {Curran Associates Inc.},
+  pages =         {2097--2106},
+  title =         {A graph-theoretic approach to multitasking},
+  year =          {2017},
+}
+
+@inproceedings{ranganath2014black,
+  author =        {Ranganath, Rajesh and Gerrish, Sean and Blei, David},
+  booktitle =     {{Artificial Intelligence and Statistics}},
+  pages =         {814--822},
+  title =         {Black box variational inference},
+  year =          {2014},
+}
+
+@article{shi2010exemplar,
+  author =        {Shi, Lei and Griffiths, Thomas L and Feldman, Naomi H and
+                   Sanborn, Adam N},
+  journal =       {Psychonomic bulletin \& review},
+  number =        {4},
+  pages =         {443--464},
+  publisher =     {Springer},
+  title =         {Exemplar models as a mechanism for performing
+                   Bayesian inference},
+  volume =        {17},
+  year =          {2010},
+}
+
+@article{stewart2006decision,
+  author =        {Stewart, Neil and Chater, Nick and Brown, Gordon DA},
+  journal =       {Cognitive Psychology},
+  number =        {1},
+  pages =         {1--26},
+  publisher =     {Elsevier},
+  title =         {Decision by sampling},
+  volume =        {53},
+  year =          {2006},
+}
+
+@article{hertwig2009description,
+  author =        {Hertwig, Ralph and Erev, Ido},
+  journal =       {Trends in Cognitive Sciences},
+  number =        {12},
+  pages =         {517--523},
+  publisher =     {Elsevier},
+  title =         {The description--experience gap in risky choice},
+  volume =        {13},
+  year =          {2009},
+}
+
+@article{orhan2017efficient,
+  author =        {Orhan, A Emin and Ma, Wei Ji},
+  journal =       {Nature Communications},
+  number =        {1},
+  pages =         {138},
+  publisher =     {Nature Publishing Group},
+  title =         {Efficient probabilistic inference in generic neural
+                   networks trained with non-probabilistic feedback},
+  volume =        {8},
+  year =          {2017},
+}
+
+@article{fischhoff1979subjective,
+  author =        {Fischhoff, Baruch and Slovic, Paul and
+                   Lichtenstein, Sarah},
+  journal =       {Organizational behavior and human performance},
+  number =        {3},
+  pages =         {339--359},
+  publisher =     {Elsevier},
+  title =         {Subjective sensitivity analysis},
+  volume =        {23},
+  year =          {1979},
+}
+
+@article{birnbaum1983bayesian,
+  author =        {Birnbaum, Michael H and Mellers, Barbara A},
+  journal =       {Journal of Personality and Social Psychology},
+  number =        {4},
+  pages =         {792},
+  publisher =     {American Psychological Association},
+  title =         {Bayesian inference: Combining base rates with
+                   opinions of sources who vary in credibility.},
+  volume =        {45},
+  year =          {1983},
+}
+
+@article{schwarz1991ease,
+  author =        {Schwarz, Norbert and Bless, Herbert and Strack, Fritz and
+                   Klumpp, Gisela and Rittenauer-Schatka, Helga and
+                   Simons, Annette},
+  journal =       {Journal of Personality and Social psychology},
+  number =        {2},
+  pages =         {195},
+  publisher =     {American Psychological Association},
+  title =         {Ease of retrieval as information: Another look at the
+                   availability heuristic.},
+  volume =        {61},
+  year =          {1991},
+}
+
+@article{dawes1993equating,
+  author =        {Dawes, Robyn M and Mirels, Herbert L and Gold, Eric and
+                   Donahue, Eileen},
+  journal =       {Psychological Science},
+  number =        {6},
+  pages =         {396--400},
+  publisher =     {SAGE Publications Sage CA: Los Angeles, CA},
+  title =         {Equating inverse probabilities in implicit
+                   personality judgments},
+  volume =        {4},
+  year =          {1993},
+}
+
+@article{ajzen1977intuitive,
+  author =        {Ajzen, Icek},
+  journal =       {Journal of Personality and Social Psychology},
+  number =        {5},
+  pages =         {303},
+  publisher =     {American Psychological Association},
+  title =         {Intuitive theories of events and the effects of
+                   base-rate information on prediction.},
+  volume =        {35},
+  year =          {1977},
+}
+
+@article{tversky1973availability,
+  author =        {Tversky, Amos and Kahneman, Daniel},
+  journal =       {Cognitive Psychology},
+  number =        {2},
+  pages =         {207--232},
+  publisher =     {Elsevier},
+  title =         {Availability: A heuristic for judging frequency and
+                   probability},
+  volume =        {5},
+  year =          {1973},
+}
+
+@article{lyon1976dominance,
+  author =        {Lyon, Don and Slovic, Paul},
+  journal =       {Acta Psychologica},
+  number =        {4},
+  pages =         {287--298},
+  publisher =     {Elsevier},
+  title =         {Dominance of accuracy information and neglect of base
+                   rates in probability estimation},
+  volume =        {40},
+  year =          {1976},
+}
+
+@article{sasaki2007belief,
+  author =        {Sasaki, Shunichiro and Kawagoe, Toshiji},
+  publisher =     {ISER Discussion Paper},
+  title =         {Belief updating in individual and social learning: A
+                   field experiment on the internet},
+  year =          {2007},
+}
+
+@article{beach1970sample,
+  author =        {Beach, Lee Roy and Wise, James A and Barclay, Scott},
+  journal =       {Organizational Behavior and Human Performance},
+  number =        {2},
+  pages =         {183--190},
+  publisher =     {Elsevier},
+  title =         {Sample proportions and subjective probability
+                   revisions},
+  volume =        {5},
+  year =          {1970},
+}
+
+@article{gershman2017blessing,
+  author =        {Gershman, Samuel J},
+  journal =       {The Quarterly Journal of Experimental Psychology},
+  number =        {3},
+  pages =         {361--365},
+  publisher =     {Taylor \& Francis},
+  title =         {On the blessing of abstraction},
+  volume =        {70},
+  year =          {2017},
+}
+
+@article{evans1983conflict,
+  author =        {Evans, J St BT and Barston, Julie L and
+                   Pollard, Paul},
+  journal =       {Memory \& Cognition},
+  number =        {3},
+  pages =         {295--306},
+  publisher =     {Springer},
+  title =         {On the conflict between logic and belief in
+                   syllogistic reasoning},
+  volume =        {11},
+  year =          {1983},
+}
+
+@article{newstead1992source,
+  author =        {Newstead, Stephen E and Pollard, Paul and
+                   Evans, Jonathan St BT and Allen, Julie L},
+  journal =       {Cognition},
+  number =        {3},
+  pages =         {257--284},
+  publisher =     {Elsevier},
+  title =         {The source of belief bias effects in syllogistic
+                   reasoning},
+  volume =        {45},
+  year =          {1992},
+}
+
+@article{oakhill1989believability,
+  author =        {Oakhill, Jane and Johnson-Laird, PN and
+                   Garnham, Alan},
+  journal =       {Cognition},
+  number =        {2},
+  pages =         {117--140},
+  publisher =     {Elsevier},
+  title =         {Believability and syllogistic reasoning},
+  volume =        {31},
+  year =          {1989},
+}
+
+@article{janis1943relationship,
+  author =        {Janis, IL and Frick, F},
+  journal =       {Journal of Experimental Psychology},
+  number =        {1},
+  pages =         {73--77},
+  publisher =     {Journal of Experimental Psychology},
+  title =         {The relationship between attitudes toward conclusions
+                   and errors in judging logical validity of syllogisms},
+  volume =        {33},
+  year =          {1943},
+}
+
+@article{evans2002background,
+  author =        {Evans, Jonathan St BT and Handley, Simon J and
+                   Over, David E and Perham, Nicholas},
+  journal =       {{Memory \& Cognition}},
+  number =        {2},
+  pages =         {179--190},
+  publisher =     {Springer},
+  title =         {Background beliefs in Bayesian inference},
+  volume =        {30},
+  year =          {2002},
+}
+
+@article{cohen2017beliefs,
+  author =        {Cohen, Andrew L and Sidlowski, Sara and
+                   Staub, Adrian},
+  journal =       {Psychonomic Bulletin \& Review},
+  number =        {3},
+  pages =         {972--978},
+  publisher =     {Springer},
+  title =         {{Beliefs and Bayesian reasoning}},
+  volume =        {24},
+  year =          {2017},
+}
+
+@article{tversky1994support,
+  author =        {Tversky, Amos and Koehler, Derek J},
+  journal =       {Psychological Review},
+  number =        {4},
+  pages =         {547},
+  publisher =     {American Psychological Association},
+  title =         {Support theory: A nonextensional representation of
+                   subjective probability.},
+  volume =        {101},
+  year =          {1994},
+}
+
+@article{blei2003latent,
+  author =        {Blei, David M and Ng, Andrew Y and Jordan, Michael I},
+  journal =       {Journal of machine Learning research},
+  number =        {Jan},
+  pages =         {993--1022},
+  title =         {Latent dirichlet allocation},
+  volume =        {3},
+  year =          {2003},
+}
+
+@article{hennig2015probabilistic,
+  author =        {Hennig, Philipp and Osborne, Michael A and
+                   Girolami, Mark},
+  journal =       {Proceedings of the Royal Society A: Mathematical,
+                   Physical and Engineering Sciences},
+  number =        {2179},
+  pages =         {20150142},
+  publisher =     {The Royal Society Publishing},
+  title =         {Probabilistic numerics and uncertainty in
+                   computations},
+  volume =        {471},
+  year =          {2015},
+}
+
+@article{zhu_sanborn_chater_2018,
+  author =        {Zhu, Jian-Qiao and Sanborn, Adam N and Chater, Nick},
+  month =         {Nov},
+  publisher =     {PsyArXiv},
+  title =         {Bayesian inference causes incoherence in human
+                   probability judgments},
+  year =          {2018},
+  doi =           {10.31234/osf.io/af9vy},
+  url =           {psyarxiv.com/af9vy},
+}
+
+@inproceedings{rasmussen2003baysian,
+  author =        {Rasmussen, CE and Ghahramani, Z},
+  booktitle =     {Advances in Neural Information Processing Systems 15},
+  organization =  {MIT Press},
+  pages =         {505--512},
+  title =         {{Bayesian Monte Carlo}},
+  year =          {2003},
+}
+
+@article{erev1994simultaneous,
+  author =        {Erev, Ido and Wallsten, Thomas S and
+                   Budescu, David V},
+  journal =       {Psychological Review},
+  number =        {3},
+  pages =         {519},
+  publisher =     {American Psychological Association},
+  title =         {Simultaneous over-and underconfidence: The role of
+                   error in judgment processes},
+  volume =        {101},
+  year =          {1994},
+}
+
+@article{hilbert12,
+  author =        {Hilbert, Martin},
+  journal =       {Psychological Bulletin},
+  number =        {2},
+  pages =         {211--237},
+  title =         {Toward a Synthesis of Cognitive Biases: how noisy
+                   information processing can bias human decision
+                   making},
+  volume =        {138},
+  year =          {2012},
+}
+
+@article{costello2018surprising,
+  author =        {Costello, Fintan and Watts, Paul and
+                   Fisher, Christopher},
+  journal =       {Cognition},
+  pages =         {280--297},
+  publisher =     {Elsevier},
+  title =         {Surprising rationality in probability judgment:
+                   Assessing two competing models},
+  volume =        {170},
+  year =          {2018},
+}
+
+@article{geman1992neural,
+  author =        {Geman, Stuart and Bienenstock, Elie and
+                   Doursat, Ren{\'e}},
+  journal =       {Neural Computation},
+  number =        {1},
+  pages =         {1--58},
+  publisher =     {MIT Press},
+  title =         {Neural networks and the bias/variance dilemma},
+  volume =        {4},
+  year =          {1992},
+}
+
+@article{griffiths2006optimal,
+  author =        {Griffiths, Thomas L and Tenenbaum, Joshua B},
+  journal =       {Psychological Science},
+  number =        {9},
+  pages =         {767--773},
+  publisher =     {SAGE Publications Sage CA: Los Angeles, CA},
+  title =         {Optimal predictions in everyday cognition},
+  volume =        {17},
+  year =          {2006},
+}
+
+@article{kording2006bayesian,
+  author =        {K{\"o}rding, Konrad P and Wolpert, Daniel M},
+  journal =       {Trends in Cognitive Sciences},
+  number =        {7},
+  pages =         {319--326},
+  publisher =     {Elsevier},
+  title =         {Bayesian decision theory in sensorimotor control},
+  volume =        {10},
+  year =          {2006},
+}
+
+@book{knill1996perception,
+  author =        {Knill, David C and Richards, Whitman},
+  publisher =     {Cambridge University Press},
+  title =         {Perception as {B}ayesian inference},
+  year =          {1996},
+}
+
+@article{lieder2019resource,
+  author =        {Lieder, Falk and Griffiths, Thomas L},
+  journal =       {Behavioral and Brain Sciences},
+  pages =         {1--85},
+  publisher =     {Cambridge University Press},
+  title =         {Resource-rational analysis: Understanding human
+                   cognition as the optimal use of limited computational
+                   resources},
+  year =          {2019},
+}
+
+@article{lake2017building,
+  author =        {Lake, Brenden M and Ullman, Tomer D and
+                   Tenenbaum, Joshua B and Gershman, Samuel J},
+  journal =       {Behavioral and Brain Sciences},
+  publisher =     {Cambridge University Press},
+  title =         {Building machines that learn and think like people},
+  volume =        {40},
+  year =          {2017},
+}
+
+@article{brunswik1955representative,
+  author =        {Brunswik, Egon},
+  journal =       {{Psychological Review}},
+  number =        {3},
+  pages =         {193},
+  publisher =     {American Psychological Association},
+  title =         {Representative design and probabilistic theory in a
+                   functional psychology.},
+  volume =        {62},
+  year =          {1955},
+}
+
+@article{simon1955behavioral,
+  author =        {Simon, Herbert A},
+  journal =       {The Quarterly Journal of Economics},
+  number =        {1},
+  pages =         {99--118},
+  publisher =     {MIT Press},
+  title =         {A behavioral model of rational choice},
+  volume =        {69},
+  year =          {1955},
+}
+
+@article{todd2007environments,
+  author =        {Todd, Peter M and Gigerenzer, Gerd},
+  journal =       {Current Directions in Psychological Science},
+  number =        {3},
+  pages =         {167--171},
+  publisher =     {SAGE Publications Sage CA: Los Angeles, CA},
+  title =         {Environments that make us smart: Ecological
+                   rationality},
+  volume =        {16},
+  year =          {2007},
+}
+
+@article{thomas2008diagnostic,
+  author =        {Thomas, Rick P and Dougherty, Michael R and
+                   Sprenger, Amber M and Harbison, J Isaiah},
+  journal =       {Psychological Review},
+  number =        {1},
+  pages =         {155--185},
+  publisher =     {Psychological Review},
+  title =         {Diagnostic Hypothesis Generation and Human Judgment},
+  volume =        {115},
+  year =          {2008},
+}
+
+@techreport{bordalo2017memory,
+  author =        {Bordalo, Pedro and Gennaioli, Nicola and
+                   Shleifer, Andrei},
+  institution =   {National Bureau of Economic Research},
+  title =         {Memory, attention, and choice},
+  year =          {2017},
+}
+
+@article{gluck1988conditioning,
+  author =        {Gluck, Mark A and Bower, Gordon H},
+  journal =       {Journal of Experimental Psychology: General},
+  number =        {3},
+  pages =         {227},
+  publisher =     {American Psychological Association},
+  title =         {From conditioning to category learning: An adaptive
+                   network model.},
+  volume =        {117},
+  year =          {1988},
+}
+
+@article{shanks1991connectionist,
+  author =        {Shanks, David R},
+  journal =       {Connection Science},
+  number =        {2},
+  pages =         {143--162},
+  publisher =     {Taylor \& Francis},
+  title =         {A connectionist account of base-rate biases in
+                   categorization},
+  volume =        {3},
+  year =          {1991},
+}
+
+@article{bhatia2017associative,
+  author =        {Bhatia, Sudeep},
+  journal =       {{Psychological Review}},
+  number =        {1},
+  pages =         {1},
+  publisher =     {American Psychological Association},
+  title =         {Associative judgment and vector space semantics.},
+  volume =        {124},
+  year =          {2017},
+}
+
+@article{brandstatter2006priority,
+  author =        {Brandst{\"a}tter, Eduard and Gigerenzer, Gerd and
+                   Hertwig, Ralph},
+  journal =       {{Psychological Review}},
+  number =        {2},
+  pages =         {409},
+  publisher =     {American Psychological Association},
+  title =         {The priority heuristic: Making choices without
+                   trade-offs.},
+  volume =        {113},
+  year =          {2006},
+}
+
+@inproceedings{todd2002testing,
+  author =        {Todd, Peter M and Goodie, Adam S},
+  booktitle =     {{From Animals to Animats 7: Proceedings of the
+                   Seventh International Conference on Simulation of
+                   Adaptive Behavior}},
+  organization =  {From animals to animats (MIT Press/Bradford Books,
+                   2002)},
+  pages =         {215--223},
+  title =         {Testing the ecological rationality of base rate
+                   neglect},
+  year =          {2002},
+}
+
+@inproceedings{de2001variational,
+  author =        {De Freitas, Nando and H{\o}jen-S{\o}rensen, Pedro and
+                   Jordan, Michael I and Russell, Stuart},
+  booktitle =     {{Proceedings of the Seventeenth Conference on
+                   Uncertainty in Artificial Intelligence}},
+  organization =  {Morgan Kaufmann Publishers Inc.},
+  pages =         {120--127},
+  title =         {Variational mcmc},
+  year =          {2001},
+}
+
+@inproceedings{gu2015neural,
+  author =        {Gu, Shixiang Shane and Ghahramani, Zoubin and
+                   Turner, Richard E},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {2629--2637},
+  title =         {Neural Adaptive Sequential Monte Carlo},
+  year =          {2015},
+}
+
+@article{lieder2018empirical,
+  author =        {Lieder, Falk and Griffiths, Thomas L and
+                   Huys, Quentin JM and Goodman, Noah D},
+  journal =       {Psychonomic Bulletin \& Review},
+  number =        {2},
+  pages =         {775--784},
+  publisher =     {Springer},
+  title =         {Empirical evidence for resource-rational anchoring
+                   and adjustment},
+  volume =        {25},
+  year =          {2018},
+}
+
+@article{li2017approximate,
+  author =        {Li, Yingzhen and Turner, Richard E and Liu, Qiang},
+  journal =       {arXiv preprint arXiv:1702.08343},
+  title =         {Approximate inference with amortised mcmc},
+  year =          {2017},
+}
+
+@article{naesseth2017variational,
+  author =        {Naesseth, Christian A and Linderman, Scott W and
+                   Ranganath, Rajesh and Blei, David M},
+  journal =       {arXiv preprint arXiv:1705.11140},
+  title =         {Variational sequential monte carlo},
+  year =          {2017},
+}
+
+@article{ruiz2019contrast,
+  author =        {Ruiz, Francisco J R and Titsia, Michalis K},
+  journal =       {arXiv preprint arXiv:1905.04062},
+  title =         {A Contrastive Divergence for Combining Variational
+                   Inference and MCMC},
+  year =          {2019},
+}
+
+@article{bramley2017formalizing,
+  author =        {Bramley, Neil R and Dayan, Peter and
+                   Griffiths, Thomas L and Lagnado, David A},
+  journal =       {Psychological Review},
+  number =        {3},
+  pages =         {301--338},
+  publisher =     {American Psychological Association},
+  title =         {{Formalizing Neurath’s ship: Approximate algorithms
+                   for online causal learning}},
+  volume =        {124},
+  year =          {2017},
+}
+
+@inproceedings{bramley2018grounding,
+  author =        {Bramley, N and Rothe, Anselm and Tenenbaum, J and
+                   Xu, Fei and Gureckis, T},
+  booktitle =     {Proceedings of the 40th Annual Conference of the
+                   Cognitive Science Society},
+  title =         {Grounding compositional hypothesis generation in
+                   specific instances},
+  year =          {2018},
+}
+
+@article{rule2018learning,
+  author =        {Rule, Joshua and Schulz, Eric and
+                   Piantadosi, Steven T and Tenenbaum, Joshua B},
+  journal =       {BioRxiv},
+  pages =         {321505},
+  publisher =     {Cold Spring Harbor Laboratory},
+  title =         {Learning list concepts through program induction},
+  year =          {2018},
+}
+
+@article{gershman2014retrospective,
+  author =        {Gershman, Samuel J and Markman, Arthur B and
+                   Otto, Ross A},
+  journal =       {Journal of Experimental Psychology: General},
+  number =        {1},
+  pages =         {182--194},
+  title =         {Retrospective Revaluation in Sequential Decision
+                   Making: A Tale of Two Systems},
+  volume =        {143},
+  year =          {2014},
+}
+
+@article{gershman2017imaginative,
+  author =        {Gershman, Samuel J and Zhou, Jimmy and Kommers, Cody},
+  journal =       {Journal of Cognitive Neuroscience},
+  number =        {12},
+  pages =         {2103--2113},
+  publisher =     {MIT Press},
+  title =         {Imaginative reinforcement learning: Computational
+                   principles and neural mechanisms},
+  volume =        {29},
+  year =          {2017},
+}
+
+@article{momennejad2018offline,
+  author =        {Momennejad, Ida and Otto, A Ross and Daw, Nathaniel D and
+                   Norman, Kenneth A},
+  journal =       {eLife},
+  pages =         {e32548},
+  publisher =     {eLife Sciences Publications Limited},
+  title =         {Offline replay supports planning in human
+                   reinforcement learning},
+  volume =        {7},
+  year =          {2018},
+}
+
+@article{villejoubert2002inverse,
+  author =        {Villejoubert, Ga{\"e}lle and Mandel, David R},
+  journal =       {Memory \& cognition},
+  number =        {2},
+  pages =         {171--178},
+  publisher =     {Springer},
+  title =         {The inverse fallacy: An account of deviations from
+                   Bayes’s theorem and the additivity principle},
+  volume =        {30},
+  year =          {2002},
+}
+
+@article{krynski2007role,
+  author =        {Krynski, Tevye R and Tenenbaum, Joshua B},
+  journal =       {Journal of Experimental Psychology: General},
+  number =        {3},
+  pages =         {430},
+  publisher =     {American Psychological Association},
+  title =         {The role of causality in judgment under uncertainty.},
+  volume =        {136},
+  year =          {2007},
+}
+
+@article{hertwig2018experience,
+  author =        {Hertwig, Ralph and Hogarth, Robin M and
+                   Lejarraga, Tom{\'a}s},
+  journal =       {Current Directions in Psychological Science},
+  number =        {2},
+  pages =         {123--128},
+  publisher =     {SAGE Publications Sage CA: Los Angeles, CA},
+  title =         {Experience and description: Exploring two paths to
+                   knowledge},
+  volume =        {27},
+  year =          {2018},
+}
+
+@article{gigerenzer2011heuristic,
+  author =        {Gigerenzer, Gerd and Gaissmaier, Wolfgang},
+  journal =       {Annual review of psychology},
+  pages =         {451--482},
+  publisher =     {Annual Reviews},
+  title =         {Heuristic decision making},
+  volume =        {62},
+  year =          {2011},
+}
+
+@article{dhami2001bailing,
+  author =        {Dhami, Mandeep K and Ayton, Peter},
+  journal =       {Journal of behavioral decision making},
+  number =        {2},
+  pages =         {141--168},
+  publisher =     {Wiley Online Library},
+  title =         {Bailing and jailing the fast and frugal way},
+  volume =        {14},
+  year =          {2001},
+}
+
+@article{reyna2006physician,
+  author =        {Reyna, Valerie F and Lloyd, Farrell J},
+  journal =       {Journal of Experimental Psychology: Applied},
+  number =        {3},
+  pages =         {179},
+  publisher =     {American Psychological Association},
+  title =         {Physician decision making and cardiac risk: effects
+                   of knowledge, risk perception, risk tolerance, and
+                   fuzzy processing.},
+  volume =        {12},
+  year =          {2006},
+}
+
+@article{schulz2017compositional,
+  author =        {Schulz, Eric and Tenenbaum, Joshua B and
+                   Duvenaud, David and Speekenbrink, Maarten and
+                   Gershman, Samuel J},
+  journal =       {Cognitive Psychology},
+  pages =         {44--79},
+  publisher =     {Elsevier},
+  title =         {Compositional inductive biases in function learning},
+  volume =        {99},
+  year =          {2017},
+}
+
+@article{beals1968foundations,
+  author =        {Beals, Richard and Krantz, David H and Tversky, Amos},
+  journal =       {Psychological review},
+  number =        {2},
+  pages =         {127},
+  publisher =     {American Psychological Association},
+  title =         {Foundations of multidimensional scaling.},
+  volume =        {75},
+  year =          {1968},
+}
+
+@article{belinkov2019analysis,
+  author =        {Belinkov, Yonatan and Glass, James},
+  journal =       {Transactions of the Association for Computational
+                   Linguistics},
+  pages =         {49--72},
+  publisher =     {MIT Press},
+  title =         {Analysis methods in neural language processing: A
+                   survey},
+  volume =        {7},
+  year =          {2019},
+}
+
+@inproceedings{bird2004nltk,
+  author =        {Bird, Steven and Loper, Edward},
+  booktitle =     {Proceedings of the ACL 2004 on Interactive poster and
+                   demonstration sessions},
+  organization =  {Association for Computational Linguistics},
+  pages =         {31},
+  title =         {NLTK: the natural language toolkit},
+  year =          {2004},
+}
+
+@article{battaglia2018relational,
+  author =        {Battaglia, Peter W and Hamrick, Jessica B and
+                   Bapst, Victor and Sanchez-Gonzalez, Alvaro and
+                   Zambaldi, Vinicius and Malinowski, Mateusz and
+                   Tacchetti, Andrea and Raposo, David and Santoro, Adam and
+                   Faulkner, Ryan and others},
+  journal =       {arXiv preprint arXiv:1806.01261},
+  title =         {Relational inductive biases, deep learning, and graph
+                   networks},
+  year =          {2018},
+}
+
+@article{baucells2008cumulative,
+  author =        {Baucells, Manel and Carrasco, Juan A and
+                   Hogarth, Robin M},
+  journal =       {Operations research},
+  number =        {5},
+  pages =         {1289--1304},
+  publisher =     {INFORMS},
+  title =         {Cumulative dominance and heuristic performance in
+                   binary multiattribute choice},
+  volume =        {56},
+  year =          {2008},
+}
+
+@article{braine1978relation,
+  author =        {Braine, Martin D},
+  journal =       {Psychological review},
+  number =        {1},
+  pages =         {1},
+  publisher =     {American Psychological Association},
+  title =         {On the relation between the natural logic of
+                   reasoning and standard logic.},
+  volume =        {85},
+  year =          {1978},
+}
+
+@article{burridge1999sequential,
+  author =        {Burridge, Robert R and Rizzi, Alfred A and
+                   Koditschek, Daniel E},
+  journal =       {The International Journal of Robotics Research},
+  number =        {6},
+  pages =         {534--555},
+  publisher =     {Sage Publications},
+  title =         {Sequential composition of dynamically dexterous robot
+                   behaviors},
+  volume =        {18},
+  year =          {1999},
+}
+
+@book{chomsky1993lectures,
+  author =        {Chomsky, Noam},
+  number =        {9},
+  publisher =     {Walter de Gruyter},
+  title =         {Lectures on government and binding: The Pisa
+                   lectures},
+  year =          {1993},
+}
+
+@book{chomsky2002syntactic,
+  author =        {Chomsky, Noam and Lightfoot, David W},
+  publisher =     {Walter de Gruyter},
+  title =         {Syntactic structures},
+  year =          {2002},
+}
+
+@article{Conneau:2017uf,
+  author =        {Conneau, Alexis and Kiela, Douwe and Schwenk, Holger and
+                   Barrault, Loic and Bordes, Antoine},
+  month =         may,
+  title =         {{Supervised Learning of Universal Sentence
+                   Representations from Natural Language Inference
+                   Data}},
+  year =          {2017},
+}
+
+@inproceedings{csimcsek2013linear,
+  author =        {{\c{S}}im{\c{s}}ek, {\"O}zg{\"u}r},
+  booktitle =     {Advances in neural information processing systems},
+  pages =         {2904--2912},
+  title =         {Linear decision rule as aspiration for simple
+                   decision heuristics},
+  year =          {2013},
+}
+
+@article{csimcsek2016most,
+  author =        {{\c{S}}im{\c{s}}ek, {\"O}zg{\"u}r and Algorta, Simon and
+                   Kothiyal, Amit},
+  journal =       {Proceedings of Machine Learning Research},
+  pages =         {1757--1765},
+  title =         {Why most decisions are easy in tetris-and perhaps in
+                   other sequential decision problems, as well},
+  volume =        {48},
+  year =          {2016},
+}
+
+@article{dasgupta2018evaluating,
+  author =        {Dasgupta, Ishita and Guo, Demi and
+                   Stuhlm{\"u}ller, Andreas and Gershman, Samuel J and
+                   Goodman, Noah D},
+  journal =       {Proceedings of the 39th Annual Conference of the
+                   Cognitive Science Society},
+  title =         {Evaluating compositionality in sentence embeddings},
+  year =          {2018},
+}
+
+@article{dasgupta2019theory,
+  author =        {Dasgupta, Ishita and Schulz, Eric and
+                   Tenenbaum, Joshua B and Gershman, Samuel J},
+  journal =       {BioRxiv},
+  pages =         {644534},
+  publisher =     {Cold Spring Harbor Laboratory},
+  title =         {A theory of learning to infer},
+  year =          {2019},
+}
+
+@article{dubey2018investigating,
+  author =        {Dubey, Rachit and Agrawal, Pulkit and Pathak, Deepak and
+                   Griffiths, Thomas L and Efros, Alexei A},
+  journal =       {arXiv preprint arXiv:1802.10217},
+  title =         {Investigating human priors for playing video games},
+  year =          {2018},
+}
+
+@article{evans1995belief,
+  author =        {Evans, Jonathan St BT and Perry, Tania S},
+  journal =       {Cahiers de Psychologie Cognitive/Current Psychology
+                   of Cognition},
+  publisher =     {CPC},
+  title =         {Belief bias in children's reasoning.},
+  year =          {1995},
+}
+
+@article{evans2003two,
+  author =        {Evans, Jonathan St BT},
+  journal =       {Trends in cognitive sciences},
+  number =        {10},
+  pages =         {454--459},
+  publisher =     {Elsevier},
+  title =         {In two minds: dual-process accounts of reasoning},
+  volume =        {7},
+  year =          {2003},
+}
+
+@book{evans2013psychology,
+  author =        {Evans, Jonathan St BT},
+  publisher =     {Psychology Press},
+  title =         {The psychology of deductive reasoning (Psychology
+                   revivals)},
+  year =          {2013},
+}
+
+@article{evans2005rapid,
+  author =        {Evans, Jonathan St BT and Curtis-Holmes, Jodie},
+  journal =       {Thinking \& Reasoning},
+  number =        {4},
+  pages =         {382--389},
+  publisher =     {Taylor \& Francis},
+  title =         {Rapid responding increases belief bias: Evidence for
+                   the dual-process theory of reasoning},
+  volume =        {11},
+  year =          {2005},
+}
+
+@article{fodor88,
+  author =        {Fodor, Jerry A and Pylyshyn, Zenon W},
+  journal =       {Cognition},
+  pages =         {3--71},
+  publisher =     {Elsevier},
+  title =         {Connectionism and cognitive architecture: A critical
+                   analysis},
+  volume =        {28},
+  year =          {1988},
+}
+
+@article{gandhi2019mutual,
+  author =        {Gandhi, Kanishk and Lake, Brenden M},
+  journal =       {arXiv preprint arXiv:1906.10197},
+  title =         {Mutual exclusivity as a challenge for neural
+                   networks},
+  year =          {2019},
+}
+
+@inproceedings{gershman15,
+  author =        {Gershman, Samuel and Tenenbaum, Joshua B},
+  booktitle =     {Proceedings of the 37th Annual Conference of the
+                   Cognitive Science Society},
+  title =         {Phrase similarity in humans and machines},
+  year =          {2015},
+}
+
+@article{gershman2019generative,
+  author =        {Gershman, Samuel J},
+  title =         {The generative adversarial brain},
+  year =          {2019},
+}
+
+@book{gigerenzer1999simple,
+  author =        {Gigerenzer, Gerd and Todd, Peter M},
+  publisher =     {Oxford University Press, USA},
+  title =         {Simple heuristics that make us smart},
+  year =          {1999},
+}
+
+@article{glockner2018breaking,
+  author =        {Glockner, Max and Shwartz, Vered and Goldberg, Yoav},
+  journal =       {arXiv preprint arXiv:1805.02266},
+  title =         {Breaking nli systems with sentences that require
+                   simple lexical inferences},
+  year =          {2018},
+}
+
+@inproceedings{goodfellow2009measuring,
+  author =        {Goodfellow, Ian and Lee, Honglak and Le, Quoc V and
+                   Saxe, Andrew and Ng, Andrew Y},
+  booktitle =     {Advances in neural information processing systems},
+  pages =         {646--654},
+  title =         {Measuring invariances in deep networks},
+  year =          {2009},
+}
+
+@article{goodfellow2014explaining,
+  author =        {Goodfellow, Ian J and Shlens, Jonathon and
+                   Szegedy, Christian},
+  journal =       {arXiv preprint arXiv:1412.6572},
+  title =         {Explaining and harnessing adversarial examples},
+  year =          {2014},
+}
+
+@article{groves1970habituation,
+  author =        {Groves, Philip M and Thompson, Richard F},
+  journal =       {Psychological review},
+  number =        {5},
+  pages =         {419},
+  publisher =     {American Psychological Association},
+  title =         {Habituation: a dual-process theory.},
+  volume =        {77},
+  year =          {1970},
+}
+
+@article{Hill:2016uu,
+  author =        {Hill, Felix and Cho, Kyunghyun and Korhonen, Anna},
+  month =         feb,
+  title =         {{Learning Distributed Representations of Sentences
+                   from Unlabelled Data}},
+  year =          {2016},
+}
+
+@article{hornik1991approximation,
+  author =        {Hornik, Kurt},
+  journal =       {Neural networks},
+  number =        {2},
+  pages =         {251--257},
+  publisher =     {Elsevier},
+  title =         {Approximation capabilities of multilayer feedforward
+                   networks},
+  volume =        {4},
+  year =          {1991},
+}
+
+@article{johnson1978psychology,
+  author =        {Johnson-Laird, Philip N and Steedman, Mark},
+  journal =       {Cognitive psychology},
+  number =        {1},
+  pages =         {64--99},
+  publisher =     {Citeseer},
+  title =         {The psychology of syllogisms},
+  volume =        {10},
+  year =          {1978},
+}
+
+@inproceedings{johnson2017clevr,
+  author =        {Johnson, Justin and Hariharan, Bharath and
+                   van der Maaten, Laurens and Fei-Fei, Li and
+                   Lawrence Zitnick, C and Girshick, Ross},
+  booktitle =     {Proceedings of the IEEE Conference on Computer Vision
+                   and Pattern Recognition},
+  pages =         {2901--2910},
+  title =         {Clevr: A diagnostic dataset for compositional
+                   language and elementary visual reasoning},
+  year =          {2017},
+}
+
+@article{jones2007representing,
+  author =        {Jones, Michael N and Mewhort, Douglas JK},
+  journal =       {Psychological review},
+  number =        {1},
+  pages =         {1},
+  publisher =     {American Psychological Association},
+  title =         {Representing word meaning and order information in a
+                   composite holographic lexicon.},
+  volume =        {114},
+  year =          {2007},
+}
+
+@book{kahneman2011thinking,
+  author =        {Kahneman, Daniel},
+  publisher =     {Macmillan},
+  title =         {Thinking, fast and slow},
+  year =          {2011},
+}
+
+@article{kadar2017representation,
+  author =        {K{\'a}d{\'a}r, Akos and Chrupa{\l}a, Grzegorz and
+                   Alishahi, Afra},
+  journal =       {Computational Linguistics},
+  number =        {4},
+  pages =         {761--780},
+  publisher =     {MIT Press},
+  title =         {Representation of linguistic form and function in
+                   recurrent neural networks},
+  volume =        {43},
+  year =          {2017},
+}
+
+@article{kang2018adventure,
+  author =        {Kang, Dongyeop and Khot, Tushar and Sabharwal, Ashish and
+                   Hovy, Eduard},
+  journal =       {arXiv preprint arXiv:1805.04680},
+  title =         {Adventure: Adversarial training for textual
+                   entailment with knowledge-guided examples},
+  year =          {2018},
+}
+
+@article{karpathy2015visualizing,
+  author =        {Karpathy, Andrej and Johnson, Justin and Fei-Fei, Li},
+  journal =       {arXiv preprint arXiv:1506.02078},
+  title =         {Visualizing and understanding recurrent networks},
+  year =          {2015},
+}
+
+@inproceedings{kiros2015skip,
+  author =        {Kiros, Ryan and Zhu, Yukun and
+                   Salakhutdinov, Ruslan R and Zemel, Richard and
+                   Urtasun, Raquel and Torralba, Antonio and
+                   Fidler, Sanja},
+  booktitle =     {Advances in neural information processing systems},
+  pages =         {3294--3302},
+  title =         {Skip-thought vectors},
+  year =          {2015},
+}
+
+@article{lake17,
+  author =        {Lake, Brenden M and Baroni, Marco},
+  journal =       {arXiv preprint arXiv:1711.00350},
+  title =         {Still not systematic after all these years: On the
+                   compositional skills of sequence-to-sequence
+                   recurrent networks},
+  year =          {2017},
+}
+
+@article{lake18,
+  author =        {Lake, Brenden M and Ullman, Tomer D and
+                   Tenenbaum, Joshua B and Gershman, Samuel J},
+  journal =       {Behavioral and Brain Sciences},
+  publisher =     {Cambridge University Press},
+  title =         {Building machines that learn and think like people},
+  volume =        {40},
+  year =          {2018},
+}
+
+@article{lake2019human,
+  author =        {Lake, Brenden M and Linzen, Tal and Baroni, Marco},
+  journal =       {arXiv preprint arXiv:1901.04587},
+  title =         {Human few-shot learning of compositional
+                   instructions},
+  year =          {2019},
+}
+
+@article{landauer1997solution,
+  author =        {Landauer, Thomas K and Dumais, Susan T},
+  journal =       {Psychological review},
+  number =        {2},
+  pages =         {211},
+  publisher =     {American Psychological Association},
+  title =         {A solution to Plato's problem: The latent semantic
+                   analysis theory of acquisition, induction, and
+                   representation of knowledge.},
+  volume =        {104},
+  year =          {1997},
+}
+
+@article{lecun2015deep,
+  author =        {LeCun, Yann and Bengio, Yoshua and Hinton, Geoffrey},
+  journal =       {nature},
+  number =        {7553},
+  pages =         {436},
+  publisher =     {Nature Publishing Group},
+  title =         {Deep learning},
+  volume =        {521},
+  year =          {2015},
+}
+
+@article{li2015visualizing,
+  author =        {Li, Jiwei and Chen, Xinlei and Hovy, Eduard and
+                   Jurafsky, Dan},
+  journal =       {arXiv preprint arXiv:1506.01066},
+  title =         {Visualizing and understanding neural models in nlp},
+  year =          {2015},
+}
+
+@article{lightfoot1984language,
+  author =        {Lightfoot, David and Julia, Pere},
+  title =         {The language lottery: Toward a biology of grammars},
+  year =          {1984},
+}
+
+@article{linzen2016assessing,
+  author =        {Linzen, Tal and Dupoux, Emmanuel and Goldberg, Yoav},
+  journal =       {Transactions of the Association for Computational
+                   Linguistics},
+  pages =         {521--535},
+  publisher =     {MIT Press},
+  title =         {Assessing the ability of LSTMs to learn
+                   syntax-sensitive dependencies},
+  volume =        {4},
+  year =          {2016},
+}
+
+@article{linzen2019can,
+  author =        {Linzen, Tal},
+  journal =       {Language},
+  publisher =     {Linguistic Society of America},
+  title =         {What can linguistics and deep learning contribute to
+                   each other? Response to Pater},
+  year =          {2019},
+}
+
+@article{marcus2018deep,
+  author =        {Marcus, Gary},
+  journal =       {arXiv preprint arXiv:1801.00631},
+  title =         {Deep learning: A critical appraisal},
+  year =          {2018},
+}
+
+@inproceedings{marelli2014semeval,
+  author =        {Marelli, Marco and Bentivogli, Luisa and
+                   Baroni, Marco and Bernardi, Raffaella and
+                   Menini, Stefano and Zamparelli, Roberto},
+  booktitle =     {Proceedings of the 8th international workshop on
+                   semantic evaluation (SemEval 2014)},
+  pages =         {1--8},
+  title =         {Semeval-2014 task 1: Evaluation of compositional
+                   distributional semantic models on full sentences
+                   through semantic relatedness and textual entailment},
+  year =          {2014},
+}
+
+@article{martignon2002fast,
+  author =        {Martignon, Laura and Hoffrage, Ulrich},
+  journal =       {Theory and Decision},
+  number =        {1},
+  pages =         {29--71},
+  publisher =     {Springer},
+  title =         {Fast, frugal, and fit: Simple heuristics for paired
+                   comparison},
+  volume =        {52},
+  year =          {2002},
+}
+
+@article{mccoy2019right,
+  author =        {McCoy, R Thomas and Pavlick, Ellie and Linzen, Tal},
+  journal =       {arXiv preprint arXiv:1902.01007},
+  title =         {Right for the Wrong Reasons: Diagnosing Syntactic
+                   Heuristics in Natural Language Inference},
+  year =          {2019},
+}
+
+@inproceedings{mikolov2013distributed,
+  author =        {Mikolov, Tomas and Sutskever, Ilya and Chen, Kai and
+                   Corrado, Greg S and Dean, Jeff},
+  booktitle =     {Advances in neural information processing systems},
+  pages =         {3111--3119},
+  title =         {Distributed representations of words and phrases and
+                   their compositionality},
+  year =          {2013},
+}
+
+@book{mitchell1980need,
+  author =        {Mitchell, Tom M},
+  publisher =     {Department of Computer Science, Laboratory for
+                   Computer Science Research~?},
+  title =         {The need for biases in learning generalizations},
+  year =          {1980},
+}
+
+@article{mnih2015human,
+  author =        {Mnih, Volodymyr and Kavukcuoglu, Koray and
+                   Silver, David and Rusu, Andrei A and Veness, Joel and
+                   Bellemare, Marc G and Graves, Alex and
+                   Riedmiller, Martin and Fidjeland, Andreas K and
+                   Ostrovski, Georg and others},
+  journal =       {Nature},
+  number =        {7540},
+  pages =         {529},
+  publisher =     {Nature Publishing Group},
+  title =         {Human-level control through deep reinforcement
+                   learning},
+  volume =        {518},
+  year =          {2015},
+}
+
+@inproceedings{nie2019analyzing,
+  author =        {Nie, Yixin and Wang, Yicheng and Bansal, Mohit},
+  booktitle =     {Proceedings of the AAAI Conference on Artificial
+                   Intelligence},
+  pages =         {6867--6874},
+  title =         {Analyzing compositionality-sensitivity of nli models},
+  volume =        {33},
+  year =          {2019},
+}
+
+@article{ommer2009learning,
+  author =        {Ommer, Bjorn and Buhmann, Joachim},
+  journal =       {IEEE Transactions on Pattern Analysis and Machine
+                   Intelligence},
+  number =        {3},
+  pages =         {501--516},
+  publisher =     {IEEE},
+  title =         {Learning the compositional nature of visual object
+                   categories for recognition},
+  volume =        {32},
+  year =          {2009},
+}
+
+@article{oord2016wavenet,
+  author =        {Oord, Aaron van den and Dieleman, Sander and
+                   Zen, Heiga and Simonyan, Karen and Vinyals, Oriol and
+                   Graves, Alex and Kalchbrenner, Nal and Senior, Andrew and
+                   Kavukcuoglu, Koray},
+  journal =       {arXiv preprint arXiv:1609.03499},
+  title =         {Wavenet: A generative model for raw audio},
+  year =          {2016},
+}
+
+@inproceedings{pennington14,
+  author =        {Pennington, Jeffrey and Socher, Richard and
+                   Manning, Christopher},
+  booktitle =     {Proceedings of the 2014 conference on empirical
+                   methods in natural language processing (EMNLP)},
+  pages =         {1532--1543},
+  title =         {Glove: Global vectors for word representation},
+  year =          {2014},
+}
+
+@article{pearl2016statistical,
+  author =        {Pearl, Lisa and Goldwater, Sharon},
+  publisher =     {Citeseer},
+  title =         {Statistical learning, inductive bias, and Bayesian
+                   inference in language acquisition},
+  year =          {2016},
+}
+
+@article{pereira2016comparative,
+  author =        {Pereira, Francisco and Gershman, Samuel and
+                   Ritter, Samuel and Botvinick, Matthew},
+  journal =       {Cognitive neuropsychology},
+  number =        {3-4},
+  pages =         {175--190},
+  publisher =     {Taylor \& Francis},
+  title =         {A comparative evaluation of off-the-shelf distributed
+                   semantic representations for modelling behavioural
+                   data},
+  volume =        {33},
+  year =          {2016},
+}
+
+@article{phillips66,
+  author =        {Phillips, Lawrence D and Edwards, Ward},
+  journal =       {Journal of Experimental Psychology},
+  pages =         {346--354},
+  publisher =     {American Psychological Association},
+  title =         {Conservatism in a simple probability inference task},
+  volume =        {72},
+  year =          {1966},
+}
+
+@article{redington1998distributional,
+  author =        {Redington, Martin and Crater, Nick and Finch, Steven},
+  journal =       {Cognitive science},
+  number =        {4},
+  pages =         {425--469},
+  publisher =     {Elsevier},
+  title =         {Distributional information: A powerful cue for
+                   acquiring syntactic categories},
+  volume =        {22},
+  year =          {1998},
+}
+
+@inproceedings{ribeiro2016should,
+  author =        {Ribeiro, Marco Tulio and Singh, Sameer and
+                   Guestrin, Carlos},
+  booktitle =     {Proceedings of the 22nd ACM SIGKDD International
+                   Conference on Knowledge Discovery and Data Mining},
+  organization =  {ACM},
+  pages =         {1135--1144},
+  title =         {Why should i trust you?: Explaining the predictions
+                   of any classifier},
+  year =          {2016},
+}
+
+@inproceedings{ritter17,
+  author =        {Ritter, Samuel and Barrett, David GT and
+                   Santoro, Adam and Botvinick, Matt M},
+  booktitle =     {International Conference on Machine Learning},
+  pages =         {2940--2949},
+  title =         {Cognitive Psychology for Deep Neural Networks: A
+                   Shape Bias Case Study},
+  year =          {2017},
+}
+
+@article{ruder2016overview,
+  author =        {Ruder, Sebastian},
+  journal =       {arXiv preprint arXiv:1609.04747},
+  title =         {An overview of gradient descent optimization
+                   algorithms},
+  year =          {2016},
+}
+
+@article{rumelhart1973model,
+  author =        {Rumelhart, David E and Abrahamson, Adele A},
+  journal =       {Cognitive Psychology},
+  number =        {1},
+  pages =         {1--28},
+  publisher =     {Elsevier},
+  title =         {A model for analogical reasoning},
+  volume =        {5},
+  year =          {1973},
+}
+
+@article{russakovsky2015imagenet,
+  author =        {Russakovsky, Olga and Deng, Jia and Su, Hao and
+                   Krause, Jonathan and Satheesh, Sanjeev and Ma, Sean and
+                   Huang, Zhiheng and Karpathy, Andrej and
+                   Khosla, Aditya and Bernstein, Michael and others},
+  journal =       {International journal of computer vision},
+  number =        {3},
+  pages =         {211--252},
+  publisher =     {Springer},
+  title =         {Imagenet large scale visual recognition challenge},
+  volume =        {115},
+  year =          {2015},
+}
+
+@article{seidenberg1997language,
+  author =        {Seidenberg, Mark S},
+  journal =       {Science},
+  number =        {5306},
+  pages =         {1599--1603},
+  publisher =     {American Association for the Advancement of Science},
+  title =         {Language acquisition and use: Learning and applying
+                   probabilistic constraints},
+  volume =        {275},
+  year =          {1997},
+}
+
+@article{siegelmann1995computational,
+  author =        {Siegelmann, Hava T and Sontag, Eduardo D},
+  journal =       {Journal of computer and system sciences},
+  number =        {1},
+  pages =         {132--150},
+  publisher =     {Elsevier},
+  title =         {On the computational power of neural nets},
+  volume =        {50},
+  year =          {1995},
+}
+
+@article{simon1991bounded,
+  author =        {Simon, Herbert A},
+  journal =       {Organization science},
+  number =        {1},
+  pages =         {125--134},
+  publisher =     {INFORMS},
+  title =         {Bounded rationality and organizational learning},
+  volume =        {2},
+  year =          {1991},
+}
+
+@article{singh1992transfer,
+  author =        {Singh, Satinder Pal},
+  journal =       {Machine Learning},
+  number =        {3-4},
+  pages =         {323--339},
+  publisher =     {Springer},
+  title =         {Transfer of learning by composing solutions of
+                   elemental sequential tasks},
+  volume =        {8},
+  year =          {1992},
+}
+
+@inproceedings{snli:emnlp2015,
+  author =        {Bowman, Samuel R and Angeli, Gabor and
+                   Potts, Christopher and Manning, Christopher D},
+  booktitle =     {Proceedings of the 2015 Conference on Empirical
+                   Methods in Natural Language Processing (EMNLP)},
+  publisher =     {Association for Computational Linguistics},
+  title =         {A large annotated corpus for learning natural
+                   language inference},
+  year =          {2015},
+}
+
+@inproceedings{socher2010learning,
+  author =        {Socher, Richard and Manning, Christopher D and
+                   Ng, Andrew Y},
+  booktitle =     {Proceedings of the NIPS-2010 Deep Learning and
+                   Unsupervised Feature Learning Workshop},
+  pages =         {1--9},
+  title =         {Learning continuous phrase representations and
+                   syntactic parsing with recursive neural networks},
+  volume =        {2010},
+  year =          {2010},
+}
+
+@inproceedings{socher11,
+  author =        {Socher, Richard and Huang, Eric H and Pennin, Jeffrey and
+                   Manning, Christopher D and Ng, Andrew Y},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {801--809},
+  title =         {Dynamic pooling and unfolding recursive autoencoders
+                   for paraphrase detection},
+  year =          {2011},
+}
+
+@article{steyvers2006multidimensional,
+  author =        {Steyvers, Mark},
+  journal =       {Encyclopedia of cognitive science},
+  publisher =     {Wiley Online Library},
+  title =         {Multidimensional scaling},
+  year =          {2006},
+}
+
+@inproceedings{white2017inference,
+  author =        {White, Aaron Steven and Rastogi, Pushpendre and
+                   Duh, Kevin and Van Durme, Benjamin},
+  booktitle =     {Proceedings of the Eighth International Joint
+                   Conference on Natural Language Processing (Volume 1:
+                   Long Papers)},
+  pages =         {996--1005},
+  title =         {Inference is everything: Recasting semantic resources
+                   into a unified evaluation framework},
+  year =          {2017},
+}
+
+@article{yosinski2015understanding,
+  author =        {Yosinski, Jason and Clune, Jeff and Nguyen, Anh and
+                   Fuchs, Thomas and Lipson, Hod},
+  journal =       {arXiv preprint arXiv:1506.06579},
+  title =         {Understanding neural networks through deep
+                   visualization},
+  year =          {2015},
+}
+
+@inproceedings{zeiler2014visualizing,
+  author =        {Zeiler, Matthew D and Fergus, Rob},
+  booktitle =     {European conference on computer vision},
+  organization =  {Springer},
+  pages =         {818--833},
+  title =         {Visualizing and understanding convolutional networks},
+  year =          {2014},
+}
+
+@article{zhao2017generating,
+  author =        {Zhao, Zhengli and Dua, Dheeru and Singh, Sameer},
+  journal =       {arXiv preprint arXiv:1710.11342},
+  title =         {Generating natural adversarial examples},
+  year =          {2017},
+}
+
+@inproceedings{krizhevsky2012imagenet,
+  author =        {Krizhevsky, A. and Sutskever, I. and Hinton, G. E.},
+  booktitle =     {Advances in neural information processing systems},
+  pages =         {1097--1105},
+  title =         {Imagenet classification with deep convolutional
+                   neural networks},
+  year =          {2012},
+}
+
+@inproceedings{hoyer2009nonlinear,
+  author =        {Hoyer, Patrik O and Janzing, Dominik and
+                   Mooij, Joris M and Peters, Jonas and
+                   Sch{\"o}lkopf, Bernhard},
+  booktitle =     {Advances in neural information processing systems},
+  pages =         {689--696},
+  title =         {Nonlinear causal discovery with additive noise
+                   models},
+  year =          {2009},
+}
+
+@article{janzing2009telling,
+  author =        {Janzing, Dominik and Hoyer, Patrik O and
+                   Sch{\"o}lkopf, Bernhard},
+  journal =       {arXiv preprint arXiv:0909.4386},
+  title =         {Telling cause from effect based on high-dimensional
+                   observations},
+  year =          {2009},
+}
+
+@article{meltzoff2007infants,
+  author =        {Meltzoff, Andrew N},
+  publisher =     {Oxford University Press},
+  title =         {Infants' causal learning: Intervention, observation,
+                   imitation.},
+  year =          {2007},
+}
+
+@inproceedings{mitrovic2018causal,
+  author =        {Mitrovic, Jovana and Sejdinovic, Dino and
+                   Teh, Yee Whye},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {6986--6994},
+  title =         {Causal inference via kernel deviance measures},
+  year =          {2018},
+}
+
+@article{saxe2006perception,
+  author =        {Saxe, Rebecca and Carey, Susan},
+  journal =       {Acta psychologica},
+  number =        {1-2},
+  pages =         {144--165},
+  publisher =     {Elsevier},
+  title =         {The perception of causality in infancy},
+  volume =        {123},
+  year =          {2006},
+}
+
+@book{carey2009origin,
+  author =        {Carey, Susan},
+  publisher =     {Oxford University Press},
+  title =         {The origin of concepts},
+  year =          {2009},
+}
+
+@article{walters1981associative,
+  author =        {Walters, Edgar T and Carew, Thomas J and
+                   Kandel, Eric R},
+  journal =       {Science},
+  number =        {4481},
+  pages =         {504--506},
+  publisher =     {American Association for the Advancement of Science},
+  title =         {Associative learning in Aplysia: Evidence for
+                   conditioned fear in an invertebrate},
+  volume =        {211},
+  year =          {1981},
+}
+
+@article{brembs2002operant,
+  author =        {Brembs, Bj{\"o}rn and Lorenzetti, Fred D and
+                   Reyes, Fredy D and Baxter, Douglas A and
+                   Byrne, John H},
+  journal =       {Science},
+  number =        {5573},
+  pages =         {1706--1709},
+  publisher =     {American Association for the Advancement of Science},
+  title =         {Operant reward learning in Aplysia: neuronal
+                   correlates and mechanisms},
+  volume =        {296},
+  year =          {2002},
+}
+
+@article{niv2002evolution,
+  author =        {Niv, Yael and Joel, Daphna and Meilijson, Isaac and
+                   Ruppin, Eytan},
+  journal =       {Neurocomputing},
+  pages =         {951--956},
+  publisher =     {Elsevier},
+  title =         {Evolution of reinforcement learning in foraging bees:
+                   A simple explanation for risk averse behavior},
+  volume =        {44},
+  year =          {2002},
+}
+
+@article{hochreiter97long,
+  author =        {Hochreiter, S. and Schmidhuber, J.},
+  journal =       {Neural computation},
+  number =        {8},
+  pages =         {1735--1780},
+  publisher =     {MIT Press},
+  title =         {Long short-term memory},
+  volume =        {9},
+  year =          {1997},
+}
+
+@article{bonawitz2010just,
+  author =        {Bonawitz, Elizabeth Baraff and Ferranti, Darlene and
+                   Saxe, Rebecca and Gopnik, Alison and
+                   Meltzoff, Andrew N and Woodward, James and
+                   Schulz, Laura E},
+  journal =       {Cognition},
+  number =        {1},
+  pages =         {104--117},
+  publisher =     {Elsevier},
+  title =         {Just do it? Investigating the gap between prediction
+                   and action in toddlers? causal inferences},
+  volume =        {115},
+  year =          {2010},
+}
+
+@inproceedings{shanmugam2015learning,
+  author =        {Shanmugam, K. and Kocaoglu, M. and Dimakis, A. G. and
+                   Vishwanath, S.},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {3195--3203},
+  title =         {Learning causal graphs with small interventions},
+  year =          {2015},
+}
+
+@incollection{schulz2012finding,
+  author =        {Schulz, Laura},
+  booktitle =     {Advances in child development and behavior},
+  pages =         {269--294},
+  publisher =     {Elsevier},
+  title =         {Finding new facts; thinking new thoughts},
+  volume =        {43},
+  year =          {2012},
+}
+
+@article{lombrozo2010causal,
+  author =        {Lombrozo, Tania},
+  journal =       {Cognitive Psychology},
+  number =        {4},
+  pages =         {303--332},
+  publisher =     {Elsevier},
+  title =         {Causal--explanatory pluralism: How intentions,
+                   functions, and mechanisms influence causal
+                   ascriptions},
+  volume =        {61},
+  year =          {2010},
+}
+
+@article{glymour2003learning,
+  author =        {Glymour, Clark},
+  journal =       {Trends in cognitive sciences},
+  number =        {1},
+  pages =         {43--48},
+  publisher =     {Elsevier},
+  title =         {Learning, prediction and causal Bayes nets},
+  volume =        {7},
+  year =          {2003},
+}
+
+@article{fernbach2010neglect,
+  author =        {Fernbach, Philip M and Darlow, Adam and
+                   Sloman, Steven A},
+  journal =       {Psychological Science},
+  number =        {3},
+  pages =         {329--336},
+  publisher =     {Sage Publications Sage CA: Los Angeles, CA},
+  title =         {Neglect of alternative causes in predictive but not
+                   diagnostic reasoning},
+  volume =        {21},
+  year =          {2010},
+}
+
+@article{fernbach2013cognitive,
+  author =        {Fernbach, Philip M and Rehder, Bob},
+  journal =       {Argument \& Computation},
+  number =        {1},
+  pages =         {64--88},
+  publisher =     {Taylor \& Francis},
+  title =         {Cognitive shortcuts in causal inference},
+  volume =        {4},
+  year =          {2013},
+}
+
+@article{rehder2014independence,
+  author =        {Rehder, Bob},
+  journal =       {Cognitive psychology},
+  pages =         {54--107},
+  publisher =     {Elsevier},
+  title =         {Independence and dependence in human causal
+                   reasoning},
+  volume =        {72},
+  year =          {2014},
+}
+
+@article{rehder2017failures,
+  author =        {Rehder, Bob and Waldmann, Michael R},
+  journal =       {Memory \& cognition},
+  number =        {2},
+  pages =         {245--260},
+  publisher =     {Springer},
+  title =         {Failures of explaining away and screening off in
+                   described versus experienced causal learning
+                   scenarios},
+  volume =        {45},
+  year =          {2017},
+}
+
+@article{hyttinen2013experiment,
+  author =        {Hyttinen, A. and Eberhardt, F. and Hoyer, P. O.},
+  journal =       {The Journal of Machine Learning Research},
+  number =        {1},
+  pages =         {3041--3071},
+  publisher =     {JMLR. org},
+  title =         {Experiment selection for causal discovery},
+  volume =        {14},
+  year =          {2013},
+}
+
+@article{cartwright2004causation,
+  author =        {Cartwright, Nancy},
+  journal =       {Philosophy of Science},
+  number =        {5},
+  pages =         {805--819},
+  publisher =     {The University of Chicago Press},
+  title =         {Causation: One word, many things},
+  volume =        {71},
+  year =          {2004},
+}
+
+@article{waldmann2013causal,
+  author =        {Waldmann, Michael R and Hagmayer, York},
+  publisher =     {Oxford University Press},
+  title =         {Causal reasoning.},
+  year =          {2013},
+}
+
+@article{silver2016mastering,
+  author =        {Silver, D. and Huang, A. and Maddison, C. J. and
+                   Guez, A. and Sifre, L. and Van Den Driessche, G. and
+                   Schrittwieser, J. and Antonoglou, I. and
+                   Panneershelvam, V. and Lanctot, M. and others},
+  journal =       {nature},
+  number =        {7587},
+  pages =         {484},
+  publisher =     {Nature Publishing Group},
+  title =         {Mastering the game of Go with deep neural networks
+                   and tree search},
+  volume =        {529},
+  year =          {2016},
+}
+
+@article{mcclelland2010letting,
+  author =        {McClelland, James L and Botvinick, Matthew M and
+                   Noelle, David C and Plaut, David C and
+                   Rogers, Timothy T and Seidenberg, Mark S and
+                   Smith, Linda B},
+  journal =       {Trends in cognitive sciences},
+  number =        {8},
+  pages =         {348--356},
+  publisher =     {Elsevier},
+  title =         {Letting structure emerge: connectionist and dynamical
+                   systems approaches to cognition},
+  volume =        {14},
+  year =          {2010},
+}
+
+@article{goodman2011learning,
+  author =        {Goodman, N. D. and Ullman, T. D. and
+                   Tenenbaum, J. B.},
+  journal =       {Psychological review},
+  number =        {1},
+  pages =         {110},
+  publisher =     {American Psychological Association},
+  title =         {Learning a theory of causality.},
+  volume =        {118},
+  year =          {2011},
+}
+
+@inproceedings{forney2017counterfactual,
+  author =        {Forney, A. and Pearl, J. and Bareinboim, E.},
+  booktitle =     {International Conference on Machine Learning},
+  pages =         {1156--1164},
+  title =         {Counterfactual Data-Fusion for Online Reinforcement
+                   Learners},
+  year =          {2017},
+}
+
+@article{sen2017identifying,
+  author =        {Sen, R. and Shanmugam, K. and Dimakis, A. G. and
+                   Shakkottai, S.},
+  journal =       {arXiv preprint arXiv:1701.02789},
+  title =         {Identifying best interventions through online
+                   importance sampling},
+  year =          {2017},
+}
+
+@inproceedings{lattimore2016causal,
+  author =        {Lattimore, F. and Lattimore, T. and Reid, M. D.},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {1181--1189},
+  title =         {Causal bandits: Learning good interventions via
+                   causal inference},
+  year =          {2016},
+}
+
+@article{lagnado2013causal,
+  author =        {Lagnado, D. A. and Gerstenberg, T. and Zultan, R.},
+  journal =       {Cognitive science},
+  number =        {6},
+  pages =         {1036--1073},
+  publisher =     {Wiley Online Library},
+  title =         {Causal responsibility and counterfactuals},
+  volume =        {37},
+  year =          {2013},
+}
+
+@article{cho2014learning,
+  author =        {Cho, K. and Van Merri{\"e}nboer, B. and Gulcehre, C. and
+                   Bahdanau, D. and Bougares, F. and Schwenk, H. and
+                   Bengio, Y.},
+  journal =       {arXiv preprint arXiv:1406.1078},
+  title =         {Learning phrase representations using RNN
+                   encoder-decoder for statistical machine translation},
+  year =          {2014},
+}
+
+@book{barber12bayesian,
+  author =        {Barber, D.},
+  publisher =     {Cambridge University Press},
+  title =         {Bayesian reasoning and machine learning},
+  year =          {2012},
+}
+
+@article{grant2018recasting,
+  author =        {Grant, E. and Finn, C. and Levine, S. and Darrell, T. and
+                   Griffiths, T.},
+  journal =       {arXiv preprint arXiv:1801.08930},
+  title =         {Recasting gradient-based meta-learning as
+                   hierarchical bayes},
+  year =          {2018},
+}
+
+@book{bishop06pattern,
+  author =        {Bishop, C. M.},
+  publisher =     {Springer},
+  title =         {Pattern Recognition and Machine Learning},
+  year =          {2006},
+}
+
+@techreport{dawid07fundamentals,
+  author =        {P. Dawid},
+  institution =   {University Colledge London},
+  title =         {Fundamentals of Statistical Causality},
+  year =          {2007},
+}
+
+@book{kollerl09probabilistic,
+  author =        {D. Koller and N. Friedman},
+  publisher =     {MIT Press},
+  title =         {Probabilistic Graphical Models: Principles and
+                   Techniques},
+  year =          {2009},
+}
+
+@book{murphy12machine,
+  author =        {{K. P.} Murphy},
+  publisher =     {MIT Press},
+  title =         {Machine Learning: a Probabilistic Perspective},
+  year =          {2012},
+}
+
+@article{Dasgupta644534,
+  author =        {Dasgupta, Ishita and Schulz, Eric and
+                   Tenenbaum, Joshua B. and Gershman, Samuel J.},
+  journal =       {bioRxiv},
+  publisher =     {Cold Spring Harbor Laboratory},
+  title =         {A theory of learning to infer},
+  year =          {2019},
+  doi =           {10.1101/644534},
+  url =           {https://www.biorxiv.org/content/early/2019/05/20/644534},
+}
+
+@article{cheng1997covariation,
+  author =        {Cheng, Patricia W},
+  journal =       {Psychological review},
+  number =        {2},
+  pages =         {367},
+  publisher =     {American Psychological Association},
+  title =         {From covariation to causation: a causal power
+                   theory.},
+  volume =        {104},
+  year =          {1997},
+}
+
+@article{geiger1990identifying,
+  author =        {Geiger, Dan and Verma, Thomas and Pearl, Judea},
+  journal =       {Networks},
+  number =        {5},
+  pages =         {507--534},
+  publisher =     {Wiley Online Library},
+  title =         {Identifying independence in Bayesian networks},
+  volume =        {20},
+  year =          {1990},
+}
+
+@book{verma1991equivalence,
+  author =        {Verma, Thomas and Pearl, Judea},
+  publisher =     {UCLA, Computer Science Department},
+  title =         {Equivalence and synthesis of causal models},
+  year =          {1991},
+}
+
+@article{jordan2002graphical,
+  author =        {Jordan, Michael I and Weiss, Yair},
+  journal =       {The handbook of brain theory and neural networks},
+  pages =         {490--496},
+  publisher =     {MIT Press Cambridge, MA},
+  title =         {Graphical models: Probabilistic inference},
+  year =          {2002},
+}
+
+@article{heckerman1995learning,
+  author =        {Heckerman, David and Geiger, Dan and
+                   Chickering, David M},
+  journal =       {Machine learning},
+  number =        {3},
+  pages =         {197--243},
+  publisher =     {Springer},
+  title =         {Learning Bayesian networks: The combination of
+                   knowledge and statistical data},
+  volume =        {20},
+  year =          {1995},
+}
+
+@inproceedings{magliacane2018domain,
+  author =        {Magliacane, Sara and van Ommen, Thijs and
+                   Claassen, Tom and Bongers, Stephan and
+                   Versteeg, Philip and Mooij, Joris M},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {10846--10856},
+  title =         {Domain Adaptation by Using Causal Inference to
+                   Predict Invariant Conditional Distributions},
+  year =          {2018},
+}
+
+@article{parascandolo2017learning,
+  author =        {Parascandolo, Giambattista and Kilbertus, Niki and
+                   Rojas-Carulla, Mateo and Sch{\"o}lkopf, Bernhard},
+  journal =       {arXiv preprint arXiv:1712.00961},
+  title =         {Learning independent causal mechanisms},
+  year =          {2017},
+}
+
+@book{pearl88probabilistic,
+  author =        {J. Pearl},
+  publisher =     {Morgan Kaufmann},
+  title =         {Probabilistic Reasoning in Intelligent Systems:
+                   Networks of Plausible Inference},
+  year =          {1988},
+}
+
+@book{pearl2000,
+  author =        {J. Pearl},
+  publisher =     {Cambridge University Press},
+  title =         {Causality: Models, Reasoning, and Inference},
+  year =          {2000},
+}
+
+@book{pearl16causal,
+  author =        {Pearl, J. and Glymour, M. and Jewell, N. P.},
+  publisher =     {John Wiley \& Sons},
+  title =         {Causal inference in statistics: a primer},
+  year =          {2016},
+}
+
+@article{premack1994levels,
+  author =        {Premack, David and Premack, Ann James},
+  journal =       {Cognition},
+  number =        {1-3},
+  pages =         {347--362},
+  publisher =     {Elsevier},
+  title =         {Levels of causal understanding in chimpanzees and
+                   children},
+  volume =        {50},
+  year =          {1994},
+}
+
+@article{mnih2016,
+  author =        {V. Mnih and {A. P.} Badia and M. Mirza and A. Graves and
+                   {T. P.} Lillicrap and T. Harley and D. Silver and
+                   K. Kavukcuoglu},
+  journal =       {CoRR},
+  title =         {Asynchronous Methods for Deep Reinforcement Learning},
+  volume =        {abs/1602.01783},
+  year =          {2016},
+  biburl =        {https://dblp.org/rec/bib/journals/corr/MnihBMGLHSK16},
+  url =           {http://arxiv.org/abs/1602.01783},
+}
+
+@article{wang2016,
+  author =        {{J. X.} Wang and Z. Kurth{-}Nelson and D. Tirumala and
+                   H. Soyer and {J. Z.} Leibo and R. Munos and
+                   C. Blundell and D. Kumaran and M. Botvinick},
+  journal =       {CoRR},
+  title =         {Learning to reinforcement learn},
+  volume =        {abs/1611.05763},
+  year =          {2016},
+  biburl =        {https://dblp.org/rec/bib/journals/corr/WangKTSLMBKB16},
+  url =           {http://arxiv.org/abs/1611.05763},
+}
+
+@article{knapp1978,
+  author =        {{T. R.} Knapp},
+  journal =       {Psychological Bulletin},
+  title =         {Canonical correlation analysis: A general parametric
+                   significance-testing system},
+  volume =        {85},
+  year =          {1978},
+}
+
+@article{gilmer2017neural,
+  author =        {J. Gilmer and {S. S.} Schoenholz Riley, Patrick F and
+                   Vinyals, Oriol and Dahl, George E},
+  journal =       {arXiv preprint arXiv:1704.01212},
+  title =         {Neural message passing for quantum chemistry},
+  year =          {2017},
+}
+
+@inproceedings{battaglia2016interaction,
+  author =        {P. Battaglia and R. Pascanu and M. Lai and
+                   {D. J.} Rezende and others},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {4502--4510},
+  title =         {Interaction networks for learning about objects,
+                   relations and physics},
+  year =          {2016},
+}
+
+@article{vaswani2017attention,
+  author =        {Vaswani, A. and Shazeer, N. and Parmar, N. and
+                   Uszkoreit, J. and Jones, L. and Gomez, A. N. and
+                   Kaiser, L. and Polosukhin, I.},
+  journal =       {arXiv preprint arXiv:1706.03762},
+  title =         {Attention Is All You Need},
+  year =          {2017},
+}
+
+@article{wang2017non,
+  author =        {Wang, X. and Girshick, R. and Gupta, A. and He, K.},
+  journal =       {arXiv preprint arXiv:1711.07971},
+  title =         {Non-local Neural Networks},
+  year =          {2017},
+}
+
+@book{sutton1998reinforcement,
+  author =        {Sutton, R. S. and Barto, A. G.},
+  publisher =     {MIT press Cambridge},
+  title =         {Reinforcement learning: An introduction},
+  volume =        {1},
+  year =          {1998},
+}
+
+@article{Lake2015human,
+  author =        {Lake, B. M. and Salakhutdinov, R. and
+                   Tenenbaum, J. B.},
+  journal =       {Science},
+  number =        {6266},
+  pages =         {1332--1338},
+  publisher =     {American Association for the Advancement of Science},
+  title =         {Human-level concept learning through probabilistic
+                   program induction},
+  volume =        {350},
+  year =          {2015},
+}
+
+@article{lake2016building,
+  author =        {Lake, B. M. and Ullman, T. D. and Tenenbaum, J. B. and
+                   Gershman, S. J.},
+  journal =       {arXiv preprint arXiv:1604.00289},
+  title =         {Building machines that learn and think like people},
+  year =          {2016},
+}
+
+@article{duan2016RL2,
+  author =        {Duan, Y. and Schulman, J. and Chen, X. and
+                   Bartlett, P. L. and Sutskever, I. and Abbeel, P.},
+  journal =       {arXiv preprint arXiv:1611.02779},
+  title =         {$RL^2$: Fast Reinforcement Learning via Slow
+                   Reinforcement Learning},
+  year =          {2016},
+}
+
+@article{wang2018,
+  author =        {Wang, J. X. and Kurth-Nelson, Z. and Kumaran, D. and
+                   Tirumala, D. and Soyer, H. and Leibo, J. Z. and
+                   Hassabis, D. and Botvinick, M.},
+  journal =       {Nature neuroscience},
+  number =        {6},
+  pages =         {860},
+  publisher =     {Nature Publishing Group},
+  title =         {Prefrontal cortex as a meta-reinforcement learning
+                   system},
+  volume =        {21},
+  year =          {2018},
+}
+
+@inproceedings{kaufmann2012pyma,
+  author =        {Kaufmann, E. and Capp{\'e}, O. and Garivier, A.},
+  booktitle =     {Artificial Intelligence and Statistics},
+  pages =         {592--600},
+  title =         {On Bayesian upper confidence bounds for bandit
+                   problems},
+  year =          {2012},
+}
+
+@book{thrun1998learning,
+  author =        {Thrun, S. and Pratt, L.},
+  publisher =     {Springer},
+  title =         {Learning to learn: Introduction and overview},
+  year =          {1998},
+}
+
+@article{schulz2007serious,
+  author =        {{L. E.} Schulz and {E. B.} Bonawitz},
+  journal =       {Developmental psychology},
+  title =         {Serious fun: preschoolers engage in more exploratory
+                   play when evidence is confounded},
+  volume =        {43},
+  year =          {2007},
+}
+
+@article{schulz2007preschool,
+  author =        {{L. E.} Schulz and A. Gopnik and C. Glymour},
+  journal =       {Developmental science},
+  title =         {Preschool children learn about causal structure from
+                   conditional interventions},
+  volume =        {10},
+  year =          {2007},
+}
+
+@inproceedings{kaufmann2012thompson,
+  author =        {E. Kaufmann and N. Korda and R. Munos},
+  booktitle =     {International Conference on Algorithmic Learning
+                   Theory},
+  pages =         {199--213},
+  title =         {Thompson sampling: An asymptotically optimal
+                   finite-time analysis},
+  year =          {2012},
+}
+
+@article{thompson1933likelihood,
+  author =        {{W. R.} Thompson},
+  journal =       {Biometrika},
+  pages =         {285--294},
+  publisher =     {JSTOR},
+  title =         {On the likelihood that one unknown probability
+                   exceeds another in view of the evidence of two
+                   samples},
+  volume =        {25},
+  year =          {1933},
+}
+
+@article{bellemare2016unifying,
+  author =        {M. Bellemare and S. Srinivasan and G. Ostrovski and
+                   T. Schaul and D. Saxton and R. Munos},
+  journal =       {Advances in Neural Information Processing Systems},
+  title =         {Unifying Count-Based Exploration and Intrinsic
+                   Motivation},
+  year =          {2016},
+}
+
+@article{mohamed2015variational,
+  author =        {S. Mohamed and {D. J.} Rezende},
+  journal =       {Advances in Neural Information Processing Systems},
+  title =         {Variational Information Maximisation for
+                   Intrinsically Motivated Reinforcement Learning},
+  year =          {2015},
+}
+
+@article{stadie2015,
+  author =        {{B. C.} Stadie and S. Levine and P. Abbeel},
+  journal =       {CoRR},
+  title =         {Incentivizing Exploration In Reinforcement Learning
+                   With Deep Predictive Models},
+  volume =        {abs/1507.00814},
+  year =          {2015},
+  url =           {http://arxiv.org/abs/1507.00814},
+}
+
+@article{osband2016,
+  author =        {I. Osband and C. Blundell and A. Pritzel and
+                   B. Van Roy},
+  journal =       {CoRR},
+  title =         {Deep Exploration via Bootstrapped {DQN}},
+  volume =        {abs/1602.04621},
+  year =          {2016},
+  url =           {http://arxiv.org/abs/1602.04621},
+}
+
+@article{lazaridou2017,
+  author =        {A. Lazaridou and A. Peysakhovich and M. Baroni},
+  journal =       {CoRR},
+  title =         {Multi-Agent Cooperation and the Emergence of
+                   (Natural) Language},
+  volume =        {abs/1612.07182},
+  year =          {2016},
+  url =           {http://arxiv.org/abs/1612.07182},
+}
+
+@article{ortega2015causal,
+  author =        {{P. A.} Ortega and {D. D.} Lee {A. A.} Stocker},
+  journal =       {37th Annual Cognitive Science Society Meeting
+                   {CogSci}},
+  title =         {Causal reasoning in a prediction task with hidden
+                   causes},
+  year =          {2015},
+}
+
+@article{ortega2010minimum,
+  author =        {{P. A.} Ortega and {D. A.} Braun},
+  journal =       {Journal of Artificial Intelligence Research},
+  title =         {A minimum relative entropy principle for learning and
+                   acting},
+  volume =        {38},
+  year =          {2010},
+}
+
+@article{Bareinboim2015bandits,
+  author =        {E. Bareinboim and A. Forney and Judea Pearl},
+  journal =       {Advances in Neural Information Processing Systems},
+  title =         {Bandits with unobserved confounders: A causal
+                   approach},
+  year =          {2015},
+}
+
+@article{ortega2013generalized,
+  author =        {P. A. Ortega and D. A. Braun},
+  journal =       {CoRR},
+  title =         {Generalized Thompson Sampling for Sequential
+                   Decision-Making and Causal Inference},
+  volume =        {abs/1303.4431},
+  year =          {2013},
+  url =           {http://arxiv.org/abs/1303.4431},
+}
+
+@book{spirtes2000causation,
+  author =        {P. Spirtes and {C. N.} Glymour and R. Scheines and
+                   D. Heckerman and C. Meek and G. Cooper and
+                   T. Richardson},
+  publisher =     {MIT press},
+  title =         {Causation, prediction, and search},
+  year =          {2000},
+}
+
+@inproceedings{ortega2011bayesian,
+  author =        {{P. A.} Ortega},
+  booktitle =     {NIPS 2011 Workshop on Philosophy and Machine
+                   Learning},
+  pages =         {1--4},
+  title =         {Bayesian Causal Induction},
+  year =          {2011},
+}
+
+@article{parida2018multivariate,
+  author =        {{P. K.} Parida and T. Marwala and S. Chakraverty},
+  journal =       {Neural Networks},
+  pages =         {44--54},
+  publisher =     {Elsevier},
+  title =         {A multivariate additive noise model for complete
+                   causal discovery},
+  volume =        {103},
+  year =          {2018},
+}
+
+@article{blaisdell2006causal,
+  author =        {{A. P.} Blaisdell and K. Sawa and {K. J.} Leising and
+                   {M. R.} Waldmann},
+  journal =       {Science},
+  number =        {5763},
+  pages =         {1020--1022},
+  publisher =     {American Association for the Advancement of Science},
+  title =         {Causal reasoning in rats},
+  volume =        {311},
+  year =          {2006},
+}
+
+@article{leslie1982perception,
+  author =        {{A. M.} Leslie},
+  journal =       {Perception},
+  number =        {2},
+  pages =         {173--186},
+  publisher =     {SAGE Publications Sage UK: London, England},
+  title =         {The perception of causality in infants},
+  volume =        {11},
+  year =          {1982},
+}
+
+@article{gopnik2004theory,
+  author =        {A. Gopnik and C. Glymour and {D. M.} Sobel and
+                   {L. E.} Schulz and T. Kushnir and D. Danks},
+  journal =       {Psychological review},
+  number =        {1},
+  pages =         {3},
+  publisher =     {American Psychological Association},
+  title =         {A theory of causal learning in children: causal maps
+                   and Bayes nets.},
+  volume =        {111},
+  year =          {2004},
+}
+
+@article{gopnik2001causal,
+  author =        {A. Gopnik and {D. M.} Sobel and {L. E.} Schulz and
+                   C. Glymour},
+  journal =       {Developmental psychology},
+  number =        {5},
+  pages =         {620},
+  publisher =     {American Psychological Association},
+  title =         {Causal learning mechanisms in very young children:
+                   two-, three-, and four-year-olds infer causal
+                   relations from patterns of variation and
+                   covariation.},
+  volume =        {37},
+  year =          {2001},
+}
+
+@article{finn2017model,
+  author =        {C. Finn and P. Abbeel and S. Levine},
+  journal =       {arXiv preprint arXiv:1703.03400},
+  title =         {Model-agnostic meta-learning for fast adaptation of
+                   deep networks},
+  year =          {2017},
+}
+
+@inproceedings{andrychowicz2016learning,
+  author =        {M. Andrychowicz and M. Denil and S. Gomez and
+                   {M. W.} Hoffman and D. Pfau and T. Schaul and
+                   B. Shillingford and N. De Freitas},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {3981--3989},
+  title =         {Learning to learn by gradient descent by gradient
+                   descent},
+  year =          {2016},
+}
+
+@article{denil2016learning,
+  author =        {Denil, Misha and Agrawal, Pulkit and
+                   Kulkarni, Tejas D and Erez, Tom and Battaglia, Peter and
+                   de Freitas, Nando},
+  journal =       {arXiv preprint arXiv:1611.01843},
+  title =         {Learning to perform physics experiments via deep
+                   reinforcement learning},
+  year =          {2016},
+}
+
+@inproceedings{louizos2017causal,
+  author =        {Louizos, Christos and Shalit, Uri and Mooij, Joris M and
+                   Sontag, David and Zemel, Richard and Welling, Max},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {6446--6456},
+  title =         {Causal effect inference with deep latent-variable
+                   models},
+  year =          {2017},
+}
+
+@article{bengio2019meta,
+  author =        {Bengio, Yoshua and Deleu, Tristan and Rahaman, Nasim and
+                   Ke, Rosemary and Lachapelle, S{\'e}bastien and
+                   Bilaniuk, Olexa and Goyal, Anirudh and
+                   Pal, Christopher},
+  journal =       {arXiv preprint arXiv:1901.10912},
+  title =         {A Meta-Transfer Objective for Learning to Disentangle
+                   Causal Mechanisms},
+  year =          {2019},
+}
+
+@inproceedings{vinyals2016matching,
+  author =        {O. Vinyals and C. Blundell and T. Lillicrap and
+                   D. Wierstra and others},
+  booktitle =     {Advances in Neural Information Processing Systems},
+  pages =         {3630--3638},
+  title =         {Matching networks for one shot learning},
+  year =          {2016},
+}
+
+@inproceedings{santoro2016meta,
+  author =        {A. Santoro and S. Bartunov and M. Botvinick and
+                   D. Wierstra and T. Lillicrap},
+  booktitle =     {International conference on machine learning},
+  pages =         {1842--1850},
+  title =         {Meta-learning with memory-augmented neural networks},
+  year =          {2016},
+}
+
+@article{espeholt2018impala,
+  author =        {Espeholt, L. and Soyer, H. and Munos, R. and
+                   Simonyan, K. and Mnih, V. and Ward, T. and Doron, Y. and
+                   Firoiu, V. and Harley, T. and Dunning, I. and others},
+  journal =       {arXiv preprint arXiv:1802.01561},
+  title =         {IMPALA: Scalable distributed Deep-RL with importance
+                   weighted actor-learner architectures},
+  year =          {2018},
+}
+
+@article{hessel2018multi,
+  author =        {Hessel, M. and Soyer, H. and Espeholt, L. and
+                   Czarnecki, W. and Schmitt, S. and van Hasselt, H.},
+  journal =       {arXiv preprint arXiv:1809.04474},
+  title =         {Multi-task Deep Reinforcement Learning with PopArt},
+  year =          {2018},
+}
+
+@article{hester2017deep,
+  author =        {Hester, T. and Vecerik, M. and Pietquin, O. and
+                   Lanctot, M. and Schaul, T. and Piot, B. and
+                   Horgan, D. and Quan, J. and Sendonaris, A. and
+                   Dulac-Arnold, G. and others},
+  journal =       {arXiv preprint arXiv:1704.03732},
+  title =         {Deep Q-learning from Demonstrations},
+  year =          {2017},
+}
+
+@inproceedings{andreas2016neural,
+  author =        {Andreas, J. and Rohrbach, M. and Darrell, T. and
+                   Klein, D.},
+  booktitle =     {Proceedings of the IEEE Conference on Computer Vision
+                   and Pattern Recognition},
+  pages =         {39--48},
+  title =         {Neural module networks},
+  year =          {2016},
+}
+
+@article{ganin2018synthesizing,
+  author =        {Ganin, Y. and Kulkarni, T. and Babuschkin, I. and
+                   Eslami, S. M. and Vinyals, O.},
+  journal =       {arXiv preprint arXiv:1804.01118},
+  title =         {Synthesizing Programs for Images using Reinforced
+                   Adversarial Learning},
+  year =          {2018},
+}
+
+@article{ortega2019meta,
+  author =        {Ortega, Pedro A and Wang, Jane X and Rowland, Mark and
+                   Genewein, Tim and Kurth-Nelson, Zeb and
+                   Pascanu, Razvan and Heess, Nicolas and Veness, Joel and
+                   Pritzel, Alex and Sprechmann, Pablo and others},
+  journal =       {arXiv preprint arXiv:1905.03030},
+  title =         {Meta-learning of Sequential Strategies},
+  year =          {2019},
+}
+
+@article{ritter2018been,
+  author =        {Ritter, Samuel and Wang, Jane X and Kurth-Nelson, Zeb and
+                   Jayakumar, Siddhant M and Blundell, Charles and
+                   Pascanu, Razvan and Botvinick, Matthew},
+  journal =       {arXiv preprint arXiv:1805.09692},
+  title =         {Been there, done that: Meta-learning with episodic
+                   recall},
+  year =          {2018},
+}
+
+@article{bengio2017consciousness,
+  author =        {Bengio, Yoshua},
+  journal =       {arXiv preprint arXiv:1709.08568},
+  title =         {The consciousness prior},
+  year =          {2017},
+}
+

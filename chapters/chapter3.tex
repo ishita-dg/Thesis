@@ -1,10 +1,10 @@
 %!TEX root = ../dissertation.tex
-\begin{savequote}[75mm]
-Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo.
-\qauthor{Quoteauthor Lastname}
-\end{savequote}
+%\begin{savequote}[75mm]
+%Nulla facilisi. In vel sem. Morbi id urna in diam dignissim feugiat. Proin molestie tortor eu velit. Aliquam erat volutpat. Nullam ultrices, diam tempus vulputate egestas, eros pede varius leo.
+%\qauthor{Quoteauthor Lastname}
+%\end{savequote}
 
-\chapter{Flexible amortization with a variational framework}
+\chapter{Amortization gives rise to ecologically rational heuristics}
 
 Bayesian theories of cognition assume that people can integrate probabilities rationally. However, several empirical findings contradict this proposition: human probabilistic inferences are prone to systematic deviations from optimality. Puzzlingly, these deviations sometimes go in opposite directions. Whereas some studies suggest that people under-react to prior probabilities (\emph{base rate neglect}), other studies find that people under-react to the likelihood of the data (\emph{conservatism}). We argue that these deviations arise because the human brain does not rely solely on a general-purpose mechanism for approximating Bayesian inference that is invariant across queries. Instead, the brain is equipped with a recognition model that maps queries to probability distributions. The parameters of this recognition model are optimized to get the output as close as possible, on average, to the true posterior. Because of our limited computational resources, the recognition model will allocate its resources so as to be more accurate for high probability queries than for low probability queries. By adapting to the query distribution, the recognition model ``learns to infer.'' We show that this theory can explain why and when people under-react to the data or the prior, and a new experiment demonstrates that these two forms of under-reaction can be systematically controlled by manipulating the query distribution. The theory also explains a range of related phenomena: memory effects, belief bias, and the structure of response variability in probabilistic reasoning. We also discuss how the theory can be integrated with prior sampling-based accounts of approximate inference.
 
@@ -228,9 +228,9 @@ What information is lost by a limited capacity approximation depends on the quer
 In this section, we consider the effect of sample size on the posterior distribution in greater detail, keeping the prior and likelihood parameters fixed. The most systematic investigation of sample size was reported by \cite{griffin1992weighing}, who suggested a specific decomposition of the posterior log-odds into the \emph{strength} (sample proportion) and the \emph{weight} (sample size) of the evidence. These are two sources of information that inform the posterior, and we can consider how strongly participants react to these the same way we consider their reactions to the prior and evidence in the previous section.
 
 In one of their studies, they gave subjects the following instructions:
-\begin{blockquote}
+\begin{quote}
 Imagine that you are spinning a coin, and recording how often the coin lands heads and how often the coin lands tails. Unlike tossing, which (on average) yields an equal number of heads and tails, spinning a coin leads to a bias favoring one side or the other because of slight imperfections on the rim of the coin (and an uneven distribution of mass). Now imagine that you know that this bias is 3/5. It tends to land on one side 3 out of 5 times. But you do not know if this bias is in favor of heads or in favor of tails. 
-\end{blockquote}
+\end{quote}
 After being shown different sets of coin ``spin'' results that varied in the number of total spins and the number of observed heads (see Table \ref{tab:GT}), subjects were then asked to judge the posterior probability that the coin was biased towards heads rather than towards tails.
 
 \begin{table}
@@ -337,11 +337,11 @@ Several lines of evidence support Koehler's argument. \citet{fischhoff1979subjec
 
 For concreteness, we will consider this issue in the context of the well-known taxi cab problem, where subjects were asked to answer the following question:
 
-\begin{blockquote}
+\begin{quote}
 {Two cab companies, the Blue and the Green, operate in a given city. Eighty-five percent of the cabs in the city are Blue; the remaining fifteen percent are Green. A cab was involved in a hit-and-run accident at night. A witness identified the cab as a Green cab.
 The court tested the witness' ability to distinguish a Blue cab from a Green cab at night by presenting to him film sequences, half of which depicted Blue cabs, and half depicting Green cabs. He was able to make correct identification in 8 out of 10 tries. He made one error on each color of cab.
 What do you think is the probability (expressed as a percentage) that the cab involved in this accident was Green?}
-\end{blockquote} 
+\end{quote} 
 
 Note that the prior in this case is fairly diagnostic: it strongly favors Blue cabs. However, several studies of the taxi-cab and similar problems produced evidence for base rate neglect \citep{tversky1973availability, bar1980base,lyon1976dominance}. These studies manipulated the base rates in a between-subject design. In the taxi cab problem, this corresponds to telling one group of subjects that 85\% of the cabs are Blue and telling another that 85\% are Green. Therefore, while the prior information is diagnostic, as it appears to each subject, it never varies.
 
