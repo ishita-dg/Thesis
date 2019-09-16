@@ -163,6 +163,7 @@
                 figurewithin=chapter,
                 tablewithin=chapter]{caption}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\setlength{\footnotesep}{\baselineskip}
 \RequirePackage{microtype}
 
 
@@ -315,7 +316,7 @@
 	\pagenumbering{roman}
 	\setcounter{page}{3}
 	\pagestyle{fancy}
-	\lhead{Thesis advisor: Professor \@advisor} \rhead{\@author}
+	\lhead{Dissertation advisor: Professor \@advisor} \rhead{\@author}
 	\renewcommand{\headrulewidth}{0.0pt}
 	\vspace*{35pt}
 	\begin{center}
