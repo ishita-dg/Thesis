@@ -496,11 +496,11 @@ We augmented the original InferSent embeddings with different combinations of sa
 \begin{itemize}
 \itemsep0em
     \item \textbf{Zero-shot control condition}: Only the $T^{0}$ tokens were seen in training; no $T^{*}$ token were seen at all. Therefore testing with tokens from $T^{*}$ is analogous to zero-shot reasoning. The training set consisted of the full training sets from $C_{1}T^{0}$ and $C_{2}T^{0}$.
-    \item \textbf{Experimental conditions}: Both $T^{0}$ and $T^{*}$ tokens were seen in training, therefore testing with tokens from $T^{*}$ is not analogous to zero-shot reasoning. However, the contexts in which $T^{0}$ and $T^{*}$ tokens appear during training differed. There are two different embeddings we trained of this kind.
+    \item \bf{Experimental conditions}: Both $T^{0}$ and $T^{*}$ tokens were seen in training, therefore testing with tokens from $T^{*}$ is not analogous to zero-shot reasoning. However, the contexts in which $T^{0}$ and $T^{*}$ tokens appear during training differed. There are two different embeddings we trained of this kind.
     \begin{itemize}
-        \item \textbf{Exposed--$C_{1}T^{*}$ }: This embedding saw $T^{0}$ tokens in both $C_{1}$ and $C_{2}$ contexts (as with the control condition), and additionally also saw $T^{*}$ tokens -- but only in the $C_{1}$ context.
+        \item \bf{Exposed--$C_{1}T^{*}$ }: This embedding saw $T^{0}$ tokens in both $C_{1}$ and $C_{2}$ contexts (as with the control condition), and additionally also saw $T^{*}$ tokens -- but only in the $C_{1}$ context.
         In order to balance the number of training examples from each context between conditions, the training set consisted of the full training sets from $C_{2}T^{0}$ and half (randomly selected) of the training set from each of the $C_{1}T^{0}$ and $C_{1}T^{*}$ context-token combination sets.
-        \item \textbf{Exposed--$C_{2}T^{*}$ }: This embedding saw $T^{0}$ tokens in both $C_{1}$ and $C_{2}$ contexts, but saw $T^{*}$ tokens only in the $C_{2}$ context. The training set was balanced across contexts here as well.
+        \item \bf{Exposed--$C_{2}T^{*}$ }: This embedding saw $T^{0}$ tokens in both $C_{1}$ and $C_{2}$ contexts, but saw $T^{*}$ tokens only in the $C_{2}$ context. The training set was balanced across contexts here as well.
     \end{itemize}
 \end{itemize}
 
@@ -516,9 +516,9 @@ We augmented the original InferSent embeddings with different combinations of sa
     \midrule
     $C_{1}T^{0} + C_{2}T^{0}$ & 97.44 & 97.02 & 98.0\\
     
-    $C_{1}T^{*}$  & 95.72 & 99.7 & \textbf{61.16}  \\
+    $C_{1}T^{*}$  & 95.72 & 99.7 & \bf{61.16}  \\
     
-     $C_{2}T^{*}$ & 95.78 & \textbf{67.71} & 99.96 \\
+     $C_{2}T^{*}$ & 95.78 & \bf{67.71} & 99.96 \\
     
 \bottomrule
 \end{tabular}

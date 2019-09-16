@@ -71,6 +71,7 @@
 \usepackage{subfig}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage[perpage]{footmisc}
 
 \usepackage{tikz}
 \usetikzlibrary{arrows,shapes}
@@ -130,7 +131,7 @@
 \DeclareMathOperator*{\argmax}{argmax}
 % end added by ishita
 
-\RaggedRight
+%\RaggedRight
 \RequirePackage{graphicx}
 \usepackage{fixltx2e}
 \parindent 12pt
@@ -145,23 +146,23 @@
 \RequirePackage{url}
 \RequirePackage{amssymb}
 \RequirePackage{mathspec}
-\setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{EB Garamond}
+\setmathsfont(Digits,Latin,Greek)[Numbers={Proportional}]{Times New Roman}
 \setmathrm{EB Garamond}
 \AtBeginEnvironment{tabular}{\addfontfeature{RawFeature=+tnum}}
 \widowpenalty=300
 \clubpenalty=300
 \setromanfont[Numbers=OldStyle, Ligatures={Common, TeX}, Scale=1.0]{EB Garamond}
 \newfontfamily{\smallcaps}[RawFeature={+c2sc,+scmp}]{EB Garamond}
-\setsansfont[Scale=MatchLowercase, BoldFont={Lato Bold}]{Lato Regular}
+\setsansfont[Scale=MatchLowercase]{Helvetica}
 \setmonofont[Scale=MatchLowercase]{Source Code Pro}
 \RequirePackage[labelfont={bf,sf,footnotesize,singlespacing},
                 textfont={sf,footnotesize,singlespacing},
-                justification={justified,RaggedRight},
+                justification={justified},
                 singlelinecheck=false,
                 margin=0pt,
                 figurewithin=chapter,
                 tablewithin=chapter]{caption}
-% \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \RequirePackage{microtype}
 
 
