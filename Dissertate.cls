@@ -164,6 +164,8 @@
                 tablewithin=chapter]{caption}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \setlength{\footnotesep}{\baselineskip}
+\setlength\bibitemsep{\baselineskip}
+\setlength\bibitemsep{\baselineskip}
 \RequirePackage{microtype}
 
 
@@ -368,7 +370,7 @@
     \begin{spacing}{\dcompressedspacing}
         \bibliography{references}
         \addcontentsline{toc}{chapter}{References}
-        \bibliographystyle{natbib}
+        \bibliographystyle{apalike2}
         \include{endmatter/colophon}
     \end{spacing}
 }
