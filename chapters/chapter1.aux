@@ -59,11 +59,11 @@
 \citation{tversky94,Dougherty2003}
 \@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Parameters used for noisy-or model.\relax }}{12}{table.caption.4}}
 \newlabel{tab:qmr}{{2.2}{12}{Parameters used for noisy-or model.\relax }{table.caption.4}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Subadditivity}{12}{subsection.2.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Subadditivity}{13}{subsection.2.2.2}}
 \citation{Dougherty2003}
-\citation{super,hadjichristidis1999opening}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces \textbf  {Subadditivity}. MCMC estimates were made for the following queries: Given the symptoms \emph  {fever, nausea} and \emph  {fatigue}, (a) Packed: what is the probability that these symptoms were caused by the presence of a gastrointestinal disease? (b) Unpacked to typical examples: what is the probability that these were caused by the presence of food poisoning, stomach flu, or any other gastrointestinal diseases? The estimate for the unpacked condition is higher than that of the packed condition. The difference between these estimates is represented by the red line. This effect diminishes as the number of samples increases.\relax }}{14}{figure.caption.5}}
 \newlabel{fig:subadd}{{2.1}{14}{\textbf {Subadditivity}. MCMC estimates were made for the following queries: Given the symptoms \emph {fever, nausea} and \emph {fatigue}, (a) Packed: what is the probability that these symptoms were caused by the presence of a gastrointestinal disease? (b) Unpacked to typical examples: what is the probability that these were caused by the presence of food poisoning, stomach flu, or any other gastrointestinal diseases? The estimate for the unpacked condition is higher than that of the packed condition. The difference between these estimates is represented by the red line. This effect diminishes as the number of samples increases.\relax }{figure.caption.5}{}}
+\citation{super,hadjichristidis1999opening}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Superadditivity and related effects}{15}{subsection.2.2.3}}
 \citation{Thomas2008,MINERVAsub}
 \citation{Costello2014}
@@ -76,10 +76,10 @@
 \newlabel{fig:weak}{{2.3}{18}{\textbf {Weak evidence effect}. MCMC estimates were made for the following queries: Given the symptoms \emph {fever, nausea} and \emph {fatigue}, (a) Control: What is the probability that these symptoms were caused by the presence of gastrointestinal disease? (b) Evidence for a weak cause: What is the probability that these symptoms were caused by the presence of gastrointestinal disease, assuming the patient's grandmother was diagnosed with stomach cancer? The increase in support of the weak cause (stomach cancer) is modeled by increasing the prior probability of stomach cancer from 0.05 to 0.06. The estimate from the weak evidence chain is lower than that from the control chain. The difference between these estimates is represented by the red line. The effect diminishes as the number of samples increases.\relax }{figure.caption.7}{}}
 \citation{dud}
 \citation{conf,koriat1980}
+\citation{conf}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Self-generation of hypotheses}{19}{subsection.2.2.4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf  {Dud alternative effect}. MCMC estimates were made for the following queries: Given the symptoms \emph  {fever, nausea} and \emph  {fatigue}, (a) Control: What is the probability that the patient has a respiratory disease (as opposed to the symptoms being caused by the presence of a gastrointestinal disease)?, (b) With dud alternatives: What is the probability that the patient has a respiratory disease (as opposed to the symptoms being caused by the presence of gastroenteritis, stomach cancer, or any other gastrointestinal disease)? The estimate from the control chain is higher than from the chain for which dud alternatives are presented. The difference between these estimates is represented by the red line and the effect diminishes as the number of samples increases\relax }}{20}{figure.caption.8}}
 \newlabel{fig:dud}{{2.4}{20}{\textbf {Dud alternative effect}. MCMC estimates were made for the following queries: Given the symptoms \emph {fever, nausea} and \emph {fatigue}, (a) Control: What is the probability that the patient has a respiratory disease (as opposed to the symptoms being caused by the presence of a gastrointestinal disease)?, (b) With dud alternatives: What is the probability that the patient has a respiratory disease (as opposed to the symptoms being caused by the presence of gastroenteritis, stomach cancer, or any other gastrointestinal disease)? The estimate from the control chain is higher than from the chain for which dud alternatives are presented. The difference between these estimates is represented by the red line and the effect diminishes as the number of samples increases\relax }{figure.caption.8}{}}
-\citation{conf}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces \textbf  {Self-generation effect}. MCMC estimates for the following query: Given the symptoms \emph  {fever} and \emph  {fatigue}, (a) Self-generated: What are the two most likely respiratory diseases to have caused these symptoms? Estimate the probability that these symptoms are caused by either of these two diseases. (b) Other-generated: What is the probability that these symptoms were caused by the presence of a cold or respiratory flu (two most likely respiratory diseases to have caused these symptoms returned by the first chain)? The estimate from the other-generated chain is higher than from the self-generated chain. The difference between these estimates is represented by the red line and the effect decreases as the number of samples increases\relax }}{21}{figure.caption.9}}
 \newlabel{fig:conf}{{2.5}{21}{\textbf {Self-generation effect}. MCMC estimates for the following query: Given the symptoms \emph {fever} and \emph {fatigue}, (a) Self-generated: What are the two most likely respiratory diseases to have caused these symptoms? Estimate the probability that these symptoms are caused by either of these two diseases. (b) Other-generated: What is the probability that these symptoms were caused by the presence of a cold or respiratory flu (two most likely respiratory diseases to have caused these symptoms returned by the first chain)? The estimate from the other-generated chain is higher than from the self-generated chain. The difference between these estimates is represented by the red line and the effect decreases as the number of samples increases\relax }{figure.caption.9}{}}
 \citation{conf}
@@ -88,15 +88,15 @@
 \citation{Lieder2013}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.5}Anchoring and adjustment}{22}{subsection.2.2.5}}
 \citation{surowiecki2005wisdom}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces \textbf  {Anchoring and adjustment}. The y axis represents the difference in the probabilities of respiratory flu and stomach flu given the symptoms \textit  {fever} and \textit  {fatigue} as returned by two different chains that are initialized differently. The chains are initialized in the two different clusters, at hypotheses other than the focal hypotheses of \textit  {respiratory} or \textit  {stomach flu}. Before reaching convergence, the chain initialized in cluster 1 of respiratory diseases places higher probability on respiratory flu, than the chain initialized in cluster 2 of gastrointestinal diseases. The net difference between the two chains diminishes as the number of samples increases.\relax }}{23}{figure.caption.10}}
-\newlabel{fig:anch}{{2.6}{23}{\textbf {Anchoring and adjustment}. The y axis represents the difference in the probabilities of respiratory flu and stomach flu given the symptoms \textit {fever} and \textit {fatigue} as returned by two different chains that are initialized differently. The chains are initialized in the two different clusters, at hypotheses other than the focal hypotheses of \textit {respiratory} or \textit {stomach flu}. Before reaching convergence, the chain initialized in cluster 1 of respiratory diseases places higher probability on respiratory flu, than the chain initialized in cluster 2 of gastrointestinal diseases. The net difference between the two chains diminishes as the number of samples increases.\relax }{figure.caption.10}{}}
 \citation{vul08}
 \citation{vul08}
 \citation{vul08}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}The crowd within}{24}{subsection.2.2.6}}
-\FN@pp@footnote@aux{3}{24}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2.6}The crowd within}{23}{subsection.2.2.6}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces \textbf  {Anchoring and adjustment}. The y axis represents the difference in the probabilities of respiratory flu and stomach flu given the symptoms \textit  {fever} and \textit  {fatigue} as returned by two different chains that are initialized differently. The chains are initialized in the two different clusters, at hypotheses other than the focal hypotheses of \textit  {respiratory} or \textit  {stomach flu}. Before reaching convergence, the chain initialized in cluster 1 of respiratory diseases places higher probability on respiratory flu, than the chain initialized in cluster 2 of gastrointestinal diseases. The net difference between the two chains diminishes as the number of samples increases.\relax }}{24}{figure.caption.10}}
+\newlabel{fig:anch}{{2.6}{24}{\textbf {Anchoring and adjustment}. The y axis represents the difference in the probabilities of respiratory flu and stomach flu given the symptoms \textit {fever} and \textit {fatigue} as returned by two different chains that are initialized differently. The chains are initialized in the two different clusters, at hypotheses other than the focal hypotheses of \textit {respiratory} or \textit {stomach flu}. Before reaching convergence, the chain initialized in cluster 1 of respiratory diseases places higher probability on respiratory flu, than the chain initialized in cluster 2 of gastrointestinal diseases. The net difference between the two chains diminishes as the number of samples increases.\relax }{figure.caption.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces \textbf  {The crowd within}. Errors in the MCMC estimates for the following query: Given the symptoms \emph  {nausea} and \emph  {shortness of breath}, what is the probability that these were caused by the presence of a respiratory disease? The estimates are averaged either over samples from the same individual (blue) or over samples from different individuals (red)\relax }}{25}{figure.caption.11}}
 \newlabel{fig:asymptote}{{2.7}{25}{\textbf {The crowd within}. Errors in the MCMC estimates for the following query: Given the symptoms \emph {nausea} and \emph {shortness of breath}, what is the probability that these were caused by the presence of a respiratory disease? The estimates are averaged either over samples from the same individual (blue) or over samples from different individuals (red)\relax }{figure.caption.11}{}}
+\FN@pp@footnote@aux{3}{25}
 \citation{shi10}
 \citation{shi2009neural}
 \citation{abbott13}
@@ -113,51 +113,51 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.4}Experiment 1}{30}{section.2.4}}
 \@writefile{toc}{\contentsline {subsubsection}{Participants}{30}{section.2.4}}
 \@writefile{toc}{\contentsline {subsubsection}{Materials and procedure}{30}{section.2.4}}
-\citation{greene13}
-\citation{Vul2014}
 \@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Queries in Experiment 1. The letter determines the focal space (e.g., all objects beginning with A), conditioned on the cue object. Typical and atypical unpackings are shown for each focal space.\relax }}{31}{table.caption.12}}
 \newlabel{tab:scenarios}{{2.3}{31}{Queries in Experiment 1. The letter determines the focal space (e.g., all objects beginning with A), conditioned on the cue object. Typical and atypical unpackings are shown for each focal space.\relax }{table.caption.12}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Model fitting}{31}{figure.caption.13}}
-\citation{super}
+\citation{greene13}
+\citation{Vul2014}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces \textbf  {Experimental setup}. Participants were asked to estimate the conditional probability using a slider bar within a 20-second time limit.\relax }}{32}{figure.caption.13}}
 \newlabel{fig:screenshot}{{2.8}{32}{\textbf {Experimental setup}. Participants were asked to estimate the conditional probability using a slider bar within a 20-second time limit.\relax }{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Results and discussion}{32}{figure.caption.13}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf  {Experiment 1 results}. Mean probability estimates for each condition. Error bars represent the 95\% confidence interval of the mean. Red dots show estimates from the MCMC model with 230 samples, assuming 6 hidden objects in the scene.\relax }}{33}{figure.caption.14}}
-\newlabel{fig:results1}{{2.9}{33}{\textbf {Experiment 1 results}. Mean probability estimates for each condition. Error bars represent the 95\% confidence interval of the mean. Red dots show estimates from the MCMC model with 230 samples, assuming 6 hidden objects in the scene.\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Model fitting}{32}{figure.caption.13}}
+\citation{super}
+\@writefile{toc}{\contentsline {subsubsection}{Results and discussion}{33}{figure.caption.13}}
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Experiment 2}{33}{section.2.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces \textbf  {Experiment 1 results}. Mean probability estimates for each condition. Error bars represent the 95\% confidence interval of the mean. Red dots show estimates from the MCMC model with 230 samples, assuming 6 hidden objects in the scene.\relax }}{34}{figure.caption.14}}
+\newlabel{fig:results1}{{2.9}{34}{\textbf {Experiment 1 results}. Mean probability estimates for each condition. Error bars represent the 95\% confidence interval of the mean. Red dots show estimates from the MCMC model with 230 samples, assuming 6 hidden objects in the scene.\relax }{figure.caption.14}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Participants}{34}{section.2.5}}
 \@writefile{toc}{\contentsline {subsubsection}{Materials and procedure}{34}{section.2.5}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Queries in Experiment 2. The letter determines the focal space (e.g., all objects beginning with A), conditioned on the cue object. Conditioned on cue object 1, unpacking 1 is predicted to cause subadditivity and unpacking 2 is predicted to cause superadditivity. These predictions reverse for cue object 2.\relax }}{34}{table.caption.15}}
-\newlabel{tab:scenarios2}{{2.4}{34}{Queries in Experiment 2. The letter determines the focal space (e.g., all objects beginning with A), conditioned on the cue object. Conditioned on cue object 1, unpacking 1 is predicted to cause subadditivity and unpacking 2 is predicted to cause superadditivity. These predictions reverse for cue object 2.\relax }{table.caption.15}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Results and discussion}{34}{table.caption.15}}
+\@writefile{lot}{\contentsline {table}{\numberline {2.4}{\ignorespaces Queries in Experiment 2. The letter determines the focal space (e.g., all objects beginning with A), conditioned on the cue object. Conditioned on cue object 1, unpacking 1 is predicted to cause subadditivity and unpacking 2 is predicted to cause superadditivity. These predictions reverse for cue object 2.\relax }}{35}{table.caption.15}}
+\newlabel{tab:scenarios2}{{2.4}{35}{Queries in Experiment 2. The letter determines the focal space (e.g., all objects beginning with A), conditioned on the cue object. Conditioned on cue object 1, unpacking 1 is predicted to cause subadditivity and unpacking 2 is predicted to cause superadditivity. These predictions reverse for cue object 2.\relax }{table.caption.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Results and discussion}{35}{table.caption.15}}
 \citation{Thomas2008}
-\@writefile{toc}{\contentsline {section}{\numberline {2.6}General discussion}{35}{section.2.6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces \textbf  {Experiment 2 results}. Mean probability estimates for each condition. Error bars represent the 95\% confidence interval of the mean. Red dots show estimates from the MCMC model with 230 samples, assuming 6 hidden objects in the scene. Unpacking 1 is typical for cue object 1 and atypical for cue object 2; unpacking 2 is typical for cue object 2 and atypical for cue object 1.\relax }}{36}{figure.caption.16}}
 \newlabel{fig:results2}{{2.10}{36}{\textbf {Experiment 2 results}. Mean probability estimates for each condition. Error bars represent the 95\% confidence interval of the mean. Red dots show estimates from the MCMC model with 230 samples, assuming 6 hidden objects in the scene. Unpacking 1 is typical for cue object 1 and atypical for cue object 2; unpacking 2 is typical for cue object 2 and atypical for cue object 1.\relax }{figure.caption.16}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}General discussion}{36}{section.2.6}}
 \citation{Vul2014}
 \citation{multistability,Lieder2013,shi10}
 \citation{Gershman2015}
 \citation{Vul2014}
 \citation{shi10}
 \citation{Thomas2008}
+\citation{conf}
 \citation{Lieder2013}
 \citation{multistability,vul08,Bonawitz2014}
 \citation{vul08}
-\citation{robert13}
-\citation{abbott2015random,smith2013multiply}
-\citation{conf}
 \@writefile{lot}{\contentsline {table}{\numberline {2.5}{\ignorespaces Comparison of stochastic sampling algorithms\relax }}{38}{table.caption.17}}
 \newlabel{tab:compare}{{2.5}{38}{Comparison of stochastic sampling algorithms\relax }{table.caption.17}{}}
 \FN@pp@footnote@aux{4}{38}
+\citation{robert13}
+\citation{abbott2015random,smith2013multiply}
 \citation{super}
 \citation{super}
 \citation{Yildirim,Gershman2014b}
 \citation{Gershman2015,Vul2014,griffiths2015}
+\@writefile{toc}{\contentsline {section}{\numberline {2.7}Future work}{39}{section.2.7}}
 \citation{motion}
 \citation{collision}
 \citation{blocks}
 \citation{smith2013sources,hamrick2015think}
-\@writefile{toc}{\contentsline {section}{\numberline {2.7}Future work}{39}{section.2.7}}
 \FN@pp@footnotehinttrue 
 \@setckpt{chapters/chapter1}{
 \setcounter{page}{41}

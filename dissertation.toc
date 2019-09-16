@@ -5,23 +5,23 @@
 \contentsline {subsection}{\numberline {2.1.2}A specific Markov chain Monte Carlo algorithm}{7}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Model simulations}{10}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Diagnostic hypotheses in a disease-symptom network}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Subadditivity}{12}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Subadditivity}{13}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Superadditivity and related effects}{15}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Self-generation of hypotheses}{19}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Anchoring and adjustment}{22}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}The crowd within}{24}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.6}The crowd within}{23}{subsection.2.2.6}
 \contentsline {subsection}{\numberline {2.2.7}Summary of simulation results and comparison with importance sampling}{26}{subsection.2.2.7}
 \contentsline {section}{\numberline {2.3}Overview of experiments}{28}{section.2.3}
 \contentsline {section}{\numberline {2.4}Experiment 1}{30}{section.2.4}
 \contentsline {subsubsection}{Participants}{30}{section.2.4}
 \contentsline {subsubsection}{Materials and procedure}{30}{section.2.4}
-\contentsline {subsubsection}{Model fitting}{31}{figure.caption.13}
-\contentsline {subsubsection}{Results and discussion}{32}{figure.caption.13}
+\contentsline {subsubsection}{Model fitting}{32}{figure.caption.13}
+\contentsline {subsubsection}{Results and discussion}{33}{figure.caption.13}
 \contentsline {section}{\numberline {2.5}Experiment 2}{33}{section.2.5}
 \contentsline {subsubsection}{Participants}{34}{section.2.5}
 \contentsline {subsubsection}{Materials and procedure}{34}{section.2.5}
-\contentsline {subsubsection}{Results and discussion}{34}{table.caption.15}
-\contentsline {section}{\numberline {2.6}General discussion}{35}{section.2.6}
+\contentsline {subsubsection}{Results and discussion}{35}{table.caption.15}
+\contentsline {section}{\numberline {2.6}General discussion}{36}{section.2.6}
 \contentsline {section}{\numberline {2.7}Future work}{39}{section.2.7}
 \contentsline {chapter}{\numberline {3}Amortization: Re-use of previous solutions}{41}{chapter.3}
 \contentsline {section}{\numberline {3.1}Hypothesis generation and amortization}{44}{section.3.1}

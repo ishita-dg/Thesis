@@ -164,8 +164,6 @@
                 tablewithin=chapter]{caption}
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
 \setlength{\footnotesep}{\baselineskip}
-\setlength\bibitemsep{\baselineskip}
-\setlength\bibitemsep{\baselineskip}
 \RequirePackage{microtype}
 
 

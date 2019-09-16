@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  16 SEP 2019 17:02
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  16 SEP 2019 18:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1418,70 +1418,6 @@ Package caption Info: We need package `newfloat' on input line 165.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2015/09/17 v1.1-109 Defining new floating environments (AR)
 )
-! Undefined control sequence.
-<argument> \bibitemsep 
-                       
-l.167 \setlength\bibitemsep{\baselineskip}
-                                          
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \protect 
-l.168 \setlength
-                \bibitemsep{\baselineskip}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \protect 
-l.168 \setlength
-                \bibitemsep{\baselineskip}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-! Undefined control sequence.
-<argument> \bibitemsep 
-                       
-l.168 \setlength\bibitemsep{\baselineskip}
-                                          
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing number, treated as zero.
-<to be read again> 
-                   \let 
-l.169 \RequirePackage
-                     {microtype}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-! Illegal unit of measure (pt inserted).
-<to be read again> 
-                   \let 
-l.169 \RequirePackage
-                     {microtype}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
 (/usr/local/texlive/2016/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2016/05/14 v2.6a Micro-typographical refinements (RS)
 \MT@toks=\toks42
@@ -1591,7 +1527,7 @@ Package: quotchap 2012/10/20 v1.1 Decorative Chapter Headings with Quotes
 \@quotebox=\box80
 )
 \mybibindent=\skip133
-Package hyperref Info: Option `colorlinks' set `true' on input line 268.
+Package hyperref Info: Option `colorlinks' set `true' on input line 266.
 )
 (./dissertation.aux (./chapters/introduction.aux) (./chapters/chapter1.aux)
 (./chapters/chapter2.aux
@@ -1952,7 +1888,7 @@ LaTeX Font Warning: Font shape `EU1/EBGaramond(3)/bx/n' undefined
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/bx/n' will be
 (Font)              scaled to size 12.0pt on input line 49.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 50.
+(Font)              scaled to size 8.0pt on input line 51.
 Package microtype Info: Character `•' is missing
 (microtype)             in font `\EU1/EBGaramond(3)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1966,7 +1902,7 @@ Package microtype Info: Character `−' is missing
 (microtype)             in font `\EU1/EBGaramond(3)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
 [3] [4] [5]
-Overfull \hbox (23.64148pt too wide) in paragraph at lines 77--79
+Overfull \hbox (23.64148pt too wide) in paragraph at lines 79--81
 \EU1/EBGaramond(1)/bx/n/10.95 some distribution $[][]\OT1/cmr/m/n/10.95 ([])$\E
 U1/EBGaramond(1)/bx/n/10.95 .[][][][][][] When $[][]\OT1/cmr/m/n/10.95 ([]) = [
 ]([]\OMS/cmsy/m/n/10.95 j[]\OT1/cmr/m/n/10.95 )$\EU1/EBGaramond(1)/bx/n/10.95 ,
@@ -1976,11 +1912,11 @@ U1/EBGaramond(1)/bx/n/10.95 .[][][][][][] When $[][]\OT1/cmr/m/n/10.95 ([]) = [
 
 [6] [7] [8] [9] [10]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 131.
+(Font)              scaled to size 10.95pt on input line 133.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 131.
+(Font)              scaled to size 10.95pt on input line 133.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 131.
+(Font)              scaled to size 6.0pt on input line 133.
 Package microtype Info: Character `•' is missing
 (microtype)             in font `\EU1/EBGaramond(1)/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1994,68 +1930,58 @@ Package microtype Info: Character `−' is missing
 (microtype)             in font `\EU1/EBGaramond(1)/m/n/6'.
 (microtype)             Ignoring protrusion settings for this character.
 
-Overfull \hbox (3.59508pt too wide) in paragraph at lines 142--142
+Overfull \hbox (3.79543pt too wide) in paragraph at lines 146--146
+ []|[]| 
+ []
+
+
+Overfull \hbox (3.59508pt too wide) in paragraph at lines 148--148
  []|\EU1/EBGaramond(3)/bx/n/12 TB| 
  []
 
 
-Overfull \hbox (6.53287pt too wide) in paragraph at lines 142--142
+Overfull \hbox (6.53287pt too wide) in paragraph at lines 148--148
  []|\EU1/EBGaramond(3)/bx/n/12 respiratory 
  []
 
 
-Overfull \hbox (2.34418pt too wide) in paragraph at lines 142--142
+Overfull \hbox (2.34418pt too wide) in paragraph at lines 148--148
  []|\EU1/EBGaramond(3)/bx/n/12 cold| 
  []
 
 
-Overfull \hbox (4.26878pt too wide) in paragraph at lines 142--142
+Overfull \hbox (4.26878pt too wide) in paragraph at lines 148--148
  []|\EU1/EBGaramond(3)/bx/n/12 stomach 
  []
 
 
-Overfull \hbox (7.1138pt too wide) in paragraph at lines 142--142
+Overfull \hbox (7.1138pt too wide) in paragraph at lines 148--148
  []|\EU1/EBGaramond(3)/bx/n/12 stomach 
  []
 
 
-Overfull \hbox (8.47908pt too wide) in paragraph at lines 144--144
+Overfull \hbox (8.47908pt too wide) in paragraph at lines 150--150
  []|\EU1/EBGaramond(3)/bx/n/12 0.05| 
  []
 
 
-Overfull \hbox (2.77908pt too wide) in paragraph at lines 146--146
+Overfull \hbox (2.77908pt too wide) in paragraph at lines 152--152
  []|\EU1/EBGaramond(3)/bx/n/12 0.7| 
  []
 
 
-Overfull \hbox (2.77908pt too wide) in paragraph at lines 148--148
+Overfull \hbox (2.77908pt too wide) in paragraph at lines 154--154
  []|\EU1/EBGaramond(3)/bx/n/12 0.1| 
  []
 
 
-Overfull \hbox (2.77908pt too wide) in paragraph at lines 150--150
+Overfull \hbox (2.77908pt too wide) in paragraph at lines 156--156
  []|\EU1/EBGaramond(3)/bx/n/12 0.5| 
  []
 
 
-Overfull \hbox (2.77908pt too wide) in paragraph at lines 152--152
- []|\EU1/EBGaramond(3)/bx/n/12 0.2| 
- []
-
-
-Overfull \hbox (2.77908pt too wide) in paragraph at lines 154--154
- []|\EU1/EBGaramond(3)/bx/n/12 0.0| 
- []
-
-
-Overfull \hbox (2.77908pt too wide) in paragraph at lines 156--156
- []|\EU1/EBGaramond(3)/bx/n/12 0.0| 
- []
-
-
 Overfull \hbox (2.77908pt too wide) in paragraph at lines 158--158
- []|\EU1/EBGaramond(3)/bx/n/12 0.0| 
+ []|\EU1/EBGaramond(3)/bx/n/12 0.2| 
  []
 
 
@@ -2064,67 +1990,81 @@ Overfull \hbox (2.77908pt too wide) in paragraph at lines 160--160
  []
 
 
-Overfull \hbox (27.10727pt too wide) in paragraph at lines 140--163
- [][] 
+Overfull \hbox (2.77908pt too wide) in paragraph at lines 162--162
+ []|\EU1/EBGaramond(3)/bx/n/12 0.0| 
  []
 
-[11] [12]
+
+Overfull \hbox (2.77908pt too wide) in paragraph at lines 164--164
+ []|\EU1/EBGaramond(3)/bx/n/12 0.0| 
+ []
+
+
+Overfull \hbox (2.77908pt too wide) in paragraph at lines 166--166
+ []|\EU1/EBGaramond(3)/bx/n/12 0.0| 
+ []
+
+
+Overfull \hbox (25.90729pt too wide) in paragraph at lines 143--170
+ [] 
+ []
+
+[11] [12] [13]
 File: figures/sub.pdf Graphic file (type QTm)
  <use  "figures/sub.pdf" >
 LaTeX Font Info:    Font shape `EU1/Helvetica(0)/m/it' will be
-(Font)              scaled to size 7.86957pt on input line 183.
- [13] [14] [15]
+(Font)              scaled to size 7.86957pt on input line 193.
+ [14] [15]
 File: figures/super.pdf Graphic file (type QTm)
  <use  "figures/super.pdf" >
-[16]
+[16] [17]
 File: figures/weak.pdf Graphic file (type QTm)
- <use  "figures/weak.pdf" > [17] [18]
+ <use  "figures/weak.pdf" > [18]
 File: figures/dud.pdf Graphic file (type QTm)
- <use  "figures/dud.pdf" > [19]
-[20]
+ <use  "figures/dud.pdf" >
 File: figures/confidence.pdf Graphic file (type QTm)
- <use  "figures/confidence.pdf" > [21]
-Overfull \hbox (3.35028pt too wide) in paragraph at lines 270--271
+
+<use  "figures/confidence.pdf" > [19] [20] [21]
+Overfull \hbox (3.35028pt too wide) in paragraph at lines 280--281
 []\EU1/EBGaramond(1)/bx/n/10.95 Lieder et al.$[]$$[]$$[]$ showed that the ancho
 ring and adjustment heuristic is a basic consequence of MCMC
  []
 
 [22]
 File: figures/anchoring.pdf Graphic file (type QTm)
- <use  "figures/anchoring.pdf" > [23]
+ <use  "figures/anchoring.pdf" > [23] [24]
 File: figures/error.pdf Graphic file (type QTm)
- <use  "figures/error.pdf" > [24]
+ <use  "figures/error.pdf" >
 [25] [26]
-Overfull \hbox (6.7148pt too wide) in paragraph at lines 312--313
+Overfull \hbox (6.7148pt too wide) in paragraph at lines 322--323
 []\EU1/EBGaramond(1)/bx/n/10.95 The self-generation effect can to some extent b
 e reproduced by importance sampling because prompt-
  []
 
 [27] [28]
-Overfull \hbox (4.85332pt too wide) in paragraph at lines 336--337
+Overfull \hbox (4.85332pt too wide) in paragraph at lines 346--347
 []\EU1/EBGaramond(1)/bx/n/10.95 Due to the relative complexity of this domain (
 compared to the simplified fictitious disease-symptom
  []
 
-[29]
-Overfull \hbox (47.88753pt too wide) in paragraph at lines 359--374
- [][] 
- []
-
-[30]
-Overfull \hbox (7.01782pt too wide) in paragraph at lines 378--379
+[29] [30] [31]
+Overfull \hbox (7.01782pt too wide) in paragraph at lines 400--401
 []\EU1/EBGaramond(1)/bx/n/10.95 On every trial, participants first saw the cue 
 object, followed by a hypothesis (either packed, unpacked-
  []
 
 File: figures/screenshot.png Graphic file (type QTm)
-<use  "figures/screenshot.png" > [31]
+<use  "figures/screenshot.png" > [32]
 File: figures/estimates.pdf Graphic file (type QTm)
- <use  "figures/estimates.pdf" > [32]
-[33] [34]
+ <use  "figures/estimates.pdf" > [33]
+Overfull \hbox (35.06151pt too wide) in paragraph at lines 447--455
+ [] 
+ []
+
+[34] [35]
 File: figures/estimate2new.pdf Graphic file (type QTm)
- <use  "figures/estimate2new.pdf" > [35] [36]
-Overfull \hbox (1.92233pt too wide) in paragraph at lines 455--456
+ <use  "figures/estimate2new.pdf" > [36]
+Overfull \hbox (1.92233pt too wide) in paragraph at lines 483--484
 []\EU1/EBGaramond(1)/bx/n/10.95 Prior studies suggest that—when averaged over l
 ong time periods or across individuals—probability
  []
@@ -2607,10 +2547,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 41392 strings out of 493591
- 812842 string characters out of 6143546
- 891098 words of memory out of 5000000
- 43958 multiletter control sequences out of 15000+600000
+ 41391 strings out of 493591
+ 812832 string characters out of 6143546
+ 892102 words of memory out of 5000000
+ 43957 multiletter control sequences out of 15000+600000
  14316 words of font info for 142 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
  62i,19n,107p,10478b,1272s stack positions out of 5000i,500n,10000p,200000b,80000s
