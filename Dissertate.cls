@@ -62,7 +62,7 @@
     {\endoldenumerate\end{spacing}}
 
 % Text layout.
-\RequirePackage[width=5.75in, letterpaper]{geometry}
+\RequirePackage[width = 5.75in, top = 1.0in, bottom = 1.0in, includefoot, includehead, letterpaper]{geometry}
 \usepackage{ragged2e}
 % start added by ishita
 \usepackage{amsmath}

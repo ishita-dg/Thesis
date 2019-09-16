@@ -1,126 +1,126 @@
-\contentsline {chapter}{\numberline {1}Introduction}{18}{chapter.1}
-\contentsline {chapter}{\numberline {2}Approximations at run-time}{19}{chapter.2}
-\contentsline {section}{\numberline {2.1}A rational process model of hypothesis generation}{22}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Monte Carlo methods}{23}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}A specific Markov chain Monte Carlo algorithm}{25}{subsection.2.1.2}
-\contentsline {section}{\numberline {2.2}Model simulations}{28}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Diagnostic hypotheses in a disease-symptom network}{28}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Subadditivity}{29}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Superadditivity and related effects}{32}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Self-generation of hypotheses}{37}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Anchoring and adjustment}{40}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}The crowd within}{41}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}Summary of simulation results and comparison with importance sampling}{45}{subsection.2.2.7}
-\contentsline {section}{\numberline {2.3}Overview of experiments}{47}{section.2.3}
-\contentsline {section}{\numberline {2.4}Experiment 1}{49}{section.2.4}
-\contentsline {subsubsection}{Participants}{49}{section.2.4}
-\contentsline {subsubsection}{Materials and procedure}{49}{section.2.4}
-\contentsline {subsubsection}{Model fitting}{50}{figure.caption.13}
-\contentsline {subsubsection}{Results and discussion}{51}{figure.caption.13}
-\contentsline {section}{\numberline {2.5}Experiment 2}{53}{section.2.5}
-\contentsline {subsubsection}{Participants}{53}{section.2.5}
-\contentsline {subsubsection}{Materials and procedure}{53}{section.2.5}
-\contentsline {subsubsection}{Results and discussion}{54}{table.caption.15}
-\contentsline {section}{\numberline {2.6}General discussion}{56}{section.2.6}
-\contentsline {section}{\numberline {2.7}Future work}{59}{section.2.7}
-\contentsline {chapter}{\numberline {3}Amortization: Re-use of previous solutions}{61}{chapter.3}
-\contentsline {section}{\numberline {3.1}Hypothesis generation and amortization}{64}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Monte Carlo sampling}{64}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Amortized inference}{70}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Two amortization strategies}{71}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}Adaptive amortization}{74}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Experiment 1}{76}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Participants}{76}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Procedure}{76}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Results}{77}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Discussion}{81}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Experiment 2}{81}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Participants}{83}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Procedure}{83}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Results}{84}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Discussion}{88}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Experiment 3}{89}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Participants}{90}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Procedure}{90}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Results}{90}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Discussion}{92}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}General Discussion}{94}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Related work}{95}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Future directions}{97}{subsection.3.5.2}
-\contentsline {chapter}{\numberline {4}Amortization gives rise to ecologically rational heuristics}{101}{chapter.4}
-\contentsline {section}{\numberline {4.1}Introduction}{102}{section.4.1}
-\contentsline {section}{\numberline {4.2}Under-reaction to probabilistic information}{104}{section.4.2}
-\contentsline {section}{\numberline {4.3}Learning to infer}{110}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Approximate inference}{111}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Amortization}{113}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}The Learned Inference Model}{116}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Understanding under-reaction}{118}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}The effect of sample size}{124}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}Manipulating the query distribution}{127}{subsection.4.4.2}
-\contentsline {subsubsection}{Subjects}{128}{subsection.4.4.2}
-\contentsline {subsubsection}{Design and procedure}{128}{subsection.4.4.2}
-\contentsline {subsubsection}{Behavioral results}{130}{figure.caption.40}
-\contentsline {subsubsection}{Modeling results}{132}{figure.caption.41}
-\contentsline {subsection}{\numberline {4.4.3}Manipulating the query distribution between vs. within subjects}{133}{subsection.4.4.3}
-\contentsline {subsection}{\numberline {4.4.4}Extension to a continuous domain}{136}{subsection.4.4.4}
-\contentsline {section}{\numberline {4.5}Further evidence for amortization: belief bias and memory effects}{139}{section.4.5}
-\contentsline {subsection}{\numberline {4.5.1}Belief bias}{139}{subsection.4.5.1}
-\contentsline {subsection}{\numberline {4.5.2}Memory effects}{142}{subsection.4.5.2}
-\contentsline {section}{\numberline {4.6}Amortization as Regularization}{145}{section.4.6}
-\contentsline {section}{\numberline {4.7}General Discussion}{150}{section.4.7}
-\contentsline {subsection}{\numberline {4.7.1}Related Work}{153}{subsection.4.7.1}
-\contentsline {subsection}{\numberline {4.7.2}Integrating with sampling-based approaches}{155}{subsection.4.7.2}
-\contentsline {subsection}{\numberline {4.7.3}Connections to other models for judgment errors}{156}{subsection.4.7.3}
-\contentsline {subsection}{\numberline {4.7.4}Limitations and future directions}{159}{subsection.4.7.4}
-\contentsline {subsection}{\numberline {4.7.5}Conclusion}{160}{subsection.4.7.5}
-\contentsline {section}{\numberline {4.8}Implementation details}{161}{section.4.8}
-\contentsline {subsection}{\numberline {4.8.1}Blackbox variational inference}{161}{subsection.4.8.1}
-\contentsline {subsection}{\numberline {4.8.2}Function approximation architecture}{162}{subsection.4.8.2}
-\contentsline {section}{\numberline {4.9}Ruling out alternative models in the continuous domain}{164}{section.4.9}
-\contentsline {chapter}{\numberline {5}Heuristics in machines: A natural language case study}{166}{chapter.5}
-\contentsline {section}{\numberline {5.1}Introduction}{167}{section.5.1}
-\contentsline {section}{\numberline {5.2}Background}{169}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Vector space embeddings}{169}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Natural Language Inference}{170}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}Models for sentence embeddings}{172}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Training datasets}{173}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}A test dataset of minimal cases: The Comparisons dataset}{174}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Same type}{176}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}More-Less type}{176}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Not type}{176}{subsection.5.3.3}
-\contentsline {section}{\numberline {5.4}Testing the sentence embeddings}{178}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Performance of Bag of Words}{178}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}Performance of InferSent}{179}{subsection.5.4.2}
-\contentsline {subsubsection}{Overlap Heuristic}{180}{subsection.5.4.2}
-\contentsline {subsubsection}{Antonyms Heuristic}{182}{table.caption.54}
-\contentsline {subsubsection}{Negation Heuristic}{184}{table.caption.56}
-\contentsline {subsubsection}{Summary of heuristics}{186}{table.caption.58}
-\contentsline {section}{\numberline {5.5}Augmenting the learning environment}{186}{section.5.5}
-\contentsline {section}{\numberline {5.6}Generalization}{189}{section.5.6}
-\contentsline {subsection}{\numberline {5.6.1}Zero-shot reasoning}{190}{subsection.5.6.1}
-\contentsline {subsection}{\numberline {5.6.2}Context Tying}{192}{subsection.5.6.2}
-\contentsline {subsubsection}{Type violations}{192}{subsection.5.6.2}
-\contentsline {subsubsection}{Biased exposure}{193}{table.caption.62}
-\contentsline {section}{\numberline {5.7}Discussion and Future Work}{198}{section.5.7}
-\contentsline {chapter}{\numberline {6}Learning amortized alorithms in machines}{201}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introduction}{202}{section.6.1}
-\contentsline {section}{\numberline {6.2}Related Work}{204}{section.6.2}
-\contentsline {section}{\numberline {6.3}Problem Specification}{205}{section.6.3}
-\contentsline {section}{\numberline {6.4}Task Setup and Agent Architecture}{206}{section.6.4}
-\contentsline {section}{\numberline {6.5}Experiments}{209}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Experiment 1: Observational Environments}{210}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Experiment 2: Interventional Environments}{214}{subsection.6.5.2}
-\contentsline {section}{\numberline {6.6}Discussion and Future Work}{216}{section.6.6}
-\contentsline {section}{\numberline {6.7}Agent architecture}{218}{section.6.7}
-\contentsline {section}{\numberline {6.8}Formalism for Memory-based Meta-learning }{219}{section.6.8}
-\contentsline {section}{\numberline {6.9}Formalisms for causal inference}{220}{section.6.9}
-\contentsline {subsection}{\numberline {6.9.1}Causal Bayes Nets}{220}{subsection.6.9.1}
-\contentsline {paragraph}{Assessing statistical independence in Bayesian networks.}{221}{figure.caption.68}
-\contentsline {subsection}{\numberline {6.9.2}An intuitive example of cause-effect reasoning in a CBN}{222}{subsection.6.9.2}
-\contentsline {subsection}{\numberline {6.9.3}Counterfactual reasoning}{223}{subsection.6.9.3}
-\contentsline {section}{\numberline {6.10}RL Baselines}{224}{section.6.10}
-\contentsline {section}{\numberline {6.11}Additional Experiments}{224}{section.6.11}
-\contentsline {subsection}{\numberline {6.11.1}Experiment 3: Counterfactual Setting}{225}{subsection.6.11.1}
-\contentsline {subsection}{\numberline {6.11.2}Experiment 4: Non-linear Causal Graphs}{227}{subsection.6.11.2}
-\contentsline {subsection}{\numberline {6.11.3}Experiment 5: Larger Causal Graphs}{228}{subsection.6.11.3}
-\contentsline {chapter}{References}{278}{chapter*.74}
+\contentsline {chapter}{\numberline {1}Introduction}{17}{chapter.1}
+\contentsline {chapter}{\numberline {2}Approximations at run-time}{18}{chapter.2}
+\contentsline {section}{\numberline {2.1}A rational process model of hypothesis generation}{21}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Monte Carlo methods}{22}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}A specific Markov chain Monte Carlo algorithm}{23}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Model simulations}{26}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Diagnostic hypotheses in a disease-symptom network}{26}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Subadditivity}{28}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Superadditivity and related effects}{31}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Self-generation of hypotheses}{35}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Anchoring and adjustment}{38}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}The crowd within}{40}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Summary of simulation results and comparison with importance sampling}{42}{subsection.2.2.7}
+\contentsline {section}{\numberline {2.3}Overview of experiments}{44}{section.2.3}
+\contentsline {section}{\numberline {2.4}Experiment 1}{46}{section.2.4}
+\contentsline {subsubsection}{Participants}{46}{section.2.4}
+\contentsline {subsubsection}{Materials and procedure}{46}{section.2.4}
+\contentsline {subsubsection}{Model fitting}{47}{figure.caption.13}
+\contentsline {subsubsection}{Results and discussion}{48}{figure.caption.13}
+\contentsline {section}{\numberline {2.5}Experiment 2}{49}{section.2.5}
+\contentsline {subsubsection}{Participants}{50}{section.2.5}
+\contentsline {subsubsection}{Materials and procedure}{50}{section.2.5}
+\contentsline {subsubsection}{Results and discussion}{50}{table.caption.15}
+\contentsline {section}{\numberline {2.6}General discussion}{51}{section.2.6}
+\contentsline {section}{\numberline {2.7}Future work}{55}{section.2.7}
+\contentsline {chapter}{\numberline {3}Amortization: Re-use of previous solutions}{57}{chapter.3}
+\contentsline {section}{\numberline {3.1}Hypothesis generation and amortization}{60}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Monte Carlo sampling}{60}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Amortized inference}{65}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Two amortization strategies}{67}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}Adaptive amortization}{69}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Experiment 1}{71}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Participants}{71}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Procedure}{71}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Results}{73}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Discussion}{76}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}Experiment 2}{77}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Participants}{77}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Procedure}{77}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Results}{79}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Discussion}{83}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Experiment 3}{83}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Participants}{84}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Procedure}{84}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Results}{84}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Discussion}{86}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}General Discussion}{88}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Related work}{88}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Future directions}{91}{subsection.3.5.2}
+\contentsline {chapter}{\numberline {4}Amortization gives rise to ecologically rational heuristics}{95}{chapter.4}
+\contentsline {section}{\numberline {4.1}Introduction}{96}{section.4.1}
+\contentsline {section}{\numberline {4.2}Under-reaction to probabilistic information}{98}{section.4.2}
+\contentsline {section}{\numberline {4.3}Learning to infer}{104}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Approximate inference}{104}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Amortization}{106}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}The Learned Inference Model}{109}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Understanding under-reaction}{111}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}The effect of sample size}{115}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}Manipulating the query distribution}{120}{subsection.4.4.2}
+\contentsline {subsubsection}{Subjects}{121}{subsection.4.4.2}
+\contentsline {subsubsection}{Design and procedure}{121}{subsection.4.4.2}
+\contentsline {subsubsection}{Behavioral results}{123}{figure.caption.40}
+\contentsline {subsubsection}{Modeling results}{125}{figure.caption.41}
+\contentsline {subsection}{\numberline {4.4.3}Manipulating the query distribution between vs. within subjects}{125}{subsection.4.4.3}
+\contentsline {subsection}{\numberline {4.4.4}Extension to a continuous domain}{129}{subsection.4.4.4}
+\contentsline {section}{\numberline {4.5}Further evidence for amortization: belief bias and memory effects}{131}{section.4.5}
+\contentsline {subsection}{\numberline {4.5.1}Belief bias}{132}{subsection.4.5.1}
+\contentsline {subsection}{\numberline {4.5.2}Memory effects}{134}{subsection.4.5.2}
+\contentsline {section}{\numberline {4.6}Amortization as Regularization}{137}{section.4.6}
+\contentsline {section}{\numberline {4.7}General Discussion}{142}{section.4.7}
+\contentsline {subsection}{\numberline {4.7.1}Related Work}{144}{subsection.4.7.1}
+\contentsline {subsection}{\numberline {4.7.2}Integrating with sampling-based approaches}{146}{subsection.4.7.2}
+\contentsline {subsection}{\numberline {4.7.3}Connections to other models for judgment errors}{148}{subsection.4.7.3}
+\contentsline {subsection}{\numberline {4.7.4}Limitations and future directions}{150}{subsection.4.7.4}
+\contentsline {subsection}{\numberline {4.7.5}Conclusion}{152}{subsection.4.7.5}
+\contentsline {section}{\numberline {4.8}Implementation details}{152}{section.4.8}
+\contentsline {subsection}{\numberline {4.8.1}Blackbox variational inference}{152}{subsection.4.8.1}
+\contentsline {subsection}{\numberline {4.8.2}Function approximation architecture}{153}{subsection.4.8.2}
+\contentsline {section}{\numberline {4.9}Ruling out alternative models in the continuous domain}{155}{section.4.9}
+\contentsline {chapter}{\numberline {5}Heuristics in machines: A natural language case study}{157}{chapter.5}
+\contentsline {section}{\numberline {5.1}Introduction}{158}{section.5.1}
+\contentsline {section}{\numberline {5.2}Background}{160}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Vector space embeddings}{160}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Natural Language Inference}{161}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}Models for sentence embeddings}{162}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Training datasets}{164}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}A test dataset of minimal cases: The Comparisons dataset}{165}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Same type}{166}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}More-Less type}{167}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Not type}{167}{subsection.5.3.3}
+\contentsline {section}{\numberline {5.4}Testing the sentence embeddings}{168}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Performance of Bag of Words}{169}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}Performance of InferSent}{170}{subsection.5.4.2}
+\contentsline {subsubsection}{Overlap Heuristic}{171}{subsection.5.4.2}
+\contentsline {subsubsection}{Antonyms Heuristic}{172}{table.caption.54}
+\contentsline {subsubsection}{Negation Heuristic}{174}{table.caption.56}
+\contentsline {subsubsection}{Summary of heuristics}{176}{table.caption.58}
+\contentsline {section}{\numberline {5.5}Augmenting the learning environment}{176}{section.5.5}
+\contentsline {section}{\numberline {5.6}Generalization}{179}{section.5.6}
+\contentsline {subsection}{\numberline {5.6.1}Zero-shot reasoning}{180}{subsection.5.6.1}
+\contentsline {subsection}{\numberline {5.6.2}Context Tying}{182}{subsection.5.6.2}
+\contentsline {subsubsection}{Type violations}{182}{subsection.5.6.2}
+\contentsline {subsubsection}{Biased exposure}{183}{table.caption.62}
+\contentsline {section}{\numberline {5.7}Discussion and Future Work}{187}{section.5.7}
+\contentsline {chapter}{\numberline {6}Learning amortized alorithms in machines}{190}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introduction}{191}{section.6.1}
+\contentsline {section}{\numberline {6.2}Related Work}{192}{section.6.2}
+\contentsline {section}{\numberline {6.3}Problem Specification}{193}{section.6.3}
+\contentsline {section}{\numberline {6.4}Task Setup and Agent Architecture}{195}{section.6.4}
+\contentsline {section}{\numberline {6.5}Experiments}{198}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Experiment 1: Observational Environments}{199}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Experiment 2: Interventional Environments}{202}{subsection.6.5.2}
+\contentsline {section}{\numberline {6.6}Discussion and Future Work}{204}{section.6.6}
+\contentsline {section}{\numberline {6.7}Agent architecture}{206}{section.6.7}
+\contentsline {section}{\numberline {6.8}Formalism for Memory-based Meta-learning }{207}{section.6.8}
+\contentsline {section}{\numberline {6.9}Formalisms for causal inference}{208}{section.6.9}
+\contentsline {subsection}{\numberline {6.9.1}Causal Bayes Nets}{208}{subsection.6.9.1}
+\contentsline {paragraph}{Assessing statistical independence in Bayesian networks.}{209}{figure.caption.68}
+\contentsline {subsection}{\numberline {6.9.2}An intuitive example of cause-effect reasoning in a CBN}{210}{subsection.6.9.2}
+\contentsline {subsection}{\numberline {6.9.3}Counterfactual reasoning}{211}{subsection.6.9.3}
+\contentsline {section}{\numberline {6.10}RL Baselines}{212}{section.6.10}
+\contentsline {section}{\numberline {6.11}Additional Experiments}{212}{section.6.11}
+\contentsline {subsection}{\numberline {6.11.1}Experiment 3: Counterfactual Setting}{212}{subsection.6.11.1}
+\contentsline {subsection}{\numberline {6.11.2}Experiment 4: Non-linear Causal Graphs}{215}{subsection.6.11.2}
+\contentsline {subsection}{\numberline {6.11.3}Experiment 5: Larger Causal Graphs}{215}{subsection.6.11.3}
+\contentsline {chapter}{References}{262}{chapter*.74}
