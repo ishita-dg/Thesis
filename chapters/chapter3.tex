@@ -183,21 +183,27 @@ In formalizing a model for subjective performance on this task, \cite{benjamin18
 where we have included a random response error term $\epsilon$. This formulation allows us to obtain maximum likelihood estimates $\hat{\alpha}_P$ and $\hat{\alpha}_L$ using least squares linear regression applied to subjective probability judgments (transformed to the log-odds scale). \cite{benjamin18} first restricted the meta-analyses to studies with equal prior probabilities across the hypotheses, such that $\alpha_P$ is irrelevant. The estimates of $\alpha_L$ revealed three main findings: (i) Under-reaction to the likelihood is more prevalent ($\hat{\alpha}_L<1$); (ii) the extent of under-reaction to the likelihood is greater ($\hat{\alpha}_L$ is lower) with larger sample size (high $N$); and (iii) the extent of under-reaction is greater with higher diagnosticity (higher $\theta$) of the likelihood.
 
 We investigated whether the Learned Inference Model can capture these findings. For each experimental condition, collected from 15 experiments, we trained the model with 2 hidden units on the same stimuli presented to subjects. The conditions varied in likelihood diagnosticity ($\theta$) and sample size ($N$). We additionally include some uniformly random sample sizes and diagnosticities in training as a proxy for subjects' ability to simulate other possible values for these query parameters, apart from the small set of specific ones chosen by the experimenters\footnote{Crucially however, the stimuli actually used in the experiment are much better represented in the query distribution during training -- leading to differences in the predictions made by the Learned Inference Models trained on different query distributions from each experiment. The uniformly random inputs primarily serve to add some noise to prevent the Learned Inference Model from overfitting in cases where the experimental stimuli only query a very small number of unique sample sizes and diagnosticities.}. We found that the Learned Inference Model could successfully reproduce the 3 main findings from the \citet{benjamin18} meta-analysis (Figure~\ref{fig:Benj}).
+%
+%
+% \begin{landscape}
+%\vspace*{\fill}
+%\begin{figure}[htpb]
+%  \includegraphics[height=0.6\textheight, width=1.5\textwidth]{Figures/Benjamin_hor_new.pdf}
+%  \caption{\textbf{Simulation of inferential errors in binary symmetric problems with uniform priors}. $P(h | d)$ represents true \newline posterior probabilities, $Q(h | d)$ represents subjective posterior probabilities. (A) Data aggregated by \cite{benjamin18}. (B) Learned \newline Inference Model simulations. Left: subjective posterior log-odds vs. Bayesian posterior log-odds. Middle: estimated sensitivity to \newline the likelihood $\hat{\alpha}_L$ vs sample size $N$. Right: estimated sensitivity to the likelihood vs. diagnosticity $\theta$. The shaded curves show the \newline linear and nonlinear (LOESS) regression functions with 95\% confidence bands}}
+%\end{figure}
+%\vfill
+%\end{landscape}
+%
+%
 
 
-
-
-
-\begin{figure}
+\begin{sidewaysfigure}%
 \centering
-\refstepcounter{figure}
-\begin{tabular}{c c}
-\rotatebox[origin=r]{270}{\parbox{1.1\textheight}{Figure~\thefigure: \textbf{Simulation of inferential errors in binary symmetric problems with uniform priors}. $P(h | d)$ represents true \newline posterior probabilities, $Q(h | d)$ represents subjective posterior probabilities. (A) Data aggregated by \cite{benjamin18}. (B) Learned \newline Inference Model simulations. Left: subjective posterior log-odds vs. Bayesian posterior log-odds. Middle: estimated sensitivity to \newline the likelihood $\hat{\alpha}_L$ vs sample size $N$. Right: estimated sensitivity to the likelihood vs. diagnosticity $\theta$. The shaded curves show the \newline linear and nonlinear (LOESS) regression functions with 95\% confidence bands}}
-&
-\includegraphics[height=1.1\textheight]{Figures/Benjamin_hor_new.pdf}
-\end{tabular}
-  \label{fig:Benj}
-\end{figure}
+\includegraphics[ width=1.02\textheight, keepaspectratio=true]{Figures/Benjamin_hor_new.pdf}%
+\caption{\textbf{Simulation of inferential errors in binary symmetric problems with uniform priors}. $P(h | d)$ represents true  posterior probabilities, $Q(h | d)$ represents subjective posterior probabilities. (A) Data aggregated by \cite{benjamin18}. (B) Learned  Inference Model simulations. Left: subjective posterior log-odds vs. Bayesian posterior log-odds. Middle: estimated sensitivity to  the likelihood $\hat{\alpha}_L$ vs sample size $N$. Right: estimated sensitivity to the likelihood vs. diagnosticity $\theta$. The shaded curves show the  linear and nonlinear (LOESS) regression functions with 95\% confidence bands}
+\label{fig:fftQCboxplot}%
+\end{sidewaysfigure}%
+
 % \newpage
 
 
@@ -236,9 +242,9 @@ After being shown different sets of coin ``spin'' results that varied in the num
 \begin{table}
     \centering
     \begin{tabular}{c|c}
+    \toprule
          Number of heads (h) & Sample size (n)\\
-         \\
-         \hline
+      \midrule
           2 & 3 \\
           3 & 3 \\
           3& 5\\
@@ -251,6 +257,7 @@ After being shown different sets of coin ``spin'' results that varied in the num
           10& 17\\
           11& 17\\
           19& 33\\
+          \bottomrule
     \end{tabular}
     \caption{Stimuli used in \cite{griffin1992weighing}.}
     \label{tab:GT}

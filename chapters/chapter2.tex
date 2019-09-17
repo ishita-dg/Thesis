@@ -71,12 +71,14 @@ Intuitively, this Markov chain will tend to move from lower to higher probabilit
 \caption{Unpacking induced biases in human hypothesis generation and evaluation.}
 \label{tab:biases}
 \begin{tabular}{p{.20\textwidth}>{\raggedright}p{.45\textwidth}p{.25\textwidth}}
-\hline
-\textbf{Name}&\textbf{Description}& \textbf{References}\\\hline
+\toprule
+\textbf{Name}&\textbf{Description}& \textbf{References}\\
+\midrule
 Subadditivity& Perceived probability of a hypothesis is higher when the hypothesis is described as a disjunction of typical component hypotheses (unpacked to typical examples). \\
 $P (\text{A}_{typical} \cup \text{B}) < P (\text{A}_{typical}) + P(\text{B})$ & \cite{fox1998belief}, \cite{tversky94} \\\\
 Superadditivity& Perceived probability of a hypothesis is lower when the hypothesis is described as a disjunction of atypical component hypotheses (unpacked to atypical examples). \\
-$P (\text{A}_{atypical} \cup \text{B}) > P (\text{A}_{atypical}) + P(\text{B})$ & \cite{sloman04,hadjichristidis1999opening} \\\\ \hline
+$P (\text{A}_{atypical} \cup \text{B}) > P (\text{A}_{atypical}) + P(\text{B})$ & \cite{sloman04,hadjichristidis1999opening} \\\\ 
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -196,20 +198,24 @@ Data for this experiment and all subsequent experiments reported in this article
 \caption{Experimental stimuli and queries for Experiment 1.}
 \label{tab:scenarios}
 \centering
-\begin{tabular}{l|c|l|l|c}
-\bf{Cue} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{$\mathcal{Q}2$}\\\hline
+\begin{tabular}{p{.1\textwidth} p{.08\textwidth} >{\raggedright}p{.25\textwidth} >{\raggedright}p{.25\textwidth} p{.1\textwidth}}
+  \toprule
 
-Table & C & chair, computer, curtain & cannon, cow, canoe & C or R\\\hline
+\bf{Cue} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{$\mathcal{Q}2$}\tabularnewline
 
-Telephone & D & display case, dresser, desk & drinking fountain, dryer, dome & D or L\\\hline
+\midrule
+Table & C & chair, computer, curtain & cannon, cow, canoe & C or R\tabularnewline
 
-Rug & B & book, bouquet, bed & bird, buffalo, bicycle & B or S\\\hline
+Telephone & D & display case, dresser, desk & drinking fountain, dryer, dome & D or L\tabularnewline
 
-Chair & P & painting, plant, printer & porch, pie, platform & P or A\\\hline
+Rug & B & book, bouquet, bed & bird, buffalo, bicycle & B or S\tabularnewline
 
-Sink & T & table, towel, toilet & trumpet, toll gate, trunk &T or E\\\hline
+Chair & P & painting, plant, printer & porch, pie, platform & P or A\tabularnewline
 
-Lamp & W & window, wardrobe, wine rack & wheelbarrow, water fountain, windmill & W or F\\
+Sink & T & table, towel, toilet & trumpet, toll gate, trunk &T or E\tabularnewline
+
+Lamp & W & window, wardrobe, wine rack & wheelbarrow, water fountain, windmill & W or F \tabularnewline
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -272,21 +278,22 @@ The procedure in Experiment 2 was largely the same as in Experiment 1, with the 
 \caption{Experimental stimuli and queries for Experiment 2.}
 \label{tab:scenarios2}
 \centering
-\scriptsize
-\begin{tabular}{l|c|l|l|c|c}
-\bf{Cue} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{$\mathcal{Q}2$-Partial overlap} &\bf{$\mathcal{Q}2$-No overlap}\\\hline
+\begin{tabular}{p{.1\textwidth} p{.08\textwidth} >{\raggedright}p{.2\textwidth} >{\raggedright}p{.2\textwidth} p{.12\textwidth} p{.1\textwidth}}
+  \toprule
+\bf{Cue} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{$\mathcal{Q}2$ Partial overlap} &\bf{$\mathcal{Q}2$ No overlap}\tabularnewline
+\midrule
+Table & C & chair, computer, curtain & cannon, cow, canoe & C or R &T or R\tabularnewline
 
-Table & C & chair, computer, curtain & cannon, cow, canoe & C or R &T or R\\\hline
+Telephone & D & display case, dresser, desk & drinking fountain, dryer, dome & D or L& G or L\tabularnewline
 
-Telephone & D & display case, dresser, desk & drinking fountain, dryer, dome & D or L& G or L\\\hline
+Rug & B & book, bouquet, bed & bird, buffalo, bicycle & B or S&D or S\tabularnewline
 
-Rug & B & book, bouquet, bed & bird, buffalo, bicycle & B or S&D or S\\\hline
+Chair & P & painting, plant, printer & porch, pie, platform & P or A&M or A\tabularnewline
 
-Chair & P & painting, plant, printer & porch, pie, platform & P or A&M or A\\\hline
-
-Sink & T & table, towel, toilet & trumpet, toll gate, trunk &T or E&F or E\\\hline
+Sink & T & table, towel, toilet & trumpet, toll gate, trunk &T or E&F or E\tabularnewline
 
 Lamp & W & window, wardrobe, wine rack & wheelbarrow, water fountain, windmill & W or F & L or F\\
+\bottomrule
 \end{tabular}
 \end{table}
 
@@ -347,18 +354,18 @@ The procedure was similar to Experiments 1 and 2. The only difference was that p
 \caption{Experimental stimuli and queries for Experiment 3. Kullback-Leibler (KL) divergence between the posteriors for $\mathcal{Q}1$ and $\mathcal{Q}2$ are shown in parentheses.}
 \label{tab:scenarios3}
 \centering
-{\sffamily
-\begin{tabular}{l|c|l|l|c|c}
-\bf{Cue1} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{Cue2-sim (KL)} & \bf{Cue2-diff (KL)}\\\hline
+\begin{tabular}{p{.08\textwidth} p{.08\textwidth} >{\raggedright}p{.2\textwidth} >{\raggedright}p{.2\textwidth} p{.12\textwidth} p{.12\textwidth}}
+  \toprule
+\bf{Cue1} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{Cue2-sim (KL)} & \bf{Cue2-diff (KL)}\tabularnewline
+\midrule
 
-Rug & B & book, bouquet, bed & bird, buffalo, bicycle & Curtain (0.080)& Car (8.658)\\\hline
+Rug & B & book, bouquet, bed & bird, buffalo, bicycle & Curtain (0.080)& Car (8.658)\tabularnewline
 
-Chair & P & painting, plant, printer & porch, pie, platform & Book (0.031) & Road (8.508)\\\hline
+Chair & P & painting, plant, printer & porch, pie, platform & Book (0.031) & Road (8.508)\tabularnewline
 
-Sink & T & table, towel, toilet & trumpet, toll gate, trunk & Counter (0.001)& Sidewalk (8.503)\\\hline
-
+Sink & T & table, towel, toilet & trumpet, toll gate, trunk & Counter (0.001)& Sidewalk (8.503)\tabularnewline
+\bottomrule
 \end{tabular}
-}
 \end{table}
 
 \subsection{Results}

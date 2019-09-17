@@ -5,11 +5,11 @@
 \contentsline {subsection}{\numberline {2.1.2}A specific Markov chain Monte Carlo algorithm}{7}{subsection.2.1.2}
 \contentsline {section}{\numberline {2.2}Model simulations}{10}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Diagnostic hypotheses in a disease-symptom network}{10}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Subadditivity}{13}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.2}Subadditivity}{12}{subsection.2.2.2}
 \contentsline {subsection}{\numberline {2.2.3}Superadditivity and related effects}{15}{subsection.2.2.3}
 \contentsline {subsection}{\numberline {2.2.4}Self-generation of hypotheses}{19}{subsection.2.2.4}
 \contentsline {subsection}{\numberline {2.2.5}Anchoring and adjustment}{22}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}The crowd within}{23}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.6}The crowd within}{24}{subsection.2.2.6}
 \contentsline {subsection}{\numberline {2.2.7}Summary of simulation results and comparison with importance sampling}{26}{subsection.2.2.7}
 \contentsline {section}{\numberline {2.3}Overview of experiments}{28}{section.2.3}
 \contentsline {section}{\numberline {2.4}Experiment 1}{30}{section.2.4}
@@ -32,20 +32,20 @@
 \contentsline {section}{\numberline {3.2}Experiment 1}{55}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Participants}{55}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Procedure}{55}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Results}{57}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Discussion}{60}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.3}Results}{56}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Discussion}{61}{subsection.3.2.4}
 \contentsline {section}{\numberline {3.3}Experiment 2}{61}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Participants}{61}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Procedure}{61}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Results}{63}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Discussion}{67}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Experiment 3}{67}{section.3.4}
+\contentsline {subsection}{\numberline {3.3.4}Discussion}{66}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Experiment 3}{68}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}Participants}{68}{subsection.3.4.1}
 \contentsline {subsection}{\numberline {3.4.2}Procedure}{68}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Results}{68}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Discussion}{70}{subsection.3.4.4}
+\contentsline {subsection}{\numberline {3.4.3}Results}{69}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Discussion}{71}{subsection.3.4.4}
 \contentsline {section}{\numberline {3.5}General Discussion}{72}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Related work}{72}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.1}Related work}{73}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Future directions}{75}{subsection.3.5.2}
 \contentsline {chapter}{\numberline {4}Amortization gives rise to ecologically rational heuristics}{79}{chapter.4}
 \contentsline {section}{\numberline {4.1}Introduction}{80}{section.4.1}

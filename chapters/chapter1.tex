@@ -137,33 +137,33 @@ As our goal is to use this set-up purely for illustrative purposes, we use a sim
 
 
 \begin{table}[htbp]
-  \setstretch{0.55}
+%\setstretch{\ddoublespacing}
 \caption{Parameters used for noisy-or model.}
   \begin{center}
-\begin{tabular}{>{\centering}m{1.6cm}>{\centering}m{1.1cm}>{\centering}m{0.4cm}>{\centering}m{1.5cm}>{\centering}m{0.6cm}>{\centering}m{1.5cm}>{\centering}m{1.2cm}>{\centering}m{1.1cm}>{\centering}m{1.6cm}c} 
+\begin{tabular}{>{\raggedright}m{0.16\textwidth} m{0.07\textwidth} m{0.04\textwidth} m{0.05\textwidth} m{0.04\textwidth} m{0.08\textwidth} m{0.08\textwidth} m{0.08\textwidth} m{0.1\textwidth} m{0.04\textwidth}} 
   \toprule
 
      \multirow{2}{*}{Symptoms} &
-      \multicolumn{9}{c}{Diseases} \\\\
- & lung cancer & TB & respiratory flu & cold & gastro-enteritis & stomach cancer & stomach flu & food poisoning & base \\\\
+      \multicolumn{9}{c}{Diseases} \\
+ & lung cancer & TB & resp. flu & cold & gastro-enteritis & stomach cancer & stomach flu & food poisoning & base \\
 \midrule
-Prior & 0.001 & 0.05 & 0.1 & 0.2 & 0.1 & 0.05 & 0.15 & 0.2 & 1.0\\\\
+Prior & 0.001 & 0.05 & 0.1 & 0.2 & 0.1 & 0.05 & 0.15 & 0.2 & 1.0\\
 %\hline \hline
-cough & 0.3 & 0.7 & 0.05 & 0.5 & 0.0 & 0.0 & 0.0 & 0.0 & 0.01 \\\\
+cough & 0.3 & 0.7 & 0.05 & 0.5 & 0.0 & 0.0 & 0.0 & 0.0 & 0.01 \\
 %\hline
-fever & 0.0 & 0.1 & 0.5 & 0.3 & 0.0 & 0.0 & 0.1 & 0.2 & 0.01 \\\\
+fever & 0.0 & 0.1 & 0.5 & 0.3 & 0.0 & 0.0 & 0.1 & 0.2 & 0.01 \\
 %\hline
-chest pain & 0.5 & 0.5 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.01 \\\\
+chest pain & 0.5 & 0.5 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.01 \\
 %\hline
-short breath & 0.5 & 0.2 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.01 \\\\
+short breath & 0.5 & 0.2 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.0 & 0.01 \\
 %\hline
-nausea & 0.0 & 0.0 & 0.2 & 0.1 & 0.5 & 0.1 & 0.5 & 0.7 & 0.01 \\\\ 
+nausea & 0.0 & 0.0 & 0.2 & 0.1 & 0.5 & 0.1 & 0.5 & 0.7 & 0.01 \\ 
 %\hline
-fatigue & 0.0 & 0.0 & 0.2 & 0.3 & 0.1 & 0.05 & 0.2 & 0.4 & 0.01 \\\\
+fatigue & 0.0 & 0.0 & 0.2 & 0.3 & 0.1 & 0.05 & 0.2 & 0.4 & 0.01 \\
 %\hline
-stomach cramps & 0.0 & 0.0 & 0.0 & 0.0 & 0.3 & 0.05 & 0.1 & 0.5 & 0.01 \\\\
+bloating & 0.0 & 0.0 & 0.0 & 0.0 & 0.3 & 0.05 & 0.1 & 0.5 & 0.01 \\
 %\hline
-abdom. pain & 0.0 & 0.0 & 0.01 & 0.0 & 0.1 & 0.5 & 0.0 & 0.0 & 0.01 \\\\
+abdom. pain & 0.0 & 0.0 & 0.01 & 0.0 & 0.1 & 0.5 & 0.0 & 0.0 & 0.01 \\
 %\hline
 \bottomrule
 \end{tabular}
@@ -366,27 +366,27 @@ Participants were asked to imagine playing a game with a friend in which the fri
 
 
 \begin{table}[htbp]
- \setstretch{0.55}
+% \setstretch{0.5\baselineskip}
 \caption{Queries in Experiment 1. The letter determines the focal space (e.g., all objects beginning with A), conditioned on the cue object. Typical and atypical unpackings are shown for each focal space.}
 \label{tab:scenarios}
 
   \begin{center} 
-\begin{tabular}{p{.12\textwidth} >{\centering}p{.08\textwidth} >{\raggedright}p{.32\textwidth} >{\raggedright}p{.36\textwidth}}
+\begin{tabular}{m{.12\textwidth}  p{.08\textwidth} >{\raggedright}p{.32\textwidth} >{\raggedright}p{.36\textwidth}}
   \toprule
-\bf{Cue object} & \bf{Letter} & \bf{Unpacked-typical} & \bf{Unpacked-atypical}\tabularnewline\tabularnewline
+\bf{Cue object} & \bf{Letter} & \bf{Unpacked-typical} & \bf{Unpacked-atypical}\tabularnewline
 \midrule
-Pillow & A & armchair, alarm clock, apple & arch, airplane, artichokes\tabularnewline\tabularnewline
-Rug & B & book, bouquet, bed & bird, buffalo, bicycle\tabularnewline\tabularnewline
-Table & C & chair, computer, curtain & cannon, cow, canoe\tabularnewline\tabularnewline
-Telephone & D & display case, dresser, desk & drinking fountain, dryer, dome\tabularnewline\tabularnewline
-Computer & E & envelope,electrical outlet, end table & eggplant, electric mixer, elevator door\tabularnewline\tabularnewline
-Armchair & F & fireplace, filing cabinet, fan& fire hydrant, fountain, fish tank\tabularnewline\tabularnewline
-Stove & L & light, lemon, ladle& leavers, ladder, lichen\tabularnewline\tabularnewline
-Chair & P & painting, plant, printer& porch, pie, platform\tabularnewline\tabularnewline
-Bed & R & rug, remote control, radio & railroad, recycling bins, rolling pin\tabularnewline\tabularnewline
-Kettle & S & stove, shelves, soap& suitcase, shoe, scanner\tabularnewline\tabularnewline
-Sink & T & table, towel, toilet & trumpet, toll gate, trunk\tabularnewline\tabularnewline
-Lamp & W & window, wardrobe, wine rack & wheelbarrow, water fountain, windmill\tabularnewline\tabularnewline
+Pillow & A & armchair, alarm clock, apple & arch, airplane, artichokes\tabularnewline
+Rug & B & book, bouquet, bed & bird, buffalo, bicycle\tabularnewline
+Table & C & chair, computer, curtain & cannon, cow, canoe\tabularnewline
+Telephone & D & display case, dresser, desk & drinking fountain, dryer, dome\tabularnewline
+Computer & E & envelope,electrical outlet, end table & eggplant, electric mixer, elevator door\tabularnewline
+Armchair & F & fireplace, filing cabinet, fan& fire hydrant, fountain, fish tank\tabularnewline
+Stove & L & light, lemon, ladle& leavers, ladder, lichen\tabularnewline
+Chair & P & painting, plant, printer& porch, pie, platform\tabularnewline
+Bed & R & rug, remote control, radio & railroad, recycling bins, rolling pin\tabularnewline
+Kettle & S & stove, shelves, soap& suitcase, shoe, scanner\tabularnewline
+Sink & T & table, towel, toilet & trumpet, toll gate, trunk\tabularnewline
+Lamp & W & window, wardrobe, wine rack & wheelbarrow, water fountain, windmill\tabularnewline
 \bottomrule
 
 \end{tabular}
@@ -440,17 +440,17 @@ The experimental procedure was identical to Experiment 1, except for the choice 
 
 
 \begin{table}[htbp]
-\setstretch{0.5}
 \caption{Queries in Experiment 2. The letter determines the focal space (e.g., all objects beginning with A), conditioned on the cue object. Conditioned on cue object 1, unpacking 1 is predicted to cause subadditivity and unpacking 2 is predicted to cause superadditivity. These predictions reverse for cue object 2.}
 \label{tab:scenarios2}
   \begin{center} 
 \begin{tabular}{p{.18\textwidth} p{.18\textwidth} p{.08\textwidth} >{\raggedright}p{.25\textwidth} >{\raggedright}p{.25\textwidth}}
   \toprule
-\bf{Cue object 1}&\bf{Cue object 2}&\bf{Letter}&\bf{Unpacking 1} &\bf{Unpacking 2}\tabularnewline\tabularnewline
+\bf{Cue object 1}&\bf{Cue object 2}&\bf{Letter}&\bf{Unpacking 1} &\bf{Unpacking 2}\tabularnewline
 \midrule
-Pillow & Faucet & B & bed skirt, bedspread\ & bucket, bread\tabularnewline\tabularnewline
-Road & Sink & C & cabin, crosswalk & cup, coffee maker\tabularnewline\tabularnewline
-Cabinet & Road & T & toothpaste, tray & terrace, tunnel
+Pillow & Faucet & B & bed skirt, bedspread\ & bucket, bread\tabularnewline
+Road & Sink & C & cabin, crosswalk & cup, coffee maker\tabularnewline
+Cabinet & Road & T & toothpaste, tray & terrace, tunnel\tabularnewline
+\bottomrule
 \end{tabular}
 \end{center}
 \end{table}
@@ -487,29 +487,28 @@ Our model recreates several cognitive biases exhibited by humans: subadditivity,
 Our simulation results rest on two key features of the model. First, our model posits an interplay between generation and evaluation of hypotheses: when a low probability hypothesis has been generated, the sampler is more likely to accept new proposals compared to when a high probability hypothesis has been generated. This property of MCMC allows us to understand superadditivity and related effects (such as the dud alternative and weak evidence effects), where unpacking a query into low probability examples causes a reduction in the probability estimate for the focal space. This feature also explains why participants give lower probability estimates to hypotheses that are self-generated compared to those generated by others and presented to them. A shortcoming of previous models based on importance sampling \citep{shi10} or cued recall \citep{Thomas2008} is that the generation and the evaluation processes are largely decoupled; the probabilities of the hypotheses already in the cache of generated hypotheses do not affect whether or not new hypotheses are generated.
 
 \begin{table}%[htbp]
-\setstretch{0.6}
 \centering
 \caption{Comparison of stochastic sampling algorithms}
 \label{tab:compare}
-\begin{tabular}{>{\centering}p{.28\textwidth}>{\centering}p{.20\textwidth}>{\centering}p{.20\textwidth}>{\centering}p{.20\textwidth}}
+\begin{tabular}{ p{.28\textwidth} p{.20\textwidth} p{.20\textwidth} p{.20\textwidth}}
 \toprule
-\textbf{Effect} & \multicolumn{3}{>{\centering}p{0.60\textwidth}}{\textbf{Stochastic Sampling Variants}} 
-\tabularnewline\tabularnewline
+\textbf{Effect} & \multicolumn{3}{ p{0.60\textwidth}}{\textbf{Stochastic Sampling Variants}} 
+\tabularnewline
 & Importance Sampling & Global proposal MCMC & Local proposal MCMC
-\tabularnewline\tabularnewline
+\tabularnewline
 \midrule
 Subadditivity & \checkmark & \checkmark & \checkmark
-\tabularnewline\tabularnewline
+\tabularnewline
 Superadditivity  & $\times$ & \checkmark & \checkmark
-\tabularnewline\tabularnewline
+\tabularnewline
 Weak Evidence effect & $\times$ & \checkmark & \checkmark
-\tabularnewline\tabularnewline
+\tabularnewline
 Dud Alternative effect & $\times$ & \checkmark & \checkmark
-\tabularnewline\tabularnewline
+\tabularnewline
 Self-generation effect & $\times\tablefootnote{While an importance sampler does reproduce this effect, we have elaborated in the section comparing our MCMC model to importance sampling how its explanation does not extend to follow-up studies on this effect in \cite{conf}}$ & \checkmark & \checkmark
-\tabularnewline\tabularnewline
+\tabularnewline
 Crowd within & $\times$ & $\checkmark$ & \checkmark
-\tabularnewline\tabularnewline
+\tabularnewline
 Anchoring \& adjustment&  $\times$ & $\times$ & \checkmark \tabularnewline
 \bottomrule
 \end{tabular}

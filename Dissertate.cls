@@ -66,6 +66,7 @@
 \usepackage{ragged2e}
 % start added by ishita
 \usepackage{amsmath}
+\usepackage{rotating}
 \usepackage{array}
 \usepackage{tablefootnote}
 \usepackage{subfig}
