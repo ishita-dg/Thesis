@@ -3,4 +3,34 @@
 \label{introduction}
 
 
-This is the Introduction -- to be written.
+Humans do many interesting things, much beyond what modern AI can.  The importance of considering comon sense and the marvel of what children achieve.
+
+Bayesian models enter and provide an explanation for how they might, and insights in to the structured kinds of inferences people make. It is not just stimulus-response.
+
+But this leaves two crucial issues ope: a) Inference is intractable (if we could do this with ML we would!) and b) People aren't really all that Bayesian (heuristics and biases). 
+
+The goal of this thesis is to provide an answer to both these concerns with Bayesian models of human cognition by considering algorithmic approaches to approximating Bayesian inference.
+
+The key observation is that humans are not general purpose computors, they function in an environment that shapes what is important to be good and what doesn't matter. And second, humans have limited resources and lifespan -- this highlights the need to adapt to the specific environments in which good performance is useful. Learning about things that don't occur often is often not even possible due to limited experience, and is largely not worth it given the cost on computation. 
+
+Herb Simon / Brunswick = importance f the environment.
+
+We will study how adaption to ecological enviornments (as often necessary under resource constraints) can both a) render inference more tractable, and b) explain deviations from normative Bayesian inference.
+
+In Chapter 2, I briefly review the motivation for Bayesian models for cognition, and various approaches that challenge it on these grounds, and how this thesis fits into that.
+
+In Chapter 3, I review some important technical background on probabilistic inference.
+
+In Chapter 4, we study how correlated sampling of underlying hypotheses can replicate several probabilistic biases. Justify why correlated sampling is an adaptation to the environment. In Chapter 5 we introduce the role of the environment in the ofrm of query distributions -- by account for computation re-use in related queries. The first entry of amortization. In Chapter 6 we study amortization in detail and show how this allows a mechanism for the discovery of ecologically rational strategy. In Chapter 7 we study analogous amortized inferences in modern NLP / ML and show how not considering the environment can be bad. In Chapter 8 we show how we can get complex algorithms like causal inference from throwing simple learning mechanisms at structured environments with meta-learning -- the modern day machine learning's redicovery of ecological rationality. In Chapter 9 we conclude.
+
+We also elaborate on some related work:
+
+"Throw a deep network at it": Not structured and generalizable.
+
+Heuristics and biases literature: Not worth throwing away the structured aspect of bayesian models for a list. They do account for the environment and care about it, but don't provide unifying principles.
+
+Resource rationality: Falk's strategy selection / learning startegy. These are also intractable! Turtles all the way down.
+
+
+
+

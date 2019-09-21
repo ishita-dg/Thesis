@@ -1,549 +1,480 @@
 %!TEX root = ../dissertation.tex
-\chapter{Heuristics in machines: A natural language case study}
-\label{introduction}
+%\begin{savequote}[75mm]
+%This is some random quote to start off the chapter.
+%\qauthor{Firstname lastname}
+%\end{savequote}
+
+\chapter{Amortization: Re-use of previous solutions}
+
+Many theories of probabilistic reasoning assume that human brains are equipped with a general-purpose inference engine that can be used to answer arbitrary queries for a wide variety of probabilistic models \citep{griffiths2012bridging, oaksford2007bayesian}. For example, given a joint distribution over objects in a scene, the inference engine can be queried with arbitrary conditional distributions, such as:
+\begin{itemize}
+\item What is the probability of a microwave given that I've observed a sink?
+\item What is the probability of a toaster given that I've observed a sink and a microwave?
+\item What is the probability of a toaster and a microwave given that I've observed a sink?
+\end{itemize}
+
+The nature of the inference engine that answers such queries is still an open research question, though many theories posit some form of approximate inference using Monte Carlo sampling \citep[e.g.,][]{thaker17,dasgupta17,vul2014one,gershman12,denison13,sanborn2016bayesian,ullman2012theory}. According to these theories, probability distributions are mentally represented with a set of samples, which are generated using a general-purpose inference engine that can operate on arbitrary probability distributions.
+
+The flexibility and power of such a general-purpose inference engine trades off against its computational efficiency: by treating each query distribution independently, an inference engine forgoes the opportunity to reuse computations across queries, thus reducing time complexity (but possibly increasing space complexity). Every time a distribution is queried, past computations are ignored and answers are produced anew---the inference engine is memoryless, a property that makes it statistically accurate but inefficient in environments with overlapping queries.
+
+Continuing the scene inference example, answering the third query should be easily computable once the first two queries have been computed. Mathematically, the answer can be expressed as:
+\begin{align}
+P(\text{toaster} \wedge \text{microwave}|\text{sink}) = P(\text{toaster}|\text{sink},\text{microwave}) P(\text{microwave}|\text{sink}).
+\end{align}
+Even though this is a trivial example, standard inference engines do not exploit these kinds of regularities because they are memoryless---they have no access to traces of past computations.
+
+An inference engine may gain efficiency by incurring some amount of bias due to reuse of past computations---a strategy we will refer to as \emph{amortized inference} \citep{stuhlmuller2013learning, gershman2014amortized}. For example, if the inference engine stores its answers to the ``toaster'' and ``microwave'' queries, then it can efficiently compute the answer to the ``toaster or microwave'' query without rerunning inference from scratch. More generally, the posterior can be approximated as a parametrized function, or \emph{recognition model}, that maps data in a bottom-up fashion to a distribution over hypotheses, with the parameters trained to minimize the divergence between the approximate and true posterior.\footnote{Formally, this is known as \emph{variational inference} \citep{jordan1999introduction}, where the divergence is typically the Kullback-Leibler divergence between the approximate and true posterior. Although this divergence cannot be minimized directly (since it requires knowledge of the true posterior), a bound (variational free energy) can be tractably optimized for some classes of approximations.} By sharing the same recognition model across multiple queries, the recognition model can support rapid inference, but is susceptible to ``interference'' across different queries, a property that we explore below.
+
+One way to construct a recognition model is using Monte Carlo sampling: the recognition model can be viewed as a kind of data-driven sampler whose parameters are optimized so that the samples resemble the true posterior. In an amortized architecture, these parameters are shared across different inputs (i.e., data) and hence the samples will be correlated, introducing a systematic bias. If the sampling process corresponds to a Markov chain Monte Carlo algorithm (see below), this bias will disappear with a sufficiently large number of samples, but since humans appear to take a relatively small number of samples \citep{dasgupta17,vul2014one}, we expect this bias to be measurable.
+
+Amortization has a long history in machine learning; the \emph{locus classicus} is the Helmholtz machine \citep{dayan1995helmholtz,hinton1995wake}, which uses samples from the generative model to train a recognition model. More recent extensions and applications of this approach \citep[e.g.,][]{rezende2014stochastic,paige2016inference,kingma2013auto,ritchie2016neurally} have ushered in a new era of scalable Bayesian computation in machine learning. We propose that amortization is also employed by the brain \citep[see][for a related proposal]{yildirim2015efficient}, flexibly reusing past inferences in order to efficiently answer new but related queries. The key behavioral prediction of amortized inference is that people will show correlations in their judgments across related queries. 
+
+We report 3 experiments that test this prediction using a variant of the probabilistic reasoning task previously studied by \citet{dasgupta17}. In this task, participants answer queries about objects in scenes, much like in the examples given above. Crucially, the hypothesis space is combinatorial because participants have to answer questions about sets of objects (e.g., ``All objects starting with the letter S''). This renders exact inference intractable: the hypothesis space cannot be efficiently enumerated. In our previous work \citep{dasgupta17}, we argued that people approximate inference in this domain using a form of Monte Carlo sampling. Although this algorithm is asymptotically exact, only a small number of samples can be generated due to cognitive limitations, thereby revealing systematic cognitive biases such as anchoring and adjustment, subadditivity, and superadditivity \citep[see also][]{lieder2017empirical,lieder2017anchoring,vul2014one}.
+
+We show that the same algorithm can be generalized to reuse inferential computations in a manner consistent with human behavior. First we describe how amortization might be used by the mind. We consider two crucial questions about how this might be implemented: what parts of previous calculations do people reuse ---all previous memories or summaries of the calculations--- and when do they choose to reuse their amortized calculations. Next we test these questions empirically. In Experiment 1, we demonstrate that people \emph{do} use amortization by showing that there is a lingering influence of one query on participants' answers to a second, related query. In Experiment 2, we explore what is reused, and find that people use summary statistics of their previously generated hypotheses, rather than the hypotheses themselves. Finally, in Experiment 3, we show that people are more likely to reuse previous computations when those computations are most likely to be relevant: when a second cue is similar to a previously evaluated one.
+
+%%%%%%%%%%%%%%%%%%
+%Previous work
+%%%%%%%%%%%%%%%%%%
+\section{Hypothesis generation and amortization}
+
+Before describing the experiments, we provide an overview of our theoretical framework. First, we describe how Monte Carlo sampling can be used to approximate Bayesian inference, and summarize the psychological evidence for such an approximation. We then introduce amortized inference as a generalization of this framework.
+
+\subsection{Monte Carlo sampling}
+Bayes' rule stipulates that the posterior distribution is obtained as a normalized product of the likelihood $P(d|h)$ and the prior $P(h)$:
+\begin{align}
+P(h|d) = \frac{P(d|h)P(h)}{\sum_{h' \in \mathcal{H}} P(d|h') P(h')},
+\end{align}
+where $\mathcal{H}$ is the hypothesis space. Unfortunately, Bayes' rule is computationally intractable for all but the smallest hypothesis spaces, because the denominator requires summing over all possible hypotheses. This intractability is especially prevalent in combinatorial space, where hypothesis spaces are exponentially large. In the scene inference example, $\mathcal{H} = \mathcal{H}_1 \times \mathcal{H}_2 \times \cdots \mathcal{H}_K$ is the product space of latent objects, so if there are $K$ latent objects and $M$ possible objects, $|\mathcal{H}| = M^K$. If we imagine there are $M=1000$ kinds of objects, then it only takes $K=26$ latent objects for the number of hypotheses to exceed the number of atoms in the universe.
+
+Monte Carlo methods approximate probability distributions with samples $\theta = \{h_1,\ldots,h_N \}$ from the posterior distribution over the hypothesis space. We can understand Monte Carlo methods as producing a recognition model $Q_\theta(h|d)$ parametrized by $\theta$ \citep[see][for a systematic treatment]{saeedi17}. In the idealized case, each hypothesis is sampled from $P(h|d)$. The approximation is then given by:
+\begin{align}
+\textstyle
+P(h|d) \approx Q_\theta(h|d) = \frac{1}{N}\sum_{n=1}^N \mathbb{I}[h_n=h],
+\end{align}
+where $\mathbb{I}[\cdot] = 1$ if its argument is true (and 0 otherwise). The accuracy of this approximation improves with $N$, but from a decision-theoretic perspective even small $N$ may be serviceable \citep{vul2014one,lieder2017anchoring,gershman2015computational}.
+
+The key challenge in applying Monte Carlo methods is that generally we do not have access to samples from the posterior. Most practical methods are based on sampling from a more convenient distribution, weighting or selecting the samples in a way that preserves the asymptotic correctness of the approximation \citep{mackay2003information}. We focus on Markov chain Monte Carlo (MCMC) methods, the most widely used class of approximations, which are based on simulating a Markov chain whose stationary distribution is the posterior. In other words, if one samples from the Markov chain for long enough, eventually $h$ will be sampled with frequency proportional to its posterior probability.
+
+A number of findings suggest that MCMC is a psychologically plausible inference algorithm. First, MCMC does not require knowledge of normalized probabilities at any stage and relies solely on an ability to compare the relative probabilities of two hypotheses. This is consistent with evidence that humans represent probabilities on a relative scale \citep{stewart06}. Second, MCMC allows for feedback between the generation and evaluation processes. The evaluated probability of already-generated hypotheses influences if and how many new hypotheses will be generated, consistent with experimental observations \citep{hamrick15}. Finally, Markov chains also generate autocorrelated samples. This is consistent with autocorrelation in hypothesis generation \citep{bonawitz14,gershman12,vul08,lieder2017anchoring}
+
+Many implementations use a form of local stochastic search, proposing and then accepting or rejecting hypotheses. For example, the classic Metropolis-Hastings algorithm first samples a new hypothesis $h'$ from a proposal distribution $\phi(h'|h_n)$ and then accepts this proposal with probability
+\begin{align}
+P(h_{n+1}=h'|h_n) = \min\left[1, \frac{P(d|h')P(h') \phi(h_n|h')}{P(d|h_n)P(h_n) \phi(h'|h_n)}\right].
+\label{eq:MH-step}
+\end{align}
+Intuitively, this Markov chain will tend to move from lower to higher probability hypotheses, but will also sometimes ``explore'' low probability hypotheses. In order to ensure that a relatively high proportion of proposals are accepted, $\phi(h'|h_n)$ is usually constructed to sample proposals from a local region around $h_n$. This combination of locality and stochasticity leads to a characteristic pattern of small inferential steps punctuated by occasional leaps, much like the processes of conceptual discovery in childhood \citep{ullman2012theory} and creative insight in adulthood \citep{suchow2017evolution}. Even low-level visual phenomena like perceptual multistability can be described in these terms \citep{gershman12,Moreno11}.
+
+
+\begin{table}%[ht!]
+\centering
+\caption{Unpacking induced biases in human hypothesis generation and evaluation.}
+\label{tab:biases}
+\begin{tabular}{p{.20\textwidth}>{\raggedright}p{.45\textwidth}p{.25\textwidth}}
+\toprule
+\textbf{Name}&\textbf{Description}& \textbf{References}\\
+\midrule
+Subadditivity& Perceived probability of a hypothesis is higher when the hypothesis is described as a disjunction of typical component hypotheses (unpacked to typical examples). \\
+$P (\text{A}_{typical} \cup \text{B}) < P (\text{A}_{typical}) + P(\text{B})$ & \cite{fox1998belief}, \cite{tversky94} \\\\
+Superadditivity& Perceived probability of a hypothesis is lower when the hypothesis is described as a disjunction of atypical component hypotheses (unpacked to atypical examples). \\
+$P (\text{A}_{atypical} \cup \text{B}) > P (\text{A}_{atypical}) + P(\text{B})$ & \cite{sloman04,hadjichristidis1999opening} \\\\ 
+\bottomrule
+\end{tabular}
+\end{table}
+
+Another implication of MCMC, under the assumption that a small number of hypotheses are sampled, is that inferences will tend to show anchoring effects (i.e., a systematic bias towards the initial hypotheses in the Markov chain). Lieder and colleagues have shown how this idea can account for a wide variety of anchoring effects observed in human cognition \citep{lieder2012burn,lieder2017empirical}. For example, priming someone with an arbitrary number (e.g., the last 4 digits of their social security number) will bias a subsequent judgment (e.g., about the birth date of Gandhi), because the arbitrary number influences the initialization of the Markov chain.
+
+
+\begin{figure}%[ht!]
+\begin{center}
+\subfloat[Different initializations]{\includegraphics[width=7.2cm, trim={2cm 1.5cm 3.5cm 5cm},clip]{figures/Remembrance_figs_2.pdf}}\hfil
+\subfloat[The same proposal made to both chains]{\includegraphics[width=7.2cm, trim={2cm 1.5cm 3.5cm 5cm},clip]{figures/Remembrance_figs_3.pdf}} 
+
+\subfloat[Proposal gets accepted or rejected (Equation \ref{eq:MH-step})]{\includegraphics[width=7.2cm, trim={2cm 1.5cm 3.5cm 5cm},clip]{figures/Remembrance_figs_4.pdf}}\hfil
+\subfloat[Sub- and super-additivity]{\includegraphics[width=7.2cm, trim={2cm 1.5cm 3.5cm 5cm},clip]{figures/Remembrance_figs_5.pdf}}
+
+\caption{Demonstration of how MCMC sampling can give rise to sub- and super-additivity for different unpacked versions of the question : ``In the presence of a table, what is the probability that there is also another object starting with C?''. The color gradient indicates probability density. (a) The chain initialized with a typical unpacking starts at `chair', a high probability hypothesis, denoted by a darker shading, while the chain initialized with an atypical unpacking starts at `canoe', a low probability hypothesis, denoted by a lighter shading. 
+(b) For the purposes of illustration we show the same new intermediate probability proposal of `toothbrush' being made to both chains. In the model, this proposal is randomly generated for each chain. %This hypothesis falls outside the focal space of `object starting with C', and has intermediate probability (significantly higher than canoe, but significantly lower than chair). 
+(c) Since the probability of `toothbrush' is significantly higher than `canoe' the proposal is accepted by the atypically unpacked chain. But conversely since it is significantly less probable than `chair', is likely rejected by the typically unpacked chain.
+(d) The tendency for the typically unpacked chain to tarry in the high probability region of the queried object set, gives rise to sub-additivity, whereas the tendency for the atypically unpacked to get easily derailed into regions outside the queried object set gives rise to super-additivity.}
+\label{fig:demo}
+\end{center}
+\end{figure}
+
+In previous research \citep{dasgupta17}, we have shown that MCMC can account for many other probabilistic reasoning ``fallacies,'' suggesting that they arise not from a fundamental misunderstanding of probability, but rather from the inevitable need to approximate inference with limited cognitive resources. We explored this idea using the scene inference task introduced in the previous section. The task facing subjects in our experiments was to judge the probability of a particular set of latent objects (the hypothesis, $h$) in a scene conditional on observing one object (the cue, $d$). By manipulating the framing of the query, we showed that subjects gave different answers to formally equivalent queries (see Table~\ref{tab:biases}). In particular, by partially unpacking the queried object set (where fully unpacking an object set means to present it explicitly as a union of each of its member objects) into a small set of exemplars and a ``catch-all'' hypothesis (e.g., ``what is the probability that there is a chair, a computer, or any other object beginning with C?''), we found that subjects judged the probability to be higher when the unpacked exemplars were typical \citep[a ``subadditivity'' effect; cf.][]{tversky94} and lower when the unpacked exemplars were atypical \citep[a ``superadditivity'' effect; cf.][]{sloman04} compared to when the query was presented without any unpacking.
+
+To provide a concrete example, in the presence of the cue ``table,'' the typically unpacked query ``what is the probability that there is also a chair, a computer, or any other object beginning with C?'' generates higher probability estimates relative to the packed query ``what is the probability that there is another object beginning with C?'', whereas the atypically unpacked query ``what is the probability that there is also a cow, a canoe, or any other object beginning with C?'' generates lower probability estimates compared to the packed query.
+
+%\FloatBarrier
+
+The generative model for this scene inference task is approximated by fitting the database of natural scenes with hand-labeled objects, provided in \citet{greene13}, to a latent Dirichlet allocation (LDA) model \citep{lda}. Specifically, the database consists of object co-occurrence statistics in natural scenes, which we model with a set of underlying ``topics'' (probability distributions over objects). This model allows us to analytically compute the joint probability of any combination of different objects. Finding the exact normalized conditional probabilities is still intractable due to the combinatorially large number of possible hypotheses to normalize over, but Monte Carlo sampling methods like MCMC can approximate these probabilities.
 
 
 
-As modern deep networks become more complex, and get closer to human-like capabilities in certain domains, the question arises of how the representations and decision rules they learn compare to the ones in humans. In this work, we study representations of sentences in one such artificial system for natural language processing. We first present a diagnostic test dataset to examine the degree of abstract composable structure represented. Analyzing performance on these diagnostic tests indicates a lack of systematicity in the representations and decision rules, and reveals a set of heuristic strategies. We then investigate the effect of the training distribution on learning these heuristic strategies, and study changes in these representations with various augmentations to the training set. Our results reveal parallels to the analogous representations in people. We find that these systems can learn abstract rules and generalize them to new contexts under certain circumstances -- similar to human zero-shot reasoning. However, we also note some shortcomings in this generalization behavior -- similar to human judgment errors like belief bias. Studying these parallels suggests new ways to understand psychological phenomena in humans as well as informs best strategies for building artificial intelligence with human-like language understanding.
-
-\section{Introduction}
-
-Recent years have seen a vast improvement in the capabilities of artificial intelligence systems, driven primarily by developments in deep neural networks \citep[see][for a review]{lecun2015deep}. These have allowed artifical system to reach human-level performance at video games \citep{mnih2015human}, object recognition \citep{russakovsky2015imagenet}, and voice generation \citep{oord2016wavenet}, as well as produced impressive performance in several other domains. However, some serious concerns haunt deep learning approaches and their promise as a general solution to artificial intelligence. Many of these concerns surround the lack of structure in the representations and decision criteria these systems learn \citep{marcus2018deep,lake18}. This problem has been implicated in deep learning's data inefficiency and inability to learn abstract structure from few examples, its difficulty in utilizing hierarchical structure and fostering transfer between tasks and domains, as well as the challenge of integrating established prior information into deep learning systems. It also presents serious concerns about the interpretability of its representations and decision criteria, making them less dependable and risky for deployment in sensitive or highly variable domains. 
-
-All of this points to a crucial problem: how can we better understand the representations learned by these systems? Existing studies \citep[e.g.,][]{karpathy2015visualizing, li2015visualizing, yosinski2015understanding, zeiler2014visualizing} primarily use approaches inspired by neuroscience methods developed to understand the brain, for example the statistical analysis of unit activations, and ablation studies where specific units are disconnected or deactivated. These methods promise interesting bottom-up insights into the inner workings of these systems. Cognitive science provides another set of tools to approach this problem from the top down \citep{ritter17, kadar2017representation, mccoy2019right}, by decomposing cognitive processes into their computational components, building models that incorporate these components, and testing these by making predictions about behavior on carefully selected test problems that distinguish different hypotheses. 
-
-The cognitive science approach has yielded huge benefits in understanding higher-level cognition in humans, a prime example of which is the human ability to learn, understand, and produce language \citep{chomsky2002syntactic, linzen2019can}. This domain exemplifies a hallmark of human intelligence: the ability, in the words of von Humboldt, to ``make infinite use of finite means.'' Specifically, human cognitive abilities have been characterized as \textit{systematic} \citep{fodor88, lake2019human} -- this indicates an algebraic capacity to produce new combinations from known components. For example, when a person learns a word in a specific context as part of a particular sentence, they can immediately use this new word in an infinity of other sentences in which this word has never previously been encountered. Systematicity therefore allows humans an impressive capacity to \textit{generalize}, transferring knowledge from one context to others. This ability requires the representations underlying this newly learned word for example, to be abstract (not tied to specific contexts) and compositional (possible to combine with other words and sentences). The failure of neural network models to achieve such systematicity has been a recurring (and controversial) theme in cognitive science \citep{fodor88,lake18}. This concern has previously been studied specifically in the domain of natural language \citep{lake17, gershman15, belinkov2019analysis}, demonstrating the lack of abstract compositional reasoning in certain networks. These analyses are often carried out on toy systems, and while they demonstrate conclusively the lack of systematicity, they largely neglect a deeper analysis of what the systems do learn. 
-
-% redundant with text below
-%We advance this line of research by investigating the representations the systems acquire, and the effect of the training distribution on these representations. We also develop novel analyses of systematicity that shed light on the ways in which these machine-learned representations are similar to and different from human representations.
-
-In this paper, we carry out an analysis of the representations learned by a state-of-the-art model for a difficult natural language processing task. We discover that its representations are not systematic; instead, the model uses various heuristic strategies. We then investigate how these heuristics might arise. Analyses of the training distribution reveal that it is very biased, containing many unintended structural regularities that can be exploited by these much simpler heuristics. These simple rules are therefore easily acquired by the neural network, since they explain a substantial amount of variance without having to invoke a more complex systematic representations. We then carry out various augmentations to the training set to better understand if the system can learn abstract composable representations, given the right training distribution. We find parallels between our findings and studies of human representations in terms of how systematic they are under certain circumstances, as well as in terms of when and where this systematicity breaks down. We discuss how such analyses can be fruitful to both cognitive science and machine learning.
-
-% long range syntactic representation to other people studying deep reps -- Tal Linzen etc.
-
-\section{Background}
-
-In this section we review some background on the kinds of representations we will be studying (vector space embeddings of sentences). We also review the three key factors in how such embeddings are generated: the task that they are optimized for, the architecture of the model used to perform that task, and the training distribution on which performance is optimized.\footnote{The details and implementation of the optimization algorithm also contribute \citep[see][for an overview]{ruder2016overview}, but as long as the optimization reaches convergence this has relatively little effect, and we leave this out of our current discussion.}
+We were also able to account for the sub- and super-additivity effects using MCMC under the assumption that the unpacked exemplars initialize the Markov chain that generates the sample set of query objects conditioned on the given cue object \citep{dasgupta17}. 
+Because the initialization of the Markov chain transiently determines its future trajectory, initializing with typical examples causes the chain to tarry in the high probability region of the queried object set, thereby increasing its judged probability (subadditivity). In contrast, initializing with atypical examples causes the chain to get more easily derailed into regions outside the queried object set. This decreases the judged probability of the queried object set (superadditivity). The strength of these effects theoretically diminishes with the number of samples, as the chain approaches its stationary distribution. Accordingly, experimental manipulations that putatively reduce the number of samples, such as response deadlines and cognitive load, moderate this effect \citep{dasgupta17}. The experiments reported in this paper build on these findings, using subadditivity and superadditivity in the scene inference paradigm to detect behavioral signatures of amortized inference.
 
 
-\subsection{Vector space embeddings}
-Vector space models represent items as vectors in some metric space. These have a long history in cognitive science as models of semantic representations \citep{steyvers2006multidimensional, beals1968foundations, pereira2016comparative}. In particular, in the domain of language, vector space models of words (also known as word embeddings) that are learned using distributional information (statistics of text corpora) have been shown to encode syntactic as well as semantic structure, and have been used in psychological models for syntactic category acquisition \citep{redington1998distributional}, inductive vocabulary learning \citep{landauer1997solution}, analogical reasoning \citep{rumelhart1973model}, categorization \citep{jones2007representing}, and high-level associative judgments \citep{bhatia2017associative}. Modern machine learning has allowed the mining of very large datasets to produce vector space embeddings that are now commonly used as the word representations in artificial intelligence systems for natural language processing \citep{pennington14, mikolov2013distributed}.
+\subsection{Amortized inference}
 
-Understanding language requires understanding not only words, but also their relations within a sentence. These relations are abstract and composable, allowing language to be combinatorially productive -- with a finite set of words, one can systematically produce an infinite set of sentences simply by creating new and longer combinations of these known words. The number of sentences in a language therefore far exceed the number of words. For this reason, generating similar vector embeddings for sentences has proven challenging. Recent papers have developed several supervised as well as unsupervised approaches to learning vector space representations of sentences using recurrent neural networks (RNNs) that are able to represent the order of words in a sentence \citep{kiros2015skip, Hill:2016uu, Conneau:2017uf}. These are intended to capture sentence-level semantic content, and have been shown to perform reasonably well on transfer tasks (sentence-level semantic tasks on which the embeddings were not specifically trained). In particular, the performance of these sentence models exceeds the performance of representations that treat sentences as bags of words (BOW models) -- these patently lack any order information about the words, therefore ignoring the abstract and composable relational structure at the sentence level. However, it is unclear exactly what relational information between words is actually represented in such RNN sentence models. In this work, we start to shed light on this question.
+As defined in the previous section, Monte Carlo sampling is memoryless, approximating $P(h|d)$ without reference to other conditional distributions that have been computed in the past; all the hypothesis samples are specific to a particular query, and thus there can be no cumulative improvement in approximation accuracy across multiple queries. However, a moment's reflection suggests that people are capable of such improvement. Every time you look out your window, you see a slightly different scene, but it would be wasteful to recompute a posterior over objects from scratch each time; if you did, you would be no faster at recognizing and locating objects the millionth time compared to the first time. Indeed, experimental research has found considerable speed-ups in object recognition and visual search when statistical regularities can be exploited \citep{oliva2007role}.
 
-\subsection{Natural Language Inference}
-The sentence embeddings we analyze are trained on the natural language inference (NLI) task. The goal is to classify pairs of sentences (a premise and a hypothesis) into `entailment', `contradiction', or `neutral', depending on the semantic relation between the two sentences. This is a popular domain for studying artificial representations since it has a lot of relatively interpretable underlying structure \citep{glockner2018breaking, mccoy2019right, nie2019analyzing}. For example, it is a simple domain in which abstract and composable relational structure is required -- word-level information is not generally sufficient to perform well on this task. The premise sentence ``Anne is more cheerful than Bob'' contradicts the hypothesis sentence ``Anne is less cheerful than Bob'', but entails the hypothesis sentence ``Bob is less cheerful than Anne''. Here, both the hypothesis sentences have the exact same words, and would be indistinguishable if we were just comparing the words in them. More generally, X is more Y than Z entails that Z is less Y than X, for any X, Y and Z. In this case, the specific words used almost don't even matter, and the bulk of the information is in the relations between the words in the sentence. Encoding abstract rules like this allows us to systematically carry out natural language inference on combinatorially many different sentences, with different Xs, Ys, and Zs.
-
-The human ability to carry out abstract reasoning of this sort is a richly studied topic. Some of these abilities however are so obvious, that they are often simply taken for granted without formal study. For example, it is reasonable to assume that any adult human (in the absence of time pressure or cognitive load) can fairly easily process that if X is more Y than Z, then in general Z is less Y than X irrespective of the specific meanings of X, Y and Z. In this paper, we investigate to what extent certain machine-learned sentence embeddings can represent and use such abstract rules in natural language inference.
-
-Despite the generally acknowledged power of human abstract reasoning, a number of studies indicate that humans are not perfect: semantic content (for example the specific meanings of the X, Y and Zs above) has been shown to interfere with systematic inferences in an effect often termed `belief bias' \citep{braine1978relation,johnson1978psychology}. This effect is especially noticeable in children \citep{evans1995belief}, as well as adults under time pressure or cognitive load \citep{evans2013psychology}. In the last part of this paper, we discuss similarities between humans and machines in how they fail certain tests of systematicity.
-
-\subsection{Models for sentence embeddings}
-The sentence embeddings we study in this paper are from a highly successful NLI system, InferSent \citep{Conneau:2017uf}. Each premise and hypothesis sentence are input to a sentence encoder as a sequence of pre-trained 300-dimensional GloVe word embeddings \citep{pennington14}. These word embeddings already contain a lot of information about the semantic and syntactic roles of the words (see section on Vector space embeddings for details), and therefore a large part of the lexical information is already represented. Therefore the bulk of the work InferSent has to do is to learn and represent how these words relate to one another in a sentence to provide meanings. The sentence encoder takes in this variable length input and, after passing it through various recurrent and convolutional layers \cite[see][for details]{Conneau:2017uf}, provides a 4096-dimensional vector as output. This output vector serves as a sentence embedding. To make the final inference, these sentence embeddings for the premise and hypothesis are fed to a simple classifier described in Figure \ref{fig:arch} that labels each pair as entailment, neutral or contradiction. The network is trained end-to-end with supervised learning, using a large labelled dataset for NLI (see next section for details on this dataset). The learned embeddings were shown to perform well on other sentence-level tasks (such as sentiment analysis, semantic textual similarity and other natural language inference datasets) by re-using the sentence encoder and training only the classifier for the specific task at hand. This indicates that the sentence encoder does capture some semantic content in the embeddings.
-
-For our tasks, we replicate the procedure in \citet{Conneau:2017uf} to obtain sentence embeddings. These are henceforth referred to as the InferSent sentence embeddings. Our trained InferSent model gives us 84.73\% accuracy on validation and 84.84\% accuracy on the test dataset, which is comparable to the performance of the classifier reported in \citet{Conneau:2017uf}. For comparison, we also train a bag-of-words (BOW) baseline model that averages the pre-trained GloVe word embeddings for all the words in the sentence to form a sentence embedding. These embeddings cannot represent abstract relational structure, since the architecture of the model used to generate them (a simple average of the word embeddings) cannot express word order. We then train a simply classifier on these embeddings to perform natural language inference. This model achieves $53.99\%$ accuracy on the SNLI test set \citep[comparable to the BOW performance reported in][]{Conneau:2017uf}.
-
-Neural networks can act as universal function approximators \citep{siegelmann1995computational, hornik1991approximation}, and given sufficient capacity, they can represent any arbitrarily complex set of relations between the words in the sentence. The InferSent model has a very large capacity due to a large number of layers and hidden units \citep[see][]{Conneau:2017uf}, so a lot of abstract compositional structure is in theory within the representational capacity of these sentence embeddings. In this paper, we analyze how much systematic structure is actually learned and utilized for the NLI task at hand.
-
+Amortized inference is a generalization of the standard memoryless framework. We will formulate it in the most general possible terms, and later explore more specific variants. Figure~\ref{fig:schematic} illustrates the basic idea. In the standard, memoryless framework, an inference engine inverts a generative model $P(d,h)$ over hypothesis $h$ and data $d$ to compute a recognition model $Q_\theta(h|d)$ parametrized by $\theta$. For example, Monte Carlo methods use a set of samples to parametrize the recognition model. Importantly, the answer to each query is approximated using a different set of parameters (e.g., independent samples)---$Q_{\theta_1}(h|d_1), Q_{\theta_2}(h|d_2)$, etc. In the amortized framework, parameters are shared across queries. The parameters are selected to accurately approximate not just a single query, but a \emph{distribution} of queries. If cognitive resources are unbounded, then the optimal solution is to parametrize each query separately, thereby recovering the memoryless framework. Under bounded resources, a finite number of parameters must be shared between multiple queries, leading to memory effects: the answer to one query affects the answer to other, similar queries.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.6\textwidth]{figures/InferSent_arch.png}
-\caption{InferSent architecture \citep{Conneau:2017uf}.}
-\label{fig:arch}
+\includegraphics[width=0.9\textwidth]{figures/amortization_schematic.pdf}
+\caption{Theory schematic. (Left) Standard, memoryless framework in which a recognition model $Q_\theta(h|d)$ approximates the posterior over hypothesis $h$ given data $d$. The recognition model is parametrized by $\theta$ (e.g., a set of samples in the case of Monte Carlo methods). Memoryless inference builds a separate recognition model for each query. (Right) Amortized framework, in which the recognition model shares parameters across queries. After each new query, the recognition model updates the shared parameters. In this way, the model ``learns to infer.''}
+\label{fig:schematic}
 \end{figure}
 
-% currently a bit degenerate with the abstract - maybe not req?
-%\section{Contributions}
-%We address the question of what is actually being learned by these sentence embeddings, by designing a diagnostic test dataset (based on comparisons) that relies explicitly on compositional information, and is intractable for systems that capture only lexical information. We characterize the performance of InferSent on this dataset. Given the exponentially large number of possible sentences, most subsets of sentences unless meticulously designed, can be justified by heuristics simpler than the true generative process of language. Performance of InferSent on the diagnostic dataset reveals that InferSent does seem to use some such heuristics when doing Natural Language Inference (NLI). This highlights the value of such structured test datasets in investigating and understanding what exactly some of these complex models encode. We also investigate the ecological validity of these heuristics in the SNLI dataset it is trained on. Finally, we retrain a model on a dataset containing both our comparison-based dataset and the original SNLI train set to see if structured datasets like ours can be learned by the InferSent architecture. This helps determine if the shortfall in compositionality found in InferSent is primarily due to poverty in the training data, or in the model architecture itself and also helps determine future utility of such structured datasets in improving training for models.
+While reuse increases computational efficiency, it can cause errors in two ways. First, if amortization is deployed not only when two queries are identical but also when they are similar, then answers will be biased due to blurring together of the distributions. This is analogous to interference effects in memory. Second, the answer to the first query might itself have been inaccurate or biased, so its reuse will propagate that inaccuracy to the second query's answer. Our experiments focus on the second type of error. Specifically, we will investigate how the over- or underestimation of unpacked probabilities resulting from approximate inference for one query will continue to influence responses to a second query. 
 
+\subsection{Two amortization strategies}
 
-\subsection{Training datasets}
-To understand sentence embeddings like the ones learned by InferSent, it is imperative to not only consider the model specifications for the system that produces them (in this case the specific end-to-end architecture of the network in InferSent), but also the learning signals it receives from the training set. For many deep learning based methods, very little information about the structure of the task is baked into the architecture of the models -- the only structure about language that it is endowed with before training are the biases that come with using a recurrent neural network as the architecture. This specifies that sentences have variable-length, sequential structure. These embedding models are therefore fairly `tabula rasa', and most of what they represent about the structure of the task (in this case natural language inference) is learned from training data. As elaborated in the previous section, some abstract compositional structure is within the representational capacity of the InferSent sentence embeddings -- but whether or not the right structure is actually learned and represented depends largely on the training data. The significance of the training set on the representations learned by flexible deep learning methods is often not adequately considered. One contribution of this work is to highlight and analyze this issue.
- 
-InferSent was trained on the Stanford Natural Language Inference (SNLI) dataset \citep{snli:emnlp2015}, a popular labelled dataset for natual language inference. SNLI consists of ~550k premise-hypothesis sentence pairs, and is balanced (consists of equal number of pairs with entailment, contradiction and neutral relationships). The dataset was generated with a crowd-sourcing framework. Workers were presented with a scene description from a corpus of image captions that act as the premise, and asked to supply hypothesis sentences that have each of the three possible NLI relations (entailment, neutral, and contradiction) to the given premise. The freedom to produce entirely novel hypotheses leads to a rich set of sentences; however, it also leads to some artifacts that can strongly bias the representations learned by a `tabula rasa' system. We discuss these in later sections.
+In our experiments, we ask participants to sequentially answer pairs of queries (denoted $\mathcal{Q}1$ and $\mathcal{Q}2$). In Experiment 2, both queries are conditioned on the same cue object ($d$), but with varying query object sets ($h$). That is, both questions are querying the same probability distribution over objects, but eliciting the probabilities of different objects in each case. So in theory, all samples taken to answer query 1, can be reused to answer query 2 (they are both samples from the same distribution). This \emph{sample reuse} strategy allows all computations carried out for query 1 to be reused to answer query 2.\footnote{We focus on sampling-based amortization strategies because our earlier experiments support the idea that human probability judgment is sample-based \citep{dasgupta17}. However, amortization strategies can be realized without any form of sampling. These typically reduce time complexity by re-using a feedforward mapping from inputs to probabilities that replaces a more expensive form of iterative computation (e.g., message passing).} However, it is expensive, because each sample must be stored in memory. A less memory-intensive solution is to store and reuse summary statistics of the generated samples, rather than the samples themselves. This \emph{summary reuse} strategy offers greater efficiency but less flexibility. Several more sophisticated amortization schemes have been developed in the machine learning literature \citep[e.g.,][]{stuhlmuller2013learning,rezende2014stochastic,paige2016inference}, but we focus on sample and summary reuse because they make clear experimental predictions, which we elaborate below.
 
-\section{A test dataset of minimal cases: The Comparisons dataset}
-Our goal is to understand the representations and decision criteria learned by InferSent, in particular how much systematic relational information they encode and utilize -- do they represent abstract rules for the ways words combine to give meaning to sentences? In the machine learning literature on natural language processing, any performance above the bag-of-words (BOW) baseline (that only receives the words in the sentence with no order information) is often seen as proof of the encoding and utilization of relational information. However, this is an unwarranted conclusion---the BOW baseline usually receives only averaged word vectors for the sentence, and therefore also loses some of the lexical information. It often does not actually reach the best possible performance with only the words. Performance above this baseline therefore does not license the conclusion that relational information is being encoded and used at all.
+In the context of our experiments, summary reuse is only applicable to problems where the answer to $\mathcal{Q}2$ can be expressed as the composition of the answer to $\mathcal{Q}1$ and another (putatively simpler) computation. In Experiment 2, $\mathcal{Q}2$ queries a hypothesis space that is the union of the hypothesis space queried in $\mathcal{Q}1$ and a disjoint hypothesis space. For example if $\mathcal{Q}1$ is ``What is the probability that there is an object starting with a C in the scene?'', $\mathcal{Q}2$ could be ``What is the probability that there is an object starting with a C or an R in the scene?''. In this case, samples generated in response to $\mathcal{Q}1$ are summarized by a single number (``the probability of an object starting with C"), new samples are generated in response to a simpler query (``the probability of an object starting with R''), and these two numbers are then composed (in this case added) to give the final estimate for $\mathcal{Q}2$ (``the probability of an object starting with C or R''). This is possible because both queries are functions of the same probability distribution over latent objects. 
 
-Here, we pursue an alternative approach, inspired by traditions in cognitive psychology and psycholinguistics of building diagnotic test sets to investigate the underlying representations and decision rules. The goal is to generate a set of sentence pairs such that encoding the relations between words (in addition to the words themselves) is \textit{required} to correctly classify them into the three NLI classes. Diagnostic test datasets such as these, that posit a hard baseline for performance without relational information, provide a more foolproof way to test whether such information is being used.
+These strategies are simplifications of what the brain is likely doing. 
+Reusing all the samples exactly would involve their storage and is very intensive in its use of memory -- in this aspect they are similar to exemplar models of categorization \citep{nosofsky1986attention,medin1978context}. 
+While reusing only the summary statistic is much less memory intensive, it is unreasonably inflexible to restrict reuse of only the exact statistic in the few places that the second query can be expressed as a composition of the first query and a simpler computation. We do not claim that either extreme is plausible, but ---to a first approximation--- they capture the key ideas motivating our theoretical framework, and more importantly, they make testable predictions which can be used to assess which extreme pulls more weight in controlled experiments.
 
-We considered pairs of sentences such that the NLI relation between the sentences can be changed without changing any of the words in the sentence, only their order. We generated our test dataset using comparisons as these are easy to fit into the NLI framework, and yield many simple examples of sentence pairs that require more than word-level data to understand. For example, the premise sentence ``the woman is more cheerful than the man'' contradicts one hypothesis sentence, ``the woman is less cheerful than the man'', but entails another hypothesis sentence, ``the man is less cheerful than the woman''. Since both hypothesis sentences have the exact same words, they would be indistinguishable if we were just comparing their bag-of-words representations. Therefore, a model based only on the words, and not considering the relations between them, would at most get one of the two classifications right. This caps the bag-of-words performance at $50\%$, and some relational rules must be learned to perform above this baseline. 
-
-Generation of several such sentence pairs can be easily automated. We considered three sub-types, described below and summarized in Tables \ref{tab:rules} and \ref{tab:dataset}.
- 
-\subsection{Same type}
-Premise-Hypothesis pairs differ only in the order of the words. \\
-{\tt Premise: The woman is more cheerful than the man \\ Hypothesis: The man is more cheerful than the woman \\ CONTRADICTION \\} {\tt Premise: The woman is more cheerful than the man \\ Hypothesis: The woman is more cheerful than the man\\ ENTAILMENT}
-
-\subsection{More-Less type}
-Premise-Hypothesis pairs differ by whether they contain the words `more' or `less'. \\
-{\tt Premise: The woman is more cheerful than the man \\ Hypothesis: The woman is less cheerful than the man\\ CONTRADICTION \\}{\tt Premise: The woman is more cheerful than the man \\ Hypothesis: The man is less cheerful than the woman \\ ENTAILMENT} 
-
-\subsection{Not type}
-Premise-Hypothesis pairs differ by whether they contain the word `not'. \\
-{\tt Premise: The woman is more cheerful than the man \\ Hypothesis: The woman is not more cheerful than the man\\ CONTRADICTION \\}{\tt Premise: The woman is more cheerful than the man \\ Hypothesis: The man is not more cheerful than the woman \\ ENTAILMENT} 
-
-
-\begin{table}[htb]
-  \begin{center}
-%   \resizebox{0.6\columnwidth}{!}{%
-  \begin{tabular}{p{20mm} p{45mm} p{45mm}} 
- \toprule
- Type & Entailment hypothesis & Contradiction hypothesis\\
- \midrule
-    
-Same & 
-X is more Y than Z  &
- Z is more Y than X \\
- 
-More-Less &
-Z is less Y than X  &
-X is less Y than Z  \\
- 
-Not &
-Z is not more Y than X  &
-X is not more Y than Z  \\
-\bottomrule
-\end{tabular}
-% }
- \caption{Rules in Comparisons dataset for Premise: X is more Y than Z}
-  \label{tab:rules}
-  \end{center}
-\end{table}
-
-
-\begin{table}[htb]
-  \begin{center}
-  \begin{tabular}{p{60mm} c} 
- \toprule
- Type & Number of sentence pairs \\ [0.5ex] 
- \midrule
-  Comparisons (same)  &  14670\\
- Comparisons (more-less)  &  14670\\
- Comparisons (not)  &  14670\\
- \bottomrule
-\end{tabular}
- \caption{Comparisons dataset summary.}
-  \label{tab:dataset}
-  \end{center}
-\end{table}
-
-To facilitate comparison with the SNLI dataset, we ensured that the vocabulary distribution of our Comparisons dataset is similar to the original SNLI training dataset.\footnote{Only a few words differed by more than $1 \%$ from their occurrence rate in SNLI, such as \textit{not, a, than, the, is, less, more}. This was inevitable given the general structure of the comparison sentence pairs we use. All of these words however did still occur in the SNLI training corpus, and were not new to the model at test time.} This ensured that we are only manipulating the relational structure of the test set, and poor performance cannot be attributed to not having experienced the specific words before.
-% This is to better target the question of whether relational information is being encoded and to ensure that poor performance does not arise from the model simply having not encountered some of the words in our dataset. 
-% We do this by controlling the frequency of the words we use to substitute the mouns X and Z and the adjective Y in Table \ref{tab:rules}. 
-
-\section{Testing the sentence embeddings}
-
-We tested the two classifiers based on two different sentence embeddings (the InferSent sentence embeddings, and the BOW sentence embeddings) on the constructed test set (the Comparisons dataset, Table \ref{tab:dataset}). Both of these classifiers were trained for the same task (Natural Language Inference), on the same training dataset (SNLI), and differed only in the model used to generate them. The InferSent embeddings had access to word order, while the BOW embeddings did not (see Section `Models for sentence embeddings' for details). The overall performance of each of the two classifiers on the Comparisons dataset are given in Table \ref{tab:pretrainperf}, and analyzed in greater detail in the following sections.
-
-\begin{table}[htb]
-\begin{center}
-  \begin{tabular}{p{20mm} p{20mm} p{20mm}} 
- \toprule
- Type & BOW & InferSent \\
-    \midrule
-same & 50.0 &50.37\\
- more/less & 30.24 &50.35\\
-not & 48.98 & 45.24\\
-\bottomrule
-\end{tabular}
- \caption{Performance on the Comparisons dataset.}
-  \label{tab:pretrainperf}
-  \end{center}
-\end{table}
-
-\subsection{Performance of Bag of Words}
-We found that the BOW embeddings make classifications that are exactly symmetric across the two true labels (entailment and contradiction) in each task (rows in Figure \ref{fig:BOWhist}). This is expected since the sentence pairs with one label are just permuted versions of the sentence pairs with the other label. Therefore BOW cannot distinguish them, and necessarily classifies both of them the same way. This also ensures that the performance is capped at $50\%$. Asymmetry between the classifications of the two categories can occur only when relational information is encoded in the sentence embedding.
-
-Considering the aggregate performance of BOW in Table \ref{tab:pretrainperf}, we found that performance, particularly on the `more/less' type subset of the test dataset ($30.24\%$), was significantly below $50\%$. This highlights the trouble with using BOW embeddings as a baseline for the encoding and use of relational information. Up to $50\%$ performance is achievable on this dataset without using any relational information; therefore performance above the BOW baseline of $30.24\%$ does not necessarily imply the use of relational information.
-
-\begin{figure}[ht!]
+\begin{figure}%[ht!]
 \centering
-\includegraphics[width=0.30\textwidth]{figures/bow-same-large}
-\includegraphics[width=0.30\textwidth]{figures/bow-ml-large-5}
-\includegraphics[width=0.30\textwidth]{figures/bow-not-large-5}
-
-\caption{BOW embedding confusion matrices, with normalized rows.}
-
-\label{fig:BOWhist}
+\includegraphics[width=0.6\textwidth]{figures/changingN.pdf}
+\caption{Simulation of subadditivity and superadditivity effects under sample-based (top) and summary-based (bottom) amortization strategies. In all panels, the y-axis represents the unstandardized effect size for $\mathcal{Q}2$. Left panels show the effects of changing the sample size for $\mathcal{Q}1$; right panels show the effects of changing the sample size for $\mathcal{Q}2$. When sample size for one query is changed, sample size for the other query is held fixed at 230 \citep[the sample size estimated by][]{dasgupta17}.}
+\label{fig:changeN}
 \end{figure}
 
-\begin{figure}[ht!]
+In particular, sample-based and summary-based amortization strategies make different predictions about how subadditivity and superadditivity change as a function of the sample size (Figure \ref{fig:changeN}, details of these implementations can be found in the Appendix).
+For sample-based amortization, as the sample size for $\mathcal{Q}1$ grows, the effect for $\mathcal{Q}2$ asymptotically \emph{diminishes} and eventually vanishes as the effect of biased initialization in $\mathcal{Q}1$ washes out. However, initially increasing the sample size for $\mathcal{Q}1$ also \emph{amplifies} the effects for $\mathcal{Q}2$ under a sample-based scheme, because this leads to more biased $\mathcal{Q}1$ samples being available for reuse. The amplification effect dominates up to a sample size of around 230 \citep[estimate for the number of samples taken for inference in this domain, reported in][]{dasgupta17}. This effect can be counteracted by increasing the sample size for $\mathcal{Q}2$. These are unbiased samples, since $\mathcal{Q}2$ is always presented as a packed query. More such samples will push the effect down by drowning out the bias with additional unbiased samples. 
+
+Under a summary-based strategy, increasing the sample size for $\mathcal{Q}1$ will only \emph{diminish} the effects for $\mathcal{Q}2$, because the bias from $\mathcal{Q}1$ is strongest when the chain is close to its starting point. The effect of early, biased samples on the summary statistic disappears with more samples. We see also that changing the number of samples for $\mathcal{Q}2$ does not influence the effect size because the initialization of the chain for $\mathcal{Q}2$ is not influenced by the samples or summary statistic from the answer to $\mathcal{Q}1$. Under the summary-based strategy, the subadditivity and superadditivity effects for $\mathcal{Q}2$ derive entirely from the same effects for $\mathcal{Q}1$, which themselves are driven by the initialization \citep[see][]{dasgupta17}.
+
+We test the different predictions of these strategies by placing people under cognitive load during either $\mathcal{Q}1$ or $\mathcal{Q}2$ in Experiment 2, a manipulation that is expected to reduce the number of produced samples \citep{dasgupta17,thaker17}. In this way, we can sample different parts of the curves shown in Figure \ref{fig:changeN}.
+
+\subsection{Adaptive amortization}
+
+Amortization is not always useful. As we have already mentioned, it can introduce systematic bias into probabilistic judgments. This is especially true if samples or summary statistics are transferred between two dissimilar distributions. This raises the question: are human amortization algorithms adaptive? This question is taken up empirically in Experiment 3. Here we discuss some of the theoretical issues.
+
+Truly adaptive amortization requires a method to assess similarities between queries. Imagine as an example the situation in which there is a ``chair'' in the scene and you have to evaluate the probability of any object starting with a ``P''. If afterwards you are told that there is a ``book'' in another scene, and the task is again to evaluate the probability of any object starting with a ``P'', it could be a viable strategy to reuse at least some of the previous computations. However, in order to do so efficiently, you would have to know how similar a chair is to a book, i.e. if they occur with a similar set of other objects on average. One way to quantify this similarity is by assessing the induced posterior over all objects conditioned on either ``book'' or ``chair'', and then comparing the two resulting distributions directly. Cues that are more similar should co-occur with other objects in similar proportions.
+
+To assess the similarity of two distributions over objects induced by two different cues, we will need a formal similarity measure. One frequently used measure of similarity between two probability distribution is the Kullback-Leibler (KL) divergence. 
+For two discrete probability distributions $Q$ and $P$, the KL divergence between $P$ and $Q$ is defined as
+\begin{align}
+D_{\text{KL}}(P||Q)=\sum_{h} P(h) \log{\frac{P(h)}{Q(h)}}.
+\end{align}
+The KL divergence is minimized to 0 when $Q$ and $P$ are identical. We will use this measure in Experiment 3 to select queries that are either similar or dissimilar, in order to examine whether our participants only exhibit signatures of amortization when the queries are similar.\footnote{Our findings do not strongly depend on the use of the KL divergence measure and all of our qualitative effects remained unchanged when we applied a symmetric distance measure such as the Jensen-Shannon divergence.} Note, however, that the exact calculation of these divergences cannot be part of the algorithmic machinery used by humans to assess similarity, since it presupposes access to the posterior being approximated. Our experiments do not yet provide insight into how humans might algorithmically achieve tractable adaptive amortization, a problem we leave to future research.
+
+
+\section{Experiment 1}
+
+In Experiment 1, we sought initial confirmation of our central hypothesis: human inference is not memoryless. To detect these ``remembrances of inferences past'', we asked participants to answer pairs of queries sequentially. The first query was manipulated (by packing or unpacking the queried hypothesis) in such a way that subadditive or superadditive probability judgments could be elicited \citep{dasgupta17}. Crucially, the second query is always presented in packed form, so any differences across the experimental conditions in answers to the second query can only be attributed to the lingering effects of the first query.
+
+\subsection{Participants}
+
+84 participants (53 males, mean age=32.61, SD=8.79) were recruited via Amazon's Mechanical Turk and received \$0.50 for their participation plus an additional bonus of \$0.10 for every on-time response. 
+The sample size for this and all of the following experiments was determined before data collection commenced. We decided to collect more participants than in our earlier work \citep{dasgupta17} as the sub- and superadditivity effects might be weaker for the amortized answers to the second query.
+
+\subsection{Procedure}
+
+Participants were asked to imagine playing a game in which their friend sees a photo and then mentions one particular object present in the photo (the cued object). The participant is then queried about the probability that another class of objects (e.g., ``objects beginning with the letter B'') is also present in the photo.
+
+\begin{figure}
 \centering
-\includegraphics[width=0.30\textwidth]{figures/infersent-same-large-2}
-\includegraphics[width=0.30\textwidth]{figures/infersent-ml-large-2}
-\includegraphics[width=0.30\textwidth]{figures/infersent-not-large}
-
-\caption{InferSent embedding confusion matrices, with normalized rows.}
-\label{fig:InferSenthist}
+\fbox{\includegraphics[scale=0.5]{figures/screenshot.png}}
+\caption{Experimental setup. Participants were asked to estimate the conditional probability using a slider bar within a 20-second time limit.}
+\label{fig:screenshot}
 \end{figure}
 
-\subsection{Performance of InferSent}
-The performance of the InferSent embeddings was slightly asymmetric (Figure \ref{fig:InferSenthist}), indicating that it was able to distinguish sentences slightly, based on relational information. Yet overall the InferSent embeddings were extremely poor at this task (Table \ref{tab:pretrainperf}), achieving performances slightly above $50\%$ for two of the three sub-types of sentence pairs in the Comparisons dataset, and even less than $50\%$ in a third sub-type. This indicates that InferSent embeddings do not correctly encode and utilize the kinds of abstract relational rules we tested with the Comparisons dataset. 
+Each participant completed 6 trials,\footnote{Note that participants were not directly informed that two consecutive trials are related and were therefore instructed that there would be 12 trials in total as there are two queries per query pair.} where the stimuli on every trial corresponded to the rows in Table~\ref{tab:scenarios}. On each trial, participants first answered $\mathcal{Q}1$ given the cued object (for example, ``I see a lamp in this photo. What is the probability that I also see a window, a wardrobe, a wine rack, or any other object starting with a W?''), using a slider bar to report the conditional probability using values between 0 (not at all likely) to 100 (very likely, see also Figure \ref{fig:screenshot}).
 
-However, InferSent's performance on another test dataset (the SNLI test dataset) is as high as $84\%$ -- so it is clearly encoding some relevant information about natural language inference. Further, a quick glance at Figure \ref{fig:InferSenthist} indicates that InferSent does not respond randomly to the queries in our Comparisons dataset, but rather in some structured (though incorrect) way. Rather than simply conclude that InferSent embeddings are not systematic and leaving things at that, we can study patterns in the incorrect classifications made to better understand the underlying representations and decisions rules. Since our test dataset is highly structured, it allows a controlled way to generate and test hypotheses about the heuristic representations and decision rules InferSent implements. 
+The $\mathcal{Q}1$ framing (typical-unpacked, atypical-unpacked or packed) was chosen randomly. Participants then completed the same procedure for $\mathcal{Q}2$ (immediately after $\mathcal{Q}1$), conditional on the same cued object. The framing for $\mathcal{Q}2$ was always packed and $\mathcal{Q}2$ was always presented as a conjunction (for example, ``What is the probability I see an object starting with a W or F?''), where the order of the letters was determined at random.
 
-Apart from isolating and characterizing these heuristics, it is also instructive to consider how InferSent might come to encode them in the first place. To answer this, we look to the study of heuristic strategies in humans. The theory of ecological rationality \citep{todd2007environments, simon1991bounded} posits that a system can exploit structural regularities in its learning environment using heuristics that achieve close to optimal performance in that specific environment. These might be much simpler than the most general strategy that performs well in all environments. Heuristics that leverage these structural regularities are therefore termed `ecologically valid' in that environment. This suggests that we can better understand how heuristic strategies might arise in InferSent by examining if they are ecologically valid in its `learning environment' (i.e., the training set). In the following sections, we delve into the heuristic strategies that explain performance on our Comparisons datset, as well as how InferSent might have come to encode them by testing their ecological validity in the SNLI training dataset.
+Data for this experiment and all subsequent experiments reported in this article were submitted along with the final manuscript.
 
-\subsubsection{Overlap Heuristic}
-We note in Figure \ref{fig:InferSenthist} that almost all the sentence pairs in the same-type comparisons were classified as entailments, despite half of them being true contradictions. A distinguishing feature of the same-type comparisons is that the premise and hypothesis sentences have full word overlap (they both contain exactly the same words). This observation allows us to hypothesize an \textit{overlap heuristic}: high overlap in words between premise and hypothesis biases InferSent against classifying the pair as a contradiction.
-
-While we have seen some evidence that this heuristic is indeed at play (based on the performance on the same-type comparisons), the question remains as to why it encodes this rule. With our knowledge of language, we know this simple rule to reflect on incorrect understanding of natural language inference. However, all the knowledge about the NLI task that InferSent encodes is from its training dataset. If the dataset has underlying structural regularities that can be exploited by simple heuristic strategies, then a tabula rasa model for NLI such as InferSent that is trained on this dataset will learn to encode it.
-
-We carried out an analysis of the SNLI dataset to determine if the overlap heuristic is ecologically valid in it. First, we observed anecdotally that indeed several contradictory sentence pairs have no overlap in words. For example, a contradictory sentence pair in SNLI is:\\
-{\tt Premise: Several people are trying to climb a ladder in a tree. \\ Hypothesis: People are watching a ball game. \\ CONTRADICTION\\}
-To quantitatively verify this observation, we ranked all the sentence pairs in SNLI by overlap rate: $\frac{\text{\# of overlap words}}{\text{total \# of words}}$(in non-increasing order). We then considered the top X sentences with highest overlap for different Xs. As shown in Table \ref{tab:highOverlap}, when considering the full dataset, the distribution is balanced (the percentage of entailments, contradictions and neutral sentences are equal). However, we found that as the word overlap in the sentences increases, the percentage of contradictions drops. When considering only the top 1000 sentence pairs for overlap, we found that $91.5\%$ of them have entailment or neutral labels, with only the remaining $8.5\%$ having a contradiction label. 
-
-\begin{table}[htb]
-  \begin{center}
-  \begin{tabular}{llll}
+\begin{table}
+\caption{Experimental stimuli and queries for Experiment 1.}
+\label{tab:scenarios}
+\centering
+\begin{tabular}{p{.1\textwidth} p{.08\textwidth} >{\raggedright}p{.25\textwidth} >{\raggedright}p{.25\textwidth} p{.1\textwidth}}
   \toprule
-     Top &Entailment & Neutral & Contradiction \\
-    \midrule
-All & 33.4 & 33.3 & 33.3 \\
-10000 & 39.5 & 35.7 & 24.8\\
- 1000 & 50.8 & 40.7 & 8.5\\
- \bottomrule
-  \end{tabular}
- \caption{Percentage of entailments split by overlap rate of words in SNLI.}
- \label{tab:highOverlap}
- \end{center}
-\end{table}
 
-It is therefore natural that InferSent encodes the simple overlap heuristic as a predictor of contradiction. This explains not only the failure of InferSent to generalize its good performance on SNLI to the same-type comparisons in our test dataset, but also matches the specific failure mode we observe in its responses.
+\bf{Cue} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{$\mathcal{Q}2$}\tabularnewline
 
-\subsubsection{Antonyms Heuristic}
-We note in Figure \ref{fig:InferSenthist} the opposite trend for the more/less-type comparisons, where almost all the sentence pairs were classified as contradictions, despite half of them being true entailments. A distinguishing feature of the more/less-type comparisons is that the the premise and hypothesis always differ by one word -- if the premise contains the word `more' (`less') then the hypothesis always contain the word `less' (`more'). This observation allows us to hypothesize an \emph{antonyms heuristic}: sentences differing in the presence of words that have opposing meanings (antonyms) tend to be classified by InferSent as contradictions, irrespective of the other words or their order in the sentence.
+\midrule
+Table & C & chair, computer, curtain & cannon, cow, canoe & C or R\tabularnewline
 
-Similarly to the previous section, we investigated the training dataset to elucidate if this heuristic is ecologically valid in InferSent's training set. Anecdotally, we saw that the contradicting hypotheses provided by crowd workers to generate SNLI do follow this pattern. For example, a contradictory sentence pair in SNLI is:\\
-{\tt Premise: A man in a white t-shirt takes a picture in the middle of the street with two public buses in the background. \\ Hypothesis:  A man is wearing a black t-shirt. \\ CONTRADICTION\\}
+Telephone & D & display case, dresser, desk & drinking fountain, dryer, dome & D or L\tabularnewline
 
-To verify this observation quantitatively, we analyzed the statistics of antonym usage in SNLI. To test whether a sentence pair (A,B) contains antonyms, we went through each word in sentence A, and considered all synonyms of that word, and considered all antonyms of those synonyms. Finally, we checked if sentence B contained any of those antonyms. These synonyms and antonyms were found using the NLTK WordNet software \citep{bird2004nltk}. We then considered two different statistics. First, we calculated P(Contradiction | Antonym), which is the probability that a sentence pair is a contradiction given that its premise and hypothesis contain an antonym pair. This measures how well the presence of antonyms predicts a contradiction label in the training set. Second, we calculated P(Antonym | Contradiction), which is the probability that a contradictory sentence pair contains antonyms. This measures how well a contradiction label predicts antonyms. Both statistics were compared with the equivalent statistic for entailment, to provide a baseline for comparison. Table \ref{tab:antonyms} shows that the presence of antonyms strongly predicts a contradiction label in the SNLI dataset (61.2\% compared to chance at 33.3\%). We also found that a contradiction label predicts the presence of an antonym pair (12.2\%) more strongly than entailment did (3.5\%). This indicates that the antonyms heuristic can explain significant variance for the contradiction label in the training set.
+Rug & B & book, bouquet, bed & bird, buffalo, bicycle & B or S\tabularnewline
 
-\begin{table}[htb]
- \centering
-   \begin{tabular}{llll}
-  \toprule
-    & P(Antonym $|$ X) & P( X $|$ Antonym) \\
-    \midrule
-    X = Contradiction & 12.2\% & 61.2\% \\
-      X = Entailment &  3.5\% &  18.0\% \\
-\bottomrule 
-  \end{tabular}
-%   }
- \caption{ Percentage of entailments split by antonym word pair in the SNLI dataset. 
-}
-  \label{tab:antonyms}
-\end{table}
+Chair & P & painting, plant, printer & porch, pie, platform & P or A\tabularnewline
 
-Since most of our Comparisons dataset contained a large amount of overlap between premise and hypothesis, the rules InferSent applies when responding to these test questions might be biased towards those learned in similar high-overlap settings during training. We checked the statistics of antonymy in the the high overlap subset of SNLI (top 10,000 highest overlap) to provide a closer comparison (Table \ref{tab:antonyms-ho}). Here, contradiction predicts the presence of an antonym pair (43.7\%) more strongly than in the whole dataset (12.2\%). The difference between P(Antonym | Contradiction) and P(Antonym | Entailment) is also more pronounced in this high overlap subset. The presence of an antonym pair no longer predicts contradictions at a high rate (28.9 \%), but this is possibly due to the very low base rate of contradictions in the high overlap subset of SNLI, as compared to entailments.
- 
-\begin{table}[htb]
-  \centering
-  \begin{tabular}{llll}
-  \toprule
-    & P(Antonym $|$ X) & P( X $|$ Antonym) \\
-    \midrule
-    X = Contradiction & 43.5\% & 28.9\% \\
-      X = Entailment &  8.7\% &  34.3\% \\
-\bottomrule 
-  \end{tabular}
- \caption{ Percentage of entailments split by antonyms in high overlap SNLI subset.}
-  \label{tab:antonyms-ho}
-\end{table}
- 
-These results suggest again, that the underlying statistics of the SNLI dataset allow models, including InferSent, to perform well with simple lexical heuristics that ignore the order of words and their relations.
+Sink & T & table, towel, toilet & trumpet, toll gate, trunk &T or E\tabularnewline
 
-%We also find that the presence of antonyms that are most used in the SNLI dataset are more likely to indicate contradiction for InferSent. For example, the antonyms  women/men, boy/girl and black/white appear more frequently in the SNLI sentence pairs than antonyms like old/young, sitting/standing, and sentences that differ by the first set of antonym pairs are more likely to be classified as contradiction by InferSent, than sentences that differ by the second set of antonym pairs.
-
-\subsubsection{Negation Heuristic}
-We see in Figure \ref{fig:InferSenthist} that the not-type comparisons are preferentially classified as contradictions. A distinguishing feature of the not-type comparisons is that the premise and the hypothesis differ by the presence of the negation `not'. This observation allows us to hypothesize a \textit{negation heuristic} where sentence pairs that differ in the presence of negations are preferentially classified as contradictions.
-
-Following procedures analogous to previous sections, we first noted anecdotally, that this heuristic seems to have validity in the contradicting hypotheses in SNLI. For example, a contradictory sentence pair in SNLI is:\\
-{\tt Premise: Men turn to the camera to smile on the middle of three long tables in a refectory. \\ Hypothesis:  The man is not smiling. \\ CONTRADICTION\\}
-
-We verified this observation quantitatively by looking at the statistics for negation in SNLI. We collected all sentence pairs that contain ``negating N-grams'': no, not, n't (by considering ``n't'', we included words such as ``don't'' or ``doesn't''). We then carried out analyses similar to the previous section, where we checked (1) the predictive power of negations on contradictions (P(Contradiction | Negation)), and (2) the predictive power of contradiction on negations, P(Negation | Contradiction), and compare both of these to statistics for entailment as a baseline. We found (Table \ref{tab:negation}) that the presence of a negation strongly predicts contradiction in the SNLI dataset (58.4\% compared to chance at 33.3\%). We also found that while both numbers are very low, a contradiction predicts the presence of a negation (3.3\%) slightly more strongly than entailment does (1.1\%). We also carried out the same analysis for a high-overlap subset (top 10,000 highest overlap) of SNLI to maximize similarity with our comparisons dataset and saw similar results (Table \ref{tab:negation-ho}). In fact, the presence of negation predicts a contradiction, P(Negation | Contradiction) = $60.0\%$, at rates comparable to that in the full dataset, P(Negation | Contradiction) = $58.4\%$, despite the much lower base rates of contradiction in this subset of the data. This indicates strong ecological validity for this heuristic in the high overlap subset of the SNLI dataset.
-
-\begin{table}[htb]
- \centering
-%   \resizebox{0.6\columnwidth}{!}{%
-  \begin{tabular}{llll}
-  \toprule
-    & P(Negation $|$ X) & P( X $|$ Negation) \\
-    \midrule
-    X = Contradiction & 3.3  & 58.4  \\
-      X = Entailment &  1.1  &  20.0  \\
-\bottomrule
-  \end{tabular}
-%   }
- \caption{Percentage of entailments split by negation in SNLI dataset.}
-  \label{tab:negation}
-\end{table}
-%
-
-\begin{table}[htb]
-  \centering
-%   \resizebox{0.6\columnwidth}{!}{%
-  \begin{tabular}{llll}
-  \toprule
-    & P(Negation $|$ X) & P( X $|$ Negation) \\
-    \midrule
-    X = Contradiction & 1.3 & 60.0 \\
-      X = Entailment &  0.1 &  7.5 \\
-\bottomrule 
-  \end{tabular}
-%   }
- \caption{Percentage of entailments split by negation in high overlap SNLI subset.}
-  \label{tab:negation-ho}
-\end{table}
-
-%Note that we also did same experiment on more broadly defined negation ngrams which includes Neither, None and etc, and we get similar results. We have $43.6\%$ negation pairs are contradiction, while $27.3\%$ negation pairs are entailment. $7 \%$ contradiction pairs have negation while only $4 \%$ entailment pairs have negation.
-
-\subsubsection{Summary of heuristics}
-
-We found evidence for three heuristics that explain the bulk of the patterns seen in the performance of InferSent on our Comparisons dataset, all of which are ecologically valid in the SNLI dataset. First, we identified the \textit{overlap heuristic} where a large overlap in words between two sentences leads InferSent to not classify them as contradictions. Second, we identified the \textit{antonyms heuristic} and the \textit{negation heuristic}, where the premise and hypothesis differ in the presence of an antonym or a negation, which leads InferSent to classify them as contradictions. 
-
-These illustrate a disproportionate dependence on lexical (rather than relational) meaning in the representations and decision rules used by InferSent. While these heuristics serve well in certain domains, for example in SNLI, they don't amount to a more general encoding of entailment and contradiction between sentence pairs, as evidenced by InferSent's poor performance on our Comparisons dataset.
-
-The analysis so far has highlighted word-level heuristics that InferSent might be using. Yet the confusion matrix results (Figure \ref{fig:InferSenthist}) show a slight asymmetry, indicating at least minor multi-word effects. This suggests that InferSent might be using some (potentially also heuristic) encodings for word order. However, a systematic analysis of the effect of word order, and how much variance such heuristics might explain, is challenging due to the combinatorial explosion in the number of possibilities. We leave a thorough investigation of this to future work.
-
-\section{Augmenting the learning environment}
-The foregoing results suggest that such ecological validity of simple heuristics in the SNLI training data (InferSent's learning environment) could explain why InferSent acquires them over a more abstract, systematic representation of the relations between words in a sentence. This leaves open the question of whether architectures such as InferSent are capable of learning the abstract relational rules needed to succeed at our task given a different training set where simple heuristics no longer explain so much of the variance. RNN architectures like the one in InferSent can in theory represent the relational structure required to encode the abstract rules of the sort in Table \ref{tab:rules} (see Section `Models for sentence embeddings' for details). But how might we get them to learn and use them? In this section, we explore this question by training the InferSent model on part of the Comparisons dataset, and testing on a held-out subset of it. This serves to test whether simple training on examples of the rules in Table \ref{tab:rules}, will enable InferSent to encode some abstract relational rules.
-% X, Y and Z that it has never previously seen in that combination.
-
-The total training subset of our Comparisons dataset consists of 40k sentence pairs ($7\%$ the size of the 550k pair SNLI training set). Validation and test sets consist of 2000 sentence pairs each. There are no overlapping sentence pairs between any of these sets, therefore simply memorizing the training set will not allow good test performance. Good test performance requires the encoding and utilization of an abstract relational rule.
-
-
-\begin{table}[htb]
- \centering
-%   \resizebox{0.6\columnwidth}{!}{%
-  \begin{tabular}{llll}
-  \toprule
-     \multirow{ 2}{*}{Epoch} &
-      \multicolumn{3}{c}{Performance (\%)} \\
-       & Train(Comp) & Test(Comp) & Test(SNLI)\\
-    \midrule
-    0 & 47.81 & 45.36 & 84.84\\
-    13 & 99.91 & 99.8 & 56.37\\
-    \bottomrule
-  \end{tabular}
-%   }
- \caption{Results of fine-tuning InferSent on the Comparisons dataset.}
-  \label{tab:finetuning}
-\end{table}
-
-We started with the original InferSent embeddings already trained on the SNLI dataset, and then fine-tuned it on our new Comparisons dataset \citep[using the same protocols used in][to train InferSent]{Conneau:2017uf}. Results are shown in Table \ref{tab:finetuning}. We found that using this method, performance on the SNLI data task degrades over the course of fine-tuning on the new Comparisons dataset from 84.84\% to 56.37\%. This points to over-fitting to the Comparisons data, at the cost of representing information necessary for SNLI. We found however, that performance on the Comparisons test set is much higher (99.8 \%) than when trained only on SNLI (47.81\%). Note that this test set consists of sentence pairs InferSent has never seen before. We thus find that the model architecture for InferSent, given the right training data, can encode some form of abstract relational structure that allows it to learn rules of the form in Table \ref{tab:rules} and apply them to new sentence pairs -- in particular sentence pairs with Xs, Ys and Zs that it has never seen in that combination before.
-
-
-\begin{table}[htb]
- \centering
-%   \resizebox{0.6\columnwidth}{!}{%
-  \begin{tabular}{llll}
-  \toprule
-     \multirow{ 2}{*}{Epoch} &
-      \multicolumn{3}{c}{Performance (\%)} \\
-       & Train(Combined) & Test(Comp) & Test(SNLI)\\
-    \midrule
-    0 & 33.33 & 33.33 & 33.33\\
-    12 & 90.99  & 100.00 & 84.96\\
-    %126 & 126 &- 126 -&- 126\\
-    %12 & ? & ? & ?\\
-    %12 & ? & ? & ?\\
-    %12 & 94.12 & 84.34 & 100.0 & 100.0\\
-    \bottomrule
-  \end{tabular}
-%   }
- \caption{Results of retraining Infersent on both SNLI and the Comparisons dataset.}
-  \label{tab:retraining}
-\end{table}
-
-We then checked whether InferSent can represent this relational structure without losing the information necessary for SNLI. We started with an untrained network, and then trained on an augmented version of the original training data. Here, examples from the SNLI training set were randomly interleaved with examples from our Comparisons training dataset, otherwise using the same training protocols reported in \citep{Conneau:2017uf}. The test results are reported in Table \ref{tab:retraining}. We found that the accuracy obtained this way on the SNLI test set (84.96 \%) is comparable to the model trained only on SNLI (84.84 \%). Moreover, test accuracy on the Comparisons dataset is close to perfect (99.55 \%) and is much higher than the model trained only on SNLI (47.81 \%). This establishes that in this case the model has enough capacity to achieve high performance on specially designed edge-cases like the Comparisons dataset, without loss of performance on the more general SNLI dataset.
-
-This result also verifies that the heuristics we find in the original InferSent are an ecologically rational response to a training environment that licenses these `shortcut' strategies, and not because of shortcomings in representational or learning abilities of the model itself. This points to the benefits of understanding the learning environment in greater detail, and potentially including specially designed data to guard against incorrect heuristics that don't generalize. Research on the generation of adversarial examples targets this intuition. The idea is to have a separate `adversarial' model that generates edge-case training examples optimized to try and fool the main model into giving the wrong answer \citep{goodfellow2014explaining, zhao2017generating}. It does so by generating examples that violate the heuristics the main model has learned from training thus far. Subsequently, the training environment for the model is augmented to include these edge cases making the current heuristics no longer ecologically valid. The main model therefore updates its representations and decision rules accordingly and the process is continued. Our work provides some insight into how we can leverage a top-down understanding of the structure of language and systematic stimulus design, to generate such edge-case training data and potentially improve the representations learned by machine learning systems. 
-
-A key hurdle for the scalability for such augmentation as a solution to improving artificial representations of language however is that there are an infinite number of possible stimuli, with brand new combinations of words that may never have been encountered before. No finite amount of augmentation will allow a system to represent and process this infinite space of natural language sentences unless it can also \textit{generalize} its knowledge gained from the examples observed thus far to new examples. In this section we saw that InferSent can generalize rules like those in Table \ref{tab:rules} to never previously observed combinations of X, Y and Z to perform well on the test set of the Comparisons dataset. In the following sections we further discuss the generalization capacities of the representations learned by InferSent, and focus in particular on their differences and similarities to human generalization.
-
-\section{Generalization}
-An important and well-studied aspect of human-like representations is that rules learned with one set of tokens can be systematically generalized to other tokens \citep{fodor88, lake2019human}. In the section on `zero-shot reasoning' we study if our machine-learned representations can perform such generalization to tokens that have never previously been observed. More often however, the tokens to which we want to generalize learned rules have previously been observed, but simply in a different context. The historical contexts of tokens can determine some of their properties -- like syntactic category, and semantic content -- which in turn inform how humans generalize rules to them, sometimes deviating from entirely systematic generalization. In our section on `context-tying', we examine how the historical context of tokens influences systematic generalization in our machine-learned representations, and how these effects compare to those in humans.
-
-% First we examine the role of syntactic category in which tokens restrict generalization to them, and second how the semantic content. 
-
-% For example, many rules of language only generalize within syntactic category -- rules learned about how nouns are used, apply only to other (potentially unobserved and new) nouns, not to other verbs, or adjectives. Further, humans exhibit belief bias across domains \citep{evans1983conflict}, where semantic beliefs about the real-world, can interfere with generalizing abstract logical rules. We study these caveats to human-like generalization, and whether they manifest in our machine-learned representations in a subsection below on context-tying.
-
-Throughout this section, we will only consider sentence pairs that are similar in structure to ones in our Comparisons dataset, and will no longer consider performance on SNLI. We will predominantly be studying the model that has been trained jointly with our Comparisons dataset in addition to SNLI (referred henceforth to as the augmented-InferSent model).
-
-% Thereofore, we only consider the performance of the fine-tuned augmented Infersent model from the previous section, since the retrained augmented model has comparable performance on Comparison-type sentences but is more expensive to train. We refer to it in general as ``the augmented InferSent'' model.
-
-\subsection{Zero-shot reasoning}
-Zero-shot reasoning is the ability to solve tasks involving a term that has never been seen before. This (often also called zero-shot learning) has commonly been used as a test for systematicity \citep{lake18} -- a human can carry out inferences like ``Anne is more boffy than Bob'' entails that ``Bob is less boffy than Anne'' without ever having encountered the word ``boffy'' before. 
-% Once a person learns a word, they can immediately produce and understand an infinitude of sentences containing it.  It is therefore an extremely efficient way to generalize.
-
-But this ability requires the representation learned to be abstract, and not be tied to the Xs, Ys, and Z's seen in training. Instead it has to encode encode an abstract relational rule where ``X is more Y than Z'' entails ``Z is more Y than X'' for all possible X, Y and Z, irrespective of their specific values. If the representation are tied to the observed values of Xs, Ys and Zs and cannot generalize to new values for these, each possible X, Y and Z has to have occurred in the training dataset. However, these can be arbitrarily complex (e.g., ``The old woman with a flower in her hair \textit{is more deliriously happy than} the tall young man wearing the blue bowler hat'' implies that ``The tall young man wearing the blue bowler hat \textit{is less deliriously happy than} the old woman with a flower in her hair''). Ensuring that every possible such X, Y and Z have been seen in the training data is impossible, and this kind of generalization is key to human-like language understanding.
-
-In this section we consider the performance of the augmented-InferSent model. We already know that this model performs well on both SNLI, and generalizes to new combinations of X, Y, and Z in our Comparisons dataset (see Table \ref{tab:retraining}), where each X, Y and Z have previously been seen. In this section, we analyze its ability to generalize to 3 different kinds of Xs and Zs that have never been encountered during training.
-
-\begin{itemize}
-\itemsep0em
-    \item \textbf{Held out nouns}: Nouns (from the GloVe dataset) that never occur in the training data (neither SNLI nor our Comparisons dataset).
-    \item \textbf{Made up ``words''}: Directly using a 300 dimensional vector randomly sampled from an uncorrelated Gaussian distribution, as a stand-in for a real GloVe vector.
-    \item \textbf{Long noun phrases}: The Xs and Zs used in training as part of the Comparisons dataset were of the type ``the man''. Here we generate longer noun phrases of the form ``the grumpy man in front of us'' consisting of randomly sampled adjectives, nouns and prepositional phrases. 
-    % Some of these combinations may in theory have been seen in SNLI, but given the length of the noun phrases and the large number of combinations possible, it is very unlikely that the specific phrases used have previously appeared. None of them have been seen in the context of rules like in in the Comparisons dataset (Table \ref{tab:rules}).
-\end{itemize}
-
-For each sub-type in the Comparisons dataset (same, more-less and not types), we generated a test set of 1,000 sequences by substituting Xs and Zs of the above kinds. The Ys were sampled in the same way as in the Comparison dataset (random adjectives that appear in SNLI). We then tested on these sentences, and reported the average accuracy. Note that not only had these specific sentences (combinations of X, Y and Z) never been seen during training, even the individual Xs and Zs had not been seen. We found that InferSent generalizes to all three new kinds of Xs and Zs quite well (Table \ref{tab:zsl}). The held-out nouns are the most similar to the Xs and Zs seen during training since they are also exactly one word, and are nouns sampled from GloVe. It is notable that generalization performance with these is comparable to that with the very different kinds of Xs and Zs such as the made-up words, or longer noun phrases, indicating a fairly abstract representation of relational rules that are not tied to the specific value of X and Z.
-
-\begin{table}[h!]
-  \begin{center}
-    \begin{tabular}{lll}
-    \toprule
-      Test set  & InferSent ($\%$)&  augmented-InferSent ($\%$)\\
-    \midrule
-    % Test (Comp) & 100.0 \\
-    Held-out nouns & 47.9 & 82.0 \\
-    Made up words & 48.0 & 83.2  \\
-    Long noun phrases & 49.1  & 84.9 \\
-    % Old long noun phrases & 91.1 \\
+Lamp & W & window, wardrobe, wine rack & wheelbarrow, water fountain, windmill & W or F \tabularnewline
 \bottomrule
 \end{tabular}
-\end{center}
-\caption{Zero-shot reasoning: Performance on previously unobserved Xs and Zs.}
-  \label{tab:zsl}
 \end{table}
 
-% \ndg{say something about comparison to in-domain generalization (slightly worse?) and comment on the surprising finding that these three types of transfer are about equally well done by the model.} 
-This indicates that the representation learned by augmented-InferSent is partially abstract and composable, allowing some systematic generalization to a variety of Xs and Zs that have never been seen before. In the next section we further probe contextuality of generalization and how that interacts with the training set / learning environment, making comparisons to human generalization.
+\subsection{Results}
 
-\subsection{Context Tying}
-We saw in the previous section that augmented-InferSent has some of the the central human-like capacity of zero-shot reasoning. This indicates some systematicity in its representations. However, even humans do not always succeed at fully systematic generalization. In this section we investigate these exceptions and qualifications to the widest interpretation of systematic generalization, focusing on the role of context in generalization. We do this in two ways: using type violations and biased exposure.
+Six participants were excluded from the following analysis, four of whom failed to respond on time in more than half of the questions, and two of whom entered the same response throughout.
 
-\subsubsection{Type violations}
-One extreme of learning a purely abstract rule like in Table \ref{tab:rules} is to be completely insensitive to any properties of the Xs, Ys and Zs, and generalize this rule to all possible tokens. However, this very strong generalization may not always match human intuitions. For example the sentence pair \\
-{\tt Premise: The punctual is more cheerful than the man \\ Hypothesis: The punctual is not more cheerful than the man\\}
-\noindent does not seem to have a right answer. The rule applies easily only to Xs, Ys and Zs that are of the right type -- in this case the right syntactic category. 
+We applied one-sided hypothesis testing for all hypothesis involving sub- and superadditivity effects as these effects only make sense when assessed directionally.
 
-While syntactic structure is not directly provided to the embedding model, some notion of syntactic category will be implicit. Information about the syntactic category of a word can be gleaned from its contexts, i.e. the other words around it \citep{chomsky1993lectures, redington1998distributional, socher2010learning}, and in some cases can be decoded from word embeddings directly \citep{pennington14}.
+Consistent with our previous studies \citep{dasgupta17}, we found both subadditivity and superadditivity effects for $\mathcal{Q}1$, depending on the unpacking: probability judgments were higher for unpacked-typical queries than for packed queries (a subadditivity effect; $59.35$ vs. $49.67$; $t(77)= 4.03, p<0.001$) and lower for unpacked-atypical than for packed queries (a superadditivity effect; $31.42$ vs. $49.67$; $t(77)= -6.44, p<0.001$).
 
-%We would like to explore the extent to which the system restricts its application of rule patterns based on types. 
-%Encoding and utilizing such type information for X, Y and Z when carrying out inferences on them requires that the rules the system learns do not generalize indiscriminately to all Xs, Ys and Zs but rather that to generalize, the test token must satisfy some notion of the right type. 
-%Since these systems have no in-built understanding of the roles of different types of tokens, whether a test token is of the `right type' can only be indicated by the contexts in which it has been seen.
+Next we calculated the difference between each participant's response to every query and the mean packed response to the same queried object. This difference was then entered as a dependent variable into a linear mixed effects regression with random effects for both participants and queried objects as well as a fixed effect for the condition. The resulting estimates revealed both a significant subadditivity effect ($\text{difference}=12.60\pm1.25$, $t(610.49)=10.083$, $p<0.0001$) and superadditivity effect ($\text{difference}=-15.69 \pm 1.32$, $t(615.46)=-11.89$,  $p<0.0001$).
 
-We investigated generalization of rules in augmented-Infersent to test items which, unlike in the previous section, had been previously seen, but had only occurred in a different syntactic role (i.e., a different context). We generated a test set of ungrammatical sentences using Xs and Zs that are random non-nouns, in our case random adjectives from SNLI. Crucially, these words had been seen before, but never in the position/context that X and Z occupy in the Comparisons dataset, since appearing in those positions violates syntax. We then evaluated the performance of the augmented-InferSent model in the same way as in the previous section on zero-shot generalization. We found that accuracy on such sentence pairs is low, giving poor performance (Table \ref{tab:type}). This indicates that the rules learned, though at least partially abstract as indicated by generalization to held-out nouns, come with restrictions on the type of (known) items they will apply to. This follows closely how humans generalize -- that learned rules don't generalize indiscriminately to all tokens, but rather only within some fixed categories. These categories in turn, like syntactic categories, can be gleaned from the contexts in which these tokens usually appear. In the next section, we examine the role of semantic content in the context of tokens, and how that influences generalization.
+Additionally, we found evidence that participants reused calculations from $\mathcal{Q}1$ for $\mathcal{Q}2$: even though all $\mathcal{Q}2$ queries were presented in the same format (as packed), the estimates for that query differed depending on how Q1 was presented. In particular, estimates for $\mathcal{Q}2$ were lower when $\mathcal{Q}1$ was unpacked to atypical exemplars ($46.38$ vs $56.83$; $t(77)= 5.08$, $p<0.001$), demonstrating a superadditivity effect that carried over from one query to the next. We did not find an analogous carry-over effect for subadditivity ($58.47$ vs. $56.83$; $t(77)= 0.72$, $p=0.4$).
+This is possibly due to the subadditivity effect ``washing out'' more quickly (i.e. with fewer samples) than superadditivity, as has been observed in this domain before \citep[see][]{dasgupta17}.\footnote{The extent and direction of this asymmetry depends on the difference between how many samples it takes on average to get out of modes once the chain is in them (the root cause of subadditivity), and how many samples it takes on average to find high probability areas when the chain is far away from them (the root cause of superadditivity).}
 
-% That this leads to a sensitivity to syntactic type in this case, is reasonable. However, tying tokens to the learning contexts in which they appear in general may not be good. In the next section we study this further.
+We calculated the difference between each participant's response for every $\mathcal{Q}2$ and the mean response for the same object averaged over all responses to $\mathcal{Q}2$ conditional on $\mathcal{Q}1$ being packed. The resulting difference was again entered as the dependent variable into a linear mixed effects regression with both participants and cued object as random effects as well as condition as a fixed effect. The resulting estimates showed both a significant subadditivity effect ($\text{difference}=4.39\pm1.14$, $t(606.40)=3.83$, $p<0.001$) and superadditivity effect ($\text{difference}=-7.86\pm1.21$, $t(610.41)=-6.50$, $p<0.0001$).
 
-\begin{table}[h!]
-  \begin{center}
-    \begin{tabular}{lll}
-    \toprule
-      Test set  & InferSent ($\%$) & augmented-InferSent ($\%$)\\
-    \midrule
-    Held-out nouns & 47.9 & 82.0\\
-    Non-noun words & 47.9 & 49.3 \\
+We calculated each participant's mean response to all packed hypotheses for $\mathcal{Q}2$ over all trials as a baseline measure and then assessed the difference between each condition's mean response and this mean packed response. This resulted in a measure of an average effect size for the $\mathcal{Q}2$ responses (how much each participant under- or overestimates different hypotheses as compared to an average packed hypothesis). Results of this calculation are shown in Figure~\ref{fig:meandiffs1}. 
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{figures/amo1results.pdf}
+\caption{Experiment 1: Differences between $\mathcal{Q}2$ responses for each condition and an average packed baseline. A negative relative mean estimate indicates a superadditivity and a positive relative mean estimate a subadditivity effect. Error bars represent the standard error of the mean.}
+\label{fig:meandiffs1}
+\end{figure}
+
+The superadditivity effect was significantly greater than 0 ($t(77)=5.07$, $p<0.001$). However, the subadditivity effect did not differ significantly from 0 \citep[$t(77)=-0.42$, $p>0.6$; see also][]{dasgupta17}.
+
+Next, we explored whether responses to $\mathcal{Q}1$ predicted trial-by-trial variation in responses to $\mathcal{Q}2$. Figure~\ref{fig:correspondence1} shows the difference between participants' estimates for $\mathcal{Q}1$ and the true underlying probability of the query (as derived by letting our MCMC model run until convergence) plotted against the same difference for $\mathcal{Q}2$.\footnote{Although we did not initially plan to perform the analysis using difference scores, we believe that this is the correct way to report our results as it takes into account the mean differences between the judgments. In fact, performing the correction actually lead to smaller correlations and weaker effects overall as compared to using the raw values.} If participants do indeed reuse computations, then how much their estimates deviate from the underlying truth for $\mathcal{Q}1$ should be predictive of the deviance of their estimates for $\mathcal{Q}2$.
+
+We found significant positive correlations between the two queries in all conditions when aggregating across participants (average correlation: $r=0.67$, $p<0.01$). The same conclusion can be drawn from analyzing correlations within participants and then testing the average correlation against 0 ($r=0.55$, $p<0.01$). Moreover, the within-participant effect size (the response difference between the unpacked conditions and the packed condition) for $\mathcal{Q}1$ was correlated with responses to $\mathcal{Q}2$ for both atypical ($r=0.35$, $p<0.01$) and typical ($r=0.21$, $p<0.05$) unpacking conditions. This means that participants who showed greater subadditivity or superadditivity for $\mathcal{Q}1$ also showed correspondingly greater effects for $\mathcal{Q}2$.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/exp1correspondence.pdf}
+\caption{Trial-by-trial analyses of Experiment 1. Difference between $\mathcal{Q}1$ responses and true probability (as assessed by our MCMC model) plotted against the same quantity for $\mathcal{Q}2$. Lines show the least-squares fit with standard error bands.}
+\label{fig:correspondence1}
+\end{figure}
+
+\subsection{Discussion}
+
+Experiment 1 established a memory effect in probabilistic inference: answers to a query are influenced by answers to a previous query, thereby providing evidence for amortization. In particular, both a sub- and a superadditivity effect induced at $\mathcal{Q}1$ carried over to $\mathcal{Q}2$, and participants showing stronger effect sizes for both sub- and superadditivity for $\mathcal{Q}1$ also showed greater effects for $\mathcal{Q}2$. 
+
+\section{Experiment 2}
+
+Our next experiment sought to discriminate between sample-based and summary-based amortization strategies. We follow the logic of the simulations shown in Figure \ref{fig:changeN}, manipulating cognitive load at $\mathcal{Q}1$ and $\mathcal{Q}2$ in order to exogenously control the number of samples \citep[see][for a similar approach]{thaker17,dasgupta17}. 
+
+In addition to cognitive load, we manipulate the ``overlap'' of $\mathcal{Q}1$ with $\mathcal{Q}2$, by creating a new set of queries with no overlap between the hypothesis spaces of the query pairs. We predicted that we would only see a memory effect for queries with overlapping pairs. This manipulation allows us to rule out an alternative trivial explanation of our results: numerical anchoring (high answers to the first query lead to high answers to the second query). If the apparent memory effect was just due to anchoring, we would expect to see the effect regardless of query overlap, contrary to our predictions.
+
+\subsection{Participants}
+
+80 participants (53 males, mean age=32.96, SD=11.56) were recruited from Amazon Mechanical Turk and received \$0.50 as a basic participation fee and an additional bonus of \$0.10 for every on time response as well as \$0.10 for every correctly classified digit during cognitive load trials.
+
+\subsection{Procedure}
+
+The procedure in Experiment 2 was largely the same as in Experiment 1, with the following differences. To probe if the memory effects arise from reuse or from numerical anchoring, we added several $\mathcal{Q}2$ queries to the list shown in Table \ref{tab:scenarios}. These $\mathcal{Q}2$ queries have no overlap with the queried hypothesis for $\mathcal{Q}1$ (for example, 'T or R' instead of 'C or R' in the trial shown in the first row in Table \ref{tab:scenarios}). In other words, these queries could not be decomposed such that the biased samples from $\mathcal{Q}1$ would be reflected in the answer to $\mathcal{Q}2$, so the sub- and super-additive effects would not be seen to carry over to $\mathcal{Q}2$ were reuse to occur. We refer to these queries as ``no overlap'', in contrast to the other ``partial overlap'' queries in which one of the letters overlapped with the previously queried letter. Half of the queries had no overlap and half had partial overlap, randomly interspersed. The stimuli used in Experiment 2 are shown in Table~\ref{tab:scenarios2}.
+
+\begin{table}
+\caption{Experimental stimuli and queries for Experiment 2.}
+\label{tab:scenarios2}
+\centering
+\begin{tabular}{p{.1\textwidth} p{.08\textwidth} >{\raggedright}p{.2\textwidth} >{\raggedright}p{.2\textwidth} p{.12\textwidth} p{.1\textwidth}}
+  \toprule
+\bf{Cue} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{$\mathcal{Q}2$ Partial overlap} &\bf{$\mathcal{Q}2$ No overlap}\tabularnewline
+\midrule
+Table & C & chair, computer, curtain & cannon, cow, canoe & C or R &T or R\tabularnewline
+
+Telephone & D & display case, dresser, desk & drinking fountain, dryer, dome & D or L& G or L\tabularnewline
+
+Rug & B & book, bouquet, bed & bird, buffalo, bicycle & B or S&D or S\tabularnewline
+
+Chair & P & painting, plant, printer & porch, pie, platform & P or A&M or A\tabularnewline
+
+Sink & T & table, towel, toilet & trumpet, toll gate, trunk &T or E&F or E\tabularnewline
+
+Lamp & W & window, wardrobe, wine rack & wheelbarrow, water fountain, windmill & W or F & L or F\\
 \bottomrule
 \end{tabular}
-\end{center}
-\caption{Type violations: Performance with tokens from the wrong syntactic category, versus with held-out tokens from the right syntactic category}
-  \label{tab:type}
 \end{table}
 
-\subsubsection{Biased exposure}
+To probe if the memory effect arises from reuse of generated samples (sample-based amortization) or reuse of summaries (summary-based amortization), we also manipulated cognitive load: on half of the trials, the cognitive load manipulation occurred at $\mathcal{Q}1$ and on half at $\mathcal{Q}2$. A sequence of 3 different digits was presented prior to the query, where each of the digits remained on the screen for 1 second and then vanished. After their response to the query, participants were asked to make a same/different judgment about a probe sequence. Half of the probes were old and half were new.
 
-In this section, we manipulate the context of various tokens, without violating the syntactic rules, to study its effect on generalization. In all the augmentations we have used so far, some token X is equally likely to occur in the context of a same-type sentence pair as it is in the context of a more/less-type sentence pair. Similarly, X is as likely to occur in the context where it is `more cheerful than the man' as it is to occur in the context where it is `less cheerful than the man'. Therefore, apart from the restrictions of syntactically correct placement, there is no additional structure around which contexts which tokens occur in -- they are all randomly distributed. 
-% However, by virtue of the combinatorially many possible sentences in language, each token is guaranteed to not have occurred in every possible context in which it is syntactically valid. Further, 
-However, in the real world, tokens are not uniformly sampled into contexts even within constraints of syntax; a word is much more likely to be sampled repeatedly in certain contexts than others. This is because the appearance of tokens in naturally occurring sentences is not determined solely by their syntactic role, but also by their semantic role.
-% The fact that the semantics of sentences are usually used to describe the real world entails that . 
-For example, one is more much likely to encounter the sentence ``broccoli is more nutritious than candy'' than the sentence ``candy is more nutritious than broccoli'', since one is true of the real world, and the other is not. Nonetheless, the premise ``candy is more nutritious than broccoli'' still logically entails the hypothesis ``broccoli is less nutritious than candy''. Statistics of how often certain implications and inferences are made in the learning environment (that will be reflected in semantic beliefs about the real-world) can interfere with such logical inferences in humans in both deductive \citep{evans1983conflict} and probabilistic \citep{evans2002background} reasoning. This is often termed `belief bias'. 
+We hypothesized that partial overlap would lead to stronger amortization effects, whereas no overlap would lead to weaker effects. Furthermore, if participants are utilizing sample-based amortization, then cognitive load during $\mathcal{Q}2$ should increase the amortization effect: if more samples are generated during $\mathcal{Q}1$ (which are the samples that contain the sub- or superadditivity biases) and these samples are concatenated with fewer unbiased samples during $\mathcal{Q}2$, then the combined samples will be dominated by biased samples from $\mathcal{Q}1$ and therefore show stronger effects. Vice versa, if participants are utilizing summary-based amortization, then cognitive load during $\mathcal{Q}1$ should increase the amortization effect: if less samples are generated during $\mathcal{Q}1$, then a summary of those samples will inherit a stronger sub- or superadditivity effect such that the overall amortization effect will be stronger if the two summaries are combined (assuming that the summaries are combined with equal or close-to equal weights).
 
-% with adults having a reasonably high capacity for abtract inferences even if they violate intutions about the real-world.
+\subsection{Results}
 
-In this section, we test if the representations we are studying exhibit belief bias. We manipulate the uniformity in the co-occurrence of tokens with contexts (subject to syntactic constraints), and examine if a newly augmented InferSent model can generalize a token it has seen in one context, to cases where it appears in a different context. We compare this to a zero-shot control condition, where the test token has never been seen before.
+Analyzing only the queries with partial overlap (averaging across load conditions), we found that probability judgments for $\mathcal{Q}1$ were higher for unpacked-typical compared to packed conditions (a subadditivity effect; $t(79)=4.38$, $p<0.001$) and lower for unpacked-atypical compared to packed (a superadditivity effect; $t(79)=-4.94$, $p<0.001$). These same effects occurred for $\mathcal{Q}2$ (unpacked-typical vs. packed: $t(79)=2.44$, $p<0.01$; unpacked-atypical vs. packed: $t(79)=-1.93$, $p<0.05$). 
 
-% , and adult humans are in general capable of abstract relational reasoning, even if the semantics of the sentences are not believable and are in fact violated by their learning environment. 
+We again calculated the difference between each participant's response to every query during $\mathcal{Q}1$ and the overall mean response for the same query object in the packed condition. This difference was then used as the dependent variable in a linear mixed-effects regression model with participants and queried object as random effects and condition as fixed effect. The resulting estimates showed both a significant subadditivity effect ($\text{difference}=13.64\pm1.57$, $t(396.95)=8.70$, $p<0.0001$) and superadditivity effect ($-14.90 \pm1.56$, $t(395.48)=-9.55$, $p<0.0001$). Afterwards, we repeated the same analysis for responses to $\mathcal{Q}2$ (as in Experiment 1). This analysis again showed significant indicators of amortization as both the subadditivity ($\text{difference}=5.37\pm1.34$, $t(398.01)=4.02,$ $p<0.001$) and the superadditivity effect ($\text{difference}=-4.92\pm1.34$, $t(398.01)=-3.69$, $p<0.001$) were still present during $\mathcal{Q}2$. 
 
-% Context-tying based on biased exposure to sentences has been found and studied extensively in humans.  Humans are often faster and less error-prone during speeded judgements at inferences that are either consistent with their experience of the relevant tokens in their learning context, or have never occurred in their learning context. This finding is often termed `belief bias'. These studies do not directly study comparisons of the sort we study here, but focus on other forms of deduuctive reasoning such as syllogisms. The analogy to this domain would be that the following inference would be easier\\
-% {\tt Premise: Broccoli is more nutritious than candy \\
- 
-% ENTAILS\\
-% Hypothesis: Candy is less nutritious than broccoli\\}
-% \noindent as compared to inferences that are less believable, i.e. that violate their experience in the learning context, like the inference\\
-% {\tt Premise: Candy is more nutritious than Broccoli \\ 
-% ENTAILS\\
-% Hypothesis: Broccoli is less nutritious than candy\\
-% }
-% \noindent Infererences about which no prior beliefs exist from the learning context (i.e. zero-shot generalization) are also easier, for example\\
-% {\tt Premise: Dax is more nutritious than zug \\ 
-% ENTAILS\\
-% Hypothesis: Zug is less nutritious than dax\\}
-% \noindent where dax and zug are new nouns that participants have never previously ecountered. 
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/amo2results.pdf}
+\caption{Experiment 2: Differences between $\mathcal{Q}2$ responses for each condition and an average packed baseline. A negative relative mean estimate indicates a superadditivity and a positive relative mean estimate a subadditivity effect. Error bars represent the standard error of the mean.}
+\label{fig:meandiffs2}
+\end{figure}
 
-% Leveraging existing research on belief bias in cognitive science might better inform ways to understand and characterize the representations learned by machine-learned embeddings. Additionally, that something akin to belief bias is exhibited in an architecture that was built artificially, in a system over which we have a lot of control (like altering the learning environments,manipulating architectures, examining or lesioning units etc) suggests new ways to understand and computationally model such effects in humans.
+Next, we assessed how the memory effect was modulated by cognitive load and overlap (Figure~\ref{fig:meandiffs2}). When cognitive load occurred during $\mathcal{Q}2$ and there was no overlap, none of the conditions produced an effect significantly different from 0 (all $p>0.5$). When cognitive load occurred during $\mathcal{Q}2$ and there was partial overlap, only typically unpacked hypotheses produced an effect significantly greater than 0 ($t(38)=2.14$, $p<0.05$). When cognitive load occurred during $\mathcal{Q}1$ and there was no overlap, we again found no evidence that the conditions differ from 0 (all $p>0.05$). Crucially, if cognitive load occurred during $\mathcal{Q}1$ and there was partial overlap, both conditions showed the expected subadditive ($t(38)=4.18$, $p<0.05$) and superadditive ($t(46)=-1.89$, $p<0.05$) effects. Moreover, calculating the average effect size of amortization for the different quadrants of Figure~\ref{fig:meandiffs2}, the partial overlap-cognitive load at $\mathcal{Q}1$ condition produced the highest overall effect ($d=0.8$), followed by the partial overlap-cognitive load at $\mathcal{Q}2$ condition ($d=0.56$) and the no overlap-cognitive load at $\mathcal{Q}1$ condition ($d=0.42$). The no overlap-cognitive load at $\mathcal{Q}2$ condition did not produce an effect greater than 0. Partial overlap trials were also more strongly correlated with responses during $\mathcal{Q}1$ than trials with no overlap ($0.41$ vs $0.15$, $t(79)=-2.1$, $p<0.05$).
 
-%  In fact it is likely to have been observed only in a small fraction of the contexts in which it is syntactically valid.  
-% This is not to say all context-tying is bad -- tying a token to the contexts in which it would be syntactically valid, like we saw in the section on `type violation', is not necessarily harmful since syntactically incorrect sentences are rare, and being able to process sentences that don't obey syntactic rules is arguably not the prerogative of a system built to encode natural language sentences. However, o
+Next, we calculated the difference between all responses to $\mathcal{Q}2$ and the mean responses to $\mathcal{Q}2$ over queried objects provided that $\mathcal{Q}1$ was packed. This difference was entered into a linear mixed-effects regression that contained overlap, cognitive load, and the presentation format of $\mathcal{Q}1$ as fixed effects, and participants and the queried objects as random effects. We then assessed the interaction between cognitive load and the sub- and superadditivity conditions while controlling for overlap. The resulting estimates showed that there was a significant subadditivity effect ($\text{difference}=5.25\pm2.12$, $t(417.08)=2.48$  $p<0.05$) but no superadditivity effect ($\text{difference}=-3.19\pm2.17$, $t(419.23)=-1.47$, $p=0.17$) when cognitive load was applied during $\mathcal{Q}2$. Importantly, both the subadditivity ($\text{difference}=5.83\pm 2.25$, $t(418.91)=2.59$, $p<0.05$) and the superadditivity ($\text{difference}=-6.86\pm2.21$, $t(419.80)=-3.102$, $p<0.01$) effects were present when cognitive load was applied during $\mathcal{Q}1$. This finding points towards a larger amortization effect in the presence of cognitive load on $\mathcal{Q}1$, thus supporting a summary-based over a sampled-based amortization scheme.
 
+Further, on trials with cognitive load at $\mathcal{Q}2$, participants were on average more likely to answer the probe correctly for partial overlap trials compared to no overlap trials ($t(36)=3.16$, $p<0.05$). This is another signature of amortization: participants are expected to have more resources to spare for the memory task at $\mathcal{Q}2$ if the computations they executed for $\mathcal{Q}1$ are reusable in answering $\mathcal{Q}2$. This also indicates that these results cannot be explained by simply initializing the chain for $\mathcal{Q}2$ where the chain for $\mathcal{Q}1$ ended, which would not have affected the required computations. 
 
-To this end, we first generated variants of our Comparisons dataset where tokens are no longer uniformly sampled into contexts. We considered only two sub-types of the comparison types summarized in Table \ref{tab:rules}: the \textit{same-type} ($C_{2}$) and the \textit{more/less-type} ($C_{1}$). These consist the two contexts $C_{1}$ and $C_{2}$ in which tokens can appear. Noun phrases were generated using the same procedure used for the long noun phrases in the section on zero-shot reasoning---phrases (tokens) of the form ``the grumpy man in front of us''. These tokens were then randomly divided into $T^{0}$-type and $T^{*}$-type (460 each). Therefore there is no structural difference between the the $T^{0}$ and $T^{*}$ tokens, only the context in which they are seen will differ across conditions. 
-% 500 Glove nouns from spacy... we manually curated a list of ~200 adjectives and ~50 proposition phrases. Then, we divide our noun, adjective and proposition phrases lists into two groups. Finally, we create two groups of noun phrases by randomly concatenating noun, adjective and proposition phrases following some manually curated templates (e.g. first sample a function word such as the, our, her. Then, Sample multiple adjectives. Finally, sample a noun)
+Interestingly, there was no evidence for a significant difference between participants' responses to $\mathcal{Q}2$ under cognitive load in Experiment 2 as compared to participants' responses to $\mathcal{Q}2$ in Experiment 1 when no cognitive load during either $\mathcal{Q}1$ or $\mathcal{Q}2$ was applied ($t(314)=-1.44$, $p= 0.15$).
 
-We built four sets of sentence pairs that vary in their context-token combination: $C_{2}T^{0}$ consisted of combinations of $T^{0}$ tokens in a $C_{2}$ context, so on and so forth for $C_{2}T^{*}$, $C_{1}T^{0}$, and $C_{1}T^{*}$. Each such context-token combination set was independently divided into train and test sets (each of size 5000). The sentence pairs in each of the four test sets had never been seen before in any of the four training sets. 
+Finally, we assessed how much the difference between responses for $\mathcal{Q}1$ and the true underlying probabilities were predictive of the difference between responses for $\mathcal{Q}2$ and the true underlying probabilities (Figure \ref{fig:correspondence2}). There was a strong correlation between responses to $\mathcal{Q}1$ and $\mathcal{Q}2$ over all conditions ($r=0.41$, $p<0.001$), for the packed ($r=0.44$, $p<0.001$), the typically unpacked ($r=0.36$, $p<0.01$), as well as the atypically unpacked condition ($r=0.40$, $p<0.01$). Moreover, the differences of $\mathcal{Q}1$ and $\mathcal{Q}2$ responses from the true answer were also correlated within participants (mean $r=0.31$, $p<0.01$) and participants who showed stronger subadditivity or superadditivity effects for $\mathcal{Q}1$ also showed stronger effects for $\mathcal{Q}2$ overall ($r=0.31$, $p<0.001$), for the superadditive ($r=0.3$, $p<0.001$), and for the subadditive condition ($r=0.29$, $p<0.001$). This replicates the effects of amortization found in Experiment 1.
 
-We augmented the original InferSent embeddings with different combinations of samples from the four different train sets.\footnote{In this experiment we only make comparisons between the performances of differently augmented models, rather than considering the overall performance like in previous experiments. The influence on performance from the SNLI training data is irrelevant since it will affect all four augmented models equally. Therefore we can neglect SNLI performance and carry out our experiments using fine-tuned augmentation rather than full retraining (see the Section `Augmenting the learning environment' for details on these). This is computationally a lot cheaper.} We then compared their performance on all four of the test sets to examine how different context-token combinations seen during training influenced test generalization. The three different embeddings that result are as follows:
-\vspace{-2mm}
-\begin{itemize}
-\itemsep0em
-    \item \textbf{Zero-shot control condition}: Only the $T^{0}$ tokens were seen in training; no $T^{*}$ token were seen at all. Therefore testing with tokens from $T^{*}$ is analogous to zero-shot reasoning. The training set consisted of the full training sets from $C_{1}T^{0}$ and $C_{2}T^{0}$.
-    \item \bf{Experimental conditions}: Both $T^{0}$ and $T^{*}$ tokens were seen in training, therefore testing with tokens from $T^{*}$ is not analogous to zero-shot reasoning. However, the contexts in which $T^{0}$ and $T^{*}$ tokens appear during training differed. There are two different embeddings we trained of this kind.
-    \begin{itemize}
-        \item \bf{Exposed--$C_{1}T^{*}$ }: This embedding saw $T^{0}$ tokens in both $C_{1}$ and $C_{2}$ contexts (as with the control condition), and additionally also saw $T^{*}$ tokens -- but only in the $C_{1}$ context.
-        In order to balance the number of training examples from each context between conditions, the training set consisted of the full training sets from $C_{2}T^{0}$ and half (randomly selected) of the training set from each of the $C_{1}T^{0}$ and $C_{1}T^{*}$ context-token combination sets.
-        \item \bf{Exposed--$C_{2}T^{*}$ }: This embedding saw $T^{0}$ tokens in both $C_{1}$ and $C_{2}$ contexts, but saw $T^{*}$ tokens only in the $C_{2}$ context. The training set was balanced across contexts here as well.
-    \end{itemize}
-\end{itemize}
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/exp2correspondence.pdf}
+\caption{Trial-by-trial analyses of Experiment 2. Relationship between difference between $\mathcal{Q}1$ responses and true probability (as assessed by our MCMC model) and $\mathcal{Q}2$ responses and true probability. Lines show the least-squares fit with standard error bands.}
+\label{fig:correspondence2}
+\end{figure}
 
+\subsection{Discussion}
 
-\begin{table}[h!]
-  \begin{center}
-%   \resizebox{0.6\columnwidth}{!}{%
-    \begin{tabular}{llll}
-    \toprule
-     \multirow{2}{*}{Test set} &
-      \multicolumn{3}{c}{Performance (\%)} \\
-       & Zero-shot  & Exposed--$C_{1}T^{*}$ & Exposed--$C_{2}T^{*}$ \\
-    \midrule
-    $C_{1}T^{0} + C_{2}T^{0}$ & 97.44 & 97.02 & 98.0\\
-    
-    $C_{1}T^{*}$  & 95.72 & 99.7 & \bf{61.16}  \\
-    
-     $C_{2}T^{*}$ & 95.78 & \bf{67.71} & 99.96 \\
-    
+Experiment 2 extended the findings of Experiment 1, suggesting constraints on the underlying amortization strategy. Participants exhibited an intricate pattern of sensitivity to cognitive load and query overlap. Based on our simulations (Figure \ref{fig:changeN}), we argue that the effect of cognitive load at $\mathcal{Q}1$ on $\mathcal{Q}2$ responses is more consistent with summary-based amortization than with sample-based amortization. Summary-based amortization is less flexible than sample-based amortization, but trades this inference limitation for an increase in memory efficiency, and is thus consistent with the idea that humans adopt cost-efficient resource-rational inference strategies \citep{gershman2015computational,griffiths2015,lieder2017anchoring}. Further supporting this idea is our finding that performance on the secondary task was better in the partial overlap conditions, indicating that more resources are available when computations can be amortized. 
+
+Our design allowed us to rule out a numerical anchoring effect, whereby participants would give high answers to the second query if they gave high answers to the first query. This effect should be invariant to the extent of overlap of the queried hypothesis spaces, but contrary to the anchoring hypothesis, the memory effect was stronger in the high overlap condition.
+
+\section{Experiment 3}
+
+In this experiment we further probe the strategic nature of amortization. So far, all generated hypotheses have been reusable, since both queries probe the same probability distribution, conditioned on the same cue object. By changing the cue object between $\mathcal{Q}1$ and $\mathcal{Q}2$ and manipulating the similarity between the cues, we can control how reusable the computations are. Note that this is in contrast to the notion of ``overlap'' in Experiment 2 where all the samples from $\mathcal{Q}1$ are always ``reusable'' in $\mathcal{Q}2$ since both query the same probability distribution, but in the no overlap conditions, the queried hypotheses spaces do not overlap resulting in the biased samples from $\mathcal{Q}1$ not being reflected in $\mathcal{Q}2$ judgments. The notion of reusability now allows us to test whether or not reuse always occurs, or if it occurs preferentially when it is more applicable (i.e., under high similarity between cues).
+
+\subsection{Participants}
+
+100 participants (41 females, mean age=35.74, SD=11.69) were recruited from Amazon Mechanical Turk and received \$0.50 as a basic participation fee and an additional bonus of \$0.10 for every on time response.
+
+\subsection{Procedure}
+
+The procedure was similar to Experiments 1 and 2. The only difference was that participants were shown a new cue word for $\mathcal{Q}2$, asking them to judge the probability of objects starting with the same letter as the letter from $\mathcal{Q}1$ with no conjunction of letters (i.e., same query space, full overlap). The query for $\mathcal{Q}2$ was always packed, as in previous experiments. The new cue words for $\mathcal{Q}2$ were generated to either have posterior with a low (similar cues) or a high (dissimilar cues) KL divergence from the $\mathcal{Q}1$ posterior. The range of KL divergences fell between $0$ and $9$; all similar cue words had conditional distributions with KL divergence of less than $0.1$, and all dissimilar cue-words had a KL divergence of greater than $8.5$. The exact KL divergences are reported in Table~\ref{tab:scenarios3}.
+
+\begin{table}
+
+\caption{Experimental stimuli and queries for Experiment 3. Kullback-Leibler (KL) divergence between the posteriors for $\mathcal{Q}1$ and $\mathcal{Q}2$ are shown in parentheses.}
+\label{tab:scenarios3}
+\centering
+\begin{tabular}{p{.08\textwidth} p{.08\textwidth} >{\raggedright}p{.2\textwidth} >{\raggedright}p{.2\textwidth} p{.12\textwidth} p{.12\textwidth}}
+  \toprule
+\bf{Cue1} & \bf{$\mathcal{Q}1$} & \bf{$\mathcal{Q}1$-Typical} & \bf{$\mathcal{Q}1$-Atypical}& \bf{Cue2-sim (KL)} & \bf{Cue2-diff (KL)}\tabularnewline
+\midrule
+
+Rug & B & book, bouquet, bed & bird, buffalo, bicycle & Curtain (0.080)& Car (8.658)\tabularnewline
+
+Chair & P & painting, plant, printer & porch, pie, platform & Book (0.031) & Road (8.508)\tabularnewline
+
+Sink & T & table, towel, toilet & trumpet, toll gate, trunk & Counter (0.001)& Sidewalk (8.503)\tabularnewline
 \bottomrule
 \end{tabular}
-% }
-\end{center}
-\caption{Biased exposure: Results from InferSent embeddings augmented with different training sets that manipulate the co-occurrence of context and token.}
-  \label{tab:comb}
 \end{table}
 
-All three models received the same number of training examples, with equal numbers of sentence pairs from both contexts $C_{1}$ and $C_{2}$. They all also saw $T^{*}$ noun phrases appear in both contexts. The three models only differed in which contexts $T^{*}$ noun phrases appeared during training. The control model never saw $T^{*}$ noun phrases, Exposed--$C_{1}T^{*}$  only saw them in the $C_1$ context and Exposed--$C_{2}T^{*}$ only saw them in the $C_2$ context. All of these were then tested on the same held-out test set. We see from Table \ref{tab:comb} that all three models generalize well to held-out test examples involving previously unobserved combinations of $T^{0}$ noun phrases in both contexts (first row). This is consistent with our initial results on augmentation (see section `Augmenting the learning environment'). Further, the control (zero-shot reasoning) condition that never saw $T^{*}$ noun phrases in training generalizes well to all the test examples with $T^{*}$ noun phrases (first column). This is consistent with our results on zero-shot generalization (see section `Zero-shot reasoning'). 
+\subsection{Results}
 
-We now turn to generalization performance when tokens were seen before but only in a specific context (second and third columns in Table \ref{tab:comb}). We discuss the results for the model Exposed--$C_{1}T^{*}$ (that saw $T^{*}$ noun phrases in $C_{1}$ type comparisons), a symmetric discussion applies also to Exposed--$C_{2}T^{*}$.  W found that Exposed--$C_{1}T^{*}$ performs well on held-out test examples from the $C_{1}T^{*}$ category (99.7 \%) -- as consistent with our original experiments with augmentation. However, we found that it fails to generalize very well to $T^{*}$ type noun phrases in the $C_{2}$ context, with a significant drop in performance (67.71 \%). The crucial comparison is that this low performance is also significantly worse that that of the zero-shot control on the same test set (95.78 \%). Neither of these have seen $T^{*}$ phrases in the $C_{2}$ context -- yet the control generalizes very well, while the Exposed--$C_{1}T^{*}$ fails to. This indicates that while the representations learned can generalize well to previously unseen tokens, this generalization is poorer to tokens that have in fact been seen before, but only in a different context.
+Seven participants did not respond on time to more than a half of all queries and were therefore excluded from the following analysis.
 
-This indicates that our representations do learn something akin to belief bias, where the context in which tokens have been seen (even within the right syntactic category) can influence how abstract logical rules (like in Table \ref{tab:rules}) generalize to them. This suggests potential directions for research on modeling how belief bias in humans arises. However, it is crucial to point out that although humans do exhibit such context tying, the effects are mostly observed in children \citep{evans1995belief} and under time pressure / cognitive load \citep{evans2005rapid}. The co-existence of such a fast heuristic strategy (that potentially suffers from belief bias), and a slower deliberative strategy (that can perform abstract reasoning) is a well-studied and popular model for representations and decision rules in humans \citep{evans2005rapid, kahneman2011thinking, groves1970habituation}. Thus, although people have a tendency towards belief bias, they are able to overcome it and engage in abstract reasoning, which our machine-learned representations cannot do.
+We again found that probability judgments for $\mathcal{Q}1$ in the typically unpacked queries were higher than in the unpacked condition (subadditivity effect: $t(92)=4.67$, $p<0.001$) and that probability judgments in the atypically unpacked condition were lower than in the unpacked condition (superadditivity effect: $t(92)=3.25$, $p<0.01$).
 
-This raises a new concern about the scalability of augmentation as a general approach to learning systematic representations in such tabula rasa machine-learning systems. There are infinitely many possible sentences that all follow the rules of syntax, so observing tokens in contexts that one has not often seen them in, but where they are syntactically valid, is likely to occur often. Our new findings show that while zero-shot reasoning to previously unobserved tokens works in certain cases, these tabula rasa systems may tie an observed token to the small fraction of contexts in which it has been seen. This hinders generalization to cases where this token occurs in a new context. In order for every token to have been observed in every context, a combinatorially large amount of augmented training data would be required, potentially making this approach unfeasible for achieving the kinds of systematic representations humans have.
- 
-\section{Discussion and Future Work}
+Analyzing the probability judgments for $\mathcal{Q}2$, we found a significant subadditivity effect ($(t(92)=2.28$, $p<0.05$) but not a significant superadditivity effect ($56.06$ vs. $55.31$; $t(92)=0.07$,$p=0.94$).
 
-In this paper, we carried out a case study in the use of methods from cognitive science and psycholinguistics to better understand machine-learned representations. We developed minimal cases in a natural language inference task that test for some aspects of abstract relational structure in sentences. We used this diagnostic tool on large-scale state-of-the-art sentence embeddings \citep{Conneau:2017uf} to not only demonstrate its lack of abstract composable structure, but also provide insight into the representations and decision criteria actually learned. This approach led us to isolate the use of some simple heuristics, which we then traced to structural regularities in the training distribution. This allowed us to demonstrate the strong effect the training data has on the representations learned. We then augmented this training environment with so-called adversarial examples such that simple heuristics like the ones we found are no longer ecologically valid. We found that such augmentation leads the system to learn some forms of abstract relational structure. Notably, we found that one of the traditional holy grails of systematicity ---zero-shot generalization of learned rules to new, previously unseen words---can be partially  achieved using appropriate augmentation. Further tests, however, revealed limitations to the breadth of this generalization. We found that while zero-shot generalization to previously unseen words works, generalizations to words that have previously been seen in a different context, suffers. This gives us another measure for the extent of systematicity in representations---a phenomena we call `context-tying'. We discussed the relationship between this effect and findings in human cognitive psychology where semantic beliefs about the real-world can interfere with flexible inferences supported by abstract logical representations \citep{evans2013psychology}. This parallel suggests new ways to model this psychological phenomena \citep{dasgupta2019theory}. The presence of context-tying in the machine-learned representations indicates that combinatorially large amounts of augmentation will likely be required for a tabula rasa unstructured neural network model to learn an entirely systematic representation from data. 
-% This points to the value of utilizing insights from the study of such representations in humans to build in appropriate inductive biases \citep{lake18}.
+As before, we calculated the difference between each participant's response to every query during $\mathcal{Q}1$ and the overall mean response for the same query object in the packed condition. This difference was entered as the dependent variable into a linear mixed-effects regression model with participants and queried object as random effects and condition as fixed effect. The resulting estimates showed both a significant subadditivity effect ($\text{difference}=14.39\pm1.97$, $t(189.84)=7.31$, $p<0.0001$) and a superadditivity effect ($-13.72\pm1.98$, $t(190.18)=-6.941$, $p<0.0001$). Repeating this analysis for responses to $\mathcal{Q}2$ revealed a significant amortization effect for the typically unpacked condition ($\text{difference}=5.21\pm1.90$, $t(191)=2.74$, $p<0.05$) but not for the atypically unpacked condition ($\text{difference}=-2.49\pm1.91$, $t(191.52)=-1.303$ $p=0.19$). 
 
-These results suggest many directions for future work. We showed how the issue of context-tying bodes poorly for the scalability of using only training set augmentations to achieve human-like systematic representations. Recent work, however, suggests such adversarial mechanisms in the human brain \citep{gershman2019generative}. This motivates further research on how this approach might be made more scalable. We studied the representations learned from a fixed amount of augmentation and training. An important step forward is to better understand how systematicity in these representations evolves over the course of augmented training, and exactly how much augmentation is really needed. Another important problem is to understand what augmentations work best. To that end, a promising direction is to integrate our approach, where augmentations are generated using existing knowledge about analogous representations in humans, with approaches that learn to generate such adversarial augmentations \citep{kang2018adventure,goodfellow2014explaining, zhao2017generating}.
+\begin{figure}
+\centering
+\includegraphics[width=0.8\textwidth]{figures/amo3results.pdf}
+\caption{Experiment 3: Differences between $\mathcal{Q}2$ responses for each condition and an average packed baseline. A negative relative mean estimate indicates a superadditivity effect and a positive relative mean estimate a subadditivity effect. Error bars represent the standard error of the mean.}
+\label{fig:meandiffs3}
+\end{figure}
+%\FloatBarrier
 
-Human infants are not as tabula rasa as models like InferSent but rather encode useful inductive biases \citep{mitchell1980need, pearl2016statistical, chomsky2002syntactic, lightfoot1984language, seidenberg1997language}. Building such biases into our models \citep{lake18, gandhi2019mutual, dubey2018investigating, battaglia2018relational} is a promising direction towards scalably learning systematic representations. We also showed how analysis and controlled testing for heuristic strategies in the learning environment can provide rich insights into the representations learned. Such analyses could also be used to improve learning and subsequent performance by leveraging this underlying structure \citep{csimcsek2013linear, csimcsek2016most, gigerenzer1999simple, martignon2002fast}. Finally, we leverage methods from cognitive psychology to introduce a new structured test dataset (the Comparisons dataset) as well as a new metric (context-tying) for sentence representations. Rather than the traditional single-dimensional metrics of the accuracy achieved on ad-hoc test datasets, our approach provides insights into the kinds of mistakes made and therefore a more principled and nuanced ways to benchmark artificial systems against humans \citep{white2017inference, marelli2014semeval, lake17, linzen2016assessing, mccoy2019right, glockner2018breaking}. A metric like context-tying is not bound to the domain of language, and can also be used to benchmark systematicity in other domains that benefit from abstract compositional representations -- like scene understanding \citep{ommer2009learning, johnson2017clevr} or structured planning \citep{burridge1999sequential, singh1992transfer}. Future work should pursue other such diagnostic metrics, to build towards a comprehensive suite of testable criteria for exactly what constitutes human-like representations, and also to further inform which aspects of these we wish to emulate in artificial systems.
+For the dissimilar cues, we did not find statistical evidence for an effect of subadditivity ($t(49)=1.31$, $p=0.19$) or superaditivity ($t(47)=-0.27$, $p=0.79$). However, for the similar cues at $\mathcal{Q}2$, the effect for the typically unpacked condition was significantly different from 0 (subadditivity effect: $t(47)=3.30$, $p<0.01$), whereas there was again no superadditivity effect ($t(48)=0.54$, $p=0.59$). The difference between the size of the subadditivity effect was marginally bigger for the similar cues as compared to the dissimilar cues ($t(36)=1.83$, $p=0.07$) and the overall effect size of the similar cues was $d=0.17$, whereas the effect size for the dissimilar cues was $d=0.11$.
 
-% \ndg{this final paragraph is largey redundant with the above, and kind of a flat ending. maybe replace it with a shorter speculation toward future work and implications?}
-% Our main contributions are 1) to show a proof-of-concept of how methods from cognitive psychology can be applied to understanding representations in artificial systems, particularly those trained for high level cognitive functions like language which cognitive scientists have studied for decades, 2) to show how this approach can build mutually-benefical bridges between the two literatures -- for example studies in psychology of ecological rationality and belief bias can inspire new experiments to further analyze the representations learned by these systems, and the fact that these phenomena also show up in fully engineered artificial systems provides inroads to study and model these effects in humans, and 3) to find and introduce tangible tests and measures, like the extent of `context-tying', that allow a more nuanced understanding of what it means to achieve systematicity.
+The difference between judgments and the true probabilities was correlated between $\mathcal{Q}1$ and $\mathcal{Q}2$ ($r=0.34$, $p<0.001$), for the packed ($r=0.43$, $p<0.001$), the typically unpacked ($r=0.43$, $p<0.001$), but not the atypically unpacked condition ($r=0.20$, $p=0.3$); see Figure \ref{fig:correspondence3}. Participants who showed higher subadditivity or superadditivity effects for $\mathcal{Q}1$ also showed higher effects for $\mathcal{Q}2$ overall ($r=0.29$, $p<0.001$), for the typically unpacked condition ($r=0.39$, $p<0.001$), but not for the atypically unpacked condition ($r=0.11$, $p=0.29$).
+
+\begin{figure}%[ht!]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/exp3correspondence.pdf}
+\caption{Trial-by-trial analyses of Experiment 3. Relationship between difference between $\mathcal{Q}1$ responses and true probability (as assessed by our MCMC model) and $\mathcal{Q}2$ responses and true probability. Lines show the least-squares fit with standard error bands.}
+\label{fig:correspondence3}
+\end{figure}
+
+\subsection{Discussion}
+
+Experiment 3 assessed the strategic nature of amortization by manipulating the similarity between cues, which presumably affected the degree to which amortization is useful. We found a stronger subadditivity effect for similar cues compared to dissimilar cues, indicating that reuse is at least partially sensitive to similarity.
+
+An unexpected finding was that while the superadditivity effect in aytpically-unpacked $\mathcal{Q}1$ was significant, neither the memory-based superadditivity effect (in $\mathcal{Q}2$) nor correlations across the queries for atypically-unpacked $\mathcal{Q}1$ were significant. This indicates that the answers to the atypically-unpacked $\mathcal{Q}1$ are not detectably being reused in $\mathcal{Q}2$ in this experiment. However, in Experiments 1 and 2, the atypically-unpacked answers seem to be reused (as indicated by a robust memory-based superadditivity effect, and correlations across the queries) \emph{when the cue object remains the same}. 
+This may be because the extent of rational reuse here (where the cues change) is smaller than in previous experiments (where the cues remained the same) and therefore harder to detect. 
 
 
-% This indicates that without building in to some extent the kinds of structures we know, from studies in psychology and linguistics, to exist in language, it may be unrealistic for vector space models to learn, with finite data, the abstract representations required for the most general form of human-like language understanding.
+\section{General Discussion}
+
+We tested a model of amortized hypothesis generation across 3 experiments and found that participants not only exhibited subadditive and superadditive probability judgments in the same paradigm \citep[replicating][]{dasgupta17}, but also carried over these effects to subsequent queries---a memory effect on inference. Experiment 2 demonstrated that this memory effect is some function of the hypotheses generated in the first query and made some inroads into trying to understand this function. We found that the effect is stronger when cognitive load is applied to the first query, suggesting that the memory effect is driven by a form of summary-based amortization, whereby a summary statistic of the first query is computed from the samples and then reused to answer subsequent queries, provided they can be expressed in terms of previous computations. Summary-based amortization gives up some flexibility (compared to reusing the raw samples generated by past inferences), in order to gain memory-efficiency. Experiment 3 demonstrated that the memory effect selectively occurs when the queries are similar, indicating that reuse is deployed specifically when it is likely to be useful.
+
+Building on earlier results \citep{gershman2014amortized}, our findings support the existence of a sophisticated inference engine that adaptively exploits past computations. While reuse can introduce error, this error may be a natural consequence of a resource-bounded system that optimally balances accuracy and efficiency \citep{lieder2012burn,vul2014one,griffiths2015,gershman2015computational}. The incorporation of reuse into a Monte Carlo sampling framework allows the inference engine to preserve asymptotic exactness while improving efficiency in the finite-sample regime.
+
+\subsection{Related work}
+
+This work fits into a larger nexus of ideas exploring the role of memory in inductive reasoning. Heit, Hayes and colleagues have carried out a number of studies that make this link explicit \citep{heit2011predicting,hayes2013relationship,hayes2013similar,hawkins2016dynamic}. For example, \citet{heit2011predicting} developed a task in which participants studied a set of exemplars (large dogs that all possess ``beta cells'') and then on a test set of exemplars (consisting of large and small dogs) made either property induction judgments (``does this dog have beta cells?'') or recognition memory judgments (``did this dog appear in the study phase?''). The key finding was that property induction and recognition memory judgments were strongly correlated across items, supporting the hypothesis that both judgments rely on a shared exemplar similarity computation: test exemplars are judged to be more familiar, and have the same latent properties, to the degree that they are similar to past exemplars. Heit and Hayes showed that both judgments could be captured by the same exemplar model, but with a broader generalization gradient for induction.
+
+Another example of memory effects on inference is the observation that making a binary decision about a noisy stimulus (whether dots are moving to the left or right of a reference) influences a subsequent continuous judgment about motion direction \citep{jazayeri2007new}. Stocker and colleagues \citep{stocker2008bayesian,luu2016choice} refer to this as ``conditioned perception''' or ``self-consistent inference'' because it appears as though observers are conditioning on their decision as they make a choice. \citet{fleming2017self} have pushed this idea further, arguing that observers condition on their own confidence about the decision. Self-consistent inferences may reflect rational conditioning on choice or confidence information when a memory trace of the stimulus is unavailable or unreliable.
+
+
+Another important consideration for the study of amortization is the utility conferred by reuse rather than simply the efficiency. Previous work has explored resource-rational solutions to balancing the utility of events with their probability of occurrence \citep{lieder2018overrepresentation, gershman2010neural,lieder2012burn,vul2014one}. These have successfully modeled effects such as the over-representation of low frequency events with extreme utilities, indicating a possible role for utility in availability for subsequent reuse.
+
+An intriguing explanation of order effects has been reported by Wang and colleagues \citep{wang2013quantum,wang2014context}. The key idea, derived from a quantum probability model of cognition \citep[see also][]{trueblood2011quantum}, is that answering a question will cause the corresponding mental state to linger and thus ``superpose'' with the mental state evoked by a second question. This superposition gives rise to a particular symmetry in the pattern of judgments when question order is manipulated, known as the \emph{quantum question order equality} \citep[see][for details]{wang2013quantum}. Our amortization framework does not intrinsically make this prediction, but nor does it necessarily exclude it. Rather, we prefer to think about superposition states as arising from computational principles governing a computation-flexibility trade-off. Roughly speaking, states superpose in our framework because the inference engine is reusing information from past queries.
+
+Recently, \citet{costello18} pointed out that the quantum question order equality could arise from rational probabilistic reasoning corrupted by correlated noise. In particular, answers to a probabilistic query will be corrupted by samples retrieved recently to answer another probabilistic query \citep[similar to the concept of ``overgeneralization'' in probabilistic estimation, as developed in][]{marchiori15}. \citet{costello18} view this as a kind of priming effect. Alternatively, correlated noise would arise in the amortized inference framework due to stochastic reuse. Thus, amortization might provide a complementary rational analysis for the ``probability theory plus noise'' model proposed by \citet{costello18}.
+
+Most closely related to the present paper is the work of Dougherty and colleagues \citep{Dougherty1999,Thomas2008,thomas2014memory,dougherty2003hypothesis,dougherty2003probability}, who have pursued the idea that probability judgments depend on the generation of hypotheses from memory. In particular, they argue that subadditivity arises from the failure to generate hypotheses, much like the account offered by \citet{dasgupta17}, and that this failure is exacerbated by cognitive load or low working memory capacity. The key difference from our account is the particular way in which memories are used to generate hypotheses. For combinatorial hypothesis spaces like the scene inference task used here and by \citet{dasgupta17}, one cannot assume that all the relevant hypotheses are already stored in memory; rather, these must be generated on the fly---a function we ascribe to MCMC sampling, 
+
+where new hypotheses that have never been seen before can be generated from a probabilistic generative model, and only these generated samples need be stored for the purposes of inference. The present paper asserts a more direct role for memory within a sampling framework, by controlling the trade-off between computation and flexibility.
+
+This trade-off mirrors a similar tension in reinforcement learning, where the goal is to estimate long-term reward \citep{daw2005uncertainty,daw2011model,kool2017cost}. ``Model-based'' algorithms estimate long-term reward by applying tree search or dynamic programming to a probabilistic model of the environment. This is flexible, but computationally expensive. ``Model-free'' algorithms avoid this cost by directly estimating long-term rewards by interacting with the environment, storing these estimates in a look-up table or function approximator. This is computationally cheap but inflexible. In other words, model-free algorithms trade time for space, much in the same way that amortized inference uses memory to reduce the cost of approximate inference. Analogous to our proposed summary-based amortization strategy, recent work has suggested that model-free value estimates can be incorporated into model-based tree search algorithms \citep{keramati2016adaptive}, thus occupying a middle ground in the time-space trade-off.
+
+\subsection{Future directions}
+
+Our work has focused on fairly simple forms of amortization. There exists a much larger space of more sophisticated amortization strategies developed in the machine learning literature \citep[e.g.,][]{stuhlmuller2013learning,rezende2014stochastic} that we have not yet explored. Finding behaviorally distinguishable versions of these algorithms is an interesting challenge. These versions could take the form of reuse in much more abstract ways, such as developing strategies and heuristics, instead of just local reuse in a sequence of queries. We believe that further examining established effects of heuristics and biases through the lens of computational rationality will continue to produce interesting insights into principles of cognition.
+
+More broadly, we are still lacking a comprehensive, mechanistic theory of amortized inference. What objective function is being optimized by amortization? 
+How are the computational trade-offs managed algorithmically? What are the contributions of different memory mechanisms (episodic, semantic, procedural, etc.)? Answering these questions will require a more general theoretical treatment than the one offered here. Nonetheless, our experiments provide important constraints on any such theory.
+
+\subsection*{Acknowledgments}
+
+We thank Kevin Smith for helpful comments and discussions. 
+
+We would also like to thank Mike Oaksford and Michael Dougherty for useful feedback during the review process. This material is based upon work supported by the Center for Brains, Minds and Machines (CBMM), funded by NSF STC award CCF-1231216. E.S. was supported by a postdoctoral fellowship from the Harvard Data Science Initiative.
+
+
+\section*{Appendix}
+\subsection*{Two reuse Schemes}
+The two schemes for reuse described in Figure \ref{fig:changeN}, \emph{summary-based} and \emph{sample-based} amortization, are described below in greater detail. 
+
+
+In \emph{sample-based amortization}, we simply add samples generated in response to one query ($\mathcal{Q}1$) to the sample set for another query ($\mathcal{Q}2$). So if $N_1$ samples were generated in response to $\mathcal{Q}1$, and $N_2$ new samples are generated in response to $\mathcal{Q}2$, in the absence of amortization, the responses to the two queries $\mathcal{Q}1$ and $\mathcal{Q}2$ would be generated as follows:
+
+\begin{align*}
+\textstyle
+P(h_{\mathcal{Q}1}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}1}]\\
+P(h_{\mathcal{Q}2}|d) & \approx \frac{1}{N_2}\sum_{n=1}^{N_2} \mathbb{I}[h_n=h_{\mathcal{Q}2}]\\
+\end{align*}
+
+Under the sample-based amortization scheme, the response to $\mathcal{Q}2$ is given by a calculation carried out over all $N_1 + N_2$ equally weighted samples.
+
+\begin{align*}
+\textstyle
+P(h_{\mathcal{Q}1}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}1}]\\
+P(h_{\mathcal{Q}2}|d) & \approx \frac{1}{N_2 + N_1}  \left( \sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}2}] + \sum_{n=1}^{N_2} \mathbb{I}[h_n=h_{\mathcal{Q}2}] \right)\\
+\end{align*}
+
+Under this scheme, all the computations carried out for $\mathcal{Q}1$ are available for flexible reuse in the computation for $\mathcal{Q}2$. 
+
+In \emph{summary-based amortization}, we reuse a summary statistic computed from $\mathcal{Q}1$. This strategy is only applicable to problems where the answer to $\mathcal{Q}2$ can be expressed as the composition of the answer to $\mathcal{Q}1$, and an additional simpler computation. For example if $\mathcal{Q}1$ is ``What is the probability that there is an object starting with a C in the scene?'', $\mathcal{Q}2$ could be ``What is the probability that there is an object starting with a C or an R in the scene?''. In this case, the $N_1$ samples generated in response to $\mathcal{Q}1$ are summarized into one probability (``the probability of an object starting with C''), $N_2$ new samples are generated in response to a simpler query (``the probability of an object starting with R''), and these two numbers are then composed (in this case simply added) to give the final estimate for $\mathcal{Q}2$ (``the probability of an object starting with C or R''). 
+
+
+\begin{align*}
+\textstyle
+P(h_{\mathcal{Q}1}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}1}]\\
+P(h_{\mathcal{Q}2}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}1}] + \frac{1}{N_2}\sum_{n=1}^{N_2} \mathbb{I}[h_n= (h_{\mathcal{Q}2} - h_{\mathcal{Q}1})]\\
+\end{align*}
+
+
+Under this scheme, only the final product of the computation carried out for $\mathcal{Q}1$ is reused in the calculations for $\mathcal{Q}2$.
