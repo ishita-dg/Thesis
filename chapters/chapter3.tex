@@ -5,7 +5,12 @@
 %\end{savequote}
 
 
+
+
 \chapter{Approximations at run-time}
+\label{chap:MCMC}
+
+because people tend to only generate a small number of hypotheses \citep{klein1999,ross96,Gettys1979,weber1993,dougherty1997}.
 %
 %\newthought{There's something to be said} for having a good opening line. 
 %
@@ -64,7 +69,6 @@ Much of the recent work on probabilistic inference in human cognition has been d
 
 The phenomena listed in Table~\ref{tab:biases} do not yield easily to a purely computational-level analysis, since different choices for the probabilistic model do not account for the systematic errors in approximating them. For this reason, we turn to ``rational process'' models \citep[see][for a review]{Griffiths2012BridgingCognition}, which make explicit claims about the mechanistic implementation of inference. Rational process models are designed to be approximations of the idealized reasoner, but make distinctive predictions under resource constraints. In particular, we explore how sample-based approximations lead to particular cognitive biases in a large space of hypotheses, when the number of samples is limited.
 With an infinite number of samples, different sampling algorithms are indistinguishable as they all converge to the ideal response, but these algorithms display different behaviors at small sample sizes. We narrow the space of candidate sampling algorithms by studying these behaviors and comparing their predictions to observed cognitive biases.
-
 
 
 \subsection{A specific Markov chain Monte Carlo algorithm}

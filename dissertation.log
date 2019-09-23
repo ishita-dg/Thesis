@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  21 SEP 2019 18:54
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  23 SEP 2019 13:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1870,59 +1870,7 @@ Package microtype Info: Character `™' is missing
 Package microtype Info: Character `−' is missing
 (microtype)             in font `\EU1/EBGaramond(1)/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
- [5]
-LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/bx/n' will be
-(Font)              scaled to size 7.0pt on input line 28.
-Package microtype Info: Character `•' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `℃' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `™' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `−' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/7'.
-(microtype)             Ignoring protrusion settings for this character.
-
-
-Package natbib Warning: Citation `neal1993probabilistic' on page 6 undefined on
- input line 28.
-
-[6]
-LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/bx/n' will be
-(Font)              scaled to size 8.0pt on input line 46.
-Package microtype Info: Character `•' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `℃' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `™' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `−' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/8'.
-(microtype)             Ignoring protrusion settings for this character.
-
-
-Package natbib Warning: Citation `blitzstein2014introduction' on page 7 undefin
-ed on input line 46.
-
-
-Package natbib Warning: Citation `holden1998geometric' on page 7 undefined on i
-nput line 46.
-
-
-Package natbib Warning: Citation `holden1998geometric' on page 7 undefined on i
-nput line 48.
-
-[7]
-
-Package natbib Warning: Citation `metropolis1953equation' on page 8 undefined o
-n input line 51.
-
+ [5] [6] [7]
 LaTeX Font Info:    Font shape `EU1/SourceCodePro(0)/m/n' will be
 (Font)              scaled to size 9.35316pt on input line 51.
 Package microtype Info: Loading generic settings for font family
@@ -1930,49 +1878,34 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+
 LaTeX Font Warning: Font shape `EU1/SourceCodePro(0)/m/it' undefined
 (Font)              using `EU1/SourceCodePro(0)/m/n' instead on input line 51.
 
-[8]
-
-Package natbib Warning: Citation `metropolis1953equation' on page 9 undefined o
-n input line 65.
-
-
-Package natbib Warning: Citation `hastings1970monte' on page 9 undefined on inp
-ut line 65.
-
-
-Package natbib Warning: Citation `kirkpatrick1983optimization' on page 9 undefi
-ned on input line 67.
-
-
-Package natbib Warning: Citation `geman1984stochastic' on page 9 undefined on i
-nput line 67.
-
-
-Package natbib Warning: Citation `richey2010evolution' on page 9 undefined on i
-nput line 67.
-
-[9] [10] [11] [12]) [13]
+[8] [9] [10] [11] [12]) [13]
 \openout2 = `chapters/chapter3.aux'.
 
  (./chapters/chapter3.tex
 Chapter 4.
+[14
+
+
+
+]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 39.
+(Font)              scaled to size 12.0pt on input line 44.
 LaTeX Font Info:    Font shape `EU1/Helvetica(0)/bx/n' will be
-(Font)              scaled to size 9.27887pt on input line 39.
+(Font)              scaled to size 9.27887pt on input line 44.
 Package microtype Info: Loading generic settings for font family
 (microtype)             `Helvetica' (encoding: EU1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `EU1/Helvetica(0)/bx/n' will be
-(Font)              scaled to size 7.73239pt on input line 39.
+(Font)              scaled to size 7.73239pt on input line 44.
 LaTeX Font Info:    Font shape `EU1/Helvetica(0)/m/n' will be
-(Font)              scaled to size 9.44348pt on input line 39.
+(Font)              scaled to size 9.44348pt on input line 44.
 LaTeX Font Info:    Font shape `EU1/Helvetica(0)/m/n' will be
-(Font)              scaled to size 7.86957pt on input line 39.
+(Font)              scaled to size 7.86957pt on input line 44.
 .................................................
 . fontspec info: "no-font-shape"
 . 
@@ -2006,15 +1939,16 @@ tex-text;+tnum;+smcp;"-
 =tex-text;+tnum;+smcp;"
 .................................................
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 41.
+(Font)              scaled to size 12.0pt on input line 46.
+
 
 LaTeX Font Warning: Font shape `EU1/EBGaramond(3)/bx/n' undefined
-(Font)              using `EU1/EBGaramond(3)/m/n' instead on input line 43.
+(Font)              using `EU1/EBGaramond(3)/m/n' instead on input line 48.
 
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/bx/n' will be
-(Font)              scaled to size 12.0pt on input line 43.
+(Font)              scaled to size 12.0pt on input line 48.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 45.
+(Font)              scaled to size 8.0pt on input line 50.
 Package microtype Info: Character `•' is missing
 (microtype)             in font `\EU1/EBGaramond(3)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2027,68 +1961,54 @@ Package microtype Info: Character `™' is missing
 Package microtype Info: Character `−' is missing
 (microtype)             in font `\EU1/EBGaramond(3)/m/n/8'.
 (microtype)             Ignoring protrusion settings for this character.
-[14
-
-
-
-] [15] [16] [17] [18] [19] [20]
+[15] [16] [17] [18] [19] [20]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 112.
+(Font)              scaled to size 10.95pt on input line 116.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(3)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 112.
+(Font)              scaled to size 10.95pt on input line 116.
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
 []|\EU1/EBGaramond(3)/bx/n/12 lung
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
 []|\EU1/EBGaramond(3)/bx/n/12 resp.
  []
 
 
-Overfull \hbox (2.79669pt too wide) in paragraph at lines 127--127
+Overfull \hbox (2.79669pt too wide) in paragraph at lines 131--131
 []|\EU1/EBGaramond(3)/bx/n/12 cold| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 127--127
+Underfull \hbox (badness 10000) in paragraph at lines 131--131
 []|\EU1/EBGaramond(3)/bx/n/12 gastro-
  []
 
 
-Overfull \hbox (3.70305pt too wide) in paragraph at lines 127--127
+Overfull \hbox (3.70305pt too wide) in paragraph at lines 131--131
 \EU1/EBGaramond(3)/bx/n/12 enteritis| 
  []
 
 
-Overfull \hbox (5.16705pt too wide) in paragraph at lines 127--127
+Overfull \hbox (5.16705pt too wide) in paragraph at lines 131--131
 []|\EU1/EBGaramond(3)/bx/n/12 stomach
  []
 
 
-Overfull \hbox (5.16705pt too wide) in paragraph at lines 127--127
+Overfull \hbox (5.16705pt too wide) in paragraph at lines 131--131
 []|\EU1/EBGaramond(3)/bx/n/12 stomach
  []
 
 
-Overfull \hbox (2.88069pt too wide) in paragraph at lines 127--128
+Overfull \hbox (2.88069pt too wide) in paragraph at lines 131--132
 []|\EU1/EBGaramond(3)/bx/n/12 base| 
  []
 
 
-Overfull \hbox (3.24069pt too wide) in paragraph at lines 129--129
+Overfull \hbox (3.24069pt too wide) in paragraph at lines 133--133
 []|\EU1/EBGaramond(3)/bx/n/12 0.05| 
- []
-
-
-Overfull \hbox (3.24069pt too wide) in paragraph at lines 131--133
-[]|\EU1/EBGaramond(3)/bx/n/12 0.01| 
- []
-
-
-Overfull \hbox (3.24069pt too wide) in paragraph at lines 133--135
-[]|\EU1/EBGaramond(3)/bx/n/12 0.01| 
  []
 
 
@@ -2122,7 +2042,17 @@ Overfull \hbox (3.24069pt too wide) in paragraph at lines 145--147
  []
 
 
-Overfull \hbox (11.95857pt too wide) in paragraph at lines 122--149
+Overfull \hbox (3.24069pt too wide) in paragraph at lines 147--149
+[]|\EU1/EBGaramond(3)/bx/n/12 0.01| 
+ []
+
+
+Overfull \hbox (3.24069pt too wide) in paragraph at lines 149--151
+[]|\EU1/EBGaramond(3)/bx/n/12 0.01| 
+ []
+
+
+Overfull \hbox (11.95857pt too wide) in paragraph at lines 126--153
  [] 
  []
 
@@ -2130,19 +2060,19 @@ Overfull \hbox (11.95857pt too wide) in paragraph at lines 122--149
 File: figures/sub.pdf Graphic file (type QTm)
  <use  "figures/sub.pdf" >
 LaTeX Font Info:    Font shape `EU1/Helvetica(0)/m/it' will be
-(Font)              scaled to size 7.86957pt on input line 172.
+(Font)              scaled to size 7.86957pt on input line 176.
  [23] [24]
 File: figures/super.pdf Graphic file (type QTm)
  <use  "figures/super.pdf" >
-[25] [26]
+[25] [26] [27]
 File: figures/weak.pdf Graphic file (type QTm)
- <use  "figures/weak.pdf" > [27] [28]
+ <use  "figures/weak.pdf" > [28]
 File: figures/dud.pdf Graphic file (type QTm)
  <use  "figures/dud.pdf" >
 File: figures/confidence.pdf Graphic file (type QTm)
 
 <use  "figures/confidence.pdf" > [29] [30] [31]
-Overfull \hbox (3.35028pt too wide) in paragraph at lines 259--260
+Overfull \hbox (4.79828pt too wide) in paragraph at lines 263--264
 []\EU1/EBGaramond(1)/bx/n/10.95 Lieder et al.$[]$$[]$$[]$ showed that the ancho
 ring and adjustment heuristic is a basic consequence of MCMC
  []
@@ -2153,55 +2083,56 @@ File: figures/anchoring.pdf Graphic file (type QTm)
 File: figures/error.pdf Graphic file (type QTm)
  <use  "figures/error.pdf" >
 [35] [36]
-Overfull \hbox (6.7148pt too wide) in paragraph at lines 301--302
+Overfull \hbox (6.7148pt too wide) in paragraph at lines 305--306
 []\EU1/EBGaramond(1)/bx/n/10.95 The self-generation effect can to some extent b
 e reproduced by importance sampling because prompt-
  []
 
-[37] [38]
-Overfull \hbox (4.85332pt too wide) in paragraph at lines 325--326
+[37] [38] [39]
+Overfull \hbox (4.85332pt too wide) in paragraph at lines 329--330
 []\EU1/EBGaramond(1)/bx/n/10.95 Due to the relative complexity of this domain (
 compared to the simplified fictitious disease-symptom
  []
 
-[39] [40] [41]
-Overfull \hbox (7.01782pt too wide) in paragraph at lines 379--380
+[40]
+Overfull \hbox (7.01782pt too wide) in paragraph at lines 383--384
 []\EU1/EBGaramond(1)/bx/n/10.95 On every trial, participants first saw the cue 
 object, followed by a hypothesis (either packed, unpacked-
  []
 
 File: figures/screenshot.png Graphic file (type QTm)
-<use  "figures/screenshot.png" > [42]
+<use  "figures/screenshot.png" > [41] [42] [43]
 File: figures/estimates.pdf Graphic file (type QTm)
- <use  "figures/estimates.pdf" > [43]
-Overfull \hbox (35.06151pt too wide) in paragraph at lines 425--434
+
+<use  "figures/estimates.pdf" > [44]
+Overfull \hbox (35.06151pt too wide) in paragraph at lines 429--438
  [] 
  []
 
-[44] [45]
+[45]
 File: figures/estimate2new.pdf Graphic file (type QTm)
- <use  "figures/estimate2new.pdf" > [46]
-Overfull \hbox (1.92233pt too wide) in paragraph at lines 462--463
+ <use  "figures/estimate2new.pdf" > [46] [47]
+Overfull \hbox (1.92233pt too wide) in paragraph at lines 466--467
 []\EU1/EBGaramond(1)/bx/n/10.95 Prior studies suggest that—when averaged over l
 ong time periods or across individuals—probability
  []
 
-[47]
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--480
 []|\EU1/EBGaramond(3)/bx/n/12 Importance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--476
+Underfull \hbox (badness 10000) in paragraph at lines 480--480
 []|\EU1/EBGaramond(3)/bx/n/12 Global proposal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--478
+Underfull \hbox (badness 10000) in paragraph at lines 480--482
 []|\EU1/EBGaramond(3)/bx/n/12 Local proposal
  []
 
-[48] [49]) [50]
+[48] [49] [50]) [51]
 \openout2 = `chapters/chapter4.aux'.
 
  (./chapters/chapter4.tex
@@ -2213,26 +2144,26 @@ hat human brains are equipped with a general-purpose
  []
 
 
-Overfull \hbox (55.28891pt too wide) in paragraph at lines 16--17
+Overfull \hbox (56.40892pt too wide) in paragraph at lines 16--17
 \EU1/EBGaramond(1)/bx/n/10.95 though many theories posit some form of approxima
 te inference using Monte Carlo sampling e.g.,$[]$.
  []
 
-[51
+[52
 
 
 
 ]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 26.
- [52]
-Overfull \hbox (4.57169pt too wide) in paragraph at lines 30--31
+ [53]
+Overfull \hbox (5.37968pt too wide) in paragraph at lines 30--31
 []\EU1/EBGaramond(1)/bx/n/10.95 Amortization has a long history in machine lear
 ning; the \EU1/EBGaramond(1)/m/it/10.95 locus classicus \EU1/EBGaramond(1)/bx/n
 /10.95 is the Helmholtz machine$[]$,
  []
 
-[53] [54] [55] [56]
+[54] [55] [56] [57]
 File: figures/Remembrance_figs_2.pdf Graphic file (type QTm)
  <use  "figures/Remembrance_figs_2.pdf" >
 LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/bx/n' will be
@@ -2245,7 +2176,7 @@ File: figures/Remembrance_figs_4.pdf Graphic file (type QTm)
 <use  "figures/Remembrance_figs_4.pdf" >
 File: figures/Remembrance_figs_5.pdf Graphic file (type QTm)
 
-<use  "figures/Remembrance_figs_5.pdf" > [57] [58] [59]
+<use  "figures/Remembrance_figs_5.pdf" > [58] [59] [60]
 File: figures/amortization_schematic.pdf Graphic file (type QTm)
 
 <use  "figures/amortization_schematic.pdf" >
@@ -2257,30 +2188,30 @@ LaTeX Font Info:    Font shape `EU1/Helvetica(0)/m/n' will be
 (Font)              scaled to size 5.5087pt on input line 127.
 LaTeX Font Info:    Font shape `EU1/Helvetica(0)/m/n' will be
 (Font)              scaled to size 3.93478pt on input line 127.
- [60] [61]
+ [61] [62]
 File: figures/changingN.pdf Graphic file (type QTm)
 
-<use  "figures/changingN.pdf" > [62] [63] [64]
+<use  "figures/changingN.pdf" > [63] [64] [65]
 File: figures/screenshot.png Graphic file (type QTm)
 
-<use  "figures/screenshot.png" > [65]
+<use  "figures/screenshot.png" > [66]
 Overfull \hbox (6.75421pt too wide) in paragraph at lines 209--209
 []|\EU1/EBGaramond(3)/bx/n/12 Telephone| 
  []
 
-[66]
+[67]
 Overfull \hbox (1.20345pt too wide) in paragraph at lines 232--234
 []\EU1/EBGaramond(1)/bx/n/10.95 Additionally, we found evidence that participan
 ts reused calculations from $\OMS/cmsy/m/n/10.95 Q[]$ \EU1/EBGaramond(1)/bx/n/1
 0.95 for $\OMS/cmsy/m/n/10.95 Q[]$\EU1/EBGaramond(1)/bx/n/10.95 : even though
  []
 
-[67]
+[68]
 File: figures/amo1results.pdf Graphic file (type QTm)
- <use  "figures/amo1results.pdf" > [68] [69]
+ <use  "figures/amo1results.pdf" > [69] [70]
 File: figures/exp1correspondence.pdf Graphic file (type QTm)
 
-<use  "figures/exp1correspondence.pdf" > [70] [71]
+<use  "figures/exp1correspondence.pdf" > [71] [72]
 Underfull \hbox (badness 10000) in paragraph at lines 283--284
 []|$\OMS/cmsy/m/n/12 Q[]$ \EU1/EBGaramond(1)/bx/n/12 No
  []
@@ -2290,12 +2221,12 @@ Overfull \hbox (6.75421pt too wide) in paragraph at lines 287--287
 []|\EU1/EBGaramond(3)/bx/n/12 Telephone| 
  []
 
-[72]
+[73]
 File: figures/amo2results.pdf Graphic file (type QTm)
- <use  "figures/amo2results.pdf" > [73] [74] [75]
+ <use  "figures/amo2results.pdf" > [74] [75] [76]
 File: figures/exp2correspondence.pdf Graphic file (type QTm)
 
-<use  "figures/exp2correspondence.pdf" > [76] [77]
+<use  "figures/exp2correspondence.pdf" > [77] [78]
 Underfull \hbox (badness 10000) in paragraph at lines 359--359
 []|\EU1/EBGaramond(1)/bx/n/12 Cue2-sim
  []
@@ -2335,9 +2266,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 366--367
 []|\EU1/EBGaramond(3)/bx/n/12 Sidewalk
  []
 
-[78] [79]
+[79] [80]
 File: figures/amo3results.pdf Graphic file (type QTm)
- <use  "figures/amo3results.pdf" > [80]
+ <use  "figures/amo3results.pdf" > [81]
 File: figures/exp3correspondence.pdf Graphic file (type QTm)
 
 <use  "figures/exp3correspondence.pdf" >
@@ -2347,28 +2278,28 @@ Overfull \hbox (1.662pt too wide) in paragraph at lines 404--406
 s to the atypically-unpacked
  []
 
-[81] [82] [83] [84] [85] [86]) [87] [88]
+[82] [83] [84] [85] [86] [87]) [88] [89]
 \openout2 = `chapters/chapter5.aux'.
 
  (./chapters/chapter5.tex
 Chapter 6.
-[89
+[90
 
 
 
-] [90] [91]
-Overfull \hbox (11.95667pt too wide) in paragraph at lines 35--36
+] [91] [92]
+Overfull \hbox (12.40466pt too wide) in paragraph at lines 35--36
 []\EU1/EBGaramond(1)/bx/n/10.95 The earliest studies of probabilistic belief up
 dating, carried out by Ward Edwards and his students$[]$,
  []
 
-[92] [93] [94] [95] [96] [97]
+[93] [94] [95] [96] [97] [98]
 Overfull \hbox (3.55025pt too wide) in paragraph at lines 84--85
 []\EU1/EBGaramond(1)/bx/n/10.95 In summary, the literature on probabilistic bel
 ief updating has produced evidence for under-reaction
  []
 
-[98] [99] [100]
+[99] [100] [101]
 File: Figures/memoryless0.png Graphic file (type QTm)
  <use  "Figures/memoryless0.png" >
 File: Figures/amortized0.png Graphic file (type QTm)
@@ -2378,17 +2309,17 @@ File: Figures/LIM1.png Graphic file (type QTm)
  <use  "Figures/LIM1.png" >
 File: Figures/LIM5.png Graphic file (type QTm)
 
-<use  "Figures/LIM5.png" > [101] [102]
+<use  "Figures/LIM5.png" > [102] [103]
 File: Figures/all_posts.png Graphic file (type QTm)
  <use  "Figures/all_posts.png" >
 File: Figures/all_finalQs.png Graphic file (type QTm)
 
 <use  "Figures/all_finalQs.png" >
 File: Figures/all_KLs.png Graphic file (type QTm)
- <use  "Figures/all_KLs.png" > [103] [104]
-[105]
+ <use  "Figures/all_KLs.png" > [104] [105]
+[106]
 
-LaTeX Warning: Reference `fig:Benj' on page 106 undefined on input line 185.
+LaTeX Warning: Reference `fig:Benj' on page 107 undefined on input line 185.
 
 File: Figures/Benjamin_hor_new.pdf Graphic file (type QTm)
 <use  "Figures/Benjamin_hor_new.pdf" >
@@ -2396,74 +2327,80 @@ Overfull \hbox (11.77364pt too wide) in paragraph at lines 202--203
  [][] 
  []
 
-[106]
+[107]
 File: figures/Benjamin_prior.pdf Graphic file (type QTm)
  <use  "figures/Benjamin_prior.pdf" >
 
-LaTeX Warning: Reference `fig:Benj' on page 107 undefined on input line 219.
+LaTeX Warning: Reference `fig:Benj' on page 108 undefined on input line 219.
 
 File: figures/Benjamin_control_hor.pdf Graphic file (type QTm)
 <use  "figures/Benjamin_control_hor.pdf" >
 
-LaTeX Warning: Reference `fig:Benj' on page 107 undefined on input line 230.
+LaTeX Warning: Reference `fig:Benj' on page 108 undefined on input line 230.
 
-[107] [108] [109] [110] [111]
+[108] [109] [110] [111] [112]
 File: figures/GT_fulltrain.pdf Graphic file (type QTm)
- <use  "figures/GT_fulltrain.pdf" > [112]
+ <use  "figures/GT_fulltrain.pdf" > [113]
 File: figures/GT_rsquare_sample.pdf Graphic file (type QTm)
 
 <use  "figures/GT_rsquare_sample.pdf" >
 File: figures/GT_rsquare_stimuli.pdf Graphic file (type QTm)
 
-<use  "figures/GT_rsquare_stimuli.pdf" > [113] [114]
+<use  "figures/GT_rsquare_stimuli.pdf" > [114] [115]
 File: figures/urns.png Graphic file (type QTm)
 
-<use  "figures/urns.png" > [115] [116]
+<use  "figures/urns.png" > [116] [117]
 File: figures/resulturns.pdf Graphic file (type QTm)
  <use  "figures/resulturns.pdf" >
-[117] [118] [119]
+[118] [119] [120]
 File: figures/FC_temp.pdf Graphic file (type QTm)
- <use  "figures/FC_temp.pdf" > [120] [121]
+ <use  "figures/FC_temp.pdf" > [121] [122]
 
-LaTeX Warning: Reference `fig:Benj' on page 122 undefined on input line 365.
+LaTeX Warning: Reference `fig:Benj' on page 123 undefined on input line 365.
 
-[122] [123]
+[123] [124]
 File: figures/samexp.pdf Graphic file (type QTm)
  <use  "figures/samexp.pdf" >
 File: figures/samsim.pdf Graphic file (type QTm)
- <use  "figures/samsim.pdf" > [124]
+ <use  "figures/samsim.pdf" > [125]
 
-LaTeX Warning: Reference `fig:Benj' on page 125 undefined on input line 392.
+LaTeX Warning: Reference `fig:Benj' on page 126 undefined on input line 392.
 
-[125]
+[126]
 File: figures/cohenetal.pdf Graphic file (type QTm)
- <use  "figures/cohenetal.pdf" > [126] [127]
+ <use  "figures/cohenetal.pdf" > [127] [128]
 Underfull \hbox (badness 10000) in paragraph at lines 422--426
 
  []
 
-[128]
+[129]
 File: figures/amonew.pdf Graphic file (type QTm)
- <use  "figures/amonew.pdf" > [129] [130] [131] [132] [133]
+ <use  "figures/amonew.pdf" > [130] [131] [132] [133] [134]
 File: figures/correctionprior2.pdf Graphic file (type QTm)
 
-<use  "figures/correctionprior2.pdf" > [134] [135] [136] [137] [138] [139]
-[140] [141] [142] [143] [144] [145] [146] [147] [148]
-File: figures/samstan.pdf Graphic file (type QTm)
+<use  "figures/correctionprior2.pdf" > [135] [136] [137] [138] [139] [140]
+[141] [142] [143]
+Overfull \hbox (5.03397pt too wide) in paragraph at lines 533--534
+\EU1/EBGaramond(1)/bx/n/10.95 heuristics$[]$. Studying judgment errors across d
+omains where participants vary in pre-experimental
+ []
 
-<use  "figures/samstan.pdf" > [149]) [150]
+[144] [145] [146] [147] [148] [149]
+File: figures/samstan.pdf Graphic file (type QTm)
+ <use  "figures/samstan.pdf" > [150])
+[151]
 \openout2 = `chapters/chapter6.aux'.
 
  (./chapters/chapter6.tex
 Chapter 7.
-[151
+[152
 
 
 
-] [152] [153] [154] [155] [156]
+] [153] [154] [155] [156] [157]
 File: figures/InferSent_arch.png Graphic file (type QTm)
  <use  "figures/InferSent_arch.png" >
-[157] [158] [159] [160] [161] [162]
+[158] [159] [160] [161] [162] [163]
 File: figures/bow-same-large.png Graphic file (type QTm)
  <use  "figures/bow-same-large.png" >
 File: figures/bow-ml-large-5.png Graphic file (type QTm)
@@ -2479,7 +2416,7 @@ File: figures/infersent-ml-large-2.png Graphic file (type QTm)
 <use  "figures/infersent-ml-large-2.png" >
 File: figures/infersent-not-large.png Graphic file (type QTm)
 
-<use  "figures/infersent-not-large.png" > [163] [164] [165]
+<use  "figures/infersent-not-large.png" > [164] [165] [166]
 Overfull \hbox (16.56363pt too wide) in paragraph at lines 219--221
 \EU1/SourceCodePro(0)/m/it/10.95 Premise: A man in a white t-shirt takes a pict
 ure in the middle of the street
@@ -2490,13 +2427,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 219--221
 
  []
 
-[166]
+[167]
 Overfull \hbox (12.82004pt too wide) in paragraph at lines 240--241
 \EU1/EBGaramond(1)/bx/n/10.95 wards those learned in similar high-overlap setti
 ngs during training. We checked the statistics of antonymy
  []
 
-[167]
+[168]
 Overfull \hbox (5.33987pt too wide) in paragraph at lines 263--265
 \EU1/SourceCodePro(0)/m/it/10.95 Premise: Men turn to the camera to smile on th
 e middle of three long tables
@@ -2507,25 +2444,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 263--265
 
  []
 
-[168] [169] [170] [171] [172] [173] [174] [175] [176] [177] [178] [179]
-[180] [181] [182]) [183]
+[169] [170] [171] [172] [173] [174] [175] [176] [177] [178] [179] [180]
+[181] [182] [183]) [184]
 \openout2 = `chapters/chapter7.aux'.
 
  (./chapters/chapter7.tex
 Chapter 8.
-[184
+[185
 
 
 
-] [185] [186] [187]
-Overfull \hbox (52.26349pt too wide) in paragraph at lines 70--71
+] [186] [187] [188]
+Overfull \hbox (52.43948pt too wide) in paragraph at lines 70--71
 []\EU1/EBGaramond(1)/bx/n/10.95 Causal relationships among random variables can
  be expressed using \EU1/EBGaramond(1)/m/it/10.95 causal Bayesian networks \EU1
 /EBGaramond(1)/bx/n/10.95 (CBNs $\OMS/cmsy/m/n/10.95 G$\EU1/EBGaramond(1)/bx/n/
 10.95 )$[]$.
  []
 
-[188] [189] [190] [191] [192] [193]
+[189] [190] [191] [192] [193] [194]
 Overfull \hbox (3.72375pt too wide) in paragraph at lines 154--156
 []\EU1/EBGaramond(1)/bx/n/10.95 Associative Baseline: This baseline receives th
 e true joint distribution $[]\OT1/cmr/m/n/10.95 ([][])$ \EU1/EBGaramond(1)/bx/n
@@ -2540,13 +2477,13 @@ Overfull \hbox (12.46608pt too wide) in paragraph at lines 162--164
  []
 
 File: figures/fig_expt1.pdf Graphic file (type QTm)
-<use  "figures/fig_expt1.pdf" > [194] [195]
+<use  "figures/fig_expt1.pdf" > [195] [196]
 
-LaTeX Warning: Reference `fig:expt1_conf' on page 196 undefined on input line 2
+LaTeX Warning: Reference `fig:expt1_conf' on page 197 undefined on input line 2
 05.
 
 File: figures/fig_expt2.pdf Graphic file (type QTm)
-<use  "figures/fig_expt2.pdf" > [196]
+<use  "figures/fig_expt2.pdf" > [197]
 File: figures/fig_causal_act_v_pass.pdf Graphic file (type QTm)
 
 <use  "figures/fig_causal_act_v_pass.pdf" >
@@ -2554,21 +2491,21 @@ Overfull \hbox (12.46606pt too wide) in paragraph at lines 231--233
  [][] 
  []
 
-[197] [198] [199]
+[198] [199] [200]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/bx/n' will be
 (Font)              scaled to size 17.28pt on input line 271.
- [200] [201]
+ [201] [202]
 Underfull \hbox (badness 10000) in paragraph at lines 293--298
 
  []
 
-[202]
+[203]
 Overfull \hbox (5.52243pt too wide) in paragraph at lines 335--336
 \EU1/EBGaramond(1)/bx/n/10.95 eration, a Bayesian network expresses both causal
  and statistical relationships among random variables—
  []
 
-[203]
+[204]
 LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/m/n' will be
 (Font)              scaled to size 5.0pt on input line 396.
 Package microtype Info: Character `•' is missing
@@ -2583,9 +2520,9 @@ Package microtype Info: Character `™' is missing
 Package microtype Info: Character `−' is missing
 (microtype)             in font `\EU1/EBGaramond(1)/m/n/5'.
 (microtype)             Ignoring protrusion settings for this character.
- [204] [205] [206]
+ [205] [206] [207]
 File: figures/fig_expt3.pdf Graphic file (type QTm)
- <use  "figures/fig_expt3.pdf" > [207]
+ <use  "figures/fig_expt3.pdf" > [208]
 File: figures/fig_counterfactual_act_v_pass.pdf Graphic file (type QTm)
 
 <use  "figures/fig_counterfactual_act_v_pass.pdf" >
@@ -2594,34 +2531,30 @@ Underfull \hbox (badness 1742) in paragraph at lines 466--466
 ndom
  []
 
-[208]
+[209]
 Underfull \hbox (badness 1776) in paragraph at lines 470--471
 \EU1/EBGaramond(1)/bx/n/10.95 the cases where the maximum values are distinct, 
 however the
  []
 
 File: figures/Nonlinear_results.pdf Graphic file (type QTm)
-<use  "figures/Nonlinear_results.pdf" > [209]
+<use  "figures/Nonlinear_results.pdf" > [210]
 File: figures/N6_results_active.pdf Graphic file (type QTm)
 
-<use  "figures/N6_results_active.pdf" >) [210] (./dissertation.bbl [211
+<use  "figures/N6_results_active.pdf" >) [211] (./dissertation.bbl [212
 
 
 
 ]
-[212] [213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223]
-[224] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235]
-[236] [237] [238] [239] [240])
-
-Package natbib Warning: There were undefined citations.
-
-[241]
+[213] [214] [215] [216] [217] [218] [219] [220] [221] [222] [223] [224]
+[225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235] [236]
+[237] [238] [239] [240] [241]) [242]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
- (./dissertation.aux (./chapters/introduction.aux)
-(./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter3.aux)
-(./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux)
-(./chapters/chapter7.aux))
+ (./dissertation.aux
+(./chapters/introduction.aux) (./chapters/chapter1.aux)
+(./chapters/chapter2.aux) (./chapters/chapter3.aux) (./chapters/chapter4.aux)
+(./chapters/chapter5.aux) (./chapters/chapter6.aux) (./chapters/chapter7.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 47.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 47.
 
@@ -2636,12 +2569,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 41428 strings out of 493591
- 812667 string characters out of 6143546
- 893411 words of memory out of 5000000
- 43991 multiletter control sequences out of 15000+600000
+ 41426 strings out of 493591
+ 812801 string characters out of 6143546
+ 893473 words of memory out of 5000000
+ 43989 multiletter control sequences out of 15000+600000
  14204 words of font info for 128 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 62i,17n,107p,10478b,1272s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,17n,107p,10478b,1270s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on dissertation.pdf (248 pages).
+Output written on dissertation.pdf (249 pages).

@@ -164,6 +164,11 @@ Blei, D.~M., Ng, A.~Y., \& Jordan, M.~I. (2003b).
 \newblock Latent dirichlet allocation.
 \newblock {\em Journal of machine Learning research}, 3(Jan), 993--1022.
 
+\bibitem[Blitzstein \& Hwang, 2014]{blitzstein2014introduction}
+Blitzstein, J.~K. \& Hwang, J. (2014).
+\newblock {\em Introduction to probability}.
+\newblock Chapman and Hall/CRC.
+
 \bibitem[Bonawitz et~al., 2014a]{Bonawitz2014}
 Bonawitz, E., Denison, S., Gopnik, A., \& Griffiths, T.~L. (2014a).
 \newblock {Win-Stay, Lose-Sample: A simple sequential algorithm for
@@ -252,11 +257,6 @@ Carey, S. (2009).
 \newblock {\em The origin of concepts}.
 \newblock Oxford University Press.
 
-\bibitem[Carroll \& Kemp, 2015]{carroll2015}
-Carroll, C.~D. \& Kemp, C. (2015).
-\newblock Evaluating the inverse reasoning account of object discovery.
-\newblock {\em Cognition}, 139, 130--153.
-
 \bibitem[Cartwright, 2004]{cartwright2004causation}
 Cartwright, N. (2004).
 \newblock Causation: One word, many things.
@@ -310,12 +310,12 @@ Costello, F.~J. \& Watts, P. (2018).
 \newblock Invariants in probabilistic reasoning.
 \newblock {\em Cognitive Psychology}, 100, 1--16.
 
-\bibitem[Dasgupta et~al., 2017a]{dasgupta17}
+\bibitem[Dasgupta et~al., 2017a]{dasgupta2017hypotheses}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017a).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
 
-\bibitem[Dasgupta et~al., 2017b]{dasgupta2017hypotheses}
+\bibitem[Dasgupta et~al., 2017b]{dasgupta17}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017b).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
@@ -577,11 +577,6 @@ Fox, C.~R. \& Tversky, A. (1998).
 \newblock A belief-based account of decision under uncertainty.
 \newblock {\em Management Science}, 44(7), 879--895.
 
-\bibitem[Frank \& Goodman, 2012]{frank2012}
-Frank, M.~C. \& Goodman, N.~D. (2012).
-\newblock Predicting pragmatic reasoning in language games.
-\newblock {\em Science}, 336, 998--998.
-
 \bibitem[Friston, 2008]{friston2008hierarchical}
 Friston, K. (2008).
 \newblock Hierarchical models in the brain.
@@ -612,6 +607,13 @@ Geiger, D., Verma, T., \& Pearl, J. (1990).
 Geman, S., Bienenstock, E., \& Doursat, R. (1992).
 \newblock Neural networks and the bias/variance dilemma.
 \newblock {\em Neural Computation}, 4(1), 1--58.
+
+\bibitem[Geman \& Geman, 1984]{geman1984stochastic}
+Geman, S. \& Geman, D. (1984).
+\newblock Stochastic relaxation, gibbs distributions, and the bayesian
+  restoration of images.
+\newblock {\em IEEE Transactions on pattern analysis and machine intelligence},
+  (6), 721--741.
 
 \bibitem[Gennaioli \& Shleifer, 2010]{gennaioli2010comes}
 Gennaioli, N. \& Shleifer, A. (2010).
@@ -681,12 +683,12 @@ Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012a).
 \newblock {Multistability and Perceptual Inference}.
 \newblock {\em Neural Computation}, 24(1), 1--24.
 
-\bibitem[Gershman et~al., 2012b]{gershman12}
+\bibitem[Gershman et~al., 2012b]{gershman2012multistability}
 Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012b).
 \newblock Multistability and perceptual inference.
 \newblock {\em Neural Computation}, 24, 1--24.
 
-\bibitem[Gershman et~al., 2012c]{gershman2012multistability}
+\bibitem[Gershman et~al., 2012c]{gershman12}
 Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012c).
 \newblock Multistability and perceptual inference.
 \newblock {\em Neural Computation}, 24, 1--24.
@@ -803,31 +805,20 @@ Griffiths, T.~L., Lieder, F., \& Goodman, N.~D. (2015).
   computational and the algorithmic.
 \newblock {\em Topics in Cognitive Science}, 7, 217--229.
 
-\bibitem[Griffiths \& Tenenbaum, 2006a]{griffiths2006}
-Griffiths, T.~L. \& Tenenbaum, J.~B. (2006a).
-\newblock Optimal predictions in everyday cognition.
-\newblock {\em Psychological Science}, 17, 767--773.
-
-\bibitem[Griffiths \& Tenenbaum, 2006b]{griffiths2006optimal}
-Griffiths, T.~L. \& Tenenbaum, J.~B. (2006b).
+\bibitem[Griffiths \& Tenenbaum, 2006]{griffiths2006optimal}
+Griffiths, T.~L. \& Tenenbaum, J.~B. (2006).
 \newblock Optimal predictions in everyday cognition.
 \newblock {\em Psychological Science}, 17(9), 767--773.
 
-\bibitem[Griffiths \& Tenenbaum, 2011]{griffiths2011}
-Griffiths, T.~L. \& Tenenbaum, J.~B. (2011).
-\newblock Predicting the future as bayesian inference: {P}eople combine prior
-  knowledge with observations when estimating duration and extent.
-\newblock {\em Journal of Experimental Psychology: General}, 140, 725--743.
-
-\bibitem[Griffiths et~al., 2012a]{Griffiths2012BridgingCognition}
-Griffiths, T.~L., Vul, E., \& Sanborn, a.~N. (2012a).
-\newblock {Bridging Levels of Analysis for Probabilistic Models of Cognition}.
-\newblock {\em Current Directions in Psychological Science}, 21(4), 263--268.
-
-\bibitem[Griffiths et~al., 2012b]{griffiths2012bridging}
-Griffiths, T.~L., Vul, E., \& Sanborn, A.~N. (2012b).
+\bibitem[Griffiths et~al., 2012a]{griffiths2012bridging}
+Griffiths, T.~L., Vul, E., \& Sanborn, A.~N. (2012a).
 \newblock Bridging levels of analysis for probabilistic models of cognition.
 \newblock {\em Current Directions in Psychological Science}, 21, 263--268.
+
+\bibitem[Griffiths et~al., 2012b]{Griffiths2012BridgingCognition}
+Griffiths, T.~L., Vul, E., \& Sanborn, a.~N. (2012b).
+\newblock {Bridging Levels of Analysis for Probabilistic Models of Cognition}.
+\newblock {\em Current Directions in Psychological Science}, 21(4), 263--268.
 
 \bibitem[Grinnell et~al., 1971]{grinnell1971bayesian}
 Grinnell, M., Keeley, S.~M., \& Doherty, M.~E. (1971).
@@ -876,6 +867,11 @@ Hamrick, J.~B., Smith, K.~A., Griffiths, T.~L., \& Vul, E. (2015b).
 \newblock Think again? the amount of mental simulation tracks uncertainty in
   the outcome.
 \newblock In {\em CogSci}: Citeseer.
+
+\bibitem[Hastings, 1970]{hastings1970monte}
+Hastings, W.~K. (1970).
+\newblock Monte carlo sampling methods using markov chains and their
+  applications.
 
 \bibitem[Hawkins et~al., 2016]{hawkins2016dynamic}
 Hawkins, G.~E., Hayes, B.~K., \& Heit, E. (2016).
@@ -962,6 +958,12 @@ Hinton, G.~E., Dayan, P., Frey, B.~J., \& Neal, R.~M. (1995).
 Hochreiter, S. \& Schmidhuber, J. (1997).
 \newblock Long short-term memory.
 \newblock {\em Neural computation}, 9(8), 1735--1780.
+
+\bibitem[Holden, 1998]{holden1998geometric}
+Holden, L. (1998).
+\newblock Geometric convergence of the metropolis-hastings simulation
+  algorithm.
+\newblock {\em Statistics \& probability letters}, 39(4), 371--377.
 
 \bibitem[Hornik, 1991]{hornik1991approximation}
 Hornik, K. (1991).
@@ -1075,16 +1077,21 @@ Keramati, M., Smittenaar, P., Dolan, R.~J., \& Dayan, P. (2016).
 \newblock {\em Proceedings of the National Academy of Sciences}, 113(45),
   12868--12873.
 
-\bibitem[Kingma \& Welling, 2013a]{kingma2013auto}
+\bibitem[Kingma \& Welling, 2013a]{kingma2014auto}
 Kingma, D.~P. \& Welling, M. (2013a).
+\newblock Auto-encoding variational bayes.
+\newblock {\em CoRR}, abs/1312.6114.
+
+\bibitem[Kingma \& Welling, 2013b]{kingma2013auto}
+Kingma, D.~P. \& Welling, M. (2013b).
 \newblock Auto-encoding variational bayes.
 \newblock {\em The 2nd International Conference on Learning Representations
   (ICLR)}.
 
-\bibitem[Kingma \& Welling, 2013b]{kingma2014auto}
-Kingma, D.~P. \& Welling, M. (2013b).
-\newblock Auto-encoding variational bayes.
-\newblock {\em CoRR}, abs/1312.6114.
+\bibitem[Kirkpatrick et~al., 1983]{kirkpatrick1983optimization}
+Kirkpatrick, S., Gelatt, C.~D., \& Vecchi, M.~P. (1983).
+\newblock Optimization by simulated annealing.
+\newblock {\em science}, 220(4598), 671--680.
 
 \bibitem[Kiros et~al., 2015]{kiros2015skip}
 Kiros, R., Zhu, Y., Salakhutdinov, R.~R., Zemel, R., Urtasun, R., Torralba, A.,
@@ -1363,6 +1370,12 @@ Mercier, H. \& Sperber, D. (2017).
 \newblock {\em The enigma of reason}.
 \newblock Harvard University Press.
 
+\bibitem[Metropolis et~al., 1953]{metropolis1953equation}
+Metropolis, N., Rosenbluth, A.~W., Rosenbluth, M.~N., Teller, A.~H., \& Teller,
+  E. (1953).
+\newblock Equation of state calculations by fast computing machines.
+\newblock {\em The journal of chemical physics}, 21(6), 1087--1092.
+
 \bibitem[Mikolov et~al., 2013]{mikolov2013distributed}
 Mikolov, T., Sutskever, I., Chen, K., Corrado, G.~S., \& Dean, J. (2013).
 \newblock Distributed representations of words and phrases and their
@@ -1422,6 +1435,12 @@ Naesseth, C.~A., Linderman, S.~W., Ranganath, R., \& Blei, D.~M. (2017).
 \newblock Variational sequential monte carlo.
 \newblock {\em arXiv preprint arXiv:1705.11140}.
 
+\bibitem[Neal, 1993]{neal1993probabilistic}
+Neal, R.~M. (1993).
+\newblock {\em Probabilistic inference using Markov chain Monte Carlo methods}.
+\newblock Department of Computer Science, University of Toronto Toronto,
+  Ontario, Canada.
+
 \bibitem[Neil~Bearden \& Wallsten, 2004]{MINERVAsub}
 Neil~Bearden, J. \& Wallsten, T.~S. (2004).
 \newblock {Minerva-DM and subadditive frequency judgments}.
@@ -1449,14 +1468,8 @@ Oakhill, J., Johnson-Laird, P., \& Garnham, A. (1989).
 \newblock Believability and syllogistic reasoning.
 \newblock {\em Cognition}, 31(2), 117--140.
 
-\bibitem[Oaksford \& Chater, 2007a]{oaksford2007}
-Oaksford, M. \& Chater, N. (2007a).
-\newblock {\em Bayesian rationality: The probabilistic approach to human
-  reasoning}.
-\newblock Oxford University Press.
-
-\bibitem[Oaksford \& Chater, 2007b]{oaksford2007bayesian}
-Oaksford, M. \& Chater, N. (2007b).
+\bibitem[Oaksford \& Chater, 2007]{oaksford2007bayesian}
+Oaksford, M. \& Chater, N. (2007).
 \newblock {\em Bayesian rationality: The probabilistic approach to human
   reasoning}.
 \newblock Oxford University Press.
@@ -1585,11 +1598,6 @@ Peterson, C.~R. \& Ulehla, Z. (1964).
 \newblock Uncertainty, inference difficulty, and probability learning.
 \newblock {\em Journal of Experimental Psychology}, 67, 523--530.
 
-\bibitem[Petzschner et~al., 2015]{petzschner2015}
-Petzschner, F.~H., Glasauer, S., \& Stephan, K.~E. (2015).
-\newblock A {B}ayesian perspective on magnitude estimation.
-\newblock {\em Trends in Cognitive Sciences}, 19, 285--293.
-
 \bibitem[Phillips \& Edwards, 1966]{phillips1966conservatism}
 Phillips, L.~D. \& Edwards, W. (1966).
 \newblock Conservatism in a simple probability inference task.
@@ -1652,6 +1660,11 @@ Rezende, D.~J., Mohamed, S., \& Wierstra, D. (2014).
   generative models.
 \newblock In {\em {Proceedings of The 31st International Conference on Machine
   Learning}}  (pp.\ 1278--1286).
+
+\bibitem[Richey, 2010]{richey2010evolution}
+Richey, M. (2010).
+\newblock The evolution of markov chain monte carlo methods.
+\newblock {\em The American Mathematical Monthly}, 117(5), 383--413.
 
 \bibitem[Rieskamp \& Otto, 2006]{rieskamp06}
 Rieskamp, J. \& Otto, P.~E. (2006).
@@ -1748,6 +1761,12 @@ Sanborn, A.~N. \& Griffiths, T.~L. (2009).
 \newblock {A Bayesian Framework for Modeling Intuitive Dynamics}.
 \newblock In {\em {Proceedings of the 31st Annual Conference of the Cognitive
   Science Society}}  (pp.\ 1145--1150).
+
+\bibitem[Sanborn et~al., 2010]{sanborn2010rational}
+Sanborn, A.~N., Griffiths, T.~L., \& Navarro, D.~J. (2010).
+\newblock Rational approximations to rational models: alternative algorithms
+  for category learning.
+\newblock {\em Psychological review}, 117(4), 1144.
 
 \bibitem[Santoro et~al., 2016]{santoro2016meta}
 Santoro, A., Bartunov, S., Botvinick, M., Wierstra, D., \& Lillicrap, T.
