@@ -9,7 +9,7 @@
 This chapter provides a brief introduction to the approximate inference methods that will be used throughout this thesis. First, I introduce the computational problem we hope to approximate and the various challenges. Second, I introduce sampling-based approaches, focusing on methods based on Markov chains. Third, I introduce variational approaches to this problem. Finally, I briefly discuss the trade-offs between these two methods, with particular focus on their cognitive relevance, and how they might be combined.
 
 \section{The challenge of Bayesian inference}
-Bayesian inference is method in statistics where Bayes' theorem is used to update the probabilities of hypotheses $h \in \mathcal{H}$ as more information or data $d in \mathcal{D}$ is made available. We consider a simple coin-flipping example of updating the probabilities that a coin is biased towards Heads ($h1$), is biased towards Tails ($h2$), or unbiased ($h0$) based on observing the results of coin flips ($d \in \{\text{H}, \text{T}\}$ for heads or tails). Bayesian inference has two key components that are derived from a statistical model for the observed data. First, a prior distribution $P(h)$ defined over all hypotheses $h \in \mathcal{H}$ that determines the a priori probability of a certain hypothesis. In our coin flipping example, we likely have a fairly high expectation that a coin is generally unbiased giving high prior probability to $h0$, and lower prior probabilities to $h1$ and $h2$. Second, a likelihood function $P(d | h)$ that defines the probability of observed data given specific hypotheses. So in our coin-flipping example, the likelihood is a Bernoulli probability distribution given by $P(\text{H} | h) = q = 1 - P(\text{T} | h) = 1- q$ with different parameters $q$ for he hypotheses $h0, h1$ and $h2$. The goal then is to combine these two pieces of information -- a priori knowledge via the prior distribution, as well as information from the data observed via the likelihood function -- to form a \textit{posterior probability distribution} over the hypotheses. This is represented as $P(h | d)$ and computed uses Bayes' rule as follows:
+Bayesian inference is method in statistics where Bayes' theorem is used to update the probabilities of hypotheses $h \in \mathcal{H}$ as more information or data $d in D$ is made available. We consider a simple coin-flipping example of updating the probabilities that a coin is biased towards Heads ($h1$), is biased towards Tails ($h2$), or unbiased ($h0$) based on observing the results of coin flips ($d \in \{\text{H}, \text{T}\}$ for heads or tails). Bayesian inference has two key components that are derived from a statistical model for the observed data. First, a prior distribution $P(h)$ defined over all hypotheses $h \in \mathcal{H}$ that determines the a priori probability of a certain hypothesis. In our coin flipping example, we likely have a fairly high expectation that a coin is generally unbiased giving high prior probability to $h0$, and lower prior probabilities to $h1$ and $h2$. Second, a likelihood function $P(d | h)$ that defines the probability of observed data given specific hypotheses. So in our coin-flipping example, the likelihood is a Bernoulli probability distribution given by $P(\text{H} | h) = q = 1 - P(\text{T} | h) = 1- q$ with different parameters $q$ for he hypotheses $h0, h1$ and $h2$. The goal then is to combine these two pieces of information -- a priori knowledge via the prior distribution, as well as information from the data observed via the likelihood function -- to form a \textit{posterior probability distribution} over the hypotheses. This is represented as $P(h | d)$ and computed uses Bayes' rule as follows:
 
 \begin{align}
     P(h|d) = \frac{P(d, h)}{\sum_{h'} P(d, h')} = \frac{P(d|h)P(h)}{\sum_{h'} P(d|h') P(h')},
@@ -19,13 +19,21 @@ The numerator i.e. the joint distribution over the data and the hypothesis is ea
 
 \section{Monte Carlo methods}
 
-In their simplest form, sample-based approximations, \citep[also known as \emph{Monte Carlo} approximations][]{robert13}, take the following form:
+Sample-based approximations, \citep[also known as \emph{Monte Carlo} approximations][]{robert13}, take the following form:
 \begin{align}
 P(h|d) \approx \hat{P}_N(h|d) = \frac{1}{N}\sum_{n=1}^N \mathbb{I}[h_n=h],
 \end{align}
-where $\mathbb{I}[\cdot]=1$ when its argument is true (0 otherwise) and $h_n$ is a random hypothesis drawn from some distribution $Q_n(h)$. This approach is also straightforwardly generalized to sets of hypotheses: $\hat{P}_N(h \in H|d) = \frac{1}{N}\sum_{n=1}^N \mathbb{I}[h_n \in H]$, where $H \subset \mathcal{H}$. When $Q_n(h) = P(h|d)$, this approximation is unbiased, meaning $\mathbb{E}[\hat{P}_N(h|d)] = P(h|d)$, and asymptotically exact, meaning $\lim_{N\rightarrow \infty} \hat{P}_N(h|d) = P(h|d)$.
+where $\mathbb{I}[\cdot]=1$ when its argument is true (0 otherwise) and $h_n$ is a random hypothesis drawn from some distribution $Q_n(h)$. A schematic is in Figure \ref{fig:MC_schematic}. This approach is also straightforwardly generalized to sets of hypotheses: $\hat{P}_N(h \in H|d) = \frac{1}{N}\sum_{n=1}^N \mathbb{I}[h_n \in H]$, where $H \subset \mathcal{H}$. When $Q_n(h) = P(h|d)$, this approximation is unbiased, meaning $\mathbb{E}[\hat{P}_N(h|d)] = P(h|d)$, and asymptotically exact, meaning $\lim_{N\rightarrow \infty} \hat{P}_N(h|d) = P(h|d)$.
 
-In general, we cannot directly sample from the posterior, because the normalizing constant $P(d) = \sum_{h} P(h,d)$ requires the evaluation of the joint probabilities of each and every hypothesis and is intractable when the hypothesis space is large. In fact, sampling from the exact posterior entails solving exactly the problem which we wish to approximate. Nonetheless, it is still possible to construct an asymptotically exact approximation by sampling from a Markov chain whose stationary distribution is the posterior; this method is known as \emph{Markov chain Monte Carlo} (henceforth referred to as MCMC). \footnote{There exist other Monte Carlo methods that do not simulate a Markov chain. These include accept-reject methods and importance sampling. While these have the advantage of producing uncorrelated i.i.d. samples, they do not scale well to high dimensions, and often require pre-existing knowledge of the posterior. This makes MCMC methods the predominant Monte-Carlo method commonly used for Bayesian inference \cite{neal1993probabilistic}.}.
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{figures/MonteCarlo_schematic.pdf}
+\caption{\textbf{Schematic for Monte Carlo approximation}. }
+\label{fig:MC_schematic}
+\end{figure}
+
+In general, we cannot directly sample from the posterior, because the normalizing constant $P(d) = \sum_{h} P(h,d)$ requires the evaluation of the joint probabilities of each and every hypothesis and is intractable when the hypothesis space is large. In fact, sampling from the exact posterior entails solving exactly the problem which we wish to approximate. Nonetheless, it is still possible to construct an asymptotically exact approximation by sampling from a Markov chain whose stationary distribution is the posterior; this method is known as \emph{Markov chain Monte Carlo} (henceforth referred to as MCMC). \footnote{There exist other Monte Carlo methods that do not simulate a Markov chain. These include accept-reject methods and importance sampling. While these have the advantage of producing uncorrelated i.i.d. samples, they do not scale well to high dimensions, and often require pre-existing knowledge of the posterior. This makes MCMC methods the predominant Monte-Carlo method commonly used for Bayesian inference \cite{neal1993probabilistic, andrieu2003introduction}.}.
 
 \subsection{Algorithmic details}
 
@@ -67,7 +75,7 @@ The original paper \citet{metropolis1953equation} introduced the \textit{Metropo
 Versions of MCMC were then applied to optimization problems in the form of \textit{simulated annealing} \cite{kirkpatrick1983optimization}, widening their reach out outside of statistical physics. The first Bayesian perspective (as well as a new MCMC algorithm, Gibbs sampling) came from an application of MCMC to the problem of digital restoration\cite{geman1984stochastic}. These methods have since been widely applied in physics, engineering, and artificial intelligence, see \citet{richey2010evolution} for further details on the history of MCMC.
 
 
-\subsection{In cognitive science}
+\subsection{Monte Carlo methods in models of cognition}
 
 Sampling theories have long been invoked, implicitly or explicitly, in models of human cognition to justify variation in responses across individuals and trials. In studies demonstrating optimal Bayesian behavior in the average, it has often been found that individual reponses arise from the full range of the distribution, with frequency proportional to the posterior probability, in a phenomena called `probability matching' \citep{wozny2010,Denison2013,Moreno11,Vul2014}. More recently,``rational process models'' have explicitly modelled sampling as a mechanism to drive a stronger connection between rational models of cognition and psychological mechanisms \cite{griffiths2012bridging, Vul2014, shi10, sanborn2010rational, Lieder2013}. These highlight phenomena that emerge in the finite sample regime, within a ``resource-rational'' framework \citep{Vul2014,griffiths2015,Gershman2015,schulz2016simple}. This framework posits the if generating samples is costly (in terms of time and cognitive resources), then the rational strategy is to generate the minimum number of samples necessary to achieve a desired level of accuracy. This explicitly bridges the requirements from a computational level account of inference, with the cognitive processes that implement it. 
 %An important implication of this framing is that that incentives or uncertainty should have systematic effects on sample generation. For example, \citet{hamrick2015think} showed that people generated more samples when they were more uncertain. By the same token, cognitive load \citep{sprenger2011} or response time pressure \citep{Dougherty2003} act as disincentives, potentially reducing the number of generated samples.
@@ -103,37 +111,45 @@ We have so far discussed the advent of Monte Carlo approximations in cognitive s
 
 \section{Variational methods}
 
-
-Virtually all approximate inference algorithms address this problem by circumventing the calculation of the normalizing constant \citep{gershman2017complex}. For example, Monte Carlo algorithms \citep{andrieu2003introduction} approximate the posterior using $M$ weighted samples $\{h^1,\ldots,h^M\}$:
+To motivate variational approximations, we first consider a more general case of Monte Carlo approximation, using weighted samples
 \begin{align}
-    P(h|d) \approx \sum_{m=1}^M w^m \mathbb{I}[h^m = h],
+    P(h|d) \approx \sum_{n=1}^N w^n \mathbb{I}[h^n = h],
     \label{eq:montecarlo}
 \end{align}
-where $w^m$ is the weight attached to sample $m$, and $\mathbb{I}[\cdot]=1$ if its argument is true (0 otherwise). Markov chain Monte Carlo algorithms, generate these samples from a Markov chain whose stationary distribution is the posterior, and the weights are uniform, $w^m = 1/M$. The Markov chain is constructed in such a way that the transition distribution does not depend on the normalizing constant. Importance sampling algorithms generate samples simultaneously from a proposal distribution $\tilde{P}(h)$, with weights given by $w^m = P(d|h^m)P(h^m)/\tilde{P}(h^m)$.
-
-Most cognitive theories of approximate inference have appealed to some form of Monte Carlo sampling, for several reasons. First, they can explain response variability in human judgments as arising from randomness in the sampling process \citep{denison2013rational,vul2014one,gershman2012multistability}. Second, they can explain a wide range of inferential errors, ranging from subadditivity to the conjunction fallacy \citep{sanborn2016bayesian,dasgupta2017hypotheses}. Third, they can be implemented in biologically plausible circuits with spiking neurons \citep{buesing2011neural,orban2016neural,haefner2016perceptual}.
-
-Monte Carlo algorithms can be thought of as procedures for generating an approximate posterior $Q_\phi(h|d)$ parametrized by the set of weights and samples, $\phi = \{ w^m, h^m \}_{m=1}^M$. The superset $\Phi$ of all feasible sets (i.e., the sets that can be produced by a particular Monte Carlo algorithm) defines an approximation family. This leads us to a more general view of approximate inference as an optimization problem: find the approximation (parametrized by $\phi \in \Phi$) that gets ``closest'' to the true posterior,
+Monte Carlo algorithms can be thought of as procedures for generating an approximate posterior $Q_\phi(h|d)$ parametrized by the set of these weights and samples, $\phi = \{ w^n, h^n \}_{n=1}^N$. The superset $\Phi$ of all feasible sets (i.e., the sets that can be produced by a particular Monte Carlo algorithm) defines an approximation family. This leads us to a more general view of approximate inference as an optimization problem: find the approximation (parametrized by $\phi \in \Phi$) that gets ``closest'' to the true posterior, where dissimilarity between the two distributions is measured by a divergence functional $\mathcal{D}$. 
 \begin{align}
 \phi^\ast = \argmin_{\phi \in \Phi} \mathcal{D}[Q_\phi(h|d)||P(h|d)],
 \end{align}
-where dissimilarity between the two distributions is measured by a divergence functional $\mathcal{D}$. Most Monte Carlo algorithms do not directly solve this optimization problem, but instead randomly sample $\phi$ such that, in the limit $M \rightarrow \infty$, they produce $\phi^\ast$. It is however possible to design non-randomized algorithms that directly optimize $\phi$ \citep{saeedi2017variational} in a sample-based approximation. Such optimization is an example of \emph{variational inference} \citep{jordan1999introduction}, because the solution can be derived using the calculus of variations. The most commonly used divergence functional is the Kullback-Leibler (KL) divergence (also known as the relative entropy):
+Monte Carlo algorithms do not solve this optimization problem, but instead randomly sample $\phi$ such that, in the limit $N \rightarrow \infty$, they produce $\phi^\ast$. It is however possible to design non-randomized algorithms that directly optimize $\phi$ even in a sample-based approximation\citep{saeedi2017variational}. Such optimization is an example of \emph{Variational Inference} \citep{jordan1999introduction}.
+
+The general idea of Variational Inference (VI) is to first posit a family of densities and then to find a member of that family which is closest to the target probability distribution. Classic variational methods use the \textit{Kullback-Leibler} divergence (also known as relative entropy) as a measure of closeness. This is given by:
 \begin{align}
 \mathcal{D}_{\text{KL}}[Q_\phi(h|d)||P(h|d)] = \sum_h Q_\phi(h|d) \log \frac{Q_\phi(h|d)}{P(h|d)}.
 \end{align}
-% Most Monte Carlo algorithms do not directly solve the variational optimization problem, but instead randomly sample $\phi$ such that, in the limit $M \rightarrow \infty$, they produce $\phi^\ast$. It is also possible to design non-randomized algorithms that directly optimize $\phi$ \citep{saeedi2017variational}.
+This formulation reduces the problem of approximate inference to an optimization problem to which any standard algorothm for optimization may be applied. An example with a Gaussian approximation family and an iterative optimization procedure is given in Figure \ref{fig:var_schematic}.
 
-The variational optimization view of approximate inference allows us to consider more general approximation families that go beyond weighted samples. In fact, the approximate posterior can be any parametrized function that defines a valid probability distribution over the relevant hypothesis space. For example, researchers have used deep neural networks as flexible function approximators \citep{dayan1995helmholtz,kingma2014auto,mnih2014neural,rezende2015variational,paige2016inference}. From a neuroscience perspective, this approach to approximate inference is appealing because it lets us contemplate complex, biologically realistic approximation architectures \citep[provided that the optimization procedures can also be realized biologically; see][]{whittington2019theories}. For example, particular implementations of variational inference have been used to model hierarchical predictive coding in the brain \citep{friston2008hierarchical,gershman2019does}.
+In general however, this divergence cannot directly be optimized, since finding a $Q$ that optimizies $\mathcal{D}_{\text{KL}}$ requires knowing the exact $P$ -- which is precisely the problem we are trying to approximate. Instead we optimize an alternative objective that is equivalent to $\mathcal{D}_{\text{KL}}$ up to an added constant,
+
+\begin{align}
+\text{ELBO}[Q_\phi(h|d)] &=  \sum_h Q_\phi(h|d) \log \frac{P(h,d)}{Q_\phi(h|d)} \\
+& = \sum_h Q_\phi(h|d) \log \frac{P(h|d)}{Q_\phi(h|d)} + \sum_h Q_\phi(h|d) \log P(d) \\
+& = - \mathcal{D}_{\text{KL}}[Q_\phi(h|d)||P(h|d)]  + \log P(d)
+\end{align}
+
+This function is called the evidence lower bound, or ELBO. It is computable because the joint distribution $P(h, d)$ in known. The log probability of the observed data $P(d)$ is independent of the approximation $Q_\phi(h|d)$, so maximizing the the ELBO is equivalent to minimizing $\mathcal{D}_{\text{KL}}[Q_\phi(h|d)||P(h|d)] $.
+
+\begin{figure}
+\centering
+\includegraphics[width = \textwidth]{figures/variational_schematic.pdf}
+\caption{\textbf{Schematic for Variational approximation}. }
+\label{fig:var_schematic}
+\end{figure}
 
 
-\subsection{HIstory}
+\subsection{Algorithmic details}
 
-\subsection{In cognitive science}
 
-\section{Hybrid methods}
-
-\subsection{Blackbox variational inference}
-
+Blackbox variational inference
 In the main text, the variational optimization problem is stated in terms of minimizing KL divergence. This is useful for clarifying the nature of the problem, but less useful from an algorithmic perspective because the objective function is not tractable (it requires knowledge of the true posterior distribution, which is what we are trying to approximate). Nonetheless, we can obtain a tractable objective function using the following identity:
 \begin{align}
     \log P(d) = \mathcal{L}[Q_\phi(h|d)] + \mathcal{D}_\text{KL}[Q_\phi(h|d)||P(h|d)],
@@ -153,3 +169,18 @@ where $h^m \sim Q_\phi(h|d)$. Using this approximation, the variational paramete
     \phi_{t+1} \leftarrow \phi_t + \rho_t \nabla_\phi \mathcal{L}[Q_\phi(h|d)],
 \end{align}
 where $t$ indexes iterations and $\rho_t$ is an iteration-dependent step-size. Provided $\rho_t$ satisfies the Robbins-Monro stochastic approximation conditions ($\sum_{t=1}^\infty \rho_t = \infty, \sum_{t=1}^\infty \rho_t^2 < \infty$), this optimization procedure will converge to the optimal parameters with probability 1.
+\subsection{History}
+
+The history of variational inference is more difficult to trace since it is intimately tied to optimization. Some of the first variational approximations appear in statistical physics as mean field theories. The first of these was the Curie-Weiss theory for ferromagnetism, that made a mean-field approximation to the Ising model\cite{curie1895proprietes,  weiss1907hypothese}. Here the local field at each point on a lattice, which could in theory have significant local structure, is approximated by a global field that applies uniformly to the whole lattice. This effectively ignores correlations between the lattice sites. In the language of the previous section, this constitutes approximating the probability distribution $P(\vec{h})$ which maybe be defined over a complex joint distribution over the dimensions of $\vec{h}$. 
+
+Subsequent to this model, several other mean field theories were developed across other domain of physics. \citet{landau1965collected} formalized mean field theory as a variational approximation\cite{kadanoff2009more}. Concurrently, variational approaches were also applied to problems in quantum physics and quantum field theory \citep{milton2006electromagnetic, feynman1965quantum}. 
+
+The development of variational methods specifically for Bayesian inference is relatively more recent, arguably starting with a mean field learning algorithm for neural networks in \citet{anderson1987mean}, followed by formalization of variational approximations to a slew of othe models\citep{saul1996mean, jaakkola1997variational}. These approaches have been extensively studied in statistics and machine learning, and provide a strong alternative to MCMC for scalable posterior approximation \citep{blei2017variational}.
+
+\subsection{Variational methods in models of cognition}
+
+The variational optimization view of approximate inference allows us to consider more general approximation families that go beyond weighted samples. In fact, the approximate posterior can be any parametrized function that defines a valid probability distribution over the relevant hypothesis space. For example, researchers have used deep neural networks as flexible function approximators \citep{dayan1995helmholtz,kingma2014auto,mnih2014neural,rezende2015variational,paige2016inference}. From a neuroscience perspective, this approach to approximate inference is appealing because it lets us contemplate complex, biologically realistic approximation architectures \citep[provided that the optimization procedures can also be realized biologically; see][]{whittington2019theories}. For example, particular implementations of variational inference have been used to model hierarchical predictive coding in the brain \citep{friston2008hierarchical,gershman2019does}.
+
+
+\section{Hybrid methods}
+

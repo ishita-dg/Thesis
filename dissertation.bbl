@@ -310,12 +310,17 @@ Costello, F.~J. \& Watts, P. (2018).
 \newblock Invariants in probabilistic reasoning.
 \newblock {\em Cognitive Psychology}, 100, 1--16.
 
-\bibitem[Dasgupta et~al., 2017a]{dasgupta2017hypotheses}
+\bibitem[Curie, 1895]{curie1895proprietes}
+Curie, P. (1895).
+\newblock {\em Magnetic properties of bodies at various times}.
+\newblock Number~4. Gauthier-Villars and sons.
+
+\bibitem[Dasgupta et~al., 2017a]{dasgupta17}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017a).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
 
-\bibitem[Dasgupta et~al., 2017b]{dasgupta17}
+\bibitem[Dasgupta et~al., 2017b]{dasgupta2017hypotheses}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017b).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
@@ -683,12 +688,12 @@ Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012a).
 \newblock {Multistability and Perceptual Inference}.
 \newblock {\em Neural Computation}, 24(1), 1--24.
 
-\bibitem[Gershman et~al., 2012b]{gershman2012multistability}
+\bibitem[Gershman et~al., 2012b]{gershman12}
 Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012b).
 \newblock Multistability and perceptual inference.
 \newblock {\em Neural Computation}, 24, 1--24.
 
-\bibitem[Gershman et~al., 2012c]{gershman12}
+\bibitem[Gershman et~al., 2012c]{gershman2012multistability}
 Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012c).
 \newblock Multistability and perceptual inference.
 \newblock {\em Neural Computation}, 24, 1--24.
@@ -1174,6 +1179,11 @@ Lake, B.~M., Ullman, T.~D., Tenenbaum, J.~B., \& Gershman, S.~J. (2017).
 Lake, B.~M., Ullman, T.~D., Tenenbaum, J.~B., \& Gershman, S.~J. (2018).
 \newblock Building machines that learn and think like people.
 \newblock {\em Behavioral and Brain Sciences}, 40.
+
+\bibitem[Landau, 1965]{landau1965collected}
+Landau, L.~D. (1965).
+\newblock {\em Collected papers of LD Landau}.
+\newblock Pergamon.
 
 \bibitem[Landauer \& Dumais, 1997]{landauer1997solution}
 Landauer, T.~K. \& Dumais, S.~T. (1997).
@@ -1948,13 +1958,6 @@ Spirtes, P., Glymour, C., Scheines, R., Heckerman, D., Meek, C., Cooper, G., \&
 \newblock {\em Causation, prediction, and search}.
 \newblock MIT press.
 
-\bibitem[Sprenger et~al., 2011]{sprenger2011}
-Sprenger, A.~M., Dougherty, M., Atkins, S.~M., Franco-Watkins, A.~M., Thomas,
-  R., Lange, N., \& Abbs, B. (2011).
-\newblock Implications of cognitive load for hypothesis generation and
-  probability judgment.
-\newblock {\em Frontiers in Psychology}, 2, 129.
-
 \bibitem[Stanford, 2010]{stanford10}
 Stanford, P.~K. (2010).
 \newblock {\em Exceeding our grasp: Science, history, and the problem of
@@ -2167,6 +2170,11 @@ Weber, E.~U., B{\"o}ckenholt, U., Hilton, D.~J., \& Wallace, B. (1993).
   information, base rates, and experience.
 \newblock {\em Journal of Experimental Psychology: Learning, Memory, and
   Cognition}, 19, 1151--1164.
+
+\bibitem[Weiss, 1907]{weiss1907hypothese}
+Weiss, P. (1907).
+\newblock The hypothesis of the molecular field and the ferromagnetic property.
+\newblock {\em Journal of Theoretical and Applied Physics}, 6, 661--690.
 
 \bibitem[Wheeler \& Beach, 1968]{wheeler1968subjective}
 Wheeler, G. \& Beach, L.~R. (1968).
