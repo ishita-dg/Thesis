@@ -53,7 +53,7 @@ The goal is to create samples from some probability distribution $P(h | d)$. The
 
 This results in a Markov chain with $P(h|d)$ as its stationary distribution, see \citet{blitzstein2014introduction} for proofs. As  $N \rightarrow \inf$, the approximation $\hat{P}_N(h|d) $ asymptotically approaches the true posterior $P(h | d)$. See Holden 1998 \cite{holden1998geometric} for proofs.
 
-What remains to be decided is what a good proposal distribution might be. The closer the proposal to the true posterior, the faster the algorithm converges\cite{holden1998geometric}. The proposal distribution can also depend on the current state of the Markov chain, allowing for local adjustments to the current hypothesis. Another well known variant of MCMC called Gibbs sampling can be seen as a variant of Metropolis-Hastings, with a specific proposal distribution such that the proposals are always accepted. Here the sampling is over a joint distribution over hypotheses $\vec{h}$ that have multiple ($k$) dimensions. Only one of these dimensions $h_i$ is changed in every step, and the proposal distribution is the exact conditional distribution $Q = P(h_i | h_{1:K\setminus i})$. Substituting this into the formula for the acceptance probability, we can see that this proposal is always accepted. The conditional distributions however are not always easy to compute, making Metropolis-Hastings a more general purpose MCMC algorithms (though with the added worry of choosing a good proposal distribution).
+What remains to be decided is what a good proposal distribution might be. As along as the proposal distribution ensures a finite probability of proposing every state at some point along the chain (ensures \textit{ergodicity}), the samples will converge asympotically to the true posterior. However, the closer the proposal to the true posterior, the faster the algorithm converges\cite{holden1998geometric}. The proposal distribution can also depend on the current state of the Markov chain, allowing for local adjustments to the current hypothesis. Another well known variant of MCMC called Gibbs sampling can be seen as a variant of Metropolis-Hastings, with a specific proposal distribution such that the proposals are always accepted. Here the sampling is over a joint distribution over hypotheses $\vec{h}$ that have multiple ($k$) dimensions. Only one of these dimensions $h_i$ is changed in every step, and the proposal distribution is the exact conditional distribution $Q = P(h_i | h_{1:K\setminus i})$. Substituting this into the formula for the acceptance probability, we can see that this proposal is always accepted. The conditional distributions however are not always easy to compute, making Metropolis-Hastings a more general purpose MCMC algorithms (though with the added worry of choosing a good proposal distribution).
 
 \subsection{History}
 Sampling methods based on Markov chains were first developed in physics to study properties of the Boltzmann distribution in statistical mechanics. \cite{metropolis1953equation} For a system at equilibrium, the relative frequency of a configuration $\omega$ is given by its Boltxmann weight
@@ -128,15 +128,6 @@ The general idea of Variational Inference (VI) is to first posit a family of den
 \end{align}
 This formulation reduces the problem of approximate inference to an optimization problem to which any standard algorothm for optimization may be applied. An example with a Gaussian approximation family and an iterative optimization procedure is given in Figure \ref{fig:var_schematic}.
 
-In general however, this divergence cannot directly be optimized, since finding a $Q$ that optimizies $\mathcal{D}_{\text{KL}}$ requires knowing the exact $P$ -- which is precisely the problem we are trying to approximate. Instead we optimize an alternative objective that is equivalent to $\mathcal{D}_{\text{KL}}$ up to an added constant,
-
-\begin{align}
-\text{ELBO}[Q_\phi(h|d)] &=  \sum_h Q_\phi(h|d) \log \frac{P(h,d)}{Q_\phi(h|d)} \\
-& = \sum_h Q_\phi(h|d) \log \frac{P(h|d)}{Q_\phi(h|d)} + \sum_h Q_\phi(h|d) \log P(d) \\
-& = - \mathcal{D}_{\text{KL}}[Q_\phi(h|d)||P(h|d)]  + \log P(d)
-\end{align}
-
-This function is called the evidence lower bound, or ELBO. It is computable because the joint distribution $P(h, d)$ in known. The log probability of the observed data $P(d)$ is independent of the approximation $Q_\phi(h|d)$, so maximizing the the ELBO is equivalent to minimizing $\mathcal{D}_{\text{KL}}[Q_\phi(h|d)||P(h|d)] $.
 
 \begin{figure}
 \centering
@@ -145,41 +136,45 @@ This function is called the evidence lower bound, or ELBO. It is computable beca
 \label{fig:var_schematic}
 \end{figure}
 
+In general however, this divergence cannot directly be optimized, since finding a $Q$ that optimizies $\mathcal{D}_{\text{KL}}$ requires knowing the exact $P$ -- which is precisely the problem we are trying to approximate. Instead we optimize an alternative objective that is equivalent to $\mathcal{D}_{\text{KL}}$ up to an added constant,
+
+\begin{align}
+\text{ELBO}[Q_\phi(h|d)] &=  \sum_h Q_\phi(h|d) \log \frac{P(h,d)}{Q_\phi(h|d)} \\
+& = \sum_h Q_\phi(h|d) \log \frac{P(h|d)}{Q_\phi(h|d)} + \sum_h Q_\phi(h|d) \log P(d) \\
+& = - \mathcal{D}_{\text{KL}}[Q_\phi(h|d)||P(h|d)]  + \log P(d)
+\label{eq:ELBO}
+\end{align}
+
+This function is called the \emph{evidence lower bound} (ELBO), also known as the \emph{negative free energy}. The term ELBO comes from the fact that $\mathcal{L}[Q_\phi(h|d)]$ is a lower bound on the ``evidence'' (log marginal likelihood) $\log P(d)$. Maximizing the ELBO will produce the same variational approximation as minimizing the KL divergence. Critically, the ELBO eliminates the dependence on $P(h|d)$, only requiring access to the unnormalized posterior, the joint distribution $P(h,d)$.
+
 
 \subsection{Algorithmic details}
 
+Algorithms for variational inference vary on two dimensions. First, on the specific variational family being used, and whether it is a good fit to the true posterior. Unlike MCMC, variational inference does not have any formal guarantees about asympotically reaching the true posterior -- for example, if the variational family chosen does not actually contain the true posterior. Different choices of the approximation family can give vastly different approximations. Second, the optimization algorithm used can vary. This also interacts with the choice of variational family -- with the goal being to allow maximum complexity in the variational family while managinf the complexity of performing the optimization effectively. Note that exactly computing the ELBO (Equation \ref{eq:ELBO}) still requires an expectation over $Q_\phi$ which may not always be tractable thus making optimizing it also a non-trivial problem.
 
-Blackbox variational inference
-In the main text, the variational optimization problem is stated in terms of minimizing KL divergence. This is useful for clarifying the nature of the problem, but less useful from an algorithmic perspective because the objective function is not tractable (it requires knowledge of the true posterior distribution, which is what we are trying to approximate). Nonetheless, we can obtain a tractable objective function using the following identity:
-\begin{align}
-    \log P(d) = \mathcal{L}[Q_\phi(h|d)] + \mathcal{D}_\text{KL}[Q_\phi(h|d)||P(h|d)],
-\end{align}
-where
-\begin{align}
-    \mathcal{L}[Q_\phi(h|d)] = \mathbb{E}_{Q_\phi(h)} \left[ \log P(h,d) - \log Q_\phi(h) \right]
-\end{align}
-is the \emph{evidence lower bound} (ELBO), also known as the \emph{negative free energy}. The term ELBO comes from the fact that $\mathcal{L}[Q_\phi(h|d)]$ is a lower bound on the ``evidence'' (log marginal likelihood) $\log P(d)$. Maximizing the ELBO will produce the same variational approximation as minimizing the KL divergence. Critically, the ELBO eliminates the dependence on $P(h|d)$, only requiring access to the unnormalized posterior, the joint distribution $P(h,d)$.
+In this section we concentrate on one approach to variational inference using deep neural networks as flexible function approximators \citep{dayan1995helmholtz,kingma2014auto,mnih2014neural,rezende2015variational,paige2016inference}, with the parameters of these networks acting as the variational parameters being optimized. This also allows us to leverage the developments made in gradient based optimzation of such architectures. The idea is that the network takes in the relevant information about the data $d$ that is being conditioned on and produces some output. These outputs can be interpreted as the tradiational notion of `parameters' of a variational family $\phi$ -- for example if we were considering a Gaussian variational family then the outputs could be the mean and variance. However, these `parameters' are produced by the parameters of the neural network, and we can directly optimize these parameters instead, utilizing much of the progress made in recent years in efficiently and scalably in training neural networks.
 
-In certain special cases, the ELBO can be tractably computed \citep[see][]{jordan1999introduction}, but this is not true for arbitrary joint distributions and approximations. Because the Learned Inference Model uses a flexible neural network function approximator, we adopt an approximate technique for evaluating and optimizing the ELBO known as \emph{blackbox variational inference} \citep{ranganath2014black}. The key idea is to approximate the gradient of the ELBO with a set of $M$ samples:
+We describe an approximate technique for evaluating and optimizing the ELBO known as \emph{blackbox variational inference} \citep{ranganath2014black}. Here we directly approximate the gradient of the ELBO. This still requires the computation of an expectation over $Q_\phi$, which is tractably approximated with a set of $M$ samples:
 \begin{align}
-    \nabla_\phi \mathcal{L}[Q_\phi(h|d)] \approx \frac{1}{M} \sum_{m=1}^M \nabla_\phi \log Q_\phi(h^m|d) \left[ \log P(h^m,d) - \log Q_\phi(h^m) \right],
+    \nabla_\phi \text{ELBO}[Q_\phi(h|d)] \approx \frac{1}{M} \sum_{m=1}^M \nabla_\phi \log Q_\phi(h^m|d) \left[ \log P(h^m,d) - \log Q_\phi(h^m) \right],
 \end{align}
 where $h^m \sim Q_\phi(h|d)$. Using this approximation, the variational parameters can be optimized with stochastic gradient descent updates of the form:
 \begin{align}
     \phi_{t+1} \leftarrow \phi_t + \rho_t \nabla_\phi \mathcal{L}[Q_\phi(h|d)],
 \end{align}
 where $t$ indexes iterations and $\rho_t$ is an iteration-dependent step-size. Provided $\rho_t$ satisfies the Robbins-Monro stochastic approximation conditions ($\sum_{t=1}^\infty \rho_t = \infty, \sum_{t=1}^\infty \rho_t^2 < \infty$), this optimization procedure will converge to the optimal parameters with probability 1.
+
 \subsection{History}
 
-The history of variational inference is more difficult to trace since it is intimately tied to optimization. Some of the first variational approximations appear in statistical physics as mean field theories. The first of these was the Curie-Weiss theory for ferromagnetism, that made a mean-field approximation to the Ising model\cite{curie1895proprietes,  weiss1907hypothese}. Here the local field at each point on a lattice, which could in theory have significant local structure, is approximated by a global field that applies uniformly to the whole lattice. This effectively ignores correlations between the lattice sites. In the language of the previous section, this constitutes approximating the probability distribution $P(\vec{h})$ which maybe be defined over a complex joint distribution over the dimensions of $\vec{h}$. 
+The history of variational inference is more difficult to trace since it is a broader concept intimately tied to optimization. Some of the first variational approximations, recognizable as such, appear in statistical physics as mean field theories. The first of these was the Curie-Weiss theory for ferromagnetism, that made a mean-field approximation to the Ising model\cite{curie1895proprietes,  weiss1907hypothese}. Here the local field at each point on a lattice is approximated by a global field that applies uniformly to the whole lattice. This effectively ignores correlations between the lattice sites. In the language of probability distributions this constitutes approximating the probability distribution $P(\vec{h} | d)$ defined over a potentially complex joint distribution over the $K$ dimensions of $\vec{h}$ (the magnetizations at different lattice sites for example), with a factorized distribution $Q_\phi$ where
+\begin{align}
+Q(\vec{h}| d) = \prod_{i}^K Q_{\phi_i}(h_i | d)
+\end{align}
+and the parameters $\phi_{1:K}$ defining the parameters of the variational family that are optimized. Here, the correlations between the different dimensions are neglected. Subsequent to this model, several other mean field theories were developed across other domains of physics. Following these, \citet{landau1965collected} formalized mean field theory as a variational approximation\cite{kadanoff2009more}. Concurrently, variational approaches were also applied to problems in quantum physics and quantum field theory \citep{milton2006electromagnetic, feynman1965quantum}. 
 
-Subsequent to this model, several other mean field theories were developed across other domain of physics. \citet{landau1965collected} formalized mean field theory as a variational approximation\cite{kadanoff2009more}. Concurrently, variational approaches were also applied to problems in quantum physics and quantum field theory \citep{milton2006electromagnetic, feynman1965quantum}. 
+The development of variational methods specifically for Bayesian inference is arguably started with a mean field learning algorithm for neural networks in \citet{anderson1987mean}, followed by formalization of variational approximations to a slew of othe models\citep{saul1996mean, jaakkola1997variational}. These approaches have been extensively studied in statistics and machine learning, and provide a strong alternative to MCMC for scalable posterior approximation \citep{blei2017variational, jordan1999introduction}.
 
-The development of variational methods specifically for Bayesian inference is relatively more recent, arguably starting with a mean field learning algorithm for neural networks in \citet{anderson1987mean}, followed by formalization of variational approximations to a slew of othe models\citep{saul1996mean, jaakkola1997variational}. These approaches have been extensively studied in statistics and machine learning, and provide a strong alternative to MCMC for scalable posterior approximation \citep{blei2017variational}.
-
-\subsection{Variational methods in models of cognition}
-
-The variational optimization view of approximate inference allows us to consider more general approximation families that go beyond weighted samples. In fact, the approximate posterior can be any parametrized function that defines a valid probability distribution over the relevant hypothesis space. For example, researchers have used deep neural networks as flexible function approximators \citep{dayan1995helmholtz,kingma2014auto,mnih2014neural,rezende2015variational,paige2016inference}. From a neuroscience perspective, this approach to approximate inference is appealing because it lets us contemplate complex, biologically realistic approximation architectures \citep[provided that the optimization procedures can also be realized biologically; see][]{whittington2019theories}. For example, particular implementations of variational inference have been used to model hierarchical predictive coding in the brain \citep{friston2008hierarchical,gershman2019does}.
+Variational methods have been evoked implicitly in models of human cognition to in special cases where only certain moments of distributions are shown to be tracked (mean tracking, check for studies about kurtosis etc). However, they have not historically been studied explicitly as models of high level cognition; we believe our approach in Chapter \ref{chap:LTI} is one of the first in this regard. This approach to approximate inference has also been studied from a neuroscience perspective, where its appeal lies in allowing us to contemplate complex, biologically realistic approximation architectures (provided that the optimization procedures can also be realized biologically; see \citet{whittington2019theories}). For example, particular implementations of variational inference have been used to model hierarchical predictive coding in the brain \citep{friston2008hierarchical,gershman2019does}.
 
 
 \section{Hybrid methods}
