@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  23 SEP 2019 23:26
+This is XeTeX, Version 3.14159265-2.6-0.99996 (TeX Live 2016) (preloaded format=xelatex 2016.5.22)  23 SEP 2019 23:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1871,8 +1871,14 @@ Package microtype Info: Character `−' is missing
 (microtype)             in font `\EU1/EBGaramond(1)/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
  [5]
+Overfull \hbox (0.7239pt too wide) in paragraph at lines 22--23
+\EU1/EBGaramond(1)/bx/n/10.95 Sample-based approximations, also known as \EU1/E
+BGaramond(1)/m/it/10.95 Monte Carlo \EU1/EBGaramond(1)/bx/n/10.95 approximation
+s$[]$, take the following form: 
+ []
+
 File: figures/MonteCarlo_schematic.pdf Graphic file (type QTm)
- <use  "figures/MonteCarlo_schematic.pdf" >
+<use  "figures/MonteCarlo_schematic.pdf" >
 LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/bx/n' will be
 (Font)              scaled to size 12.0pt on input line 32.
 LaTeX Font Info:    Font shape `EU1/Helvetica(0)/bx/n' will be
@@ -1902,54 +1908,7 @@ LaTeX Font Warning: Font shape `EU1/SourceCodePro(0)/m/it' undefined
 [8] [9] [10] [11]
 File: figures/variational_schematic.pdf Graphic file (type QTm)
  <use  "figures/variational_schematic.pdf" > [12] [13]
-LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/bx/n' will be
-(Font)              scaled to size 8.0pt on input line 173.
-Package microtype Info: Character `•' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `℃' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `™' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/8'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `−' is missing
-(microtype)             in font `\EU1/EBGaramond(1)/bx/n/8'.
-(microtype)             Ignoring protrusion settings for this character.
-
-
-Package natbib Warning: Citation `kadanoff2009more' on page 14 undefined on inp
-ut line 173.
-
-
-Package natbib Warning: Citation `milton2006electromagnetic' on page 14 undefin
-ed on input line 173.
-
-
-Package natbib Warning: Citation `feynman1965quantum' on page 14 undefined on i
-nput line 173.
-
-[14]
-
-Package natbib Warning: Citation `anderson1987mean' on page 15 undefined on inp
-ut line 175.
-
-
-Package natbib Warning: Citation `saul1996mean' on page 15 undefined on input l
-ine 175.
-
-
-Package natbib Warning: Citation `jaakkola1997variational' on page 15 undefined
- on input line 175.
-
-
-Package natbib Warning: Citation `blei2017variational' on page 15 undefined on 
-input line 175.
-
-
-LaTeX Warning: Reference `chap:LTI' on page 15 undefined on input line 177.
-
-) [15]
+[14]) [15]
 \openout2 = `chapters/chapter3.aux'.
 
  (./chapters/chapter3.tex
@@ -2125,7 +2084,7 @@ File: figures/dud.pdf Graphic file (type QTm)
 File: figures/confidence.pdf Graphic file (type QTm)
 
 <use  "figures/confidence.pdf" > [31] [32] [33]
-Overfull \hbox (4.03828pt too wide) in paragraph at lines 263--264
+Overfull \hbox (4.11028pt too wide) in paragraph at lines 263--264
 []\EU1/EBGaramond(1)/bx/n/10.95 Lieder et al.$[]$$[]$$[]$ showed that the ancho
 ring and adjustment heuristic is a basic consequence of MCMC
  []
@@ -2197,7 +2156,7 @@ hat human brains are equipped with a general-purpose
  []
 
 
-Overfull \hbox (55.93694pt too wide) in paragraph at lines 16--17
+Overfull \hbox (55.01694pt too wide) in paragraph at lines 16--17
 \EU1/EBGaramond(1)/bx/n/10.95 though many theories posit some form of approxima
 te inference using Monte Carlo sampling e.g.,$[]$.
  []
@@ -2210,7 +2169,7 @@ te inference using Monte Carlo sampling e.g.,$[]$.
 LaTeX Font Info:    Font shape `EU1/EBGaramond(1)/m/it' will be
 (Font)              scaled to size 10.0pt on input line 26.
  [55]
-Overfull \hbox (5.73969pt too wide) in paragraph at lines 30--31
+Overfull \hbox (6.52368pt too wide) in paragraph at lines 30--31
 []\EU1/EBGaramond(1)/bx/n/10.95 Amortization has a long history in machine lear
 ning; the \EU1/EBGaramond(1)/m/it/10.95 locus classicus \EU1/EBGaramond(1)/bx/n
 /10.95 is the Helmholtz machine$[]$,
@@ -2341,7 +2300,7 @@ Chapter 6.
 
 
 ] [93] [94]
-Overfull \hbox (10.50867pt too wide) in paragraph at lines 36--37
+Overfull \hbox (11.80466pt too wide) in paragraph at lines 36--37
 []\EU1/EBGaramond(1)/bx/n/10.95 The earliest studies of probabilistic belief up
 dating, carried out by Ward Edwards and his students$[]$,
  []
@@ -2502,7 +2461,7 @@ Chapter 8.
 
 
 ] [188] [189] [190]
-Overfull \hbox (50.6955pt too wide) in paragraph at lines 70--71
+Overfull \hbox (50.4875pt too wide) in paragraph at lines 70--71
 []\EU1/EBGaramond(1)/bx/n/10.95 Causal relationships among random variables can
  be expressed using \EU1/EBGaramond(1)/m/it/10.95 causal Bayesian networks \EU1
 /EBGaramond(1)/bx/n/10.95 (CBNs $\OMS/cmsy/m/n/10.95 G$\EU1/EBGaramond(1)/bx/n/
@@ -2595,17 +2554,13 @@ File: figures/N6_results_active.pdf Graphic file (type QTm)
 ]
 [215] [216] [217] [218] [219] [220] [221] [222] [223] [224] [225] [226]
 [227] [228] [229] [230] [231] [232] [233] [234] [235] [236] [237] [238]
-[239] [240] [241] [242] [243])
-
-Package natbib Warning: There were undefined citations.
-
-[244]
+[239] [240] [241] [242] [243]) [244]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 47.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 47.
- (./dissertation.aux (./chapters/introduction.aux)
-(./chapters/chapter1.aux) (./chapters/chapter2.aux) (./chapters/chapter3.aux)
-(./chapters/chapter4.aux) (./chapters/chapter5.aux) (./chapters/chapter6.aux)
-(./chapters/chapter7.aux))
+ (./dissertation.aux
+(./chapters/introduction.aux) (./chapters/chapter1.aux)
+(./chapters/chapter2.aux) (./chapters/chapter3.aux) (./chapters/chapter4.aux)
+(./chapters/chapter5.aux) (./chapters/chapter6.aux) (./chapters/chapter7.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 47.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 47.
 
@@ -2620,12 +2575,12 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 41449 strings out of 493591
- 813351 string characters out of 6143546
- 893856 words of memory out of 5000000
- 44010 multiletter control sequences out of 15000+600000
+ 41462 strings out of 493591
+ 813714 string characters out of 6143546
+ 894104 words of memory out of 5000000
+ 44023 multiletter control sequences out of 15000+600000
  14204 words of font info for 128 fonts, out of 8000000 for 9000
  1347 hyphenation exceptions out of 8191
- 62i,17n,107p,10478b,1276s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,17n,107p,10478b,1277s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on dissertation.pdf (251 pages).

@@ -10,7 +10,7 @@ A level-1 auxiliary file: chapters/chapter5.aux
 A level-1 auxiliary file: chapters/chapter6.aux
 A level-1 auxiliary file: chapters/chapter7.aux
 The style file: apalike2.bst
-Reallocated field_info (elt_size=4) to 13800 items from 5000.
+Reallocated field_info (elt_size=4) to 13954 items from 5000.
 Database file #1: references.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--can't use both volume and number fields in abbott2015random
@@ -34,45 +34,45 @@ Warning--empty journal in waldmann2013causal
 Warning--empty year in Yildirim
 Warning--empty journal in Yildirim
 Warning--empty journal in zhu_sanborn_chater_2018
-You've used 400 entries,
+You've used 407 entries,
             2229 wiz_defined-function locations,
-            2421 strings with 66551 characters,
-and the built_in function-call counts, 166190 in all, are:
-= -- 16404
-> -- 6996
-< -- 255
-+ -- 2480
-- -- 2341
-* -- 14211
-:= -- 28544
-add.period$ -- 1187
-call.type$ -- 400
-change.case$ -- 3132
-chr.to.int$ -- 371
-cite$ -- 421
-duplicate$ -- 6267
-empty$ -- 11448
-format.name$ -- 3001
-if$ -- 32514
+            2456 strings with 67621 characters,
+and the built_in function-call counts, 168782 in all, are:
+= -- 16656
+> -- 7091
+< -- 262
++ -- 2514
+- -- 2371
+* -- 14426
+:= -- 28994
+add.period$ -- 1208
+call.type$ -- 407
+change.case$ -- 3180
+chr.to.int$ -- 378
+cite$ -- 428
+duplicate$ -- 6372
+empty$ -- 11638
+format.name$ -- 3046
+if$ -- 33022
 int.to.chr$ -- 30
 int.to.str$ -- 0
-missing$ -- 423
-newline$ -- 1986
-num.names$ -- 1206
-pop$ -- 2781
+missing$ -- 432
+newline$ -- 2021
+num.names$ -- 1227
+pop$ -- 2828
 preamble$ -- 1
-purify$ -- 3159
+purify$ -- 3209
 quote$ -- 0
-skip$ -- 4793
+skip$ -- 4868
 stack$ -- 0
-substring$ -- 12009
-swap$ -- 917
-text.length$ -- 59
+substring$ -- 12180
+swap$ -- 928
+text.length$ -- 61
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 2346
+type$ -- 2384
 warning$ -- 21
-while$ -- 1394
+while$ -- 1416
 width$ -- 0
-write$ -- 5093
+write$ -- 5183
 (There were 21 warnings)
