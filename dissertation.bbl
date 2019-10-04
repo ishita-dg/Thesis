@@ -26,6 +26,11 @@ Alon, N., Reichman, D., Shinkar, I., Wagner, T., Musslick, S., Cohen, J.~D.,
 \newblock In {\em Proceedings of the 31st International Conference on Neural
   Information Processing Systems}  (pp.\ 2097--2106).: Curran Associates Inc.
 
+\bibitem[Anderson, 1990]{anderson1990adaptive}
+Anderson, J.~R. (1990).
+\newblock {\em The Adaptive Character of Thought}.
+\newblock Psychology Press.
+
 \bibitem[Anderson \& Peterson, 1987]{anderson1987mean}
 Anderson, J.~R. \& Peterson, C. (1987).
 \newblock A mean field theory learning algorithm for neural networks.
@@ -245,15 +250,9 @@ Brunswik, E. (1955).
   psychology.
 \newblock {\em {Psychological Review}}, 62(3), 193.
 
-\bibitem[Buesing et~al., 2011a]{buesing11}
-Buesing, L., Bill, J., Nessler, B., \& Maass, W. (2011a).
+\bibitem[Buesing et~al., 2011]{buesing11}
+Buesing, L., Bill, J., Nessler, B., \& Maass, W. (2011).
 \newblock Neural dynamics as sampling: a model for stochastic computation in
-  recurrent networks of spiking neurons.
-\newblock {\em PLoS Computational Biology}, 7, e1002211.
-
-\bibitem[Buesing et~al., 2011b]{buesing2011neural}
-Buesing, L., Bill, J., Nessler, B., \& Maass, W. (2011b).
-\newblock Neural dynamics as sampling: A model for stochastic computation in
   recurrent networks of spiking neurons.
 \newblock {\em PLoS Computational Biology}, 7, e1002211.
 
@@ -326,12 +325,12 @@ Curie, P. (1895).
 \newblock {\em Magnetic properties of bodies at various times}.
 \newblock Number~4. Gauthier-Villars and sons.
 
-\bibitem[Dasgupta et~al., 2017a]{dasgupta17}
+\bibitem[Dasgupta et~al., 2017a]{dasgupta2017hypotheses}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017a).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
 
-\bibitem[Dasgupta et~al., 2017b]{dasgupta2017hypotheses}
+\bibitem[Dasgupta et~al., 2017b]{dasgupta17}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017b).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
@@ -603,6 +602,12 @@ Friston, K. (2008).
 \newblock Hierarchical models in the brain.
 \newblock {\em PLoS Computational Biology}, 4, e1000211.
 
+\bibitem[Friston et~al., 2015]{friston2015active}
+Friston, K., Rigoli, F., Ognibene, D., Mathys, C., Fitzgerald, T., \& Pezzulo,
+  G. (2015).
+\newblock Active inference and epistemic value.
+\newblock {\em Cognitive neuroscience}, 6(4), 187--214.
+
 \bibitem[Gandhi \& Lake, 2019]{gandhi2019mutual}
 Gandhi, K. \& Lake, B.~M. (2019).
 \newblock Mutual exclusivity as a challenge for neural networks.
@@ -646,6 +651,11 @@ Gershman, S. \& Tenenbaum, J.~B. (2015).
 \newblock Phrase similarity in humans and machines.
 \newblock In {\em Proceedings of the 37th Annual Conference of the Cognitive
   Science Society}.
+
+\bibitem[Gershman, 2015]{gershman2015unifying}
+Gershman, S.~J. (2015).
+\newblock A unifying probabilistic view of associative learning.
+\newblock {\em PLoS computational biology}, 11(11), e1004567.
 
 \bibitem[Gershman, 2017]{gershman2017blessing}
 Gershman, S.~J. (2017).
@@ -757,6 +767,17 @@ Gigerenzer, G. \& Goldstein, D.~G. (1996).
 \newblock Reasoning the fast and frugal way: Models of bounded rationality.
 \newblock {\em {Psychological Review}}, 103, 650--669.
 
+\bibitem[Gigerenzer \& Selten, 2002]{gigerenzer2002bounded}
+Gigerenzer, G. \& Selten, R. (2002).
+\newblock {\em Bounded rationality: The adaptive toolbox}.
+\newblock MIT press.
+
+\bibitem[Gigerenzer et~al., 1990]{gigerenzer1990empire}
+Gigerenzer, G., Swijtink, Z., Porter, T., Daston, L., \& Kruger, L. (1990).
+\newblock {\em The empire of chance: How probability changed science and
+  everyday life}, volume~12.
+\newblock Cambridge University Press.
+
 \bibitem[Gigerenzer \& Todd, 1999]{gigerenzer1999simple}
 Gigerenzer, G. \& Todd, P.~M. (1999).
 \newblock {\em Simple heuristics that make us smart}.
@@ -820,6 +841,10 @@ Griffiths, T.~L. (2015).
 \newblock Revealing ontological commitments by magic.
 \newblock {\em Cognition}, 136, 43--48.
 
+\bibitem[Griffiths et~al., 2008]{griffiths2008bayesian}
+Griffiths, T.~L., Kemp, C., \& Tenenbaum, J.~B. (2008).
+\newblock Bayesian models of cognition.
+
 \bibitem[Griffiths et~al., 2015]{griffiths2015}
 Griffiths, T.~L., Lieder, F., \& Goodman, N.~D. (2015).
 \newblock Rational use of cognitive resources: Levels of analysis between the
@@ -857,17 +882,17 @@ Gu, S.~S., Ghahramani, Z., \& Turner, R.~E. (2015).
 \newblock In {\em Advances in Neural Information Processing Systems}  (pp.\
   2629--2637).
 
+\bibitem[Hacking, 2006]{hacking2006emergence}
+Hacking, I. (2006).
+\newblock {\em The emergence of probability: A philosophical study of early
+  ideas about probability, induction and statistical inference}.
+\newblock Cambridge University Press.
+
 \bibitem[Hadjichristidis et~al., 1999]{hadjichristidis1999opening}
 Hadjichristidis, C., Stibel, J., Sloman, S., Over, D., \& Stevenson, R. (1999).
 \newblock Opening pandora's box: Selective unpacking and superadditivity.
 \newblock In {\em {Proceedings of the European Society for the Study of
   Cognitive Systems 16th Annual Workshop}}.
-
-\bibitem[Haefner et~al., 2016]{haefner2016perceptual}
-Haefner, R.~M., Berkes, P., \& Fiser, J. (2016).
-\newblock Perceptual decision-making as probabilistic inference by neural
-  sampling.
-\newblock {\em Neuron}, 90, 649--660.
 
 \bibitem[Hamrick et~al., 2011]{blocks}
 Hamrick, J.~B., Battaglia, P., \& Tenenbaum, J.~B. (2011).
@@ -1219,6 +1244,12 @@ Landauer, T.~K. \& Dumais, S.~T. (1997).
   acquisition, induction, and representation of knowledge.
 \newblock {\em Psychological review}, 104(2), 211.
 
+\bibitem[Lau \& Brady, 2018]{lau2018ensemble}
+Lau, J. S.-H. \& Brady, T.~F. (2018).
+\newblock Ensemble statistics accessed through proxies: Range heuristic and
+  dependence on low-level properties in variability discrimination.
+\newblock {\em Journal of vision}, 18(9), 3--3.
+
 \bibitem[LeCun et~al., 2015]{lecun2015deep}
 LeCun, Y., Bengio, Y., \& Hinton, G. (2015).
 \newblock Deep learning.
@@ -1293,6 +1324,11 @@ Linzen, T., Dupoux, E., \& Goldberg, Y. (2016).
   dependencies.
 \newblock {\em Transactions of the Association for Computational Linguistics},
   4, 521--535.
+
+\bibitem[Logan, 1988]{logan1988toward}
+Logan, G.~D. (1988).
+\newblock Toward an instance theory of automatization.
+\newblock {\em Psychological review}, 95(4), 492.
 
 \bibitem[Lombrozo, 2010]{lombrozo2010causal}
 Lombrozo, T. (2010).
@@ -1877,6 +1913,11 @@ Shanks, D.~R. (1991).
 \newblock A connectionist account of base-rate biases in categorization.
 \newblock {\em Connection Science}, 3(2), 143--162.
 
+\bibitem[Shepard, 1987]{shepard1987toward}
+Shepard, R.~N. (1987).
+\newblock Toward a universal law of generalization for psychological science.
+\newblock {\em Science}, 237(4820), 1317--1323.
+
 \bibitem[Shi \& Griffiths, 2009]{shi2009neural}
 Shi, L. \& Griffiths, T.~L. (2009).
 \newblock {Neural implementation of hierarchical Bayesian inference by
@@ -2095,15 +2136,15 @@ Tversky, A. \& Kahneman, D. (1973).
 \newblock Availability: A heuristic for judging frequency and probability.
 \newblock {\em Cognitive Psychology}, 5(2), 207--232.
 
-\bibitem[Tversky \& Kahneman, 1974a]{tversky}
+\bibitem[Tversky \& Kahneman, 1974a]{tversky1974judgment}
 Tversky, A. \& Kahneman, D. (1974a).
-\newblock {Judgment under Uncertainty: Heuristics and Biases.}
-\newblock {\em Science (New York, N.Y.)}, 185(4157), 1124--1131.
-
-\bibitem[Tversky \& Kahneman, 1974b]{tversky1974judgment}
-Tversky, A. \& Kahneman, D. (1974b).
 \newblock Judgment under uncertainty: Heuristics and biases.
 \newblock {\em Science}, 185(4157), 1124--1131.
+
+\bibitem[Tversky \& Kahneman, 1974b]{tversky}
+Tversky, A. \& Kahneman, D. (1974b).
+\newblock {Judgment under Uncertainty: Heuristics and Biases.}
+\newblock {\em Science (New York, N.Y.)}, 185(4157), 1124--1131.
 
 \bibitem[Tversky \& Kahneman, 1983]{tversky1983extensional}
 Tversky, A. \& Kahneman, D. (1983).
