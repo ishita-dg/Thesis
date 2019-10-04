@@ -2,14 +2,34 @@
 \chapter{Amortization: Memory as a computational resource}
 \label{chap:amort}
 
-
-In this chapter, I first discuss what amortization means and suggest some ways in which it might be realized. I then discuss the history of implicit invocation of amortized inference in models of human cognition, focusing in particular on two domains: Inference and planning\footnote{Planning and inference have historically been studied as separate problems. However, planning can be seen as a specific case of inference \citep{botvinick2012planning}. We first address these two separately and then discuss how the battery of methdos developed in each can better relate and inform one another when seen through the common lens of amortization.}. 
+In this chapter, I will discuss first what the computational problem that amortization addresses. I then discuss how it links to ecological rationality, and then outline some concrete algorithms for how it might be implemented -- focusing on amortization in the approximate algorithms for probabilistic inference discussed in Chapter \ref{chap:approx}. I then discuss the implicit invocation of amortized inference in models of human cognition, focusing in particular on two domains: Inference and planning. Planning can be seen as a specific case of inference\citep{botvinick2012planning}, but these have historically been studied as separate problems, with various approaches to each developing independently. So we first address amortization in these two separately and then discuss how the methods developed in each can better relate and inform one another, when seen through the common lens of amortization.
 
 \section{Two kinds of knowledge}
 
- We outline the computational challenge in going from possible to realized knowledge in each of these cases, and then explore how various methods to solve this problem can be seen as amortization. We discuss how different amortization strategies can arise depending on the structure in the environment and limitations on computational resources, and outline empirical evidence for these behaviours in natural intelligence.
+Amortization means to spread the costs over a period of time. In our case, the costs are computational costs. In this section, I discuss what these computational costs being amortized are. 
 
-\section{Amortization in Inference}
+There are two distinct aspects to having a response to a query: a) to have all the relevant information from the external world and b) to have internally computed the response based on this information. Once the relevant information is learned, all knowledge possible from that information is termed `possible knowledge' -- for example, once we learn the rules of mathematics, the proofs of all the theorems in the world are included in this `possible knowledge'. However, only a small subset of these proofs can and will actually be computed by an average mathematician. This subset is termed `realized knowledge'. Arriving at each of these proofs requires some work -- even if we already possess all possible knowledge in a domain, going from that to realized knowledge requires computation. These computations cost resources. It is these costs are what we wish to amortize.
+
+\section{Amortization and ecological rationality}
+
+In different environments, with different distributions of queries, different levels of amortization can be optimal. For example, if a query is rarely experienced, there may not exist adequate previous experience from which to build and recover a strong response-prior. Further, the cost of running an inference in the rare cases that it is encountered may not be worth the trade-off of storing and recovering pre-computed solutions or procedures. However, with more experience, a stronger response-prior can develop, allowing fast off the shelf re-use of solutions that have worked well in the past. As phrased in \cite{logan1988toward}:
+\begin{quote}
+``Automaticity is memory retrieval: Performance is automatic when it is based on singlestep direct-access retrieval of past solutions from memory. The theory assumes that novices begin with a general algorithm that is sufficient to perform the task. As they gain experience, they learn specific solutions to specific problems, which they retrieve when they encounter the same problems again.''
+\end{quote}
+
+More experience in a certain domain and greater familiarity with it leads to easier and faster inferences, \textit{even after the stage of acquiring all `possible' knowledge about the domain is complete}. This can be explained by amortization, i.e. stronger response-priors built over time, that aid and speed up internal computations required to form a compiled response. Another prediction of this kind of re-use is that if the queries faced in our experience of the word are biased, the response-prior learned might end up being much simpler, and not fully represent the complexities in the space of all possible query-response pairs. This is because it only sees a small subset of that space. This might be very adaptive to the common queries but be very misleading in uncommon ones. This is related to the notion of ecological rationality -- where seemingly simple responses, that engage computations much less expensive than full inference in a world-model, can give surprisingly good results in the real world. This might be because the real world doesn't ask random uncorrelated queries and actually provides a lot of experience in certain query spaces. Within these limited spaces, it's possible to learn good -- and simple -- response priors. Biasing responses with these provides good responses to the most common queries. This also allows grounds for explaining the observed poor performance in humans when faced with uncommon queries. If the computations were being carried out from scratch using a mental model, these would be no difference between common and uncommon queries.
+
+
+% We outline the computational challenge in going from possible to realized knowledge in each of these cases, and then explore how various methods to solve this problem can be seen as amortization. 
+% 
+% We discuss how different amortization strategies can arise depending on the structure in the environment and limitations on computational resources, and outline empirical evidence for these behaviours in natural intelligence.
+
+\section{Algorithms for amortization}
+
+
+\section{Amortization in cognitive science}
+
+\subsection{Amortization in Inference}
 
 In many real-world situations, people have to combine information from many sources, in order to make judgments about probabilistic outcomes. Bayesian inference provides a normative computational account of what should be done. An extensive research program has sought to establish signature of the use of abstract, normative baysian inference in humans. Exactly computing this is difficult. Information about the world can be encoded in teh form of a generative model P(h, d) that consists of a likelihood P(d | h) of observed data d, given latent hypothesis h, and a prior over latent hypothesis h. This encompasses as `possible' knowledge. However, to know the probability of different underlying hypotheses h, given the observed data d, the following computations need to be done.
 Given data $d$, Bayes' rule stipulates how a rational agent should update its prior probabilistic beliefs $P(h)$ about hypothesis $h$:
@@ -31,7 +51,7 @@ In thinking of a heuristic as a learned function from query to response, the rol
 
 
 
-\section{Amortization in Planning}
+\subsection{Amortization in Planning}
 
 While the main focus of this paper is on inference and not planning, amortization has implicitly played a very crucial role in our understanding of how planning might be implemented. In this section, we briefly review the literature on how amortization fits into the existing framework for approximate planning, and draw parallels to our primary discussion on amortization in inference.
 
@@ -50,12 +70,5 @@ The model-based representation is "possible knowledge" that is, it contains with
 Model-free value functions, pruning. Episodic RL.
 Temporal abstraction, options. Successor representation -- since much of the important structure in the environment is baked into the representation, simple computations with this representation can give good responses. 
 
-\section{Ecological rationality and how much to amortize}
-
-In different environments, with different distributions of queries, different levels of amortization can be optimal. For example, if a query is rarely experienced, there may not exist adequate previous experience from which to build and recover a strong response-prior. Further, the cost of running an inference in the rare cases that it is encountered may not be worth the trade-off of storing and recovering pre-computed solutions or procedures. However, with more experience, a stronger response-prior can develop, allowing fast off the shelf re-use of solutions that have worked well in the past. As phrased in \cite{logan1988toward}:
-\begin{quote}
-``Automaticity is memory retrieval: Performance is automatic when it is based on singlestep direct-access retrieval of past solutions from memory. The theory assumes that novices begin with a general algorithm that is sufficient to perform the task. As they gain experience, they learn specific solutions to specific problems, which they retrieve when they encounter the same problems again.''
-\end{quote}
-
-More experience in a certain domain and greater familiarity with it leads to easier and faster inferences, \textit{even after the stage of acquiring all `possible' knowledge about the domain is complete}. This can be explained by amortization, i.e. stronger response-priors built over time, that aid and speed up internal computations required to form a compiled response. Another prediction of this kind of re-use is that if the queries faced in our experience of the word are biased, the response-prior learned might end up being much simpler, and not fully represent the complexities in the space of all possible query-response pairs. This is because it only sees a small subset of that space. This might be very adaptive to the common queries but be very misleading in uncommon ones. This is related to the notion of ecological rationality -- where seemingly simple responses, that engage computations much less expensive than full inference in a world-model, can give surprisingly good results in the real world. This might be because the real world doesn't ask random uncorrelated queries and actually provides a lot of experience in certain query spaces. Within these limited spaces, it's possible to learn good -- and simple -- response priors. Biasing responses with these provides good responses to the most common queries. This also allows grounds for explaining the observed poor performance in humans when faced with uncommon queries. If the computations were being carried out from scratch using a mental model, these would be no difference between common and uncommon queries.
+\subsection{A fruitful exchange}
 
