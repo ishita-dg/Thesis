@@ -267,6 +267,11 @@ Carey, S. (2009).
 \newblock {\em The origin of concepts}.
 \newblock Oxford University Press.
 
+\bibitem[Carroll \& Kemp, 2015]{carroll2015}
+Carroll, C.~D. \& Kemp, C. (2015).
+\newblock Evaluating the inverse reasoning account of object discovery.
+\newblock {\em Cognition}, 139, 130--153.
+
 \bibitem[Cartwright, 2004]{cartwright2004causation}
 Cartwright, N. (2004).
 \newblock Causation: One word, many things.
@@ -480,11 +485,17 @@ Edwards, W. (1968).
 Elstein, A.~S., Shulman, L.~S., \& Sprafka, S.~A. (1978).
 \newblock Medical problem solving an analysis of clinical reasoning.
 
-\bibitem[Erev \& Barron, 2005]{erev05}
-Erev, I. \& Barron, G. (2005).
+\bibitem[Erev \& Barron, 2005a]{erev05}
+Erev, I. \& Barron, G. (2005a).
 \newblock On adaptation, maximization, and reinforcement learning among
   cognitive strategies.
 \newblock {\em Psychological Review}, 112, 912--931.
+
+\bibitem[Erev \& Barron, 2005b]{erev2005adaptation}
+Erev, I. \& Barron, G. (2005b).
+\newblock On adaptation, maximization, and reinforcement learning among
+  cognitive strategies.
+\newblock {\em Psychological review}, 112(4), 912.
 
 \bibitem[Erev et~al., 1994]{erev1994simultaneous}
 Erev, I., Wallsten, T.~S., \& Budescu, D.~V. (1994).
@@ -596,6 +607,11 @@ Fodor, J.~A. \& Pylyshyn, Z.~W. (1988).
 Fox, C.~R. \& Tversky, A. (1998).
 \newblock A belief-based account of decision under uncertainty.
 \newblock {\em Management Science}, 44(7), 879--895.
+
+\bibitem[Frank \& Goodman, 2012]{frank2012}
+Frank, M.~C. \& Goodman, N.~D. (2012).
+\newblock Predicting pragmatic reasoning in language games.
+\newblock {\em Science}, 336, 998--998.
 
 \bibitem[Friston, 2008]{friston2008hierarchical}
 Friston, K. (2008).
@@ -851,10 +867,21 @@ Griffiths, T.~L., Lieder, F., \& Goodman, N.~D. (2015).
   computational and the algorithmic.
 \newblock {\em Topics in Cognitive Science}, 7, 217--229.
 
-\bibitem[Griffiths \& Tenenbaum, 2006]{griffiths2006optimal}
-Griffiths, T.~L. \& Tenenbaum, J.~B. (2006).
+\bibitem[Griffiths \& Tenenbaum, 2006a]{griffiths2006}
+Griffiths, T.~L. \& Tenenbaum, J.~B. (2006a).
+\newblock Optimal predictions in everyday cognition.
+\newblock {\em Psychological Science}, 17, 767--773.
+
+\bibitem[Griffiths \& Tenenbaum, 2006b]{griffiths2006optimal}
+Griffiths, T.~L. \& Tenenbaum, J.~B. (2006b).
 \newblock Optimal predictions in everyday cognition.
 \newblock {\em Psychological Science}, 17(9), 767--773.
+
+\bibitem[Griffiths \& Tenenbaum, 2011]{griffiths2011}
+Griffiths, T.~L. \& Tenenbaum, J.~B. (2011).
+\newblock Predicting the future as bayesian inference: {P}eople combine prior
+  knowledge with observations when estimating duration and extent.
+\newblock {\em Journal of Experimental Psychology: General}, 140, 725--743.
 
 \bibitem[Griffiths et~al., 2012a]{griffiths2012bridging}
 Griffiths, T.~L., Vul, E., \& Sanborn, A.~N. (2012a).
@@ -1548,8 +1575,14 @@ Oakhill, J., Johnson-Laird, P., \& Garnham, A. (1989).
 \newblock Believability and syllogistic reasoning.
 \newblock {\em Cognition}, 31(2), 117--140.
 
-\bibitem[Oaksford \& Chater, 2007]{oaksford2007bayesian}
-Oaksford, M. \& Chater, N. (2007).
+\bibitem[Oaksford \& Chater, 2007a]{oaksford2007}
+Oaksford, M. \& Chater, N. (2007a).
+\newblock {\em Bayesian rationality: The probabilistic approach to human
+  reasoning}.
+\newblock Oxford University Press.
+
+\bibitem[Oaksford \& Chater, 2007b]{oaksford2007bayesian}
+Oaksford, M. \& Chater, N. (2007b).
 \newblock {\em Bayesian rationality: The probabilistic approach to human
   reasoning}.
 \newblock Oxford University Press.
@@ -1678,6 +1711,11 @@ Peterson, C.~R. \& Ulehla, Z. (1964).
 \newblock Uncertainty, inference difficulty, and probability learning.
 \newblock {\em Journal of Experimental Psychology}, 67, 523--530.
 
+\bibitem[Petzschner et~al., 2015]{petzschner2015}
+Petzschner, F.~H., Glasauer, S., \& Stephan, K.~E. (2015).
+\newblock A {B}ayesian perspective on magnitude estimation.
+\newblock {\em Trends in Cognitive Sciences}, 19, 285--293.
+
 \bibitem[Phillips \& Edwards, 1966]{phillips1966conservatism}
 Phillips, L.~D. \& Edwards, W. (1966).
 \newblock Conservatism in a simple probability inference task.
@@ -1746,10 +1784,15 @@ Richey, M. (2010).
 \newblock The evolution of markov chain monte carlo methods.
 \newblock {\em The American Mathematical Monthly}, 117(5), 383--413.
 
-\bibitem[Rieskamp \& Otto, 2006]{rieskamp06}
-Rieskamp, J. \& Otto, P.~E. (2006).
+\bibitem[Rieskamp \& Otto, 2006a]{rieskamp06}
+Rieskamp, J. \& Otto, P.~E. (2006a).
 \newblock {SSL: A theory of how people learn to select strategies}.
 \newblock {\em Journal of Experimental Psychology: General}, 135, 207--236.
+
+\bibitem[Rieskamp \& Otto, 2006b]{rieskamp2006ssl}
+Rieskamp, J. \& Otto, P.~E. (2006b).
+\newblock Ssl: a theory of how people learn to select strategies.
+\newblock {\em Journal of Experimental Psychology: General}, 135(2), 207.
 
 \bibitem[Ritchie et~al., 2016]{ritchie2016neurally}
 Ritchie, D., Thomas, A., Hanrahan, P., \& Goodman, N. (2016).
@@ -1814,6 +1857,12 @@ Russakovsky, O., Deng, J., Su, H., Krause, J., Satheesh, S., Ma, S., Huang, Z.,
   Karpathy, A., Khosla, A., Bernstein, M., et~al. (2015).
 \newblock Imagenet large scale visual recognition challenge.
 \newblock {\em International journal of computer vision}, 115(3), 211--252.
+
+\bibitem[Russell, 2016]{russell2016rationality}
+Russell, S. (2016).
+\newblock Rationality and intelligence: A brief update.
+\newblock In {\em Fundamental issues of artificial intelligence}  (pp.\ 7--28).
+  Springer.
 
 \bibitem[Saeedi et~al., 2017a]{saeedi17}
 Saeedi, A., Kulkarni, T.~D., Mansinghka, V., \& Gershman, S.~J. (2017a).
@@ -2037,6 +2086,13 @@ Spirtes, P., Glymour, C., Scheines, R., Heckerman, D., Meek, C., Cooper, G., \&
   Richardson, T. (2000).
 \newblock {\em Causation, prediction, and search}.
 \newblock MIT press.
+
+\bibitem[Sprenger et~al., 2011]{sprenger2011}
+Sprenger, A.~M., Dougherty, M., Atkins, S.~M., Franco-Watkins, A.~M., Thomas,
+  R., Lange, N., \& Abbs, B. (2011).
+\newblock Implications of cognitive load for hypothesis generation and
+  probability judgment.
+\newblock {\em Frontiers in Psychology}, 2, 129.
 
 \bibitem[Stanford, 2010]{stanford10}
 Stanford, P.~K. (2010).
@@ -2283,11 +2339,6 @@ Windschitl, P.~D. \& Chambers, J.~R. (2004).
 Wozny, D.~R., Beierholm, U.~R., \& Shams, L. (2010).
 \newblock Probability matching as a computational strategy used in perception.
 \newblock {\em PLoS Computational Biology}, 6, e1000871.
-
-\bibitem[Yildirim \& Kulkarni, ]{Yildirim}
-Yildirim, I. \& Kulkarni, T.~D.
-\newblock {Efficient analysis-by-synthesis in vision: {A} computational
-  framework, behavioral tests, and comparison with neural representations}.
 
 \bibitem[Yildirim et~al., 2015]{yildirim2015efficient}
 Yildirim, I., Kulkarni, T.~D., Freiwald, W.~A., \& Tenenbaum, J.~B. (2015).

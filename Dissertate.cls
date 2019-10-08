@@ -362,7 +362,7 @@
 
 \renewcommand{\backmatter}{
     \begin{appendices}
-        \include{chapters/appendixA}
+        \include{chapters/appendix}
     \end{appendices}
     \input{endmatter/personalize}
     \clearpage

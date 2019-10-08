@@ -5,6 +5,15 @@
 %\end{savequote}
 
 \chapter{Amortization in a sampling framework}
+\label{chap:MCMC_amort}
+
+Bayesian models of cognition assume that people compute probability distributions over hypotheses. However, the required computations are frequently intractable or prohibitively expensive. Since people often encounter many closely related distributions, selective reuse of computations (amortized inference) is ecologically rational: it leverages structure in the distribution of queries, to make efficient use of the brain’s limited resources. In this chapter, I extend the sampling framework introduced in Chapter \ref{chap:MCMC} to include how amortization in such a model might take place. 
+
+
+I demonstrate in 3 experiments that humans adaptively and flexibly re-use computations in probabilistic reasoning. When sequentially answering two related queries about natural scenes, participants’ responses to the second query systematically depend on the structure of the first query. This influence is sensitive to the content of the queries, only appearing when the queries are related. Using a cognitive load manipulation, I show evidence that people amortize summary statistics of previous inferences, rather than storing the entire distribution. These findings support the view that the brain trades off accuracy and computational cost, and utilizes structure in sequences of queries observed, to make efficient use of its limited cognitive resources to approximate probabilistic inference.
+
+
+\section{Amortized hypothesis generation}
 
 Many theories of probabilistic reasoning assume that human brains are equipped with a general-purpose inference engine that can be used to answer arbitrary queries for a wide variety of probabilistic models \citep{griffiths2012bridging, oaksford2007bayesian}. For example, given a joint distribution over objects in a scene, the inference engine can be queried with arbitrary conditional distributions, such as:
 \begin{itemize}
@@ -23,20 +32,20 @@ P(\text{toaster} \wedge \text{microwave}|\text{sink}) = P(\text{toaster}|\text{s
 \end{align}
 Even though this is a trivial example, standard inference engines do not exploit these kinds of regularities because they are memoryless---they have no access to traces of past computations.
 
-An inference engine may gain efficiency by incurring some amount of bias due to reuse of past computations---a strategy we will refer to as \emph{amortized inference} \citep{stuhlmuller2013learning, gershman2014amortized}. For example, if the inference engine stores its answers to the ``toaster'' and ``microwave'' queries, then it can efficiently compute the answer to the ``toaster or microwave'' query without rerunning inference from scratch. More generally, the posterior can be approximated as a parametrized function, or \emph{recognition model}, that maps data in a bottom-up fashion to a distribution over hypotheses, with the parameters trained to minimize the divergence between the approximate and true posterior.\footnote{Formally, this is known as \emph{variational inference} \citep{jordan1999introduction}, where the divergence is typically the Kullback-Leibler divergence between the approximate and true posterior. Although this divergence cannot be minimized directly (since it requires knowledge of the true posterior), a bound (variational free energy) can be tractably optimized for some classes of approximations.} By sharing the same recognition model across multiple queries, the recognition model can support rapid inference, but is susceptible to ``interference'' across different queries, a property that we explore below.
+An inference engine may gain efficiency by incurring some amount of bias due to reuse of past computations---a strategy we will refer to as \emph{amortized inference} \citep{stuhlmuller2013learning, gershman2014amortized}. This idea is expanded upon in Chapter \ref{chap:amort}. For example, if the inference engine stores its answers to the ``toaster'' and ``microwave'' queries, then it can efficiently compute the answer to the ``toaster or microwave'' query without rerunning inference from scratch. More generally, the posterior can be approximated as a parametrized function, or \emph{recognition model}, that maps data in a bottom-up fashion to a distribution over hypotheses, with the parameters trained to minimize the divergence between the approximate and true posterior.\footnote{Formally, this is known as \emph{variational inference} \citep{jordan1999introduction}, where the divergence is typically the Kullback-Leibler divergence between the approximate and true posterior. Although this divergence cannot be minimized directly (since it requires knowledge of the true posterior), a bound (variational free energy) can be tractably optimized for some classes of approximations.} By sharing the same recognition model across multiple queries, the recognition model can support rapid inference, but is susceptible to ``interference'' across different queries, a property that we explore below.
 
 One way to construct a recognition model is using Monte Carlo sampling: the recognition model can be viewed as a kind of data-driven sampler whose parameters are optimized so that the samples resemble the true posterior. In an amortized architecture, these parameters are shared across different inputs (i.e., data) and hence the samples will be correlated, introducing a systematic bias. If the sampling process corresponds to a Markov chain Monte Carlo algorithm (see below), this bias will disappear with a sufficiently large number of samples, but since humans appear to take a relatively small number of samples \citep{dasgupta17,vul2014one}, we expect this bias to be measurable.
 
 Amortization has a long history in machine learning; the \emph{locus classicus} is the Helmholtz machine \citep{dayan1995helmholtz,hinton1995wake}, which uses samples from the generative model to train a recognition model. More recent extensions and applications of this approach \citep[e.g.,][]{rezende2014stochastic,paige2016inference,kingma2013auto,ritchie2016neurally} have ushered in a new era of scalable Bayesian computation in machine learning. We propose that amortization is also employed by the brain \citep[see][for a related proposal]{yildirim2015efficient}, flexibly reusing past inferences in order to efficiently answer new but related queries. The key behavioral prediction of amortized inference is that people will show correlations in their judgments across related queries. 
 
-We report 3 experiments that test this prediction using a variant of the probabilistic reasoning task previously studied by \citet{dasgupta17}. In this task, participants answer queries about objects in scenes, much like in the examples given above. Crucially, the hypothesis space is combinatorial because participants have to answer questions about sets of objects (e.g., ``All objects starting with the letter S''). This renders exact inference intractable: the hypothesis space cannot be efficiently enumerated. In our previous work \citep{dasgupta17}, we argued that people approximate inference in this domain using a form of Monte Carlo sampling. Although this algorithm is asymptotically exact, only a small number of samples can be generated due to cognitive limitations, thereby revealing systematic cognitive biases such as anchoring and adjustment, subadditivity, and superadditivity \citep[see also][]{lieder2017empirical,lieder2017anchoring,vul2014one}.
+We report 3 experiments that test this prediction using a variant of the probabilistic reasoning task previously studied by \citet{dasgupta17} (Chapter \ref{MCMC}). In this task, participants answer queries about objects in scenes, much like in the examples given above. Crucially, the hypothesis space is combinatorial because participants have to answer questions about sets of objects (e.g., ``All objects starting with the letter S''). This renders exact inference intractable: the hypothesis space cannot be efficiently enumerated. In our previous work \citep{dasgupta17}, we argued that people approximate inference in this domain using a form of Monte Carlo sampling. Although this algorithm is asymptotically exact, only a small number of samples can be generated due to cognitive limitations, thereby revealing systematic cognitive biases such as anchoring and adjustment, subadditivity, and superadditivity \citep[see also][]{lieder2017empirical,lieder2017anchoring,vul2014one}.
 
 We show that the same algorithm can be generalized to reuse inferential computations in a manner consistent with human behavior. First we describe how amortization might be used by the mind. We consider two crucial questions about how this might be implemented: what parts of previous calculations do people reuse ---all previous memories or summaries of the calculations--- and when do they choose to reuse their amortized calculations. Next we test these questions empirically. In Experiment 1, we demonstrate that people \emph{do} use amortization by showing that there is a lingering influence of one query on participants' answers to a second, related query. In Experiment 2, we explore what is reused, and find that people use summary statistics of their previously generated hypotheses, rather than the hypotheses themselves. Finally, in Experiment 3, we show that people are more likely to reuse previous computations when those computations are most likely to be relevant: when a second cue is similar to a previously evaluated one.
 
 %%%%%%%%%%%%%%%%%%
 %Previous work
 %%%%%%%%%%%%%%%%%%
-\section{Hypothesis generation and amortization}
+\section{Theoretical Framework}
 
 Before describing the experiments, we provide an overview of our theoretical framework. First, we describe how Monte Carlo sampling can be used to approximate Bayesian inference, and summarize the psychological evidence for such an approximation. We then introduce amortized inference as a generalization of this framework.
 
@@ -75,9 +84,9 @@ Intuitively, this Markov chain will tend to move from lower to higher probabilit
 \textbf{Name}&\textbf{Description}& \textbf{References}\\
 \midrule
 Subadditivity& Perceived probability of a hypothesis is higher when the hypothesis is described as a disjunction of typical component hypotheses (unpacked to typical examples). \\
-$P (\text{A}_{typical} \cup \text{B}) < P (\text{A}_{typical}) + P(\text{B})$ & \cite{fox1998belief}, \cite{tversky94} \\\\
+$P (\text{A}_{typical} \cup \text{B}) < P (\text{A}_{typical}) + P(\text{B})$ & \citet{fox1998belief}, \citet{tversky94} \\\\
 Superadditivity& Perceived probability of a hypothesis is lower when the hypothesis is described as a disjunction of atypical component hypotheses (unpacked to atypical examples). \\
-$P (\text{A}_{atypical} \cup \text{B}) > P (\text{A}_{atypical}) + P(\text{B})$ & \cite{sloman04,hadjichristidis1999opening} \\\\ 
+$P (\text{A}_{atypical} \cup \text{B}) > P (\text{A}_{atypical}) + P(\text{B})$ & \citet{sloman04}, \citet{hadjichristidis1999opening} \\\\ 
 \bottomrule
 \end{tabular}
 \end{table}
@@ -168,7 +177,7 @@ D_{\text{KL}}(P||Q)=\sum_{h} P(h) \log{\frac{P(h)}{Q(h)}}.
 The KL divergence is minimized to 0 when $Q$ and $P$ are identical. We will use this measure in Experiment 3 to select queries that are either similar or dissimilar, in order to examine whether our participants only exhibit signatures of amortization when the queries are similar.\footnote{Our findings do not strongly depend on the use of the KL divergence measure and all of our qualitative effects remained unchanged when we applied a symmetric distance measure such as the Jensen-Shannon divergence.} Note, however, that the exact calculation of these divergences cannot be part of the algorithmic machinery used by humans to assess similarity, since it presupposes access to the posterior being approximated. Our experiments do not yet provide insight into how humans might algorithmically achieve tractable adaptive amortization, a problem we leave to future research.
 
 
-\section{Experiment 1}
+\section{Experiment 1: Human inference is not memoryless}
 
 In Experiment 1, we sought initial confirmation of our central hypothesis: human inference is not memoryless. To detect these ``remembrances of inferences past'', we asked participants to answer pairs of queries sequentially. The first query was manipulated (by packing or unpacking the queried hypothesis) in such a way that subadditive or superadditive probability judgments could be elicited \citep{dasgupta17}. Crucially, the second query is always presented in packed form, so any differences across the experimental conditions in answers to the second query can only be attributed to the lingering effects of the first query.
 
@@ -260,7 +269,7 @@ We found significant positive correlations between the two queries in all condit
 
 Experiment 1 established a memory effect in probabilistic inference: answers to a query are influenced by answers to a previous query, thereby providing evidence for amortization. In particular, both a sub- and a superadditivity effect induced at $\mathcal{Q}1$ carried over to $\mathcal{Q}2$, and participants showing stronger effect sizes for both sub- and superadditivity for $\mathcal{Q}1$ also showed greater effects for $\mathcal{Q}2$. 
 
-\section{Experiment 2}
+\section{Experiment 2: Distinguishing algorithms for amortization}
 
 Our next experiment sought to discriminate between sample-based and summary-based amortization strategies. We follow the logic of the simulations shown in Figure \ref{fig:changeN}, manipulating cognitive load at $\mathcal{Q}1$ and $\mathcal{Q}2$ in order to exogenously control the number of samples \citep[see][for a similar approach]{thaker17,dasgupta17}. 
 
@@ -337,7 +346,7 @@ Experiment 2 extended the findings of Experiment 1, suggesting constraints on th
 
 Our design allowed us to rule out a numerical anchoring effect, whereby participants would give high answers to the second query if they gave high answers to the first query. This effect should be invariant to the extent of overlap of the queried hypothesis spaces, but contrary to the anchoring hypothesis, the memory effect was stronger in the high overlap condition.
 
-\section{Experiment 3}
+\section{Experiment 3: Adaptive re-use of inferences}
 
 In this experiment we further probe the strategic nature of amortization. So far, all generated hypotheses have been reusable, since both queries probe the same probability distribution, conditioned on the same cue object. By changing the cue object between $\mathcal{Q}1$ and $\mathcal{Q}2$ and manipulating the similarity between the cues, we can control how reusable the computations are. Note that this is in contrast to the notion of ``overlap'' in Experiment 2 where all the samples from $\mathcal{Q}1$ are always ``reusable'' in $\mathcal{Q}2$ since both query the same probability distribution, but in the no overlap conditions, the queried hypotheses spaces do not overlap resulting in the biased samples from $\mathcal{Q}1$ not being reflected in $\mathcal{Q}2$ judgments. The notion of reusability now allows us to test whether or not reuse always occurs, or if it occurs preferentially when it is more applicable (i.e., under high similarity between cues).
 
