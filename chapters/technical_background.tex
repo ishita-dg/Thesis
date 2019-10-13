@@ -19,6 +19,7 @@ Bayesian inference is method in statistics where Bayes' theorem is used to updat
 The numerator i.e. the joint distribution over the data and the hypothesis is easy to compute since we already know the two components -- the prior and the likelihood. The denominator requires a summation over all the possible hypotheses. This is tractable in our coin-flipping case since the space of hypotheses is very small (3 possibilities). However, for several problems of practical significance -- including many that humans solve everyday -- this summation (or integral) is intractable. \footnote{There exist priors and likelihoods such that this integral remains tractable even for large or continuous hypothesis spaces. These are called conjugate families of prior and likelihood. However, many real world data generating processes cannot be well approximated by distributions from such conjugate families.}  For example, consider a clinician diagnosing a patient. A patient can simultaneously have any of $N$ possible conditions. This means that the hypothesis space contains $2^N$ hypotheses. Or consider the segmentation problem, faced constantly by the visual system, of assigning each retinotopic location to the surface of an object. If there are $K$ objects and $N$ locations, the hypothesis space contains $K^N$ hypotheses. Such vast hypothesis spaces render exact computation of Bayes' rule intractable, because the denominator (the normalizing constant, sometimes called the partition function or marginal likelihood) requires summation over all possible hypotheses. Computing this normalization constant is the key computational challenge in Bayesian inference, and computing exact posterior probabilities of hypotheses. In the following sections, I will introduce the two main approaches to approximating such posteriors.
 
 \section{Monte Carlo methods}
+\label{sec:approx_MC}
 
 Sample-based approximations, \citep[also known as \emph{Monte Carlo} approximations][]{robert13}, take the following form:
 \begin{align}
@@ -111,6 +112,7 @@ We have so far discussed the advent of Monte Carlo approximations in cognitive s
 %
 
 \section{Variational methods}
+\label{sec:approx_var}
 
 To motivate variational approximations, we first consider a more general case of Monte Carlo approximation, using weighted samples
 \begin{align}
