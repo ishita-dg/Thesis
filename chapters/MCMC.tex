@@ -713,13 +713,13 @@ There are however ways to get around this for certain classes of rational-proces
 P(h|d) \approx \hat{P}_N(h|d) = \frac{1}{N}\sum_{n=1}^N \mathbb{I}[h_n=h],
 \end{align}
 
-Then the bounded rationality objective function is a function of the distance $\mathcal{D}$ between this approximation and the true posterior, as well as the cost of the resources required to make this approximation, where we assume that cost scales linearly with the number of samples, with $\mathcal{C}$ per sample. This gives the following objective $\mathcal{O}$ that we wish to minimize as a function of the number of samples (N):
+Then the bounded rationality objective function is a function of the distance $\mathcal{D}$ between this approximation and the true posterior, as well as the cost of the resources required to make this approximation, where we assume that cost scales linearly with the number of samples, with $\mathcal{C}$ per sample. This gives the following objective $\mathcal{F}$ that we wish to minimize as a function of the number of samples (N):
 \begin{align}
-\mathcal{O}(N) = \mathcal{D}[\hat{P}_N(h|d)||P(h|d)] + \mathcal{C}N
+\mathcal{F}(N) = \mathcal{D}[\hat{P}_N(h|d)||P(h|d)] + \mathcal{C}N
 \end{align}
 We choose the Kullback-Liebler (KL) divergence, or relative entropy, as the distance metric to get
 \begin{align}
-\mathcal{O}(N) &= \mathcal{D_{KL}}[\hat{P}_N(h|d)||P(h|d)] + \mathcal{C}N \\
+\mathcal{F}(N) &= \mathcal{D_{KL}}[\hat{P}_N(h|d)||P(h|d)] + \mathcal{C}N \\
 & =  \sum_h \hat{P}_N(h|d) \log \frac{\hat{P}_N(h|d)}{P(h|d)} + \mathcal{C}N
 \end{align}
 Exactly computing this objective still requires the exact posterior to evaluate exactly. However, two insights make this a lot easier. First, we note that the KL divergence can we written as follows (see also Equation \ref{eq:ELBO}):
@@ -727,11 +727,11 @@ Exactly computing this objective still requires the exact posterior to evaluate 
 \mathcal{D_{KL}}[\hat{P}_N(h|d)||P(h|d)]  = \sum_h \hat{P}_N(h|d) \log \frac{\hat{P}_N(h|d)}{P(h,d)} + \log P(d)
 \label{eq:split_KL}
 \end{align}
-Here, the first term is computable since a) we know the joint distribution $P(h,d)$,  and b) we can take expectations over our approximate distribution $\hat{P}_N(h|d)$. The second term remains intractable. However, our second insight is that we don't need to compute the exact value of the objective function. Our objective function is a linear sum of smooth monotonic functions: the KL term decreases (on average) with increase in the number of samples, and the cost term increases. Therefore, our cost function is convex, and the global minimum can be found simply by following local gradients. This smooth, convex assumption does not hold for many other classes of resource-rational approximations, for example, if we are optimizing over the space of discrete strategies (eg. whether to employ a certain heuristic or another), rather than optimizing over an (almost) continuous parameter like the number of samples drawn.
+Here, the first term is computable since a) we know the joint distribution $P(h,d)$,  and b) we can take expectations over our approximate distribution $\hat{P}_N(h|d)$. The second term remains intractable. 
 
-This local gradient (or the incremental value to one additional sample) is given by:
+However, our second insight is that we don't need to compute the exact value of the objective function. Our objective function is a linear sum of smooth monotonic functions: the KL term decreases (on average) with increase in the number of samples, and the cost term increases. Therefore, our cost function is convex, and the global minimum can be found simply by following local gradients. This smooth, convex assumption does not hold for many other classes of resource-rational approximations, for example, if we are optimizing over the space of discrete strategies (eg. whether to employ a certain heuristic or another), rather than optimizing over an (almost) continuous parameter like the number of samples drawn. This local gradient (or the incremental value to one additional sample) is given by:
 \begin{align}
-\mathcal{O}(N + 1) - \mathcal{O}(N) =  \sum_h \hat{P}_{N+1}(h|d) \log \frac{\hat{P}_{N+1}(h|d)}{P(h|d)} -  \sum_h \hat{P}_N(h|d) \log \frac{\hat{P}_N(h|d)}{P(h|d)} + \mathcal{C}
+\mathcal{F}(N + 1) - \mathcal{F}(N) =  \sum_h \hat{P}_{N+1}(h|d) \log \frac{\hat{P}_{N+1}(h|d)}{P(h|d)} -  \sum_h \hat{P}_N(h|d) \log \frac{\hat{P}_N(h|d)}{P(h|d)} + \mathcal{C}
 \end{align}
 Since the second term in Equation \ref{eq:split_KL} is the same in both, it cancels out, leaving a tractable expression for the gradient. The gradient can therefore be estimated locally everytime a new sample is drawn. Once this gradient starts to become negative, it is time to stop computations. This can be seen as treating the sample based approximation as a variational family and finding the optimal number of samples\cite{saeedi17}. See Chapter \ref{chap:approx}, Section \ref{sec:approx_var} for further details on variational approximations.
 

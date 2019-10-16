@@ -35,13 +35,13 @@ Amortization can take many forms. The most general approach is to think of the c
 
 I briefly discuss the key principles behind how amortization is possible in the various algorithms for approximate inference discussed in Chapter \ref{chap:approx}. These will be discussed in greater detail in Chapters \ref{chap:MCMC_amort} and \ref{chap:LTI}.
 
-\paragraph{Amortization in a sampling framework} 
+\subsection*{Amortization in a sampling framework} 
 
 In a Monte Carlo framework, what can be re-used query to query are the samples themselves -- or certain summary statistics of the samples. Consider an example where we have samples from the space of hypotheses $h \in \mathcal{H}$, sampled from the posterior distribution $P(h | d)$, giving an approximate distribution $\hat{P}(h | d)$ . Supposed we generated these samples in response to a query that demanded the posterior probability of a specific hypothesis $h_1$. The approximate responses in this case would be $\hat{P}(h_1 |d)$. Now, if we are asked another query about the posterior probability of a different hypothesis $h_2$. Note that if we store these samples and re-use them for this new query, we don't have to do any new computations -- the sample-based approximate distribution $\hat{P}(h | d)$ can be used to respond to this new query without any additional samples drawn. However, storing all the samples might be very intensive on memory. One possibility is that people instead store certain statistics of the samples instead. While this reduces how much flexibility we have in the kinds of the re-use we might want, it reduces load on memory. We propose more specific algorithms for amortization in a sample-based approximations, as well as test them in humans in Chapter \ref{chap:MCMC_amort}.
 
 A disadvantage of purely sample-based re-use is that it is less flexible when two queries are not querying the same posterior distribution. The framework described so far provides no way to re-use samples from $P(h | d)$ in $P(h | d')$. We will see in Chapter \ref{chap:MCMC_amort} however, that humans re-use inferences flexibly across different posterior distributions as well. I model this with re-use in a variational framework in Chapter \ref{chap:LTI}. I outline below briefly what this kind of re-use could look like below.
 
-\paragraph{Amortization in a variational framework} 
+\subsection*{Amortization in a variational framework} 
 
 In a variational framework, the approximate posterior $\hat{P}(h | d)$ is a member of some parametrized family that we choose as the variational family. These parameters therefore can be re-used from query to query. A key advantage of representing the approximate posterior as a finite set of variational parameters, rather than a variable number of random samples, is that it makes it easier to flexibly re-use inferences. I outline below how this might be possible.
 
