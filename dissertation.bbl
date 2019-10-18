@@ -244,6 +244,11 @@ Brown, S.~D. \& Steyvers, M. (2009).
 \newblock Detecting and predicting changes.
 \newblock {\em Cognitive Psychology}, 58, 49--67.
 
+\bibitem[Brunswik, 1943]{brunswik1943organismic}
+Brunswik, E. (1943).
+\newblock Organismic achievement and environmental probability.
+\newblock {\em Psychological review}, 50(3), 255.
+
 \bibitem[Brunswik, 1955]{brunswik1955representative}
 Brunswik, E. (1955).
 \newblock Representative design and probabilistic theory in a functional
@@ -399,6 +404,12 @@ De~Freitas, N., H{\o}jen-S{\o}rensen, P., Jordan, M.~I., \& Russell, S. (2001).
 \newblock Variational mcmc.
 \newblock In {\em {Proceedings of the Seventeenth Conference on Uncertainty in
   Artificial Intelligence}}  (pp.\ 120--127).: Morgan Kaufmann Publishers Inc.
+
+\bibitem[Del~Pero et~al., 2013]{del2013understanding}
+Del~Pero, L., Bowdish, J., Kermgard, B., Hartley, E., \& Barnard, K. (2013).
+\newblock Understanding bayesian rooms using composite 3d object models.
+\newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
+  Pattern Recognition}  (pp.\ 153--160).
 
 \bibitem[Denil et~al., 2016]{denil2016learning}
 Denil, M., Agrawal, P., Kulkarni, T.~D., Erez, T., Battaglia, P., \&
@@ -1278,6 +1289,11 @@ Lake, B.~M., Linzen, T., \& Baroni, M. (2019).
 \newblock Human few-shot learning of compositional instructions.
 \newblock {\em arXiv preprint arXiv:1901.04587}.
 
+\bibitem[Lake et~al., 2015]{lake2015human}
+Lake, B.~M., Salakhutdinov, R., \& Tenenbaum, J.~B. (2015).
+\newblock Human-level concept learning through probabilistic program induction.
+\newblock {\em Science}, 350(6266), 1332--1338.
+
 \bibitem[Lake et~al., 2017]{lake2017building}
 Lake, B.~M., Ullman, T.~D., Tenenbaum, J.~B., \& Gershman, S.~J. (2017).
 \newblock Building machines that learn and think like people.
@@ -1862,6 +1878,11 @@ Robert, C. \& Casella, G. (2013).
 \newblock {\em {Monte Carlo Statistical Methods}}.
 \newblock Springer Science \& Business Media.
 
+\bibitem[Rogers \& McClelland, 2004]{rogers2004semantic}
+Rogers, T.~T. \& McClelland, J.~L. (2004).
+\newblock {\em Semantic cognition: A parallel distributed processing approach}.
+\newblock MIT press.
+
 \bibitem[Rosenthal, 2011]{rosenthal2011optimal}
 Rosenthal, J.~S. (2011).
 \newblock Optimal proposal distributions and adaptive mcmc.
@@ -2063,6 +2084,11 @@ Simon, H.~A. (1955).
 \newblock A behavioral model of rational choice.
 \newblock {\em The Quarterly Journal of Economics}, 69(1), 99--118.
 
+\bibitem[Simon, 1956]{simon1956rational}
+Simon, H.~A. (1956).
+\newblock Rational choice and the structure of the environment.
+\newblock {\em Psychological review}, 63(2), 129.
+
 \bibitem[Simon, 1991]{simon1991bounded}
 Simon, H.~A. (1991).
 \newblock Bounded rationality and organizational learning.
@@ -2168,6 +2194,11 @@ Stewart, N., Chater, N., \& Brown, G.~D. (2006b).
 Steyvers, M. (2006).
 \newblock Multidimensional scaling.
 \newblock {\em Encyclopedia of cognitive science}.
+
+\bibitem[Steyvers \& Griffiths, 2007]{steyvers2007probabilistic}
+Steyvers, M. \& Griffiths, T. (2007).
+\newblock Probabilistic topic models.
+\newblock {\em Handbook of latent semantic analysis}, 427(7), 424--440.
 
 \bibitem[Stocker \& Simoncelli, 2008]{stocker2008bayesian}
 Stocker, A.~A. \& Simoncelli, E.~P. (2008).
@@ -2426,6 +2457,12 @@ Zeiler, M.~D. \& Fergus, R. (2014).
 Zhang, C., Bengio, S., Hardt, M., Recht, B., \& Vinyals, O. (2016).
 \newblock Understanding deep learning requires rethinking generalization.
 \newblock {\em arXiv preprint arXiv:1611.03530}.
+
+\bibitem[Zhao \& Zhu, 2011]{zhao2011image}
+Zhao, Y. \& Zhu, S.-C. (2011).
+\newblock Image parsing with stochastic scene grammar.
+\newblock In {\em Advances in Neural Information Processing Systems}  (pp.\
+  73--81).
 
 \bibitem[Zhao et~al., 2017]{zhao2017generating}
 Zhao, Z., Dua, D., \& Singh, S. (2017).
