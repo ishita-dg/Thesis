@@ -837,6 +837,11 @@ Goodfellow, I.~J., Shlens, J., \& Szegedy, C. (2014).
 \newblock Explaining and harnessing adversarial examples.
 \newblock {\em arXiv preprint arXiv:1412.6572}.
 
+\bibitem[Goodman, 1983]{goodman1983fact}
+Goodman, N. (1983).
+\newblock {\em Fact, fiction, and forecast}.
+\newblock Harvard University Press.
+
 \bibitem[Goodman et~al., 2008]{Goodman2008}
 Goodman, N., Tenenbaum, J.~B., Feldman, J., \& Griffiths, T. (2008).
 \newblock {A Rational Analysis of Rule-Based Concept Learning}.
@@ -974,6 +979,11 @@ Hamrick, J.~B., Smith, K.~A., Griffiths, T.~L., \& Vul, E. (2015b).
 \newblock Think again? the amount of mental simulation tracks uncertainty in
   the outcome.
 \newblock In {\em CogSci}: Citeseer.
+
+\bibitem[Harlow, 1949]{harlow1949formation}
+Harlow, H.~F. (1949).
+\newblock The formation of learning sets.
+\newblock {\em Psychological review}, 56(1), 51.
 
 \bibitem[Hastings, 1970]{hastings1970monte}
 Hastings, W.~K. (1970).
@@ -1183,6 +1193,11 @@ Kang, D., Khot, T., Sabharwal, A., \& Hovy, E. (2018).
 Karpathy, A., Johnson, J., \& Fei-Fei, L. (2015).
 \newblock Visualizing and understanding recurrent networks.
 \newblock {\em arXiv preprint arXiv:1506.02078}.
+
+\bibitem[Kemp et~al., 2007]{kemp2007learning}
+Kemp, C., Perfors, A., \& Tenenbaum, J.~B. (2007).
+\newblock Learning overhypotheses with hierarchical bayesian models.
+\newblock {\em Developmental science}, 10(3), 307--321.
 
 \bibitem[Kennedy et~al., 1997]{kennedy1997base}
 Kennedy, M.~L., Willis, W.~G., \& Faust, D. (1997).
@@ -2271,6 +2286,11 @@ Todd, P.~M. \& Goodie, A.~S. (2002).
 \newblock In {\em {From Animals to Animats 7: Proceedings of the Seventh
   International Conference on Simulation of Adaptive Behavior}}  (pp.\
   215--223).: From animals to animats (MIT Press/Bradford Books, 2002).
+
+\bibitem[Tolman, 1948]{tolman1948cognitive}
+Tolman, E.~C. (1948).
+\newblock Cognitive maps in rats and men.
+\newblock {\em Psychological review}, 55(4), 189.
 
 \bibitem[Trueblood \& Busemeyer, 2011]{trueblood2011quantum}
 Trueblood, J.~S. \& Busemeyer, J.~R. (2011).
