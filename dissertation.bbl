@@ -54,6 +54,12 @@ Andrychowicz, M., Denil, M., Gomez, S., Hoffman, M., Pfau, D., Schaul, T.,
 \newblock In {\em Advances in Neural Information Processing Systems}  (pp.\
   3981--3989).
 
+\bibitem[Baker et~al., 2007]{baker2007goal}
+Baker, C.~L., Tenenbaum, J.~B., \& Saxe, R.~R. (2007).
+\newblock Goal inference as inverse planning.
+\newblock In {\em Proceedings of the Annual Meeting of the Cognitive Science
+  Society}, volume~29.
+
 \bibitem[Bar-Hillel, 1980]{bar1980base}
 Bar-Hillel, M. (1980).
 \newblock The base-rate fallacy in probability judgments.
@@ -346,12 +352,12 @@ Curie, P. (1895).
 \newblock {\em Magnetic properties of bodies at various times}.
 \newblock Number~4. Gauthier-Villars and sons.
 
-\bibitem[Dasgupta et~al., 2017a]{dasgupta2017hypotheses}
+\bibitem[Dasgupta et~al., 2017a]{dasgupta17}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017a).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
 
-\bibitem[Dasgupta et~al., 2017b]{dasgupta17}
+\bibitem[Dasgupta et~al., 2017b]{dasgupta2017hypotheses}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017b).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
@@ -832,6 +838,12 @@ Gluck, M.~A. \& Bower, G.~H. (1988).
 \newblock From conditioning to category learning: An adaptive network model.
 \newblock {\em Journal of Experimental Psychology: General}, 117(3), 227.
 
+\bibitem[Gobet et~al., 2001]{gobet2001chunking}
+Gobet, F., Lane, P.~C., Croker, S., Cheng, P.~C., Jones, G., Oliver, I., \&
+  Pine, J.~M. (2001).
+\newblock Chunking mechanisms in human learning.
+\newblock {\em Trends in cognitive sciences}, 5(6), 236--243.
+
 \bibitem[Goodfellow et~al., 2014]{goodfellow2014explaining}
 Goodfellow, I.~J., Shlens, J., \& Szegedy, C. (2014).
 \newblock Explaining and harnessing adversarial examples.
@@ -995,6 +1007,11 @@ Hawkins, G.~E., Hayes, B.~K., \& Heit, E. (2016).
 \newblock A dynamic model of reasoning and memory.
 \newblock {\em Journal of Experimental Psychology: General}, 145(2), 155--180.
 
+\bibitem[Hay et~al., 2014]{hay2014selecting}
+Hay, N., Russell, S., Tolpin, D., \& Shimony, S.~E. (2014).
+\newblock Selecting computations: Theory and applications.
+\newblock {\em arXiv preprint arXiv:1408.2048}.
+
 \bibitem[Hayes et~al., 2013]{hayes2013relationship}
 Hayes, B.~K., Fritz, K., \& Heit, E. (2013).
 \newblock The relationship between memory and inductive reasoning: Does it
@@ -1086,6 +1103,12 @@ Holden, L. (1998).
 Hornik, K. (1991).
 \newblock Approximation capabilities of multilayer feedforward networks.
 \newblock {\em Neural networks}, 4(2), 251--257.
+
+\bibitem[Horvitz et~al., 1989]{horvitz1989reflection}
+Horvitz, E.~J., Cooper, G.~F., \& Heckerman, D.~E. (1989).
+\newblock Reflection and action under scarce resources: Theoretical principles
+  and empirical study.
+\newblock In {\em IJCAI}  (pp.\ 1121--1127).
 
 \bibitem[Hoyer et~al., 2009]{hoyer2009nonlinear}
 Hoyer, P.~O., Janzing, D., Mooij, J.~M., Peters, J., \& Sch{\"o}lkopf, B.
@@ -1269,7 +1292,7 @@ Kool, W., Gershman, S.~J., \& Cushman, F.~A. (2017).
 \bibitem[K{\"o}rding \& Wolpert, 2006]{kording2006bayesian}
 K{\"o}rding, K.~P. \& Wolpert, D.~M. (2006).
 \newblock Bayesian decision theory in sensorimotor control.
-\newblock {\em Trends in Cognitive Sciences}, 10(7), 319--326.
+\newblock {\em Trends in cognitive sciences}, 10(7), 319--326.
 
 \bibitem[Koriat et~al., 1980]{koriat1980}
 Koriat, A., Lichtenstein, S., \& Fischhoff, B. (1980).
@@ -1287,6 +1310,12 @@ Kraemer, C. \& Weber, M. (2004).
 Krynski, T.~R. \& Tenenbaum, J.~B. (2007).
 \newblock The role of causality in judgment under uncertainty.
 \newblock {\em Journal of Experimental Psychology: General}, 136(3), 430.
+
+\bibitem[Kulkarni et~al., 2015]{kulkarni2015picture}
+Kulkarni, T.~D., Kohli, P., Tenenbaum, J.~B., \& Mansinghka, V. (2015).
+\newblock Picture: A probabilistic programming language for scene perception.
+\newblock In {\em Proceedings of the ieee conference on computer vision and
+  pattern recognition}  (pp.\ 4390--4399).
 
 \bibitem[Lagnado et~al., 2013]{lagnado2013causal}
 Lagnado, D.~A., Gerstenberg, T., \& Zultan, R. (2013).
@@ -1329,6 +1358,12 @@ Landauer, T.~K. \& Dumais, S.~T. (1997).
 \newblock A solution to plato's problem: The latent semantic analysis theory of
   acquisition, induction, and representation of knowledge.
 \newblock {\em Psychological review}, 104(2), 211.
+
+\bibitem[Lasserre et~al., 2006]{lasserre2006principled}
+Lasserre, J.~A., Bishop, C.~M., \& Minka, T.~P. (2006).
+\newblock Principled hybrids of generative and discriminative models.
+\newblock In {\em 2006 IEEE Computer Society Conference on Computer Vision and
+  Pattern Recognition (CVPR'06)}, volume~1  (pp.\ 87--94).: IEEE.
 
 \bibitem[Lau \& Brady, 2018]{lau2018ensemble}
 Lau, J. S.-H. \& Brady, T.~F. (2018).
@@ -1578,6 +1613,12 @@ Mnih, V., Badia, A., Mirza, M., Graves, A., Lillicrap, T., Harley, T., Silver,
 \newblock Asynchronous methods for deep reinforcement learning.
 \newblock {\em CoRR}, abs/1602.01783.
 
+\bibitem[Mnih et~al., 2013]{mnih2013playing}
+Mnih, V., Kavukcuoglu, K., Silver, D., Graves, A., Antonoglou, I., Wierstra,
+  D., \& Riedmiller, M. (2013).
+\newblock Playing atari with deep reinforcement learning.
+\newblock {\em arXiv preprint arXiv:1312.5602}.
+
 \bibitem[Mnih et~al., 2015]{mnih2015human}
 Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A.~A., Veness, J., Bellemare,
   M.~G., Graves, A., Riedmiller, M., Fidjeland, A.~K., Ostrovski, G., et~al.
@@ -1617,6 +1658,11 @@ Neil~Bearden, J. \& Wallsten, T.~S. (2004).
 \newblock {Minerva-DM and subadditive frequency judgments}.
 \newblock {\em Journal of Behavioral Decision Making}, 17(5), 349--363.
 
+\bibitem[Newell \& Rosenbloom, 1981]{newell1981mechanisms}
+Newell, A. \& Rosenbloom, P.~S. (1981).
+\newblock Mechanisms of skill acquisition and the law of practice.
+\newblock {\em Cognitive skills and their acquisition}, 1(1981), 1--55.
+
 \bibitem[Newstead et~al., 1992]{newstead1992source}
 Newstead, S.~E., Pollard, P., Evans, J. S.~B., \& Allen, J.~L. (1992).
 \newblock The source of belief bias effects in syllogistic reasoning.
@@ -1627,6 +1673,13 @@ Neyshabur, B., Bhojanapalli, S., McAllester, D., \& Srebro, N. (2017).
 \newblock Exploring generalization in deep learning.
 \newblock In {\em Advances in Neural Information Processing Systems}  (pp.\
   5947--5956).
+
+\bibitem[Ng \& Jordan, 2002]{ng2002discriminative}
+Ng, A.~Y. \& Jordan, M.~I. (2002).
+\newblock On discriminative vs. generative classifiers: A comparison of
+  logistic regression and naive bayes.
+\newblock In {\em Advances in neural information processing systems}  (pp.\
+  841--848).
 
 \bibitem[Nie et~al., 2019]{nie2019analyzing}
 Nie, Y., Wang, Y., \& Bansal, M. (2019).
@@ -1943,6 +1996,11 @@ Russell, S. (2016).
 \newblock In {\em Fundamental issues of artificial intelligence}  (pp.\ 7--28).
   Springer.
 
+\bibitem[Russell \& Subramanian, 1994]{russell1994provably}
+Russell, S.~J. \& Subramanian, D. (1994).
+\newblock Provably bounded-optimal agents.
+\newblock {\em Journal of Artificial Intelligence Research}, 2, 575--609.
+
 \bibitem[Saeedi et~al., 2017a]{saeedi17}
 Saeedi, A., Kulkarni, T.~D., Mansinghka, V., \& Gershman, S.~J. (2017a).
 \newblock Variational particle approximations.
@@ -2068,6 +2126,12 @@ Shi, L., Griffiths, T.~L., Feldman, N.~H., \& Sanborn, A.~N. (2010a).
 Shi, L., Griffiths, T.~L., Feldman, N.~H., \& Sanborn, A.~N. (2010b).
 \newblock Exemplar models as a mechanism for performing bayesian inference.
 \newblock {\em Psychonomic bulletin \& review}, 17(4), 443--464.
+
+\bibitem[Shiffrin \& Schneider, 1977]{shiffrin1977controlled}
+Shiffrin, R.~M. \& Schneider, W. (1977).
+\newblock Controlled and automatic human information processing: Ii. perceptual
+  learning, automatic attending and a general theory.
+\newblock {\em Psychological review}, 84(2), 127.
 
 \bibitem[Shiffrin \& Steyvers, 1997]{shiffrin1997model}
 Shiffrin, R.~M. \& Steyvers, M. (1997).
@@ -2302,15 +2366,15 @@ Tversky, A. \& Kahneman, D. (1973).
 \newblock Availability: A heuristic for judging frequency and probability.
 \newblock {\em Cognitive Psychology}, 5(2), 207--232.
 
-\bibitem[Tversky \& Kahneman, 1974a]{tversky1974judgment}
+\bibitem[Tversky \& Kahneman, 1974a]{tversky}
 Tversky, A. \& Kahneman, D. (1974a).
-\newblock Judgment under uncertainty: Heuristics and biases.
-\newblock {\em Science}, 185(4157), 1124--1131.
-
-\bibitem[Tversky \& Kahneman, 1974b]{tversky}
-Tversky, A. \& Kahneman, D. (1974b).
 \newblock {Judgment under Uncertainty: Heuristics and Biases.}
 \newblock {\em Science (New York, N.Y.)}, 185(4157), 1124--1131.
+
+\bibitem[Tversky \& Kahneman, 1974b]{tversky1974judgment}
+Tversky, A. \& Kahneman, D. (1974b).
+\newblock Judgment under uncertainty: Heuristics and biases.
+\newblock {\em Science}, 185(4157), 1124--1131.
 
 \bibitem[Tversky \& Kahneman, 1980]{tversky80}
 Tversky, A. \& Kahneman, D. (1980).
@@ -2414,6 +2478,11 @@ Wang, Z., Solloway, T., Shiffrin, R.~M., \& Busemeyer, J.~R. (2014).
   human judgments.
 \newblock {\em Proceedings of the National Academy of Sciences}, 111(26),
   9431--9436.
+
+\bibitem[Watkins \& Dayan, 1992]{watkins1992q}
+Watkins, C.~J. \& Dayan, P. (1992).
+\newblock Q-learning.
+\newblock {\em Machine learning}, 8(3-4), 279--292.
 
 \bibitem[Weber et~al., 1993]{weber1993}
 Weber, E.~U., B{\"o}ckenholt, U., Hilton, D.~J., \& Wallace, B. (1993).
