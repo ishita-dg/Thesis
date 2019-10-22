@@ -215,6 +215,12 @@ Bordalo, P., Gennaioli, N., \& Shleifer, A. (2017).
 \newblock {\em Memory, attention, and choice}.
 \newblock Technical report, National Bureau of Economic Research.
 
+\bibitem[Botvinick et~al., 2019]{botvinick2019reinforcement}
+Botvinick, M., Ritter, S., Wang, J.~X., Kurth-Nelson, Z., Blundell, C., \&
+  Hassabis, D. (2019).
+\newblock Reinforcement learning, fast and slow.
+\newblock {\em Trends in cognitive sciences}.
+
 \bibitem[Bowman et~al., 2015]{snli:emnlp2015}
 Bowman, S.~R., Angeli, G., Potts, C., \& Manning, C.~D. (2015).
 \newblock A large annotated corpus for learning natural language inference.
@@ -399,6 +405,12 @@ Dawes, R.~M., Mirels, H.~L., Gold, E., \& Donahue, E. (1993).
 Dawid, P. (2007).
 \newblock {\em Fundamentals of Statistical Causality}.
 \newblock Technical report, University Colledge London.
+
+\bibitem[Dayan, 1993]{dayan1993improving}
+Dayan, P. (1993).
+\newblock Improving generalization for temporal difference learning: The
+  successor representation.
+\newblock {\em Neural Computation}, 5(4), 613--624.
 
 \bibitem[Dayan et~al., 1995]{dayan1995helmholtz}
 Dayan, P., Hinton, G.~E., Neal, R.~M., \& Zemel, R.~S. (1995).
@@ -722,6 +734,12 @@ Gershman, S.~J. \& Beck, J.~M. (2017).
 \newblock In A. Moustafa (Ed.), {\em Computational Models of Brain and
   Behavior}. John Wiley \& Sons.
 
+\bibitem[Gershman \& Daw, 2017]{gershman2017reinforcement}
+Gershman, S.~J. \& Daw, N.~D. (2017).
+\newblock Reinforcement learning and episodic memory in humans and animals: an
+  integrative framework.
+\newblock {\em Annual review of psychology}, 68, 101--128.
+
 \bibitem[Gershman \& Goodman, 2014a]{gershman2014amortized}
 Gershman, S.~J. \& Goodman, N. (2014a).
 \newblock Amortized inference in probabilistic reasoning.
@@ -827,6 +845,12 @@ Gigerenzer, G. \& Todd, P.~M. (1999).
 \newblock {\em Simple heuristics that make us smart}.
 \newblock Oxford University Press, USA.
 
+\bibitem[Gl{\"a}scher et~al., 2010]{glascher2010states}
+Gl{\"a}scher, J., Daw, N., Dayan, P., \& O'Doherty, J.~P. (2010).
+\newblock States versus rewards: dissociable neural prediction error signals
+  underlying model-based and model-free reinforcement learning.
+\newblock {\em Neuron}, 66(4), 585--595.
+
 \bibitem[Glockner et~al., 2018]{glockner2018breaking}
 Glockner, M., Shwartz, V., \& Goldberg, Y. (2018).
 \newblock Breaking nli systems with sentences that require simple lexical
@@ -902,6 +926,13 @@ Griffin, D. \& Tversky, A. (1992).
 Griffiths, T.~L. (2015).
 \newblock Revealing ontological commitments by magic.
 \newblock {\em Cognition}, 136, 43--48.
+
+\bibitem[Griffiths et~al., 2019]{griffiths2019doing}
+Griffiths, T.~L., Callaway, F., Chang, M.~B., Grant, E., Krueger, P.~M., \&
+  Lieder, F. (2019).
+\newblock Doing more with less: meta-reasoning and meta-learning in humans and
+  machines.
+\newblock {\em Current Opinion in Behavioral Sciences}, 29, 24--30.
 
 \bibitem[Griffiths et~al., 2008]{griffiths2008bayesian}
 Griffiths, T.~L., Kemp, C., \& Tenenbaum, J.~B. (2008).
@@ -1287,7 +1318,7 @@ Koller, D. \& Friedman, N. (2009).
 Kool, W., Gershman, S.~J., \& Cushman, F.~A. (2017).
 \newblock Cost-benefit arbitration between multiple reinforcement-learning
   systems.
-\newblock {\em Psychological Science}, 28(9), 1321--1333.
+\newblock {\em Psychological science}, 28(9), 1321--1333.
 
 \bibitem[K{\"o}rding \& Wolpert, 2006]{kording2006bayesian}
 K{\"o}rding, K.~P. \& Wolpert, D.~M. (2006).
@@ -1710,6 +1741,13 @@ Oaksford, M. \& Chater, N. (2007b).
   reasoning}.
 \newblock Oxford University Press.
 
+\bibitem[O'Doherty et~al., 2003]{o2003temporal}
+O'Doherty, J.~P., Dayan, P., Friston, K., Critchley, H., \& Dolan, R.~J.
+  (2003).
+\newblock Temporal difference models and reward-related learning in the human
+  brain.
+\newblock {\em Neuron}, 38(2), 329--337.
+
 \bibitem[Ofir, 1988]{ofir1988pseudodiagnosticity}
 Ofir, C. (1988).
 \newblock Pseudodiagnosticity in judgment under uncertainty.
@@ -1752,6 +1790,11 @@ Ortega, P.~A., Wang, J.~X., Rowland, M., Genewein, T., Kurth-Nelson, Z.,
   (2019).
 \newblock Meta-learning of sequential strategies.
 \newblock {\em arXiv preprint arXiv:1905.03030}.
+
+\bibitem[Otto et~al., 2014]{otto2014cognitive}
+Otto, A.~R., Skatova, A., Madlon-Kay, S., \& Daw, N.~D. (2014).
+\newblock Cognitive control predicts use of model-based reinforcement learning.
+\newblock {\em Journal of cognitive neuroscience}, 27(2), 319--333.
 
 \bibitem[Paige \& Wood, 2016]{paige2016inference}
 Paige, B. \& Wood, F. (2016).
@@ -2301,6 +2344,12 @@ Suchow, J.~W., Bourgin, D.~D., \& Griffiths, T.~L. (2017).
 Surowiecki, J. (2005).
 \newblock {\em The wisdom of crowds}.
 \newblock Anchor.
+
+\bibitem[Sutton, 1991]{sutton1991dyna}
+Sutton, R.~S. (1991).
+\newblock Dyna, an integrated architecture for learning, planning, and
+  reacting.
+\newblock {\em ACM Sigart Bulletin}, 2(4), 160--163.
 
 \bibitem[T{\'{e}}gl{\'{a}}s et~al., 2011]{motion}
 T{\'{e}}gl{\'{a}}s, E., Vul, E., Girotto, V., Gonzalez, M., Tenenbaum, J.~B.,

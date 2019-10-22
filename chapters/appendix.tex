@@ -2,6 +2,43 @@
 \chapter{Supplementary Materials}
 \label{app}
 
+\section{Two reuse Schemes}
+\label{app:2schemes}
+
+The two schemes for reuse described in Figure \ref{fig:changeN}, \emph{summary-based} and \emph{sample-based} amortization, are described below in greater detail. 
+
+
+In \emph{sample-based amortization}, we simply add samples generated in response to one query ($\mathcal{Q}1$) to the sample set for another query ($\mathcal{Q}2$). So if $N_1$ samples were generated in response to $\mathcal{Q}1$, and $N_2$ new samples are generated in response to $\mathcal{Q}2$, in the absence of amortization, the responses to the two queries $\mathcal{Q}1$ and $\mathcal{Q}2$ would be generated as follows:
+
+\begin{align*}
+\textstyle
+P(h_{\mathcal{Q}1}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}1}]\\
+P(h_{\mathcal{Q}2}|d) & \approx \frac{1}{N_2}\sum_{n=1}^{N_2} \mathbb{I}[h_n=h_{\mathcal{Q}2}]\\
+\end{align*}
+
+Under the sample-based amortization scheme, the response to $\mathcal{Q}2$ is given by a calculation carried out over all $N_1 + N_2$ equally weighted samples.
+
+\begin{align*}
+\textstyle
+P(h_{\mathcal{Q}1}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}1}]\\
+P(h_{\mathcal{Q}2}|d) & \approx \frac{1}{N_2 + N_1}  \left( \sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}2}] + \sum_{n=1}^{N_2} \mathbb{I}[h_n=h_{\mathcal{Q}2}] \right)\\
+\end{align*}
+
+Under this scheme, all the computations carried out for $\mathcal{Q}1$ are available for flexible reuse in the computation for $\mathcal{Q}2$. 
+
+In \emph{summary-based amortization}, we reuse a summary statistic computed from $\mathcal{Q}1$. This strategy is only applicable to problems where the answer to $\mathcal{Q}2$ can be expressed as the composition of the answer to $\mathcal{Q}1$, and an additional simpler computation. For example if $\mathcal{Q}1$ is ``What is the probability that there is an object starting with a C in the scene?'', $\mathcal{Q}2$ could be ``What is the probability that there is an object starting with a C or an R in the scene?''. In this case, the $N_1$ samples generated in response to $\mathcal{Q}1$ are summarized into one probability (``the probability of an object starting with C''), $N_2$ new samples are generated in response to a simpler query (``the probability of an object starting with R''), and these two numbers are then composed (in this case simply added) to give the final estimate for $\mathcal{Q}2$ (``the probability of an object starting with C or R''). 
+
+
+\begin{align*}
+\textstyle
+P(h_{\mathcal{Q}1}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}1}]\\
+P(h_{\mathcal{Q}2}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{\mathcal{Q}1}] + \frac{1}{N_2}\sum_{n=1}^{N_2} \mathbb{I}[h_n= (h_{\mathcal{Q}2} - h_{\mathcal{Q}1})]\\
+\end{align*}
+
+
+Under this scheme, only the final product of the computation carried out for $\mathcal{Q}1$ is reused in the calculations for $\mathcal{Q}2$.
+
+\newpage
 
 \section{Recognition network architecture}
 \label{app:LTI_arch}
@@ -136,3 +173,5 @@ We also find that the Active-Interventional Agent achieves reward well above the
 In this experiment we scaled up to larger graphs with $N=6$ nodes, which afforded considerably more unique \CBNs~than with $N=5$ ($1.4\times10^7$ vs $5.9\times10^4$). As shown in Figure \ref{fig:N6_results}a, we find the same pattern of behavior noted in the main text where the rewards earned are ordered such that Observational agent $<$ Active-Conditional agent $<$ Active-Interventional agent $<$ Active-Counterfactual agent. We see additionally in Figure \ref{fig:N6_results}b that the Active-Interventional agent performs significantly better than the baseline Random-Interventional agent, indicating an ability to choose non-random, informative interventions.
 
 \newpage
+
+
