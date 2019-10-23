@@ -2,3 +2,4 @@
 git checkout public_thesis
 git checkout master dissertation.pdf
 git commit -m "Placeholder commit message"
+git checkout master
