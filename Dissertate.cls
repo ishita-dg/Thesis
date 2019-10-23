@@ -225,6 +225,7 @@
      \endlist}
 
 % Some definitions.
+\def\abstracttitle#1{\gdef\@abstracttitle{#1}}
 \def\advisor#1{\gdef\@advisor{#1}}
 \def\coadvisorOne#1{\gdef\@coadvisorOne{#1}}
 \def\coadvisorTwo#1{\gdef\@coadvisorTwo{#1}}
@@ -274,6 +275,7 @@
 	\copyrightpage
 	\abstractpage
     \contentspage
+	    \prevwork
 	% \listoffigures % optional
 	\dedicationpage
 	\acknowledgments
@@ -321,7 +323,7 @@
 	\renewcommand{\headrulewidth}{0.0pt}
 	\vspace*{35pt}
 	\begin{center}
-    	\Large \textcolor{SchoolColor}{\@title} \normalsize \\
+    	\Large \textcolor{SchoolColor}{\@abstracttitle} \normalsize \\
     	\vspace*{20pt}
     	\scshape Abstract \\ \rm
 	\end{center}
@@ -360,6 +362,18 @@
 }
 
 
+\newcommand{\prevwork}{
+	\chapter*{Previously published and submitted works}
+	\noindent
+    \begin{spacing}{\dcompressedspacing}
+    	\input{frontmatter/prevwork}
+    \end{spacing}
+	\vspace*{\fill} \newpage
+	\setcounter{page}{1}
+	\pagenumbering{arabic}
+}
+
+
 \renewcommand{\backmatter}{
     \begin{appendices}
         \include{chapters/appendix}
@@ -373,3 +387,13 @@
         \include{endmatter/colophon}
     \end{spacing}
 }
+
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \setlength\footnotemargin{0em}
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
