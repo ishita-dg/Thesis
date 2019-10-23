@@ -107,6 +107,12 @@ Beals, R., Krantz, D.~H., \& Tversky, A. (1968).
 \newblock Foundations of multidimensional scaling.
 \newblock {\em Psychological review}, 75(2), 127.
 
+\bibitem[Beattie \& Baron, 1988]{beattie1988confirmation}
+Beattie, J. \& Baron, J. (1988).
+\newblock Confirmation and matching biases in hypothesis testing.
+\newblock {\em The Quarterly Journal of Experimental Psychology}, 40(2),
+  269--297.
+
 \bibitem[Belinkov \& Glass, 2019]{belinkov2019analysis}
 Belinkov, Y. \& Glass, J. (2019).
 \newblock Analysis methods in neural language processing: A survey.
@@ -135,6 +141,12 @@ Benjamin, D.~J. (2018).
 Benjamin, D.~J., Rabin, M., \& Raymond, C. (2016).
 \newblock A model of nonbelief in the law of large numbers.
 \newblock {\em Journal of the European Economic Association}, 14, 515--544.
+
+\bibitem[Bernstein et~al., 2017]{bernstein2017markov}
+Bernstein, J., Dasgupta, I., Rolnick, D., \& Sompolinsky, H. (2017).
+\newblock Markov transitions between attractor states in a recurrent neural
+  network.
+\newblock In {\em 2017 AAAI Spring Symposium Series}.
 
 \bibitem[Bhatia, 2017]{bhatia2017associative}
 Bhatia, S. (2017).
@@ -256,6 +268,11 @@ Brown, S.~D. \& Steyvers, M. (2009).
 \newblock Detecting and predicting changes.
 \newblock {\em Cognitive Psychology}, 58, 49--67.
 
+\bibitem[Bruner, 2017]{bruner2017study}
+Bruner, J. (2017).
+\newblock {\em A study of thinking}.
+\newblock Routledge.
+
 \bibitem[Brunswik, 1943]{brunswik1943organismic}
 Brunswik, E. (1943).
 \newblock Organismic achievement and environmental probability.
@@ -310,6 +327,11 @@ Cheng, P.~W. \& Holyoak, K.~J. (1985).
 \newblock Pragmatic reasoning schemas.
 \newblock {\em Cognitive Psychology}, 17, 391--416.
 
+\bibitem[Chomsky, 1967]{chomsky1967recent}
+Chomsky, N. (1967).
+\newblock Recent contributions to the theory of innate ideas.
+\newblock In {\em A Portrait of Twenty-five Years}  (pp.\ 31--40). Springer.
+
 \bibitem[Chomsky, 1993]{chomsky1993lectures}
 Chomsky, N. (1993).
 \newblock {\em Lectures on government and binding: The Pisa lectures}.
@@ -348,11 +370,6 @@ Costello, F., Watts, P., \& Fisher, C. (2018).
   competing models.
 \newblock {\em Cognition}, 170, 280--297.
 
-\bibitem[Costello \& Watts, 2018]{costello18}
-Costello, F.~J. \& Watts, P. (2018).
-\newblock Invariants in probabilistic reasoning.
-\newblock {\em Cognitive Psychology}, 100, 1--16.
-
 \bibitem[Curie, 1895]{curie1895proprietes}
 Curie, P. (1895).
 \newblock {\em Magnetic properties of bodies at various times}.
@@ -379,22 +396,17 @@ Dasgupta, I., Schulz, E., Tenenbaum, J.~B., \& Gershman, S.~J. (2019a).
 \newblock A theory of learning to infer.
 \newblock {\em BioRxiv}, (pp.\ 644534).
 
-\bibitem[Dasgupta et~al., 2019b]{Dasgupta644534}
-Dasgupta, I., Schulz, E., Tenenbaum, J.~B., \& Gershman, S.~J. (2019b).
-\newblock A theory of learning to infer.
-\newblock {\em bioRxiv}.
+\bibitem[Dasgupta et~al., 2019b]{dasgupta2019causal}
+Dasgupta, I., Wang, J., Chiappa, S., Mitrovic, J., Ortega, P., Raposo, D.,
+  Hughes, E., Battaglia, P., Botvinick, M., \& Kurth-Nelson, Z. (2019b).
+\newblock Causal reasoning from meta-reinforcement learning.
+\newblock {\em arXiv preprint arXiv:1901.08162}.
 
 \bibitem[Daw et~al., 2011]{daw2011model}
 Daw, N.~D., Gershman, S.~J., Seymour, B., Dayan, P., \& Dolan, R.~J. (2011).
 \newblock Model-based influences on humans' choices and striatal prediction
   errors.
 \newblock {\em Neuron}, 69(6), 1204--1215.
-
-\bibitem[Daw et~al., 2005]{daw2005uncertainty}
-Daw, N.~D., Niv, Y., \& Dayan, P. (2005).
-\newblock Uncertainty-based competition between prefrontal and dorsolateral
-  striatal systems for behavioral control.
-\newblock {\em Nature Neuroscience}, 8(12), 1704--1711.
 
 \bibitem[Dawes et~al., 1993]{dawes1993equating}
 Dawes, R.~M., Mirels, H.~L., Gold, E., \& Donahue, E. (1993).
@@ -442,14 +454,8 @@ Denison, S., Bonawitz, E., Gopnik, A., \& Griffiths, T.~L. (2013a).
   Hypothesis}.
 \newblock {\em Cognition}, 126(2), 280--300.
 
-\bibitem[Denison et~al., 2013b]{denison13}
+\bibitem[Denison et~al., 2013b]{denison2013rational}
 Denison, S., Bonawitz, E., Gopnik, A., \& Griffiths, T.~L. (2013b).
-\newblock Rational variability in children's causal inferences: The sampling
-  hypothesis.
-\newblock {\em Cognition}, 126, 285--300.
-
-\bibitem[Denison et~al., 2013c]{denison2013rational}
-Denison, S., Bonawitz, E., Gopnik, A., \& Griffiths, T.~L. (2013c).
 \newblock Rational variability in children’s causal inferences: The sampling
   hypothesis.
 \newblock {\em Cognition}, 126, 285--300.
@@ -470,8 +476,8 @@ Dougherty, M., Gettys, C.~F., \& Thomas, R.~P. (1997).
 \newblock {\em Organizational Behavior and Human Decision Processes}, 70,
   135--148.
 
-\bibitem[Dougherty \& Hunter, 2003a]{Dougherty2003}
-Dougherty, M. \& Hunter, J. (2003a).
+\bibitem[Dougherty \& Hunter, 2003]{Dougherty2003}
+Dougherty, M. \& Hunter, J. (2003).
 \newblock {Probability judgment and subadditivity: The role of working memory
   capacity and constraining retrieval}.
 \newblock {\em Memory {\&} Cognition}, 31, 968--982.
@@ -480,18 +486,6 @@ Dougherty, M. \& Hunter, J. (2003a).
 Dougherty, M.~R., Gettys, C.~F., \& Ogden, E.~E. (1999b).
 \newblock {MINERVA-DM: A Memory Processes Model for Judgments of Likelihood}.
 \newblock {\em Psychological Review}, 106, 180--209.
-
-\bibitem[Dougherty \& Hunter, 2003b]{dougherty2003probability}
-Dougherty, M.~R. \& Hunter, J. (2003b).
-\newblock Probability judgment and subadditivity: The role of working memory
-  capacity and constraining retrieval.
-\newblock {\em Memory \& Cognition}, 31(6), 968--982.
-
-\bibitem[Dougherty \& Hunter, 2003c]{dougherty2003hypothesis}
-Dougherty, M.~R. \& Hunter, J.~E. (2003c).
-\newblock Hypothesis generation, probability judgment, and individual
-  differences in working memory capacity.
-\newblock {\em Acta Psychologica}, 113(3), 263--282.
 
 \bibitem[Duan et~al., 2016]{duan2016RL2}
 Duan, Y., Schulman, J., Chen, X., Bartlett, P.~L., Sutskever, I., \& Abbeel, P.
@@ -631,12 +625,6 @@ Fischhoff, B. \& Beyth-Marom, R. (1983).
 Fischhoff, B., Slovic, P., \& Lichtenstein, S. (1979).
 \newblock Subjective sensitivity analysis.
 \newblock {\em Organizational behavior and human performance}, 23(3), 339--359.
-
-\bibitem[Fleming \& Daw, 2017]{fleming2017self}
-Fleming, S.~M. \& Daw, N.~D. (2017).
-\newblock Self-evaluation of decision-making: A general bayesian framework for
-  metacognitive computation.
-\newblock {\em Psychological Review}, 124(1), 91.
 
 \bibitem[Fodor \& Pylyshyn, 1988]{fodor88}
 Fodor, J.~A. \& Pylyshyn, Z.~W. (1988).
@@ -786,12 +774,6 @@ Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012c).
 \newblock Multistability and perceptual inference.
 \newblock {\em Neural Computation}, 24, 1--24.
 
-\bibitem[Gershman \& Wilson, 2010]{gershman2010neural}
-Gershman, S.~J. \& Wilson, R. (2010).
-\newblock The neural costs of optimal control.
-\newblock In {\em Advances in neural information processing systems}  (pp.\
-  712--720).
-
 \bibitem[Gershman et~al., 2017]{gershman2017imaginative}
 Gershman, S.~J., Zhou, J., \& Kommers, C. (2017).
 \newblock Imaginative reinforcement learning: Computational principles and
@@ -888,6 +870,11 @@ Goodman, N., Tenenbaum, J.~B., Feldman, J., \& Griffiths, T. (2008).
 Goodman, N.~D., Ullman, T.~D., \& Tenenbaum, J.~B. (2011).
 \newblock Learning a theory of causality.
 \newblock {\em Psychological review}, 118(1), 110.
+
+\bibitem[Gopnik, 1996]{gopnik1996scientist}
+Gopnik, A. (1996).
+\newblock The scientist as child.
+\newblock {\em Philosophy of science}, 63(4), 485--514.
 
 \bibitem[Gopnik et~al., 2004]{gopnik2004theory}
 Gopnik, A., Glymour, C., Sobel, D., Schulz, L., Kushnir, T., \& Danks, D.
@@ -1033,26 +1020,10 @@ Hastings, W.~K. (1970).
 \newblock Monte carlo sampling methods using markov chains and their
   applications.
 
-\bibitem[Hawkins et~al., 2016]{hawkins2016dynamic}
-Hawkins, G.~E., Hayes, B.~K., \& Heit, E. (2016).
-\newblock A dynamic model of reasoning and memory.
-\newblock {\em Journal of Experimental Psychology: General}, 145(2), 155--180.
-
 \bibitem[Hay et~al., 2014]{hay2014selecting}
 Hay, N., Russell, S., Tolpin, D., \& Shimony, S.~E. (2014).
 \newblock Selecting computations: Theory and applications.
 \newblock {\em arXiv preprint arXiv:1408.2048}.
-
-\bibitem[Hayes et~al., 2013]{hayes2013relationship}
-Hayes, B.~K., Fritz, K., \& Heit, E. (2013).
-\newblock The relationship between memory and inductive reasoning: Does it
-  develop?
-\newblock {\em Developmental Psychology}, 49(5), 848--860.
-
-\bibitem[Hayes \& Heit, 2013]{hayes2013similar}
-Hayes, B.~K. \& Heit, E. (2013).
-\newblock How similar are recognition memory and inductive reasoning?
-\newblock {\em Memory \& Cognition}, 41(5), 781--795.
 
 \bibitem[Heckerman, 1990]{Heckerman1990}
 Heckerman, D. (1990).
@@ -1064,11 +1035,6 @@ Heckerman, D., Geiger, D., \& Chickering, D.~M. (1995).
 \newblock Learning bayesian networks: The combination of knowledge and
   statistical data.
 \newblock {\em Machine learning}, 20(3), 197--243.
-
-\bibitem[Heit \& Hayes, 2011]{heit2011predicting}
-Heit, E. \& Hayes, B.~K. (2011).
-\newblock Predicting reasoning from memory.
-\newblock {\em Journal of Experimental Psychology: General}, 140(1), 76--101.
 
 \bibitem[Hennig et~al., 2015]{hennig2015probabilistic}
 Hennig, P., Osborne, M.~A., \& Girolami, M. (2015).
@@ -1171,11 +1137,6 @@ Janzing, D., Hoyer, P.~O., \& Sch{\"o}lkopf, B. (2009).
 \newblock Telling cause from effect based on high-dimensional observations.
 \newblock {\em arXiv preprint arXiv:0909.4386}.
 
-\bibitem[Jazayeri \& Movshon, 2007]{jazayeri2007new}
-Jazayeri, M. \& Movshon, J.~A. (2007).
-\newblock A new perceptual illusion reveals mechanisms of sensory decoding.
-\newblock {\em Nature}, 446(7138), 912--915.
-
 \bibitem[Johnson \& Payne, 1985]{johnson85}
 Johnson, E.~J. \& Payne, J.~W. (1985).
 \newblock Effort and accuracy in choice.
@@ -1193,6 +1154,13 @@ Johnson, J., Hariharan, B., van~der Maaten, L., Fei-Fei, L., Lawrence~Zitnick,
 Johnson-Laird, P.~N. \& Steedman, M. (1978).
 \newblock The psychology of syllogisms.
 \newblock {\em Cognitive psychology}, 10(1), 64--99.
+
+\bibitem[Jonas et~al., 2001]{jonas2001confirmation}
+Jonas, E., Schulz-Hardt, S., Frey, D., \& Thelen, N. (2001).
+\newblock Confirmation bias in sequential information search after preliminary
+  decisions: an expansion of dissonance theoretical research on selective
+  exposure to information.
+\newblock {\em Journal of personality and social psychology}, 80(4), 557.
 
 \bibitem[Jones \& Mewhort, 2007]{jones2007representing}
 Jones, M.~N. \& Mewhort, D.~J. (2007).
@@ -1257,13 +1225,6 @@ Kemp, C., Perfors, A., \& Tenenbaum, J.~B. (2007).
 Kennedy, M.~L., Willis, W.~G., \& Faust, D. (1997).
 \newblock The base-rate fallacy in school psychology.
 \newblock {\em Journal of Psychoeducational Assessment}, 15, 292--307.
-
-\bibitem[Keramati et~al., 2016]{keramati2016adaptive}
-Keramati, M., Smittenaar, P., Dolan, R.~J., \& Dayan, P. (2016).
-\newblock Adaptive integration of habits into depth-limited planning defines a
-  habitual-goal--directed spectrum.
-\newblock {\em Proceedings of the National Academy of Sciences}, 113(45),
-  12868--12873.
 
 \bibitem[Kingma \& Welling, 2013a]{kingma2014auto}
 Kingma, D.~P. \& Welling, M. (2013a).
@@ -1493,10 +1454,6 @@ Lombrozo, T. (2010).
   mechanisms influence causal ascriptions.
 \newblock {\em Cognitive Psychology}, 61(4), 303--332.
 
-\bibitem[Luu \& Stocker, 2016]{luu2016choice}
-Luu, L. \& Stocker, A.~A. (2016).
-\newblock Choice-dependent perceptual biases.
-
 \bibitem[Lyon \& Slovic, 1976]{lyon1976dominance}
 Lyon, D. \& Slovic, P. (1976).
 \newblock Dominance of accuracy information and neglect of base rates in
@@ -1547,6 +1504,12 @@ Marewski, J.~N. \& Schooler, L.~J. (2011).
 \bibitem[Marino et~al., 2018]{marino2018learning}
 Marino, J., Yue, Y., \& Mandt, S. (2018).
 \newblock Learning to infer.
+
+\bibitem[Markant \& Gureckis, 2014]{markant2014better}
+Markant, D.~B. \& Gureckis, T.~M. (2014).
+\newblock Is it better to select or to receive? learning via active and passive
+  hypothesis testing.
+\newblock {\em Journal of Experimental Psychology: General}, 143(1), 94.
 
 \bibitem[Marr \& Poggio, 1976]{marr1976understanding}
 Marr, D. \& Poggio, T. (1976).
@@ -1662,6 +1625,12 @@ Momennejad, I., Otto, A.~R., Daw, N.~D., \& Norman, K.~A. (2018).
 \newblock Offline replay supports planning in human reinforcement learning.
 \newblock {\em eLife}, 7, e32548.
 
+\bibitem[Montessori \& Holmes, 1912]{montessori1912montessori}
+Montessori, M. \& Holmes, H.~W. (1912).
+\newblock {\em The Montessori Method: Scientific Pedagogy as Applied to Child
+  Education in" The Children's Houses"}.
+\newblock Frederick A. Stokes Company.
+
 \bibitem[Moreno-Bote et~al., 2011]{Moreno11}
 Moreno-Bote, R., Knill, D.~C., \& Pouget, A. (2011).
 \newblock Bayesian sampling in visual perception.
@@ -1688,6 +1657,12 @@ Neal, R.~M. (1993).
 Neil~Bearden, J. \& Wallsten, T.~S. (2004).
 \newblock {Minerva-DM and subadditive frequency judgments}.
 \newblock {\em Journal of Behavioral Decision Making}, 17(5), 349--363.
+
+\bibitem[Nelson, 2005]{nelson2005finding}
+Nelson, J.~D. (2005).
+\newblock Finding useful questions: on bayesian diagnosticity, probability,
+  impact, and information gain.
+\newblock {\em Psychological review}, 112(4), 979.
 
 \bibitem[Newell \& Rosenbloom, 1981]{newell1981mechanisms}
 Newell, A. \& Rosenbloom, P.~S. (1981).
@@ -2011,6 +1986,12 @@ Ruder, S. (2016).
 \newblock An overview of gradient descent optimization algorithms.
 \newblock {\em arXiv preprint arXiv:1609.04747}.
 
+\bibitem[Ruggeri et~al., 2017]{ruggeri2017toma}
+Ruggeri, A., Sim, Z.~L., \& Xu, F. (2017).
+\newblock ?why is toma late to school again?? preschoolers identify the most
+  informative questions.
+\newblock {\em Developmental psychology}, 53(9), 1620.
+
 \bibitem[Ruiz \& Titsia, 2019]{ruiz2019contrast}
 Ruiz, F. J.~R. \& Titsia, M.~K. (2019).
 \newblock A contrastive divergence for combining variational inference and
@@ -2278,6 +2259,11 @@ Socher, R., Manning, C.~D., \& Ng, A.~Y. (2010).
 \newblock In {\em Proceedings of the NIPS-2010 Deep Learning and Unsupervised
   Feature Learning Workshop}, volume 2010  (pp.\ 1--9).
 
+\bibitem[Spelke, 1998]{spelke1998nativism}
+Spelke, E.~S. (1998).
+\newblock Nativism, empiricism, and the origins of knowledge.
+\newblock {\em Infant Behavior and Development}, 21(2), 181--200.
+
 \bibitem[Spirtes et~al., 2000]{spirtes2000causation}
 Spirtes, P., Glymour, C., Scheines, R., Heckerman, D., Meek, C., Cooper, G., \&
   Richardson, T. (2000).
@@ -2321,12 +2307,6 @@ Steyvers, M. (2006).
 Steyvers, M. \& Griffiths, T. (2007).
 \newblock Probabilistic topic models.
 \newblock {\em Handbook of latent semantic analysis}, 427(7), 424--440.
-
-\bibitem[Stocker \& Simoncelli, 2008]{stocker2008bayesian}
-Stocker, A.~A. \& Simoncelli, E.~P. (2008).
-\newblock A bayesian model of conditioned perception.
-\newblock In {\em {Advances in Neural Information Processing Systems}}  (pp.\
-  1409--1416).
 
 \bibitem[Stuhlm{\"u}ller et~al., 2013]{stuhlmuller2013learning}
 Stuhlm{\"u}ller, A., Taylor, J., \& Goodman, N. (2013).
@@ -2404,11 +2384,6 @@ Todd, P.~M. \& Goodie, A.~S. (2002).
 Tolman, E.~C. (1948).
 \newblock Cognitive maps in rats and men.
 \newblock {\em Psychological review}, 55(4), 189.
-
-\bibitem[Trueblood \& Busemeyer, 2011]{trueblood2011quantum}
-Trueblood, J.~S. \& Busemeyer, J.~R. (2011).
-\newblock A quantum probability account of order effects in inference.
-\newblock {\em Cognitive Science}, 35(8), 1518--1552.
 
 \bibitem[Tversky \& Kahneman, 1973]{tversky1973availability}
 Tversky, A. \& Kahneman, D. (1973).
@@ -2514,19 +2489,6 @@ Wang, T., Wu, Y., Moore, D., \& Russell, S.~J. (2018b).
 \newblock {Meta-Learning {MCMC} Proposals}.
 \newblock In {\em {Advances in Neural Information Processing Systems}}  (pp.\
   4150--4160).
-
-\bibitem[Wang \& Busemeyer, 2013]{wang2013quantum}
-Wang, Z. \& Busemeyer, J.~R. (2013).
-\newblock A quantum question order model supported by empirical tests of an a
-  priori and precise prediction.
-\newblock {\em Topics in Cognitive Science}, 5(4), 689--710.
-
-\bibitem[Wang et~al., 2014]{wang2014context}
-Wang, Z., Solloway, T., Shiffrin, R.~M., \& Busemeyer, J.~R. (2014).
-\newblock Context effects produced by question orders reveal quantum nature of
-  human judgments.
-\newblock {\em Proceedings of the National Academy of Sciences}, 111(26),
-  9431--9436.
 
 \bibitem[Watkins \& Dayan, 1992]{watkins1992q}
 Watkins, C.~J. \& Dayan, P. (1992).
