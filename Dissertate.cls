@@ -62,7 +62,8 @@
     {\endoldenumerate\end{spacing}}
 
 % Text layout.
-\RequirePackage[width = 5.75in, top = 1.0in, bottom = 1.0in, includefoot, includehead, letterpaper]{geometry}
+%\RequirePackage[width = 5.75in, top = 1.0in, bottom = 1.0in, includefoot, includehead, letterpaper]{geometry}
+\RequirePackage[margin = 1.25in, letterpaper]{geometry}
 \usepackage{ragged2e}
 % start added by ishita
 \usepackage{amsmath}
@@ -306,34 +307,61 @@
 	\newpage
 	\thispagestyle{empty}
 	\vspace*{\fill}
-	\scshape \noindent \small \copyright \small 2014\hspace{3pt}-- \theauthor \\
+	\scshape \noindent \small \copyright \small 2019\hspace{3pt}-- \theauthor \\
 	\noindent all rights reserved.
 	\vspace*{\fill}
 	\newpage
 	\rm
 }
 
+
+% Formatting of the abstract page:
+\fancypagestyle{abstractstyle}{
+	\pagenumbering{roman} \setcounter{page}{3}  % ABSTRACT MUST BE NUMBERED iii
+	\lhead{Dissertation Advisor: Professor \@advisor} \rhead{\@author}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}}
+
 \newcommand{\abstractpage}{
-    \pdfbookmark{Abstract}{Abstract}
 	\newpage
-	\pagenumbering{roman}
-	\setcounter{page}{3}
-	\pagestyle{fancy}
-	\lhead{Dissertation advisor: Professor \@advisor} \rhead{\@author}
+	%\doublespacing    % ABSTRACT MUST BE DOUBLE SPACED
+	\thispagestyle{abstractstyle}
 	\renewcommand{\headrulewidth}{0.0pt}
-	\vspace*{35pt}
+	\vspace*{10pt}
 	\begin{center}
-    	\Large \textcolor{SchoolColor}{\@abstracttitle} \normalsize \\
-    	\vspace*{20pt}
-    	\scshape Abstract \\ \rm
+	\Large \textcolor{SchoolColor}{\@abstracttitle} \normalsize \\
+	\vspace*{20pt}
+	\scshape Abstract \\ \normalfont
 	\end{center}
-    \begin{spacing}{\dnormalspacing}
-    	\input{frontmatter/abstract}
-    \end{spacing}
+	\begin{doublespace}
+	\input{frontmatter/abstract}
+	\end{doublespace} 
 	\vspace*{\fill}
-	\newpage \lhead{} \rhead{}
-	\cfoot{\thepage}
+	\newpage\normalfont
+	\pagestyle{plain}
 }
+%
+%\newcommand{\abstractpage}{
+%    \pdfbookmark{Abstract}{Abstract}
+%	\newpage
+%	\pagenumbering{roman}
+%	\setcounter{page}{3}
+%	\pagestyle{fancy}
+%	\lhead{Dissertation advisor: Professor \@advisor} \rhead{\@author}
+%	\renewcommand{\headrulewidth}{0.0pt}
+%	\vspace*{15pt}%\vspace*{35pt}
+%	\begin{center}
+%    	\Large \textcolor{SchoolColor}{\@abstracttitle} \normalsize \\
+%    	\vspace*{20pt} %\vspace*{20pt}
+%    	\scshape Abstract \\ \rm
+%	\end{center}
+%    \begin{doublespace}%{\dnormalspacing}
+%    	\input{frontmatter/abstract}
+%   \end{doublespace} %\end{spacing}
+%	\vspace*{\fill}
+%	\newpage \lhead{} \rhead{}
+%	\cfoot{\thepage}
+%}
 
 \newcommand{\contentspage}{
     \pdfbookmark{\contentsname}{Contents}
@@ -353,9 +381,9 @@
 \newcommand{\acknowledgments}{
 	\chapter*{Acknowledgments}
 	\noindent
-    \begin{spacing}{\dnormalspacing}
+     \begin{doublespace}%{\dnormalspacing}
     	\input{frontmatter/thanks}
-    \end{spacing}
+     \end{doublespace} %\end{spacing}
 	\vspace*{\fill} \newpage
 	\setcounter{page}{1}
 	\pagenumbering{arabic}
@@ -369,8 +397,6 @@
     	\input{frontmatter/prevwork}
     \end{spacing}
 	\vspace*{\fill} \newpage
-	\setcounter{page}{1}
-	\pagenumbering{arabic}
 }
 
 

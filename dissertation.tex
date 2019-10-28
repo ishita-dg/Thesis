@@ -11,13 +11,14 @@
 % \maketitle
 % \copyrightpage
 \frontmatter
-\setstretch{\dnormalspacing}
+%\setstretch{\dnormalspacing}
 % \abstractpage
 %\tableofcontents
  \doublespacing
 
 % include each chapter...
 \setcounter{chapter}{0}  % start chapter numbering at 0
+%\begin{spacing}{\dnormalspacing}
 \include{chapters/introduction}
 \include{chapters/human_inference}
 \include{chapters/technical_background}
@@ -28,13 +29,15 @@
 \include{chapters/sentences}
 \include{chapters/causal}
 \include{chapters/conclusion}
+%\end{spacing}
 %\include{chapters/appendix}
 % %
 %\listoffigures
 % \dedicationpage
 % \acknowledgments
 
-\setstretch{\dnormalspacing}
+%\setstretch{\dnormalspacing}
+ \doublespacing
 
 % the back matter
 \backmatter
