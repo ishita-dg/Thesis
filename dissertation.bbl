@@ -6,6 +6,13 @@ Abbott, J.~T., Austerweil, J.~L., \& Griffiths, T.~L. (2015).
 \newblock In {\em Neural {I}nformation {P}rocessing {S}ystems {C}onference},
   volume 122  (pp.\ 558).: American Psychological Association.
 
+\bibitem[Abbott \& Griffiths, 2011]{Abbott2011ExploringLearning}
+Abbott, J.~T. \& Griffiths, T. (2011).
+\newblock {Exploring the influence of particle filter parameters on order
+  effects in causal learning}.
+\newblock {\em Proceedings of the 33rd Annual Conference of the Cognitive
+  Science Society}, (pp.\ 2950--2955).
+
 \bibitem[Abbott et~al., 2013]{abbott13}
 Abbott, J.~T., Hamrick, J.~B., \& Griffiths, T.~L. (2013).
 \newblock Approximating {B}ayesian inference with a sparse distributed memory
@@ -233,6 +240,11 @@ Botvinick, M., Ritter, S., Wang, J.~X., Kurth-Nelson, Z., Blundell, C., \&
 \newblock Reinforcement learning, fast and slow.
 \newblock {\em Trends in cognitive sciences}.
 
+\bibitem[Botvinick \& Toussaint, 2012]{botvinick2012planning}
+Botvinick, M. \& Toussaint, M. (2012).
+\newblock Planning as inference.
+\newblock {\em Trends in cognitive sciences}, 16(10), 485--488.
+
 \bibitem[Bowman et~al., 2015]{snli:emnlp2015}
 Bowman, S.~R., Angeli, G., Potts, C., \& Manning, C.~D. (2015).
 \newblock A large annotated corpus for learning natural language inference.
@@ -342,6 +354,16 @@ Chomsky, N. \& Lightfoot, D.~W. (2002).
 \newblock {\em Syntactic structures}.
 \newblock Walter de Gruyter.
 
+\bibitem[Chopin, 2002]{chopin2002sequential}
+Chopin, N. (2002).
+\newblock A sequential particle filter method for static models.
+\newblock {\em Biometrika}, 89(3), 539--552.
+
+\bibitem[Cohen et~al., 2016]{cohen16}
+Cohen, A.~L., Sidlowski, S., \& Staub, A. (2016).
+\newblock Beliefs and {B}ayesian reasoning.
+\newblock {\em Psychonomic Bulletin \& Review}, (pp.\ 1--7).
+
 \bibitem[Cohen et~al., 2017]{cohen2017beliefs}
 Cohen, A.~L., Sidlowski, S., \& Staub, A. (2017).
 \newblock {Beliefs and Bayesian reasoning}.
@@ -351,6 +373,7 @@ Cohen, A.~L., Sidlowski, S., \& Staub, A. (2017).
 Conneau, A., Kiela, D., Schwenk, H., Barrault, L., \& Bordes, A. (2017).
 \newblock {Supervised Learning of Universal Sentence Representations from
   Natural Language Inference Data}.
+\newblock {\em arXiv}.
 
 \bibitem[Cooper, 1990]{cooper1990complexity}
 Cooper, G.~F. (1990).
@@ -517,7 +540,7 @@ Edwards, W. (1968).
 
 \bibitem[Elstein et~al., 1978]{elstein1978medical}
 Elstein, A.~S., Shulman, L.~S., \& Sprafka, S.~A. (1978).
-\newblock Medical problem solving an analysis of clinical reasoning.
+\newblock {\em Medical problem solving an analysis of clinical reasoning}.
 
 \bibitem[Erev \& Barron, 2005a]{erev05}
 Erev, I. \& Barron, G. (2005a).
@@ -566,8 +589,13 @@ Evans, J. S.~B. \& Curtis-Holmes, J. (2005).
   theory of reasoning.
 \newblock {\em Thinking \& Reasoning}, 11(4), 382--389.
 
-\bibitem[Evans et~al., 2002]{evans2002background}
-Evans, J. S.~B., Handley, S.~J., Over, D.~E., \& Perham, N. (2002).
+\bibitem[Evans et~al., 2002a]{evans02}
+Evans, J. S.~B., Handley, S.~J., Over, D.~E., \& Perham, N. (2002a).
+\newblock Background beliefs in bayesian inference.
+\newblock {\em Memory \& Cognition}, 30, 179--190.
+
+\bibitem[Evans et~al., 2002b]{evans2002background}
+Evans, J. S.~B., Handley, S.~J., Over, D.~E., \& Perham, N. (2002b).
 \newblock Background beliefs in bayesian inference.
 \newblock {\em {Memory \& Cognition}}, 30(2), 179--190.
 
@@ -668,6 +696,12 @@ Ganin, Y., Kulkarni, T., Babuschkin, I., Eslami, S.~M., \& Vinyals, O. (2018).
   learning.
 \newblock {\em arXiv preprint arXiv:1804.01118}.
 
+\bibitem[Garcia-Retamero \& Dhami, 2009]{garcia2009take}
+Garcia-Retamero, R. \& Dhami, M.~K. (2009).
+\newblock Take-the-best in expert-novice decision strategies for residential
+  burglary.
+\newblock {\em Psychonomic Bulletin \& Review}, 16(1), 163--169.
+
 \bibitem[Geiger et~al., 1990]{geiger1990identifying}
 Geiger, D., Verma, T., \& Pearl, J. (1990).
 \newblock Identifying independence in bayesian networks.
@@ -689,6 +723,11 @@ Geman, S. \& Geman, D. (1984).
 Gennaioli, N. \& Shleifer, A. (2010).
 \newblock What comes to mind.
 \newblock {\em The Quarterly Journal of Economics}, 125, 1399--1433.
+
+\bibitem[Gershman et~al., 2012a]{Gershman2012}
+Gershman, S., Hoffman, M., \& Blei, D. (2012a).
+\newblock Nonparametric variational inference.
+\newblock {\em arXiv preprint arXiv:1206.4665}.
 
 \bibitem[Gershman \& Tenenbaum, 2015]{gershman15}
 Gershman, S. \& Tenenbaum, J.~B. (2015).
@@ -759,18 +798,18 @@ Gershman, S.~J., Markman, A.~B., \& Otto, R.~A. (2014).
   two systems.
 \newblock {\em Journal of Experimental Psychology: General}, 143(1), 182--194.
 
-\bibitem[Gershman et~al., 2012a]{multistability}
-Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012a).
+\bibitem[Gershman et~al., 2012b]{multistability}
+Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012b).
 \newblock {Multistability and Perceptual Inference}.
 \newblock {\em Neural Computation}, 24(1), 1--24.
 
-\bibitem[Gershman et~al., 2012b]{gershman12}
-Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012b).
+\bibitem[Gershman et~al., 2012c]{gershman12}
+Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012c).
 \newblock Multistability and perceptual inference.
 \newblock {\em Neural Computation}, 24, 1--24.
 
-\bibitem[Gershman et~al., 2012c]{gershman2012multistability}
-Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012c).
+\bibitem[Gershman et~al., 2012d]{gershman2012multistability}
+Gershman, S.~J., Vul, E., \& Tenenbaum, J.~B. (2012d).
 \newblock Multistability and perceptual inference.
 \newblock {\em Neural Computation}, 24, 1--24.
 
@@ -796,10 +835,15 @@ Gigerenzer, G. (2008).
 \newblock Why heuristics work.
 \newblock {\em Perspectives on Psychological Science}, 3(1), 20--29.
 
-\bibitem[Gigerenzer \& Brighton, 2009]{gigerenzer2009homo}
-Gigerenzer, G. \& Brighton, H. (2009).
+\bibitem[Gigerenzer \& Brighton, 2009a]{gigerenzer2009homo}
+Gigerenzer, G. \& Brighton, H. (2009a).
 \newblock Homo heuristicus: Why biased minds make better inferences.
 \newblock {\em Topics in Cognitive Science}, 1(1), 107--143.
+
+\bibitem[Gigerenzer \& Brighton, 2009b]{gigerenzer09}
+Gigerenzer, G. \& Brighton, H. (2009b).
+\newblock Homo heuristicus: Why biased minds make better inferences.
+\newblock {\em Topics in Cognitive Science}, 1, 107--143.
 
 \bibitem[Gigerenzer \& Gaissmaier, 2011]{gigerenzer2011heuristic}
 Gigerenzer, G. \& Gaissmaier, W. (2011).
@@ -923,7 +967,8 @@ Griffiths, T.~L., Callaway, F., Chang, M.~B., Grant, E., Krueger, P.~M., \&
 
 \bibitem[Griffiths et~al., 2008]{griffiths2008bayesian}
 Griffiths, T.~L., Kemp, C., \& Tenenbaum, J.~B. (2008).
-\newblock Bayesian models of cognition.
+\newblock {\em Bayesian models of cognition}.
+\newblock Cambridge University Press.
 
 \bibitem[Griffiths et~al., 2015]{griffiths2015}
 Griffiths, T.~L., Lieder, F., \& Goodman, N.~D. (2015).
@@ -990,6 +1035,12 @@ Hadjichristidis, C., Stibel, J., Sloman, S., Over, D., \& Stevenson, R. (1999).
 \newblock In {\em {Proceedings of the European Society for the Study of
   Cognitive Systems 16th Annual Workshop}}.
 
+\bibitem[Haefner et~al., 2016]{haefner2016perceptual}
+Haefner, R.~M., Berkes, P., \& Fiser, J. (2016).
+\newblock Perceptual decision-making as probabilistic inference by neural
+  sampling.
+\newblock {\em Neuron}, 90, 649--660.
+
 \bibitem[Hamrick et~al., 2011]{blocks}
 Hamrick, J.~B., Battaglia, P., \& Tenenbaum, J.~B. (2011).
 \newblock {Internal physics models guide probabilistic judgments about object
@@ -1017,8 +1068,9 @@ Harlow, H.~F. (1949).
 
 \bibitem[Hastings, 1970]{hastings1970monte}
 Hastings, W.~K. (1970).
-\newblock Monte carlo sampling methods using markov chains and their
-  applications.
+\newblock {\em Monte Carlo sampling methods using Markov chains and their
+  applications}.
+\newblock Oxford University Press.
 
 \bibitem[Hay et~al., 2014]{hay2014selecting}
 Hay, N., Russell, S., Tolpin, D., \& Shimony, S.~E. (2014).
@@ -1027,8 +1079,9 @@ Hay, N., Russell, S., Tolpin, D., \& Shimony, S.~E. (2014).
 
 \bibitem[Heckerman, 1990]{Heckerman1990}
 Heckerman, D. (1990).
-\newblock {A Tractable Inference Algorithm for Diagnosing Multiple Diseases 1
-  The QMR model}.
+\newblock A tractable inference algorithm for diagnosing multiple diseases.
+\newblock In {\em Machine Intelligence and Pattern Recognition}, volume~10
+  (pp.\ 163--171). Elsevier.
 
 \bibitem[Heckerman et~al., 1995]{heckerman1995learning}
 Heckerman, D., Geiger, D., \& Chickering, D.~M. (1995).
@@ -1069,11 +1122,6 @@ Hilbert, M. (2012).
 \newblock Toward a synthesis of cognitive biases: how noisy information
   processing can bias human decision making.
 \newblock {\em Psychological Bulletin}, 138(2), 211--237.
-
-\bibitem[Hill et~al., 2016]{Hill:2016uu}
-Hill, F., Cho, K., \& Korhonen, A. (2016).
-\newblock {Learning Distributed Representations of Sentences from Unlabelled
-  Data}.
 
 \bibitem[Hills et~al., 2012]{hills2012optimal}
 Hills, T.~T., Jones, M.~N., \& Todd, P.~M. (2012).
@@ -1513,7 +1561,8 @@ Markant, D.~B. \& Gureckis, T.~M. (2014).
 
 \bibitem[Marr \& Poggio, 1976]{marr1976understanding}
 Marr, D. \& Poggio, T. (1976).
-\newblock From understanding computation to understanding neural circuitry.
+\newblock {\em From understanding computation to understanding neural
+  circuitry}.
 
 \bibitem[Martignon \& Hoffrage, 2002]{martignon2002fast}
 Martignon, L. \& Hoffrage, U. (2002).
@@ -1806,8 +1855,9 @@ Pearl, J., Glymour, M., \& Jewell, N.~P. (2016).
 
 \bibitem[Pearl \& Goldwater, 2016]{pearl2016statistical}
 Pearl, L. \& Goldwater, S. (2016).
-\newblock Statistical learning, inductive bias, and bayesian inference in
-  language acquisition.
+\newblock {\em Statistical learning, inductive bias, and Bayesian inference in
+  language acquisition}.
+\newblock Citeseer.
 
 \bibitem[Pecevski et~al., 2011]{pecevski11}
 Pecevski, D., Buesing, L., \& Maass, W. (2011).
@@ -1831,6 +1881,11 @@ Pereira, F., Gershman, S., Ritter, S., \& Botvinick, M. (2016).
 Peterson, C. \& Miller, A. (1964).
 \newblock Mode, median, and mean as optimal strategies.
 \newblock {\em Journal of Experimental Psychology}, 68, 363.
+
+\bibitem[Peterson \& Beach, 1967]{peterson1967man}
+Peterson, C.~R. \& Beach, L.~R. (1967).
+\newblock Man as an intuitive statistician.
+\newblock {\em Psychological bulletin}, 68(1), 29.
 
 \bibitem[Peterson et~al., 1968]{peterson1968sampling}
 Peterson, C.~R., DuCharme, W.~M., \& Edwards, W. (1968).
@@ -2041,8 +2096,13 @@ Samuels, R., Stich, S., \& Bishop, M. (2012).
 \newblock {\em Collected Papers, Volume 2: Knowledge, Rationality, and
   Morality, 1978-2010}, 2, 191.
 
-\bibitem[Sanborn \& Chater, 2016]{sanborn2016bayesian}
-Sanborn, A.~N. \& Chater, N. (2016).
+\bibitem[Sanborn \& Chater, 2016a]{sanborn2016bayesian}
+Sanborn, A.~N. \& Chater, N. (2016a).
+\newblock Bayesian brains without probabilities.
+\newblock {\em Trends in Cognitive Sciences}, 20, 883--893.
+
+\bibitem[Sanborn \& Chater, 2016b]{sanborn16}
+Sanborn, A.~N. \& Chater, N. (2016b).
 \newblock Bayesian brains without probabilities.
 \newblock {\em Trends in Cognitive Sciences}, 20, 883--893.
 
@@ -2470,7 +2530,8 @@ Vul, E. \& Pashler, H. (2008).
 
 \bibitem[Waldmann \& Hagmayer, 2013]{waldmann2013causal}
 Waldmann, M.~R. \& Hagmayer, Y. (2013).
-\newblock Causal reasoning.
+\newblock {\em Causal reasoning.}
+\newblock Oxford University Press.
 
 \bibitem[Wang et~al., 2016]{wang2016}
 Wang, J., Kurth{-}Nelson, Z., Tirumala, D., Soyer, H., Leibo, J., Munos, R.,
@@ -2535,8 +2596,14 @@ Wozny, D.~R., Beierholm, U.~R., \& Shams, L. (2010).
 \newblock Probability matching as a computational strategy used in perception.
 \newblock {\em PLoS Computational Biology}, 6, e1000871.
 
-\bibitem[Yildirim et~al., 2015]{yildirim2015efficient}
-Yildirim, I., Kulkarni, T.~D., Freiwald, W.~A., \& Tenenbaum, J.~B. (2015).
+\bibitem[Yildirim et~al., 2015a]{Yildirim15}
+Yildirim, I., Kulkarni, T.~D., Freiwald, W.~A., \& Tenenbaum, J.~B. (2015a).
+\newblock Efficient and robust analysis-by-synthesis in vision: A computational
+  framework, behavioral tests, and modeling neuronal representations.
+\newblock In {\em Annual Conference of the Cognitive Science Society}.
+
+\bibitem[Yildirim et~al., 2015b]{yildirim2015efficient}
+Yildirim, I., Kulkarni, T.~D., Freiwald, W.~A., \& Tenenbaum, J.~B. (2015b).
 \newblock Efficient and robust analysis-by-synthesis in vision: A computational
   framework, behavioral tests, and modeling neuronal representations.
 \newblock In {\em {Proceedings of the 37th Annual Conference of the Cognitive
@@ -2572,5 +2639,6 @@ Zhao, Z., Dua, D., \& Singh, S. (2017).
 \bibitem[Zhu et~al., 2018]{zhu_sanborn_chater_2018}
 Zhu, J.-Q., Sanborn, A.~N., \& Chater, N. (2018).
 \newblock Bayesian inference causes incoherence in human probability judgments.
+\newblock {\em PsyArXiv}.
 
 \end{thebibliography}

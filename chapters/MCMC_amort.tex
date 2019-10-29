@@ -21,7 +21,7 @@ Many theories of probabilistic reasoning assume that human brains are equipped w
 \item What is the probability of a toaster and a microwave given that I've observed a sink?
 \end{itemize}
 
-%The nature of the inference engine that answers such queries is still an open research question, though many theories posit some form of approximate inference using Monte Carlo sampling \citep{thaker17,dasgupta17,vul2014one,gershman12,denison13,sanborn2016bayesian,ullman2012theory}. According to these theories, probability distributions are mentally represented with a set of samples, which are generated using a general-purpose inference engine that can operate on arbitrary probability distributions.
+%The nature of the inference engine that answers such queries is still an open research question, though many theories posit some form of approximate inference using Monte Carlo sampling \citep{thaker2017online,dasgupta17,vul2014one,gershman12,denison13,sanborn2016bayesian,ullman2012theory}. According to these theories, probability distributions are mentally represented with a set of samples, which are generated using a general-purpose inference engine that can operate on arbitrary probability distributions.
 
 The flexibility and power of such a general-purpose inference engine trades off against its computational efficiency: by treating each query distribution independently, an inference engine forgoes the opportunity to reuse computations across queries, thus reducing time complexity (but possibly increasing space complexity). Every time a distribution is queried, past computations are ignored and answers are produced anew---the inference engine is memoryless, a property that makes it statistically accurate but inefficient in environments with overlapping queries.
 
@@ -160,7 +160,7 @@ For sample-based amortization, as the sample size for $\mathcal{Q}1$ grows, the 
 
 Under a summary-based strategy, increasing the sample size for $\mathcal{Q}1$ will only \emph{diminish} the effects for $\mathcal{Q}2$, because the bias from $\mathcal{Q}1$ is strongest when the chain is close to its starting point. The effect of early, biased samples on the summary statistic disappears with more samples. We see also that changing the number of samples for $\mathcal{Q}2$ does not influence the effect size because the initialization of the chain for $\mathcal{Q}2$ is not influenced by the samples or summary statistic from the answer to $\mathcal{Q}1$. Under the summary-based strategy, the subadditivity and superadditivity effects for $\mathcal{Q}2$ derive entirely from the same effects for $\mathcal{Q}1$, which themselves are driven by the initialization\citet{dasgupta17}.
 
-%We test the different predictions of these strategies by placing people under cognitive load during either $\mathcal{Q}1$ or $\mathcal{Q}2$ in Experiment 2, a manipulation that is expected to reduce the number of produced samples \citep{dasgupta17,thaker17}. In this way, we can sample different parts of the curves shown in Figure \ref{fig:changeN}.
+%We test the different predictions of these strategies by placing people under cognitive load during either $\mathcal{Q}1$ or $\mathcal{Q}2$ in Experiment 2, a manipulation that is expected to reduce the number of produced samples \citep{dasgupta17,thaker2017online}. In this way, we can sample different parts of the curves shown in Figure \ref{fig:changeN}.
 
 \subsection{Adaptive amortization}
 
@@ -270,7 +270,7 @@ Experiment 1 established a memory effect in probabilistic inference: answers to 
 
 \section{Experiment 2: Distinguishing algorithms for amortization}
 
-Our next experiment sought to discriminate between sample-based and summary-based amortization strategies. We follow the logic of the simulations shown in Figure \ref{fig:changeN}, manipulating cognitive load at $\mathcal{Q}1$ and $\mathcal{Q}2$ in order to exogenously control the number of samples (see \citet{thaker17,dasgupta17}, for a similar approach). 
+Our next experiment sought to discriminate between sample-based and summary-based amortization strategies. We follow the logic of the simulations shown in Figure \ref{fig:changeN}, manipulating cognitive load at $\mathcal{Q}1$ and $\mathcal{Q}2$ in order to exogenously control the number of samples (see \citet{thaker2017online,dasgupta17}, for a similar approach). 
 
 In addition to cognitive load, we manipulate the ``overlap'' of $\mathcal{Q}1$ with $\mathcal{Q}2$, by creating a new set of queries with no overlap between the hypothesis spaces of the query pairs. We predicted that we would only see a memory effect for queries with overlapping pairs. This manipulation allows us to rule out an alternative trivial explanation of our results: numerical anchoring (high answers to the first query lead to high answers to the second query). If the apparent memory effect was just due to anchoring, we would expect to see the effect regardless of query overlap, contrary to our predictions.
 
