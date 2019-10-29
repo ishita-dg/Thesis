@@ -327,7 +327,7 @@
 	%\doublespacing    % ABSTRACT MUST BE DOUBLE SPACED
 	\thispagestyle{abstractstyle}
 	\renewcommand{\headrulewidth}{0.0pt}
-	\vspace*{10pt}
+	\vspace*{1pt}
 	\begin{center}
 	\Large \textcolor{SchoolColor}{\@abstracttitle} \normalsize \\
 	\vspace*{20pt}
@@ -410,7 +410,7 @@
         \bibliography{references}
         \addcontentsline{toc}{chapter}{References}
         \bibliographystyle{apalike2}
-        \include{endmatter/colophon}
+        %\include{endmatter/colophon}
     \end{spacing}
 }
 

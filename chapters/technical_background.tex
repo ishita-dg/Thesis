@@ -7,7 +7,7 @@
 \chapter{Approximating Bayesian inference}
 \label{chap:approx}
 
-This chapter provides a brief introduction to the approximate inference methods that will be used throughout this thesis. These for the backbone of most rational process models for human cognition, as well as algorithmic approaches to machine intelligence in a structured probabilistic models framework. First, I introduce the computational problem we hope to approximate and explain why it is challenging. Second, I introduce sampling-based approaches, focusing on methods based on Markov chains. Third, I introduce variational approaches to this problem. Finally, I briefly discuss the trade-offs between these two methods, and how they might be combined.
+This chapter provides a brief introduction to the approximate inference methods that will be used throughout this thesis. These form the backbone of most rational process models for human cognition, as well as algorithmic approaches to machine intelligence in a structured probabilistic models framework. First, I introduce the computational problem we hope to approximate and explain why it is challenging. Second, I introduce sampling-based approaches, focusing on methods based on Markov chains. Third, I introduce variational approaches to this problem. Finally, I briefly discuss the trade-offs between these two methods, and how they might be combined.
 
 \section{The challenge of Bayesian inference}
 Bayesian inference is method in statistics where Bayes' theorem is used to update the probabilities of hypotheses $h \in \mathcal{H}$ as more information or data $d \in D$ is made available. We consider a simple coin-flipping example of updating the probabilities that a coin is biased towards Heads ($h_1$), is biased towards Tails ($h_2$), or unbiased ($h_0$) based on observing the results of coin flips ($d \in \{\text{H}, \text{T}\}$ for heads or tails). Bayesian inference has two key components that are derived from a statistical model for the observed data. First, a prior distribution $P(h)$ defined over all hypotheses $h \in \mathcal{H}$ that determines the a priori probability of a certain hypothesis. In our coin flipping example, we likely have a fairly high expectation that a coin is generally unbiased giving high prior probability to $h_0$, and lower prior probabilities to $h_1$ and $h_2$. Second, a likelihood function $P(d | h)$ that defines the probability of observed data given specific hypotheses. So in our coin-flipping example, the likelihood is a Bernoulli probability distribution given by $P(\text{H} | h) = q = 1 - P(\text{T} | h) = 1- q$ with different parameters $q$ for he hypotheses $h_0, h_1$ and $h_2$. The goal then is to combine these two pieces of information -- a priori knowledge via the prior distribution, as well as information from the data observed via the likelihood function -- to form a \textit{posterior probability distribution} over the hypotheses. This is represented as $P(h | d)$ and computed uses Bayes' rule as follows:
@@ -148,7 +148,7 @@ In general however, this divergence cannot directly be optimized, since finding 
 \label{eq:ELBO}
 \end{align}
 
-This function is called the \emph{evidence lower bound} (ELBO), also known as the negative free energy. The term ELBO comes from the fact that $\mathcal{L}[Q_\phi(h|d)]$ is a lower bound on the ``evidence'' (log marginal likelihood) $\log P(d)$, since a KL divergence between any two distributions is restricted to be greater than or equal to zero. Since the evidence in a specific situation is fixed, maximizing the ELBO will produce the same variational approximation as minimizing the KL divergence. Critically, the ELBO eliminates the dependence on $P(h|d)$, only requiring access to the unnormalized posterior, the joint distribution $P(h,d)$.
+This function is called the \emph{evidence lower bound} (ELBO), also known as the negative variational free energy. The term ELBO comes from the fact that $\mathcal{L}[Q_\phi(h|d)]$ is a lower bound on the ``evidence'' (log marginal likelihood) $\log P(d)$, since a KL divergence between any two distributions is restricted to be greater than or equal to zero. Since the evidence in a specific situation is fixed, maximizing the ELBO will produce the same variational approximation as minimizing the KL divergence. Critically, the ELBO eliminates the dependence on $P(h|d)$, only requiring access to the unnormalized posterior, the joint distribution $P(h,d)$.
 
 
 \subsection{Algorithmic details}
@@ -164,7 +164,7 @@ Even given the ease of gradient-based optimization of neural network architectur
 \end{align}
 where $h^m \sim Q_\phi(h|d)$. Using this approximation, the variational parameters can be optimized with stochastic gradient descent updates of the form:
 \begin{align}
-    \phi_{t+1} \leftarrow \phi_t + \rho_t \nabla_\phi \mathcal{L}[Q_\phi(h|d)],
+    \phi_{t+1} \leftarrow \phi_t + \rho_t \nabla_\phi \text{ELBO}[Q_\phi(h|d)],
 \end{align}
 where $t$ indexes iterations and $\rho_t$ is an iteration-dependent step-size. Provided $\rho_t$ satisfies the Robbins-Monro stochastic approximation conditions ($\sum_{t=1}^\infty \rho_t = \infty, \sum_{t=1}^\infty \rho_t^2 < \infty$), this optimization procedure will converge to the optimal parameters with probability 1.
 
