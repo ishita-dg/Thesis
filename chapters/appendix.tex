@@ -38,7 +38,7 @@ P(h_{\mathcal{Q}2}|d) & \approx \frac{1}{N_1}\sum_{n=1}^{N_1} \mathbb{I}[h_n=h_{
 
 Under this scheme, only the final product of the computation carried out for $\mathcal{Q}1$ is reused in the calculations for $\mathcal{Q}2$.
 
-\newpage
+%\newpage
 
 \section{Recognition network architecture}
 \label{app:LTI_arch}
@@ -51,7 +51,7 @@ Learning a 12 dimensional multinomial is much harder than learning a binomial, s
 
 When the hypothesis space was real-valued, the output was a mean and log standard deviation parametrizing a Gaussian distribution; thus, the network implemented a function $f_\phi: \mathcal{D} \mapsto \mathbb{R}^2$, and the variational approximation was $Q_\phi(h|d) = \mathcal{N}(h; f_\phi(d))$. The data space was modeled by three inputs: the prior mean, the mean of the evidence and the number of samples, the output space consisted of two outputs that represented the mean and variance of a normal distribution. The hidden units used a hyperbolic tangent activation function, and the activation function at the topmost layer made no transformation at the node representing the mean, and took an exponential at the node representing the variance to ensure that the final output was greater than zero.
 
-\newpage 
+%\newpage 
 
 
 \section{Hierarchical Bayesian model in the continuous domain}
@@ -65,7 +65,7 @@ The L-HBM assumes the true generative model described in the section `Extension 
 \begin{figure}[hb!]
 \centering
     \includegraphics[width=0.5\textwidth]{figures/samstan.pdf}
-  \caption{\textbf{Performance of the L-HBM}. Simulation results of a hierarchical Bayesian model that infers the underlying parameters in the the experiment reported by \cite{gershman2017blessing}. The Y-axis shows the L-HBM's updates from prior to posterior ($\Delta$Data) and the X-axis shows the update of a rational (hierarchical) model ($\Delta$Rational; a HBM that knows the true parameters for the underlying generative process). Error bars represent the standard error of the mean. Gray line represents $y=x$.} 
+  \caption{\textbf{Performance of the L-HBM}. Simulation results of a hierarchical Bayesian model that infers the underlying parameters in the the experiment reported by \citet{gershman2017blessing}. The Y-axis shows the L-HBM's updates from prior to posterior ($\Delta$Data) and the X-axis shows the update of a rational (hierarchical) model ($\Delta$Rational; a HBM that knows the true parameters for the underlying generative process). Error bars represent the standard error of the mean. Gray line represents $y=x$.} 
   \label{fig:App:hierBayes}
 \end{figure}
 
@@ -75,7 +75,7 @@ The true values of these parameters are as follows: $s = 25, m_0 = 40$ for all p
 
 We compared the resulting updates of this L-HBM to the updates from the HBM in the main text that knows the true parameters of the underlying generative distributions (see Fig.~\ref{fig:App:hierBayes}). For both the high and the low dispersion conditions, the updates closely follow the diagonal line of $y=x$. This indicates that inferring $m_0$, $s$, and $v$ (in addition to $m_k$) does not result in significant differences in the updates in an ideal observer. Crucially, the L-HBM does not replicate the main qualitative effect of a significant difference in updates between the high and the low dispersion condition, for the same rational update. This means that---unlike our Learned Inference Model---a hierarchical Bayesian model cannot reproduce the qualitative effects observed in the experiment.
 
-\newpage
+%\newpage
 
 \section{Causal Bayes Nets}
 \label{app:causal_cbn}
@@ -89,9 +89,11 @@ A {\bf path} from node $X_i$ to node $X_j$ is a sequence of linked nodes startin
 at $X_i$ and ending at $X_j$. A {\bf directed path} is a path whose links are directed and pointing from preceding towards following nodes in the sequence.\\[5pt]
 %\jane{add def CBN here}
 
-\begin{wrapfigure}{l}{0.5\textwidth}
+
+\begin{figure}[t!]
 \centering
-\subfloat[]{\scalebox{0.7}{
+\subfloat[]{
+\scalebox{0.85}{
 \begin{tikzpicture}[dgraph]
 \node[ocont] (x2) at (4.5,0) {$X_2$};
 \node[ocont] (x1) at (1.5,0) {$X_1$};
@@ -111,8 +113,9 @@ at $X_i$ and ending at $X_j$. A {\bf directed path} is a path whose links are di
 % \vspace{-0.15cm}
 \caption{(a): Directed acyclic graph. The node $X_3$ is a collider on the path $X_1 \rightarrow X_3 \leftarrow X_2$ and a non-collider on the path $X_2\rightarrow X_3\rightarrow X_4$. (b): Cyclic graph obtained from (a) by adding a link from $X_4$ to $X_1$.}
 \label{fig:indep_HMM}
-\vspace{-0.75cm}
-\end{wrapfigure}A {\bf directed acyclic graph} is a directed graph with no
+\end{figure}
+
+A {\bf directed acyclic graph} is a directed graph with no
 directed paths starting and ending at the same node. For example, the directed graph in Figure \ref{fig:indep_HMM}(a) is acyclic. 
 The addition of a link from $X_4$ to $X_1$ gives rise to a cyclic graph (Figure \ref{fig:indep_HMM}(b)).\\[5pt]
 A node $X_i$ with a directed link to $X_j$ is called {\bf parent}
@@ -172,6 +175,6 @@ We also find that the Active-Interventional Agent achieves reward well above the
 \end{figure}
 In this experiment we scaled up to larger graphs with $N=6$ nodes, which afforded considerably more unique \CBNs~than with $N=5$ ($1.4\times10^7$ vs $5.9\times10^4$). As shown in Figure \ref{fig:N6_results}a, we find the same pattern of behavior noted in the main text where the rewards earned are ordered such that Observational agent $<$ Active-Conditional agent $<$ Active-Interventional agent $<$ Active-Counterfactual agent. We see additionally in Figure \ref{fig:N6_results}b that the Active-Interventional agent performs significantly better than the baseline Random-Interventional agent, indicating an ability to choose non-random, informative interventions.
 
-\newpage
+%\newpage
 
 

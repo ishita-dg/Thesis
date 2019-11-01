@@ -46,6 +46,14 @@
 \renewenvironment{quote}
     {\begin{spacing}{\dcompressedspacing}\oldquote}
     {\endoldquote\end{spacing}}
+ 
+ % landscape figure   
+\usepackage{afterpage}
+\usepackage{lscape}
+ \newenvironment{LSFigure}[1][!t]
+  {\begin{landscape}\thispagestyle{empty}\begin{figure}}
+  {\end{figure}\null\vfill\centerline{\raisebox{0cm}{\thepage}}\end{landscape}}
+
 
 % Itemize with compressed spacing
 \let\olditemize\itemize
