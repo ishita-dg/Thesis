@@ -276,10 +276,21 @@
     urlcolor=SchoolColor,
 }
 
+\newcommand\blankpage{% comando pagina vuota
+    \clearpage
+    \null
+    \thispagestyle{empty}%
+    \clearpage
+}
+
 % Formatting guidelines found in:
 % http://www.gsas.harvard.edu/publications/form_of_the_phd_dissertation.php
+\usepackage{pdfpages}
 \renewcommand{\frontmatter}{
 	\input{frontmatter/personalize}
+	\newpage
+	\includepdf[fitpaper=true, pages=-]{IshitaDasgupta_DAC.pdf}
+	\blankpage
 	\maketitle
 	\copyrightpage
 	\abstractpage
