@@ -410,7 +410,7 @@
 
 
 \newcommand{\prevwork}{
-	\chapter*{Previously published and submitted works}
+	\chapter*{Previously published work}
 	\noindent
     \begin{spacing}{\dcompressedspacing}
     	\input{frontmatter/prevwork}
