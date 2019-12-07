@@ -400,13 +400,20 @@ Czerlinski, J., Gigerenzer, G., \& Goldstein, D.~G. (1999).
 \newblock In {\em Simple heuristics that make us smart}  (pp.\ 97--118). Oxford
   University Press.
 
+\bibitem[Dasgupta et~al., 2018a]{dasgupta2018evaluating}
+Dasgupta, I., Guo, D., Stuhlm{\"u}ller, A., Gershman, S.~J., \& Goodman, N.~D.
+  (2018a).
+\newblock Evaluating compositionality in sentence embeddings.
+\newblock {\em Proceedings of the 39th Annual Conference of the Cognitive
+  Science Society}.
+
 \bibitem[Dasgupta et~al., 2017]{dasgupta2017hypotheses}
 Dasgupta, I., Schulz, E., \& Gershman, S.~J. (2017).
 \newblock Where do hypotheses come from?
 \newblock {\em Cognitive Psychology}, 96, 1--25.
 
-\bibitem[Dasgupta et~al., 2018]{dasgupta2018remembrance}
-Dasgupta, I., Schulz, E., Goodman, N.~D., \& Gershman, S.~J. (2018).
+\bibitem[Dasgupta et~al., 2018b]{dasgupta2018remembrance}
+Dasgupta, I., Schulz, E., Goodman, N.~D., \& Gershman, S.~J. (2018b).
 \newblock Remembrance of inferences past: Amortization in human hypothesis
   generation.
 \newblock {\em Cognition}, 178, 67--81.
@@ -926,11 +933,6 @@ Goodfellow, I.~J., Shlens, J., \& Szegedy, C. (2014).
 \newblock Explaining and harnessing adversarial examples.
 \newblock {\em arXiv preprint arXiv:1412.6572}.
 
-\bibitem[Goodman, 1983]{goodman1983fact}
-Goodman, N. (1983).
-\newblock {\em Fact, fiction, and forecast}.
-\newblock Harvard University Press.
-
 \bibitem[Goodman et~al., 2008]{Goodman2008}
 Goodman, N., Tenenbaum, J.~B., Feldman, J., \& Griffiths, T. (2008).
 \newblock {A Rational Analysis of Rule-Based Concept Learning}.
@@ -1087,11 +1089,6 @@ Hamrick, J.~B., Smith, K.~A., Griffiths, T.~L., \& Vul, E. (2015b).
 \newblock Think again? the amount of mental simulation tracks uncertainty in
   the outcome.
 \newblock In {\em CogSci}: Citeseer.
-
-\bibitem[Harlow, 1949]{harlow1949formation}
-Harlow, H.~F. (1949).
-\newblock The formation of learning sets.
-\newblock {\em Psychological Review}, 56(1), 51.
 
 \bibitem[Hastings, 1970]{hastings1970monte}
 Hastings, W.~K. (1970).
@@ -1822,6 +1819,12 @@ Nie, Y., Wang, Y., \& Bansal, M. (2019).
 \newblock Analyzing compositionality-sensitivity of nli models.
 \newblock In {\em Proceedings of the AAAI Conference on Artificial
   Intelligence}, volume~33  (pp.\ 6867--6874).
+
+\bibitem[Nobandegani et~al., 2019]{nobandegani2019resource}
+Nobandegani, A.~S., da~Silva~Castanheira, K., Otto, A., \& Shultz, T. (2019).
+\newblock A resource-rational process-level account the st. petersburg paradox.
+\newblock In {\em Proceedings of the 41st Annual Conference of the Cognitive
+  Science Society. Austin, TX: Cognitive Science Society}.
 
 \bibitem[Nosofsky, 1986]{nosofsky1986attention}
 Nosofsky, R.~M. (1986).
